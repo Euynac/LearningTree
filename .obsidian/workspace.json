@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "4da9e1b3f606c6d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd262439b3ea85f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd77b5ba67a2b7d3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "d2371f3a1f630b7a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/工具集合.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bba9f44576af7889",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3a90a503b87f246",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "95641d9f2e99738f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "06bae426a52ef2d9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "41feecff5bebb24a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 220.49999618530273
+  },
+  "right": {
+    "id": "135816766e82b8ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "a36754a62dd01ef4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ef2f3d5356e308d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CTF/工具集合.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0b98812902b5262d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CTF/工具集合.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "05fbbc6fa450d716",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2b6b6120ae063589",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CTF/工具集合.md"
+              }
+            }
+          },
+          {
+            "id": "7c80e3ee39f1e2d4",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "636ffba54c9a1600",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "bcaaad220d822f98",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 340.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "markdown-table-editor:Open Markdown Table Editor": false
+    }
+  },
+  "active": "95641d9f2e99738f",
+  "lastOpenFiles": [
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/图像隐写.md",
+    "CTF/MISC/压缩包.md",
+    "attachments/Pasted image 20230709005551.png",
+    "attachments/templates/文件名.md",
+    "attachments/Pasted image 20230709000756.png",
+    "attachments/templates/python脚本.md",
+    "attachments/python脚本.md",
+    "attachments/正文.md",
+    "attachments/文件名.md",
+    "CTF/工具集合.md",
+    "工具集合.md.baiduyun.uploading.cfg",
+    "attachments/templates/工具表.md.baiduyun.uploading.cfg",
+    "attachments/正文.md.baiduyun.uploading.cfg",
+    "attachments/文件名.md.baiduyun.uploading.cfg",
+    "attachments/python脚本.md.baiduyun.uploading.cfg",
+    "attachments/templates/正文.md.baiduyun.uploading.cfg",
+    "attachments/templates/文件名.md.baiduyun.uploading.cfg",
+    "attachments/templates/python脚本.md.baiduyun.uploading.cfg",
+    "MISC/压缩包.md.baiduyun.uploading.cfg",
+    "CTF/MISC/Untitled.md.baiduyun.uploading.cfg",
+    "attachments/templates/工具表.md",
+    "attachments/templates/正文.md",
+    "attachments/Pasted image 20230705203418.png",
+    "attachments/Pasted image 20230705202930.png",
+    "attachments/Pasted image 20230705202626.png",
+    "attachments/Pasted image 20230705202142.png",
+    "attachments/Pasted image 20230704181147.png",
+    "attachments/Pasted image 20230703215646.png",
+    "attachments/Pasted image 20230703201943.png",
+    "attachments/Pasted image 20230703201739.png",
+    "最佳实践/数据库.md",
+    "最佳实践/微服务接口.md",
+    "最佳实践/微服务配置.md",
+    "最佳实践/设计模式.md",
+    "最佳实践/Dapr技术中台.md",
+    "战略设计/电报子域.md",
+    "战略设计/告警子域.md",
+    "战略设计/航路子域.md",
+    "战略设计/[通用]审批子域.md",
+    "战略设计/统计子域.md",
+    "战略设计/数据交换子域.md",
+    "战略设计/基础数据子域.md",
+    "战略设计/[通用]通知子域.md",
+    "战略设计/[通用]日志子域.md",
+    "未命dd名.canvas"
+  ]
+}
