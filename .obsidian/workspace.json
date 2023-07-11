@@ -27,6 +27,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "cc400a8c16ee3f67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -164,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -183,12 +196,18 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "95641d9f2e99738f",
+  "active": "d2371f3a1f630b7a",
   "lastOpenFiles": [
-    "CTF/MISC/Untitled.md.baiduyun.uploading.cfg",
-    "CTF/MISC/文件头.md",
-    "CTF/MISC/图像隐写.md",
+    "Markdown.md",
+    "CTF/工具集合.md",
     "CTF/MISC/压缩包.md",
+    "CTF/MISC/图像隐写.md",
+    "CTF/MISC/文件头.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "attachments/templates/工具表.md",
+    "CloudNative/Deployments",
+    "CloudNative",
+    "CTF/MISC/Untitled.md.baiduyun.uploading.cfg",
     "attachments/Pasted image 20230709005551.png",
     "attachments/templates/文件名.md",
     "attachments/Pasted image 20230709000756.png",
@@ -196,7 +215,6 @@
     "attachments/python脚本.md",
     "attachments/正文.md",
     "attachments/文件名.md",
-    "CTF/工具集合.md",
     "工具集合.md.baiduyun.uploading.cfg",
     "attachments/templates/工具表.md.baiduyun.uploading.cfg",
     "attachments/正文.md.baiduyun.uploading.cfg",
@@ -204,9 +222,6 @@
     "attachments/python脚本.md.baiduyun.uploading.cfg",
     "attachments/templates/正文.md.baiduyun.uploading.cfg",
     "attachments/templates/文件名.md.baiduyun.uploading.cfg",
-    "attachments/templates/python脚本.md.baiduyun.uploading.cfg",
-    "MISC/压缩包.md.baiduyun.uploading.cfg",
-    "attachments/templates/工具表.md",
     "attachments/templates/正文.md",
     "attachments/Pasted image 20230705203418.png",
     "attachments/Pasted image 20230705202930.png",
@@ -229,7 +244,6 @@
     "战略设计/数据交换子域.md",
     "战略设计/基础数据子域.md",
     "战略设计/[通用]通知子域.md",
-    "战略设计/[通用]日志子域.md",
     "未命dd名.canvas"
   ]
 }
