@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/图像隐写/PNG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md"
+                "file": "CTF/MISC/图像隐写/PNG.md"
               }
             }
           },
@@ -199,27 +199,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
   "active": "8abfe842f5857587",
   "lastOpenFiles": [
+    "CTF/MISC/文件头.md",
     "CTF/工具集合.md",
     "CTF/ToolManual/Wireshark.md",
-    "CTF/ToolManual",
-    "CTF/MISC/文件头.md",
-    "Architecture",
-    "Architecture/ABP.md",
-    "Markdown.md",
     "CTF/MISC/压缩包.md",
-    "CTF/MISC/图像隐写.md",
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/MISC/图像隐写",
+    "Architecture/ABP.md",
+    "CTF/ToolManual",
+    "Architecture",
+    "Markdown.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "attachments/templates/工具表.md",
     "CloudNative/Deployments",
@@ -236,7 +238,6 @@
     "attachments/templates/工具表.md.baiduyun.uploading.cfg",
     "attachments/正文.md.baiduyun.uploading.cfg",
     "attachments/文件名.md.baiduyun.uploading.cfg",
-    "attachments/python脚本.md.baiduyun.uploading.cfg",
     "attachments/templates/正文.md",
     "attachments/Pasted image 20230705203418.png",
     "attachments/Pasted image 20230705202930.png",
@@ -256,7 +257,6 @@
     "战略设计/航路子域.md",
     "战略设计/[通用]审批子域.md",
     "战略设计/统计子域.md",
-    "战略设计/数据交换子域.md",
     "未命dd名.canvas"
   ]
 }
