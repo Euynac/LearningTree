@@ -7,5 +7,6 @@
   "obsidian-git",
   "customizable-menu",
   "codeblock-customizer",
-  "obsidian-command-alias-plugin"
+  "obsidian-command-alias-plugin",
+  "obsidian-find-and-replace-in-selection"
 ]
