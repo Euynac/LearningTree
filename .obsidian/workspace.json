@@ -4,32 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bd262439b3ea85f0",
+        "id": "cf3496224b9cce33",
         "type": "tabs",
         "children": [
           {
-            "id": "fd77b5ba67a2b7d3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "d2371f3a1f630b7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/工具集合.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8abfe842f5857587",
+            "id": "6e0c339d6d8aa96e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,22 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "cc400a8c16ee3f67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -190,7 +155,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -206,11 +171,22 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-table-editor:Open Markdown Table Editor": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "8abfe842f5857587",
+  "active": "6e0c339d6d8aa96e",
   "lastOpenFiles": [
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/压缩包.md",
+    "CTF/ToolManual/CyberChef.md",
+    "Markdown.md",
+    "CTF/README.md",
+    "CTF/工具集合.md",
+    "CTF/ToolManual/Wireshark.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
     "attachments/templates/正文.md.baiduyun.uploading.cfg",
     "attachments/templates/文件名.md.baiduyun.uploading.cfg",
     "attachments/templates/工具表.md.baiduyun.uploading.cfg",
@@ -221,16 +197,7 @@
     "CTF/ToolManual/Wireshark.md.baiduyun.uploading.cfg",
     "CTF/MISC/图像隐写/图像隐写.md.baiduyun.uploading.cfg",
     "CTF/MISC/图像隐写/PNG.md.baiduyun.uploading.cfg",
-    "CTF/MISC/文件头.md.baiduyun.uploading.cfg",
-    "CTF/MISC/图像隐写/图像隐写.md",
-    "Markdown.md",
-    "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/文件头.md",
-    "CTF/工具集合.md",
-    "CTF/ToolManual/Wireshark.md",
-    "CTF/MISC/压缩包.md",
     "Architecture/ABP.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "attachments/templates/工具表.md",
     "attachments/Pasted image 20230709005551.png",
     "attachments/templates/文件名.md",
@@ -256,7 +223,6 @@
     "战略设计/电报子域.md",
     "战略设计/告警子域.md",
     "战略设计/航路子域.md",
-    "战略设计/[通用]审批子域.md",
     "未命dd名.canvas"
   ]
 }
