@@ -99,5 +99,21 @@
       ],
       "key": "H"
     }
+  ],
+  "editing-toolbar:codeblock": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "3"
+    }
+  ],
+  "editing-toolbar:editor:toggle-code": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
   ]
 }

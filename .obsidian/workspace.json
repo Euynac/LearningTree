@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/MicosoftOffice.md",
+                "file": "SoftwareManual/AHK.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 220.49999618530273
+    "width": 299.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/MicosoftOffice.md",
+                "file": "SoftwareManual/AHK.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/MicosoftOffice.md",
+                "file": "SoftwareManual/AHK.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/MicosoftOffice.md"
+                "file": "SoftwareManual/AHK.md"
               }
             }
           },
@@ -175,11 +175,14 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "CTF/README.md",
+    "SoftwareManual/AHK.md",
+    "SoftwareManual/Untitled.md",
+    "SoftwareManual/MicosoftOffice.md",
     "CTF/ToolsList.md",
     "media/1bffabf753c0392c3520a8248c0ce74a.gif.md",
     "SoftwareManual/VSCode.md",
     "SoftwareManual/VisualStudio.md",
-    "SoftwareManual/MicosoftOffice.md",
     "SoftwareManual",
     "IDE/VSCode.md",
     "SoftwareMannual/VSCode.md",
@@ -204,7 +207,6 @@
     "CTF/CRYPTO/密码种类与特征.md",
     "IDE",
     "CTF/ToolManual/Xdbg.md",
-    "CTF/README.md",
     "CTF/ToolManual/CyberChef.md",
     "Markdown.md",
     "CTF/MISC/文件头.md",
@@ -219,8 +221,6 @@
     "CTF/MISC/文件头.md.baiduyun.uploading.cfg",
     "CTF/MISC/压缩包.md.baiduyun.uploading.cfg",
     "CTF/ToolsList.md.baiduyun.uploading.cfg",
-    "CTF/ToolManual/Wireshark.md",
-    "attachments/templates/工具表.md",
     "未命dd名.canvas"
   ]
 }
