@@ -115,5 +115,31 @@
       ],
       "key": "1"
     }
-  ]
+  ],
+  "editing-toolbar:change-font-color": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "4"
+    }
+  ],
+  "colored-text:add-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "5"
+    }
+  ],
+  "colored-text:get-color-input": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "6"
+    }
+  ],
+  "colored-text:change-color-forward": [],
+  "colored-text:change-color-backwards": []
 }

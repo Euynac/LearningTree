@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/AHK.md",
+                "file": "ComputerScience/人工智能.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/AHK.md",
+                "file": "ComputerScience/人工智能.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/AHK.md",
+                "file": "ComputerScience/人工智能.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/AHK.md"
+                "file": "ComputerScience/人工智能.md"
               }
             }
           },
@@ -175,8 +175,20 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
-    "CTF/README.md",
     "SoftwareManual/AHK.md",
+    "ComputerScience/人工智能.md",
+    "ComputerScience",
+    "新建文件夹",
+    "attachments/e5b6915ff51790ee1c3e9259bc73d4fe.png",
+    "attachments/c72604bc7b344b366da069bddf45216c.png",
+    "attachments/83459e82e04017d0879e71fd66af76c3.png",
+    "attachments/1525d7698e05a28a8469b0ffe660eea7.png",
+    "attachments/537f1baaa84f2789a6882f56dd6cda8a.png",
+    "attachments/74e21a384f864e2e846265455b6a244e.png",
+    "attachments/61c35245aaef85def9b6acf21febe75a.png",
+    "attachments/8a7e674cd34fb186d10dd651dc1994dd.png",
+    "attachments/1c68a4db15913dc4a0355b6a7c692f41.png",
+    "CTF/README.md",
     "SoftwareManual/Untitled.md",
     "SoftwareManual/MicosoftOffice.md",
     "CTF/ToolsList.md",
@@ -191,15 +203,6 @@
     "SoftwareMannual",
     "IDE/MicosoftOffice.md",
     "attachments/f58053aebc4a367dba3f4568e6046917.png",
-    "attachments/f6900c3da018b866d40387f299d60a83.png",
-    "attachments/bb07905e6eb3b1397e7136a46886355e.png",
-    "attachments/b157535576d0002b47b6a7543abde445.png",
-    "attachments/b18a5eb9700e58e085f3be46d33226b4.jpeg",
-    "attachments/9600354a80010512aba8ff696c073af4.png",
-    "attachments/65729db6d5041819592388b3cd97ca79.png",
-    "attachments/502c596f681092fcb2b00d180d7ae854.png",
-    "attachments/8ff1bac0012239f5e76e23b3d086e041.png",
-    "attachments/8a700602a54092862fbe861e337c375f.png",
     "IDE/VisualStudio.md",
     "attachments/templates/Csharp代码.md",
     "attachments/templates/python脚本.md",
@@ -214,13 +217,10 @@
     "Architecture/ABP.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/CRYPTO",
     "CTF/ToolManual/CyberChef.md.baiduyun.uploading.cfg",
     "CTF/MISC/图像隐写/PNG.md.baiduyun.uploading.cfg",
     "CTF/MISC/文件头.md.baiduyun.uploading.cfg",
-    "CTF/MISC/压缩包.md.baiduyun.uploading.cfg",
-    "CTF/ToolsList.md.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }
