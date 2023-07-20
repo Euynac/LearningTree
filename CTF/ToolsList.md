@@ -114,5 +114,6 @@
 | Parsec                     | 远程桌面                             | 支持移动端，高画质 |
 | Proxifier                  | 设置各种规则，使得本地软件走特定代理 |                    |
 | ContextMenuManager.NET.4.0 | Windows右键管理工具                  |                    |
+| Optimizer                  | Windows优化工具                      | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer)                   |
 
 
