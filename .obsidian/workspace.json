@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/MISC/压缩包.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/MISC/压缩包.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/MISC/压缩包.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "CTF/MISC/压缩包.md"
               }
             }
           },
@@ -175,11 +175,16 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
-    "CTF/ToolsList.md",
+    "CTF/README.md",
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "SoftwareManual/VSCode.md",
+    "SoftwareManual/MicosoftOffice.md",
+    "SoftwareManual/AHK.md",
     "SoftwareManual/CMD.md",
+    "CTF/ToolsList.md",
     "attachments/006623272f7415e1c9c9d30e9f1800d4.png",
     "ComputerScience/人工智能.md",
-    "SoftwareManual/AHK.md",
     "ComputerScience",
     "新建文件夹",
     "attachments/e5b6915ff51790ee1c3e9259bc73d4fe.png",
@@ -191,11 +196,8 @@
     "attachments/61c35245aaef85def9b6acf21febe75a.png",
     "attachments/8a7e674cd34fb186d10dd651dc1994dd.png",
     "attachments/1c68a4db15913dc4a0355b6a7c692f41.png",
-    "CTF/README.md",
     "SoftwareManual/Untitled.md",
-    "SoftwareManual/MicosoftOffice.md",
     "media/1bffabf753c0392c3520a8248c0ce74a.gif.md",
-    "SoftwareManual/VSCode.md",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual",
     "IDE/VSCode.md",
@@ -215,7 +217,6 @@
     "Markdown.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
-    "Architecture/ABP.md",
     "CTF/CRYPTO",
     "CTF/ToolManual/CyberChef.md.baiduyun.uploading.cfg",
     "CTF/MISC/图像隐写/PNG.md.baiduyun.uploading.cfg",
