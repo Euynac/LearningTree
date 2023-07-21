@@ -159,8 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5,
-    "collapsed": true
+    "width": 340.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,8 +176,8 @@
   "active": "a699c46d79554932",
   "lastOpenFiles": [
     "CTF/ToolsList.md",
-    "attachments/006623272f7415e1c9c9d30e9f1800d4.png",
     "SoftwareManual/CMD.md",
+    "attachments/006623272f7415e1c9c9d30e9f1800d4.png",
     "ComputerScience/人工智能.md",
     "SoftwareManual/AHK.md",
     "ComputerScience",
