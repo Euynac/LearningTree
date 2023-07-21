@@ -1,0 +1,634 @@
+# PowerShell
+
+#### 获取CPU温度
+
+```powershell
+$data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_ThermalZoneInformation" -Namespace "root/CIMV2"
+
+@($data)[0].HighPrecisionTemperature
+```
+
+#### 获取电池寿命报告
+
+`powercfg batteryreport output "D:\\battery_report.html"`
+
+#### 临时无限制模式
+
+`pwsh -ExecutePolicy Unrestricted`
+
+在当前会话有效
+
+#### 计算文件sha256
+
+`Get-FileHash filePath`
+
+`CertUtil -hashfile {PATH AND FILE NAME} {SHA256|MD5}`
+
+#### 端口转发
+
+`netsh interface portproxy add v4tov4 listenaddress=10.0.10.21 listenport=8081 connectaddress=192.168.33.111 connectport=8081`
+
+`netsh interface portproxy` 表示端口映射列表
+
+`add v4tov4` 表示添加的是IPV4到IPV4的端口
+
+`listenaddress` 表示侦听的ip地址，填的是映射方
+
+`listenport` 侦听的端口，可以与被映射的端口设置成不一样
+
+`connectaddress` 被映射方（连接方）的ip地址
+
+`connectport` 被映射方的端口
+
+`netsh interface portproxy delete v4tov4 listenaddress=10.0.10.21 listenport=8081`
+
+`netsh interface portproxy show all` 查看存在的转发
+
+注意，浏览器出现`ERR_UNSAFE_PORT`错误不是因为服务器那边，而是浏览器本身定义了内置端口，这些端口是无法被使用的：
+
+```
+
+1, // tcpmux
+7, // echo
+9, // discard
+11, // systat
+13, // daytime
+15, // netstat
+17, // qotd
+19, // chargen
+20, // ftp data
+21, // ftp access
+22, // ssh
+23, // telnet
+25, // smtp
+37, // time
+42, // name
+43, // nicname
+53, // domain
+77, // priv-rjs
+79, // finger
+87, // ttylink
+95, // supdup
+101, // hostriame
+102, // iso-tsap
+103, // gppitnp
+104, // acr-nema
+109, // pop2
+110, // pop3
+111, // sunrpc
+113, // auth
+115, // sftp
+117, // uucp-path
+119, // nntp
+123, // NTP
+135, // loc-srv /epmap
+139, // netbios
+143, // imap2
+179, // BGP
+389, // ldap
+465, // smtp+ssl
+512, // print / exec
+513, // login
+514, // shell
+515, // printer
+526, // tempo
+530, // courier
+531, // chat
+532, // netnews
+540, // uucp
+556, // remotefs
+563, // nntp+ssl
+587, // stmp?
+601, // ??
+636, // ldap+ssl
+993, // ldap+ssl
+995, // pop3+ssl
+2049, // nfs
+3659, // apple-sasl / PasswordServer
+4045, // lockd
+6000, // X11
+6665, // Alternate IRC
+6666, // Alternate IRC
+6667, // Standard IRC
+6668, // Alternate IRC
+6669, // Alternate IRC
+```
+
+# 一般
+
+#### win11启动组策略gpedit.msc
+
+
+```powershell
+@echo off
+
+ pushd "%~dp0"
+
+ dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt
+
+ dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt
+
+ for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+
+ pause
+```
+
+
+#### 解决UTF8编码问题
+
+`CHCP 65001`
+
+#### 修复系统损坏文件
+
+管理员模式运行
+
+`sfc /scannow`
+
+#### 换回win10右键
+
+切换到旧版右键菜单：
+
+
+``` sh
+reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+```
+
+
+恢复回Win11右键菜单：
+
+
+```sh
+reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
+```
+
+
+重启Windows资源管理器生效：
+
+`taskkill /f /im explorer.exe & start explorer.exe`
+
+#### 自启动程序
+
+文件位置打开后，按 Windows 徽标键 + R，键入`shell:startup`，然后选择“确定”。这将打开“启动”文件夹。
+
+将该应用的快捷方式从文件位置复制并粘贴到“启动”文件夹中。
+
+#### WIFI密码
+
+`netsh wlan show profiles` 查看所有连接过的WiFi配置
+
+`netsh wlan show profiles "TP-LINK_5G_4926" key=clear`  查看配置文件
+
+#### 查看文件md5等值
+
+Certutil.exe作为证书服务的一部分安装。您可以使用Certutil.exe转储和显示证书颁发机构（CA）配置信息，配置证书服务，备份和还原CA组件，以及验证证书，密钥对和证书链。
+
+```sh
+
+1.  certutil -hashfile filename MD5
+2.  certutil -hashfile filename SHA1
+3.  certutil -hashfile filename SHA256
+
+```
+
+#### 快速切换到指定文件夹
+
+文件资源管理器直接打开那个文件夹然后在url地址栏填上cmd打开
+
+#### 强行删除权限不足的文件（需要管理员权限）
+
+
+```bash
+set path=”XX”
+
+takeown /F %path% /r /d y
+
+cacls %path% /t /e /g Administrators:F
+
+rd /s /q $path$
+```
+
+
+#### 打开cmd当前目录
+
+```sh
+1.  explorer .
+2.  explorer %cd%
+3.  start .
+4.  start %cd%
+```
+
+#### Windows键失效
+
+尝试`FN+Windows`键一起连续按多几次（十几次），解锁win键
+
+#### 不重启使环境变量修改生效
+
+以修改环境变量“PATH”为例，修改完成后，进入DOS命令提示符，输入：`set PATH=C:` ，关闭DOS窗口。再次打开DOS窗口，输入：`echo %PATH%` ，可以发现PATH 值已经生效。
+
+DOS窗口必须重启后环境变量才有效。
+
+#### 以树形形式展示目录结构
+
+`tree`
+
+#### 判断程序是否以管理员运行
+
+任务管理器中，详细信息栏，选择列，选择开启“特权”一栏。
+
+### 端口占用问题
+
+Hyper-V 会保留部分tcp端口，开始到结束范围内的端口不可用, 使用如下命令查看保留的端口：
+
+`netsh interface ipv4 show excludedportrange protocol=tcp`
+
+保留的端口是随机的，每次重启电脑都会改变，因此可以通过重启电脑来解决。
+
+除了重启电脑，也可以运行`net stop winnat`停止 winnat 服务，然后再运行`net start winnat`启动 winnat 服务。
+
+让Hyper-V再随机初始化一些端口保留，如果正好没随机到要用的端口，那一次成功。如果还是随机到了要用的端口，那就只能多来几次。
+
+也可以永久排除保留端口：
+
+①在运行 Docker 之前，以管理员身份运行 powershell
+
+②使用以下命令永久排除6379作为保留端口(如果端口被占用需要重启一次电脑)
+
+`netsh int ipv4 add excludedportrange protocol=tcp startport=6379 numberofports=1 store=persistent`
+
+提示：关键在于`store=persistent`参数表示持久化信息
+
+上面的命令可以通过修改numberofports参数保留startport开始的多个端口
+
+③再次运行 `netsh interface ipv4 show excludedportrange protocol=tcp` 命令可以看到6379端口已被排除(带有\*号标记)
+
+还有一种办法是重新设置一下「TCP 动态端口范围」，让Hyper-V只在我们设定的范围内保留端口即可。可以以管理员权限运行下面的命令，将「TCP 动态端口范围」重新设定为49152-65535。如果你觉得这个范围太大，还可以改小一点。
+
+![](media/006623272f7415e1c9c9d30e9f1800d4.png)
+
+然后重启电脑即可。
+
+重启电脑后，再运行命令netsh int ipv4 show dynamicport tcp查看动态端口范围，发现确实已经修改为了49152-65535。
+
+## 设置Alias
+
+[Doskey | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490894(v=technet.10)?redirectedfrom=MSDN)
+
+`doskey npd=notepad $2 $1`
+
+即`npd aaa bbb = notepad bbb aaa`
+
+`doskey prt=echo $*`
+
+即 `prt xxx xxx xx = echo xxx xxx xx`
+
+`doskey newline=echo $1 $T echo $2`
+
+其中`$t`或`$T`是新的一行，即多执行下一行。
+
+`doskey /macros` 显示设置的宏定义
+
+`doskey macroname=` 删除宏定义（将已设置的宏设置为null）
+
+但是注意，它是临时的，需要做如下操作变成永久：
+
+[command line - Create permanent DOSKEY in Windows cmd - Super User](https://superuser.com/questions/1134368/create-permanent-doskey-in-windows-cmd)
+
+## 文件操作
+
+注意批处理`*.bat` 读取文件是用`ANSI`编码的，所以如果是用的`UTF-8`编码之类的，读取中文之类会乱码。因此需要先转`ANSI`编码，具体可以使用文本编辑器里的编码选项中进行转换文件的编码。
+
+`cd`命令只能在当前盘符使用。切换硬盘直接输入`d:`、`e:`等。
+
+## 网络
+
+| 命令                                | 参数                                                                                                                                                                                                                                        | 简介                                                                                                                                                                                                                               |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| netstat                             | -a 显示一个所有的有效连接信息列表，包括已建立的连接（ESTABLISHED），也包括监听连接请求（LISTENING）的那些连接。 -b 显示在创建每个连接或侦听端口时涉及的可执行程序。 -n 以数字形式显示地址和端口号。 -o 显示拥有的与每个连接关联的进程 ID。  | net status 显示网络连接、路由表和网络接口信息，可以让用户得知有哪些网络连接正在运作。 不带参数则是显示活动的TCP连接 netstat -aon\|findstr "80"（以80端口为例） 其他用例： 查看某个端口具体被那个应用占用 tasklist \| findstr “PID” |
+| set http_proxy set https_proxy      | =socks5://127.0.0.1:1080 或http也可以                                                                                                                                                                                                       | CMD设置临时代理（永久需要在环境变量中设置）可以用curl测试，不能使用ping。                                                                                                                                                          |
+| netsh interface ipv4 show neighbors |                                                                                                                                                                                                                                             | 查看局域网邻居ip                                                                                                                                                                                                                   |
+| tracert                             |                                                                                                                                                                                                                                             | 路由跟踪，指示到目标地址经过的路由IP                                                                                                                                                                                               |
+|                                     |                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                    |
+
+# 批处理基础
+
+## 输入与输出
+
+#### \>与\>\>
+
+
+```sh
+ping sz.tencent.com > a.txt
+ping sz1.tencent.com >> a.txt
+```
+
+将前面命令的内容输入到a.txt文件中。
+
+区别是`\>`会覆盖文本中的内容，`\>\>`是追加写入到文件中。
+
+`\<`，输入重定向命令，从文件中读入命令输入，而不是从键盘中读入。
+
+`\>&`，将一个句柄的输出写入到另一个句柄的输入中。
+
+`\<&`，刚好和`\>&`相反，从一个句柄读取输入并将其写入到另一个句柄输出中。
+
+## 标识符
+
+DOS不支持长文件名，所以就出现了Tempor\~1
+
+一般可以在cmd使用help xx来看帮助
+
+| 标识符               | 作用                                                                                                                                                                                                                                                                                                                                                               |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| @echo off            | echo off 可以关闭命令执行一行时显示本身的效果，即只会输出命令执行的结果。 比如如果有echo hello这行命令，执行时候会是 \>\>echo hello hello 如果使用了echo off ，那么echo hello也没有了 @echo off则连同echo off该命令也不显示。 常与\>、\>\>使用，输出echo结果到某文件中 在命令后跟  1\>nul 不显示命令运行的正确提示 2\>nul 不显示错误的提示 \>nul 屏蔽命令输出内容  |
+| ::                   | **注释**，不会执行                                                                                                                                                                                                                                                                                                                                                 |
+| pause                | 暂停。是让当前程序进程暂停一下，并显示一行信息：请按任意键继续. . .                                                                                                                                                                                                                                                                                                |
+| goto xxx 与 :xxx     | goto是个跳转命令，:xxx是一个标签。当程序运行到goto xxx时，将自动跳转到:xxx定义的部分去执行了                                                                                                                                                                                                                                                                       |
+| %n(数字)             | 批参数 可以用于获取执行批处理时用户输入的参数 比如echo %2 %1 %3，保存为a.bat，执行a.bat 1 2 3，将会输出2 1 3 而%0是输出调用bat时候的前缀，比如上面a.bat 1 2 3，会输出a.bat 批脚本里的 %\* 是指出所有的参数(如 %1 %2 %3 %4 %5 ...) 批参数(%n)的替代已被增强 %\~1 - 删除引号(")，扩展 %1 %\~f1 - 将 %1 扩展到一个完全合格的路径名 %\~d1 - 仅将 %1 扩展到一个驱动器号 |
+| call                 | 从批处理程序调用另一个批处理程序。                                                                                                                                                                                                                                                                                                                                 |
+| type filename        | 显示文本文件的内容。                                                                                                                                                                                                                                                                                                                                               |
+| \|                   | 管道符。让前一命令的输出当做后一命令的输入。                                                                                                                                                                                                                                                                                                                       |
+| more                 | 逐屏显示输出。                                                                                                                                                                                                                                                                                                                                                     |
+| command & command    | 用来连接n个DOS命令，并把这些命令按顺序执行，而不管是否有命令执行失败。copy a.txt b.txt /y & del a.txt 其实这句和move a.txt b.txt的效果是一样的                                                                                                                                                                                                                     |
+| command && command   | （且）把它前后两个命令组合起来当一个命令来用，与&命令不同之处在于，它在从前往后依次执行被它连接的几个命令时会自动判断是否有某个命令执行出错，一旦发现出错后将不继续执行后面剩下的命令。                                                                                                                                                                            |
+| command \|\| command | （或）前一个命令执行成功便不执行后面的命令 连续使用&&和\|\|，优先级&&比\|\|高                                                                                                                                                                                                                                                                                      |
+| %var%                | 获取变量var的值，使用set var=xxx设定的局部变量，等号两边不能有空格                                                                                                                                                                                                                                                                                                 |
+
+## IF 条件判断
+
+IF [NOT] ERRORLEVEL number do command
+
+IF [NOT] string1==string2 do command
+
+IF [NOT] EXIST filename do command
+
+cmd中输入help if可以看到详细解释
+
+ERRORLEVEL number ：如果最后运行的程序返回一个等于或大于指定数字的退出代码，指定条件为 true。(环境变量errorlevel的初始值为0，表示命令执行成功。当一些命令执行不成功，就会返回一个数值，如：1 ，2，需要具体查命令失败返回的数字是什么意思)
+
+#### ELSE
+
+ELSE 子句必须出现在同一行上的 IF 之后。例如:
+
+IF EXIST filename. (
+
+del filename.
+
+) ELSE (
+
+echo filename. missing.
+
+)
+
+#### 比较数值
+
+set /a num1=20
+
+set /a num2=15
+
+if %num1% gtr %num2% echo %num1%大于%num2%
+
+if %num1% EQU %num2% echo %num1%等于%num2%
+
+if %num1% LSS %num2% echo %num1%小于%num2%
+
+比较运算符一览：
+
+EQU - 等于
+
+NEQ - 不等于
+
+LSS - 小于
+
+LEQ - 小于或等于
+
+GTR - 大于
+
+GEQ - 大于或等于
+
+## FOR 循环语句
+
+在cmd窗口中：for %I in (command1) do command2
+
+在批处理文件中：for %%I in (command1) do command2 //红色部分不可省略；command1表示字符串或变量，command2表示字符串、变量或命令语句
+
+在cmd窗口中，for之后的形式变量I必须使用单百分号引用，即%I；而在批处理文件中，引用形式变量I必须使用双百分号，即%%I
+
+#### for中的形式变量i
+
+for语句的形式变量I，可以换成26个字母中的任意一个，这些字母会区分大小写，也就是说，%%I和%%i会被认为不是同一个变量；形式变量I还可以换成其他的字符，但是，为了不与批处理中的%0～%9这10个形式变量发生冲突，请不要随意把%%I替换为%%0 ～%%9中的任意一个
+
+#### command1（in）
+
+in和do之间的command1表示的字符串或变量可以是一个，也可以是多个，每一个字符串或变量，我们称之为一个元素，每个元素之间，用空格键、跳格键、逗号、分号或等号分隔；（即一个list中的元素）
+
+for语句依次提取command1中的每一个元素，把它的值赋予形式变量I,带到do后的command2中参与命令的执行；（其实就是类似C\#中的foreach var i in command1）
+
+### for /f （设计用于解析文本）
+
+for /f %%i in (test.txt) do echo %%i & pause
+
+for /f 语句是以行为单位处理文本文件的
+
+#### delims= （切分字符串）
+
+for /f "delims=，" %%i in (test.txt) do echo %%i
+
+将会获取test.txt中每行被，分割的前面的字符串作为in中的list元素（，及，后面的内容被省略），delims可以设定多个分隔符，但for /f 只会提取分隔符分割每行字符串后的第一组元素
+
+需要注意的是：如果没有指定"delims=符号列表"这个开关，那么，for /f 语句默认以空格键或跳格键作为分隔符号
+
+#### tokens= （定点提取）
+
+因为delims分割后提取的总是第一组字符串内容，如果要提取其他组的字符串，需要使用tokens。
+
+tokens= 后面一般跟的是数字，如 tokens=2，也可以跟多个，但是每个数字之间用逗号分隔，如 tokens=3,5,8，它们的含义分别是：提取第2节字符串、提取第3、第5和第8节字符串。注意，这里所说的“节”，是由 delims= 这一开关划分的，它的内容并不是一成不变的。
+
+tokens=1-5，提取1-5节的内容，需要用5个变量接收
+
+tokens=1,\* 仅切分一次字符串成两组（因为只提取第一组内容），剩下的作为整体（且没有被切分），需要两个变量接收
+
+##### 需要接收多个组的情况
+
+for /f "delims=， tokens=2,5" %%i in (test.txt) do echo %%i %%j
+
+如果单独使用%%i，会发现只是得到第二组的字符串，第五组的没有。
+
+for /f对该情况做了规定，如果变量是%%i接收的第一个数字指代的内容，那么用%%j接收第二个数字、%%k接收第三个数字。比如如果是用的%%x，则%%y就是第二个数字。
+
+#### skip=n （跳过n行内容）
+
+很多时候，有用的信息并不是贯穿文本内容的始终，而是位于第N行之后的行内，为了提高文本处理的效率，或者不受多余信息的干扰，for /f 允许你跳过这些无用的行，直接从第N+1行开始处理，这个时候，就需要使用参数 skip=n，其中，n是一个正整数，表示要跳过的行数。
+
+for /f "skip=2" %%i in (test.txt) do echo %%i
+
+这段代码将跳过头两行内容，从第3行起显示test.txt中的信息。
+
+#### eol= （忽略以给定单个字符开头的行不处理）
+
+for /f "eol=;" %%i in (test.txt) do echo %%i
+
+忽略;开头的行
+
+eol本意应该是end of line，本应该是忽略某字符结尾，可能是微软bug
+
+for /f 语句是默认忽略以分号打头的行内容的，正如它默认以空格键或跳格键作为字符串的切分字符一样。
+
+如果要取消这个默认设置，可选择的办法是：
+
+1、为eol=指定另外一个字符；
+
+2、使用 for /f "eol=" 语句，也就是说，强制指定字符为空，就像对付delims=一样。
+
+#### usebackq
+
+一般来说for /f 的用法就是1、2、3种，1就是使用文件作为输入的时候，2就是命令运行结果作为输入的，3是字符串作为输入。
+
+但如果第一种中，文件名是有空格或&等特殊符号的时候，使用第一种写法就会出错。这时候就使用usebackq来拓展第一种文件输入方式变为””的，5、6相应拓展2、3
+
+1、for /f %%i in (文件名) do (……)
+
+2、for /f %%i in ('命令语句') do (……)
+
+3、for /f %%i in ("字符串") do (……)
+
+4、for /f "usebackq" %%i in ("文件名") do (……)
+
+5、for /f "usebackq" %%i in (\`命令语句\`) do (……)
+
+6、for /f "usebackq" %%i in ('字符串') do (……)
+
+### 变量延迟
+
+@echo off
+
+set num=0
+
+for /f %%i in ('dir /a-d /b \*.exe') do (
+
+set /a num+=1
+
+echo num 当前的值是 %num%
+
+)
+
+批处理中的一般使用的变量和编程语言的变量不太一样。批处理是自上而下逐条执行，而且所谓的一条也不是指一行，比如if…else、for、管道符、连接符（&、&&、\|\|）中一块代码整体才被当做一条。
+
+批处理的预处理机制也是一条一条处理的，分析完第一条set num = 0后，然后分析整体的for循环语句，检测语法错误等，其中%num%在num已经有赋值，所以可以被替换。而num+=1虽然确实有用，但num值已经被替换掉了，所以结果一直都是0。
+
+这种替换在一条内部就确定变量的值了，所以如果让这种特性“延迟”，那么num变量就能变化了（即暂不替换变量），因此有了延迟变量。有两种用法：
+
+① 使用 setlocal enabledelayedexpansion 语句：在获取变化的变量值语句之前使用setlocal enabledelayedexpansion，并把原本使用百分号对闭合的变量引用改为使用感叹号对来闭合；
+
+set num=0
+
+setlocal enabledelayedexpansion
+
+for /f %%i in ('dir /a-d /b \*.exe') do (
+
+set /a num+=1
+
+echo num 当前的值是 !num!
+
+)
+
+② 使用 call 语句：在原来命令的前部加上 call 命令，并把变量引用的单层百分号对改为双层。
+
+for /f %%i in ('dir /a-d /b \*.exe') do (
+
+set /a num+=1
+
+call echo num 当前的值是 %%num%%
+
+)
+
+### for /r （遍历文件夹）
+
+其中r是recursive，递归的
+
+for /r [目录] %%i in (元素集合) do 命令语句集合
+
+1、列举“目录”及该目录路径下所有子目录，并把列举出来的目录路径和元素集合中的每一个元素拼接成形如“目录路径\\元素”格式的新字符串，然后，对每一条这样的新字符串执行“命令语句集合”中的每一条命令；
+
+特别的是：当“元素集合”带以点号分隔的通配符?或\*的时候，把“元素集合”视为文件（不视为文件夹），整条语句的作用是匹配“目录”所指文件夹及其所有子文件夹下匹配的文件；若不以点号分隔，则把“元素集合”视为文件夹（不视为文件）；
+
+2、当省略掉“目录”时，则针对当前目录；
+
+3、当元素集合中仅仅是一个点号的时候，将只列举目录路径；
+
+**@echo off**
+
+**for /r d:\\test %%i in (.) do echo %%i**
+
+**pause**
+
+执行的结果如下所示：
+
+**d:\\test\\.**
+
+**d:\\test\\1\\.**
+
+**d:\\test\\2\\.**
+
+**d:\\test\\3\\.**
+
+效果就是显示 d:\\test 目录及其之下是所有子目录的路径，其效果与 dir /ad /b /s d:\\test 类似。若要说到两者的区别，可以归纳出3点：
+
+1、for /r 列举出来的路径最后都带有斜杠和点号，而 dir 语句则没有，会对获取到的路径进行进一步加工产生影响；
+
+2、for /r 不能列举带隐藏属性的目录，而 dir 语句则可以通过指定 /a 后面紧跟的参数来获取带指定属性的目录，更加灵活；
+
+3、若要对获取到的路径进行进一步处理，则需要把 dir 语句放入 for /f 语句中进行分析，写成 for /f %%i in ('dir /ad /b /s') do …… 的形式；由于 for /r 语句是边列举路径边进行处理，所以，在处理大量路径的时候，前期不会感到有停顿，而 for /f 语句则需要等到 dir /ad /b /s 语句把所有路径都列举完之后，再读入内存进行处理，所以，在处理大量路径的时候，前期会感到有明显的停顿。
+
+第2点差别很容易被大家忽视，导致用 for /r 列举路径的时候会造成遗漏；而第3点则会让大家有更直观的感受，很容易感觉到两者之间的差别。
+
+要是“元素集合”不是点号呢？
+
+**@echo off**
+
+**for /r d:\\test %%i in (a b c) do echo %%i**
+
+**pause**
+
+运行的结果是：
+
+**D:\\test\\1\\a**
+
+**D:\\test\\1\\b**
+
+**D:\\test\\1\\c**
+
+**D:\\test\\2\\a**
+
+**D:\\test\\2\\b**
+
+**D:\\test\\2\\c**
+
+**D:\\test\\3\\a**
+
+**D:\\test\\3\\b**
+
+**D:\\test\\3\\c**
+
+原来，它的含义是：列举 d:\\test 及其所有的子目录，对所有的目录路径都分别添加a、b、c之后再显示出来。
+
+**@echo off**
+
+**for /r d:\\test %%i in (\*.txt) do echo %%i**
+
+**pause**
+
+运行结果是：
+
+**D:\\test\\test.txt**
+
+**D:\\test\\1\\1.txt**
+
+**D:\\test\\1\\2.txt**
+
+**D:\\test\\2\\a.txt**
+
+**D:\\test\\2\\b.txt**
+
+**D:\\test\\3\\1.txt**
+
+这段代码的含义是：列举 d:\\test 及其所有子目录下的txt文本文件（以.txt结尾的文件夹不会被列出来）。
