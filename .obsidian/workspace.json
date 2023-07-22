@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "ComputerScience/ArtificialIntelligence.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "ComputerScience/ArtificialIntelligence.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "ComputerScience/ArtificialIntelligence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Database.md"
+                "file": "ComputerScience/ArtificialIntelligence.md"
               }
             }
           },
@@ -181,8 +181,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bcaaad220d822f98",
+  "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "ComputerScience/Database.md",
     "ComputerScience/BigData.md",
     "ComputerScience/ArtificialIntelligence.md",
     "README.md",
@@ -193,7 +194,6 @@
     "Music/FLStudio.md",
     "CTF/ToolManual/Wireshark.md",
     "ComputerScience/SoftwareTest.md",
-    "ComputerScience/Database.md",
     "SoftwareManual/Git.md",
     "CTF/ToolsList.md",
     "CTF/README.md",
