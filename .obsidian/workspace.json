@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/VSCode.md",
     "CTF/ToolsList.md",
     "README.md",
@@ -216,7 +217,6 @@
     "attachments/e11c5afabe2c155e82e65e9228d35871.png",
     "SoftwareManual/AHK.md",
     "SoftwareManual/CMD.md",
-    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/MicosoftOffice.md",
     "Music",
     "CTF/MISC/图像隐写/图像隐写.md",
