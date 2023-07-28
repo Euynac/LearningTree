@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273
+    "width": 299.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -183,6 +184,7 @@
   },
   "active": "a699c46d79554932",
   "lastOpenFiles": [
+    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20230726170452.png",
     "SoftwareManual/VisualStudio.md",
     "CTF/ToolsList.md",
@@ -225,9 +227,7 @@
     "attachments/ec41e0fb319b852f88fb9e1d58133e0e.png",
     "attachments/e853f449ad2dc9e60a72101d81454ab8.png",
     "attachments/e354ddfa068d3c01865b622d3edbf92a.png",
-    "attachments/e11c5afabe2c155e82e65e9228d35871.png",
     "SoftwareManual/AHK.md",
-    "SoftwareManual/CMD.md",
     "SoftwareManual/MicosoftOffice.md",
     "未命dd名.canvas"
   ]
