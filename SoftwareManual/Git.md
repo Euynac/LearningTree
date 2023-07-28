@@ -62,12 +62,15 @@ git config --global --unset http.proxy # 移除代理
 
 ```bash
 # 1. configure your new username and email
-# change username 
+# change username The format of the username in Git is configurable and can be set to either "username.user" or "user.name"
 git config username.user <username>
 # change email
 git config username.email <email>
 
-#2 run this command
+# 获取配置
+git config username.user
+
+#2 run this command.This Git command will amend the previous commit with the current changes and reset the author to the original author of the commit. The -C HEAD option specifies that the commit message should not be changed and the --reset-author option resets the author to the original author of the commit.
 git commit --amend -C HEAD --reset-author
 
 #3 run this command
