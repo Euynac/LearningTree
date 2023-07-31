@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "CloudNative/Deployments/K8S部署笔记.md"
               }
             }
           },
@@ -183,9 +183,9 @@
   },
   "active": "f49c79704f16a261",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/ToolManual/CyberChef.md",
-    "CTF/ToolsList.md",
     "SoftwareManual/Git.md",
     "CTF/ToolManual/010Editor.md",
     "attachments/Pasted image 20230730194022.png",
