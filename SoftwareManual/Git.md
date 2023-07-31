@@ -154,7 +154,7 @@ git push origin --force-with-lease
 但实测发现还是需要用`--force`，不知道为什么用上面的命令会失败。
 而且还遇到了没有origin的定义的问题，手动添加`git add remote origin <url>`
 另外推送的时候还需要指定`set-upstream`的问题，导致只能一分支一分支的进行push
-
+最后发现其实可以用`git push --force --all`来批量推送
 
 ### .gitingore不生效
 
