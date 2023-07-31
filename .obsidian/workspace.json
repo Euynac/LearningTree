@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3eae69a8b4b7dcbb",
+        "id": "01ee4f7b5132d573",
         "type": "tabs",
         "children": [
           {
-            "id": "a699c46d79554932",
+            "id": "f49c79704f16a261",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/Git.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/Git.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "SoftwareManual/Git.md"
               }
             }
           },
@@ -181,8 +181,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a699c46d79554932",
+  "active": "f49c79704f16a261",
   "lastOpenFiles": [
+    "SoftwareManual/Git.md",
+    "CTF/ToolsList.md",
     "CTF/ToolManual/010Editor.md",
     "attachments/Pasted image 20230730194022.png",
     "CTF/README.md",
@@ -194,7 +196,6 @@
     "attachments/Pasted image 20230730175319.png",
     "CTF/MISC/压缩包.md",
     "CTF/ToolManual/CyberChef.md",
-    "CTF/ToolsList.md",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
     "SoftwareManual/MicosoftOffice.md.baiduyun.uploading.cfg",
     "SoftwareManual/Git.md.baiduyun.uploading.cfg",
@@ -220,7 +221,6 @@
     "Music/FLStudio.md",
     "CTF/ToolManual/Wireshark.md",
     "ComputerScience/SoftwareTest.md",
-    "SoftwareManual/Git.md",
     "CTF/CTF.md",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png",
     "attachments/fcf4104187daf017d196f9f78ae3026d.png",

@@ -61,6 +61,16 @@ git config --global http.proxy socks5://127.0.0.1:1080 # 设置代理为sock5（
 git config --global --unset http.proxy # 移除代理
 ```
 
+### 迁移Git仓库到另一个Git仓库
+
+```shell
+# 使用--mirror克隆仓库
+git clone <git-address> --mirror
+# 进入xxx.git
+cd <New directory where your OLD repo was cloned>
+git remote set-url origin <URL to my NEW repo location>
+git push --mirror origin
+```
 
 ### Git提交时用错了用户名
 
@@ -142,8 +152,6 @@ git push origin --force-with-lease
 > `--force-with-lease` It allows you to overwrite a remote branch only if your local copy is up to date with the remote branch, or in other words, if you have the “lease” on the remote branch. This way, you can avoid losing someone else’s work that you have not fetched yet. If the remote branch has changed since you last fetched it, the push will be rejected and you will have to fetch and merge or rebase before pushing again.
 
 但实测发现还是需要用`--force`，不知道为什么用上面的命令会失败。
-
-
 
 ### .gitingore不生效
 
