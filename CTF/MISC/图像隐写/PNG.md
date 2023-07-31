@@ -68,6 +68,11 @@ PNG定义了两种类型的数据块，有四种必选的称为关键数据块(c
 | Filter method      | 1 byte  | 滤波器方法                                                                                                                                                                             |
 | Interlace method   | 1 byte  | 隔行扫描方法：  <br>0：非隔行扫描   <br>1： Adam7(由Adam M. Costello开发的7遍隔行扫描方法)                                                                                             |
 
+#### ※宽高隐写
+IHDR会出现宽高隐写。
+一般是高隐写，在windows中直接往大的值修改高即可。在linux中如CRC不匹配则报错无法显示。
+直接修改宽会导致图片显示异常，需要修改使得CRC匹配。
+
 
 ### 调色板数据块PLTE（palette chunk）
 
@@ -92,6 +97,30 @@ PLTE数据块是定义图像的调色板信息，PLTE可以包含1~256个调色�
 存储实际图像数据。PNG数据允许包含多个连续的图像数据块。
 IDAT存放着图像真正的数据信息，因此，如果能够了解IDAT的结构，我们就可以很方便的生成PNG图像
 
+#### ※IDAT隐写
+
+> 标志：当上一个IDAT块未填充满时出现了下一个IDAT块。
+
+最好有三个以上的IDAT才好判断。
+通过010的模板分析，如果第一个IDAT块大小为1000，第二个IDAT为800，第三个IDAT为600，这里就可以判断出来第三个块是隐写的数据，因为只有当第二个IDAT填充到1000后，才会继续填充第三个IDAT
+
+可以用脚本读取来解题：
+```python
+import zlib
+import binascii
+fp = open('pngpng.png','rb')
+fp.seek(107356,0)
+# print(fp.read(86741).hex())
+fp1 = zlib.decompress(binascii.unhexlify(fp.read(86741).hex()))
+fp2 = open('1.rar','wb')
+fp2.write(fp1)
+```
+
+
 ### 图像结束数据IEND（image trailer chunk）
 
 放在文件尾部，表示PNG数据流结束。
+
+#### ※附加隐写
+
+> 标志：IEND后不应该再有数据块
