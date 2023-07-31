@@ -80,6 +80,8 @@ git push --force
 #### 批量修改提交的用户名
 
 ```shell
+#!/bin/sh
+
 git filter-branch --env-filter '
 OLD_EMAIL="your-old-email@example.com"
 CORRECT_NAME="Your Correct Name"
@@ -101,7 +103,21 @@ fi
 
 ###### 不修改历史来将错误的用户/邮箱关联上
 
-使用`git-mailmap`特性
+使用`mailmap`特性，在git仓库根目录下创建`.mailmap`文件，然后可以使用`git shortlog`功能看看是否关联正确。
+
+[gitmailmap(5) (htmlpreview.github.io)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/newren/git-filter-repo/docs/html/gitmailmap.html)
+
+```mailmap
+Proper Name <proper@email.xx> Commit Name <commit@email.xx>
+```
+
+但似乎对Gitlab不管用。
+
+不过可以通过[github.com/newren/git-filter-repo/](https://github.com/newren/git-filter-repo/)该工具，通过编写的`mailmap`文件，自动应用`filter-branch`命令
+
+```shell
+git filter-repo --mailmap git-mailmap
+```
 
 [git - How do I change the author and committer name/email for multiple commits? - Stack Overflow](https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits/9491696#9491696)
 
