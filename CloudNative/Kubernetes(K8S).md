@@ -115,11 +115,12 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 
 ### 概念
 
-|名称 |作用|备注|
-|:------ |:---- |:---- |
-|KubeKey|用于便捷安装K8S和KubeSphere的工具|  |
-|VIP|virtual IP，它是一群节点共用的一个虚拟IP|  |
+|名称|作用 |备注 |
+|:------- |:----------------------------------------- |:---- |
+|KubeKey |用于便捷安装K8S和KubeSphere的工具 |  |
+|VIP |virtual IP，它是一群节点共用的一个虚拟IP |  |
 |Ceph |分布式存储方案，实现K8S的存储卷方面的能力|  |
+|Ceph-CSI|Ceph Container Storage Interface. Ceph 容器存储接口是一个用于 RBD 和 CephFS 的驱动程序。|  |
 
 #### Ceph
 
