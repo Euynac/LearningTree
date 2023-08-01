@@ -116,6 +116,7 @@ fp2 = open('1.rar','wb')
 fp2.write(fp1)
 ```
 
+因为PNG是采用了无损的zlib算法压缩图像数据，所以提取数据还得用zlib算法解压。
 
 ### 图像结束数据IEND（image trailer chunk）
 
