@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8bba2cd5f7b97135",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Docker.md"
+                "file": "CloudNative/Deployments/K8S部署笔记.md"
               }
             }
           },
@@ -182,10 +196,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3848347c577a7e12",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
-    "README.md",
+    "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Docker.md",
+    "SoftwareManual/Git.md",
+    "README.md",
     "CloudNative/CloudNative.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "ComputerScience/Linux.md",
@@ -206,7 +222,6 @@
     "CTF/ToolManual/010Editor.md",
     "CTF/ToolsList.md",
     "CTF/ToolManual/CyberChef.md",
-    "SoftwareManual/Git.md",
     "CTF/README.md",
     "CTF/ToolManual/VMware.md",
     "CTF/MISC/压缩包.md",
@@ -229,7 +244,6 @@
     "ComputerScience/BigData.md",
     "ComputerScience/IoT.md",
     "Music/MusicTheory.md",
-    "Music/FLStudio.md",
     "未命dd名.canvas"
   ]
 }

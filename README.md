@@ -48,6 +48,5 @@
 |:---- |:------------- |:------------ |
 | dr   | delete raw    | 删除当前行   |
 | dc   | delete column | 删除当前列   | 
-| t    | table         | 创建表       |
 | sd   | swap down     | 与下一行互换 |
 | su   | swap up       | 与上一行互换 |

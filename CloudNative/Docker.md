@@ -107,28 +107,6 @@ docker run -t -i 可以简写为-it
 | save                                             | 保存镜像                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | -o 导出的路径 建议.tar结尾 可以同时将多个镜像打包到一个文件中                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | load                                             | 加载镜像                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | -i 输入文件路径                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Failed to get D-Bus connection: Operation not permitted
-
-Docker的设计理念是在容器里面不运行后台服务，容器本身就是宿主机上的一个独立的主进程，也可以间接的理解为就是容器里运行服务的应用进程。一个容器的生命周期是围绕这个主进程存在的，所以正确的使用容器方法是将里面的服务运行在前台。
-
-再说到systemd，这个套件已经成为主流Linux发行版（比如CentOS7、Ubuntu14+）默认的服务管理，取代了传统的SystemV风格服务管理。systemd维护系统服务程序，它需要特权去会访问Linux内核。而容器并不是一个完整的操作系统，只有一个文件系统，而且默认启动只是普通用户这样的权限访问Linux内核，也就是没有特权，所以自然就用不了！
-
-因此，请遵守容器设计原则，一个容器里运行一个前台服务！
-
-我就想这样运行，难道解决不了吗？
-
-答：可以，以特权模式运行容器。
-
-创建容器：
-
-\# docker run -tid --name centos_1 --privileged=true centos:latest /sbin/init
-
-进入容器：
-
-\# docker exec -it centos7 /bin/bash
-
-这样可以使用systemctl启动服务了。
-
 # 扩展
 
 ## Docker File
@@ -213,7 +191,7 @@ C:\\Users\\user\\work -\> /c/Users/user/work
 | volume prune                                                                                                                                                             | 移除未使用的Volume                                                                                                   | As long as volumes are associated with a container (either running or not), they cannot be removed.                                                        |
 | docker run -e ‘ACCEPT_EULA=Y’ -e ‘SA_PASSWORD=passw0rd1!’ -p 1433:1433 –name sql2019 -v sql_volume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04 | 其中-v是设置容器中/var/opt/mssql目录挂载到sql_volume，即容器对于该目录任何read-write操作将会直接作用在sql_volume上。 | -v 名字(docker volumn)或目录（bind mounts）：容器目录 比较容易使用 官方建议使用--mount  --mount type=bind,source=/tmp,target=/usr 最大区别在于显式与隐式。 |
 
-d
+
 
 ## Docker Compose
 
@@ -274,32 +252,55 @@ docker-compose.override.yml中定义的是配置。
 
 # 错误排查
 
-docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+#### docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
 
 原因是 docker 没有启动
 
-开启docker: systemctl start docker
+开启docker: `systemctl start docker`
 
-查看docker 进程 ps -ef \| grep docker
+查看docker 进程 `ps -ef | grep docker`
 
-最后执行docker-compose up -d
+最后执行`docker-compose up -d`
 
-##### win10 docker启动后检查版本报错：
+#### win10 docker启动后检查版本报错
 
+```log
 Docker.Core.Backend.BackendException:
 
-Error response from daemon: open \\.\\pipe\\docker_engine_linux: The system cannot find the file specified.
+Error response from daemon: open \.\pipe\docker_engine_linux: The system cannot find the file specified.
+```
 
 在win10 命令行提示符执行：
 
-Net stop com.docker.service
-
-Net start com.docker.service
+```sh
+net stop com.docker.service
+net start com.docker.service
+```
 
 #### Failed to get D-Bus connection: Operation not permitted
+centos无法使用systemctl等，需要创建容器的时候，使用特权模式。
 
-centos无法使用systemctl等，需要创建容器的时候，使用特权模式。docker run -d -it --privileged {Image ID} /usr/sbin/init （需要使用-d在后台，然后用exec -it /bin/bash进入）
+Docker的设计理念是在容器里面不运行后台服务，容器本身就是宿主机上的一个独立的主进程，也可以间接的理解为就是容器里运行服务的应用进程。一个容器的生命周期是围绕这个主进程存在的，所以正确的使用容器方法是将里面的服务运行在前台。
 
+再说到systemd，这个套件已经成为主流Linux发行版（比如CentOS7、Ubuntu14+）默认的服务管理，取代了传统的SystemV风格服务管理。systemd维护系统服务程序，它需要特权去会访问Linux内核。而容器并不是一个完整的操作系统，只有一个文件系统，而且默认启动只是普通用户这样的权限访问Linux内核，也就是没有特权，所以自然就用不了！
+
+因此，请遵守容器设计原则，一个容器里运行一个前台服务！
+
+我就想这样运行，难道解决不了吗？
+
+答：可以，以特权模式创建镜像。
+
+```sh
+# 创建容器：
+docker run -d -it --name xxxx --privileged=true {Image ID} /sbin/init
+
+# 还有说是/user/sbin/init，不知道是哪个
+
+# 进入容器：
+docker exec -it centos7 /bin/bash
+```
+
+这样可以使用systemctl启动服务了。
 # Visual Studio 集成
 
 visual studio 中自动Build生成的镜像无法离开VS而生效。
@@ -316,23 +317,20 @@ visual studio 中自动Build生成的镜像无法离开VS而生效。
 
 参考asp.net 6的Dockerfile
 
+```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
-
 WORKDIR /app
-
 COPY . .
-
 EXPOSE 80
-
 EXPOSE 443
-
 ENTRYPOINT ["dotnet", "QuestionnaireReport.dll"]
+```
 
 ### 使用Publish到镜像仓库
 
 ## 错误排查
 
-#### Cannot use file stream for [\*.deps.json]: No such file or directory
+#### Cannot use file stream for \[\*.deps.json\]: No such file or directory
 
 删除publish文件夹再次publish
 
@@ -372,158 +370,3 @@ You can add Docker support to an existing project by selecting Add \> Docker Sup
 
 ![](../attachments/3e5ee20a6a84cbaefb79b73951bdb637.png)
 
-# Kubernetes (Orchestration)
-
-用于容器编排
-
-部署一个Kubernetes，实际上就是部署了一个Cluster。
-
-![](../attachments/18c6f89fd0d7c2bb3af7226ae657baae.png)
-
-Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理机）中有Kubelet，即一个agent，由Control Plane进行中心化调度管理（由Master Node组成）。
-
-![](../attachments/f30159ce56ad05756bd53552d9d7817d.png)
-
-用户可以通过Kubectl（Kubernetes Client），通过它调用Kubernetes的API进行管理。
-
-一个k8s集群，可以通过namespace区分区域。
-
-## 网络
-
-在K8S中，同一个命名空间（namespace）下的服务之间调用，之间通过服务名（service name）调用即可。不过在更多时候，我们可能会将一些服务单独隔离在一个命名空间中（比如我们将中间件服务统一放在 middleware 命名空间中，将业务服务放在 business 命名空间中）。
-
-遇到这种情况，我们就需要跨命名空间访问，K8S 对service 提供了四种不同的类型，针对这个问题我们选用 ExternalName 类型的 service 即可。
-
-注意service端口是否开对
-
-## 命令
-
-| Command  | Function        | Remark                                                                               |
-|----------|-----------------|--------------------------------------------------------------------------------------|
-| kubectl  |                 |                                                                                      |
-| get pods | 获取k8s集群pods | --namespace 指定获取某个名称空间的k8s集群pods  不指定默认是获取default命名空间的pods |
-|          |                 |                                                                                      |
-|          |                 |                                                                                      |
-|          |                 |                                                                                      |
-|          |                 |                                                                                      |
-|          |                 |                                                                                      |
-
-## Node
-
-一个Node即一个VM或物理机。
-
-分为Work Node和Master Node
-
-### Work Node
-
-一个Work Node至少需要运行：
-
-#### Container Runtime
-
-如Docker，用以运行容器实例，即Pod。
-
-#### Kubelet
-
-调度Pod，以及提供接口。
-
-#### Kube Proxy
-
-用于代理，转发来自各个Service的Request到各个对应的Pod中去。
-
-### Master Node
-
-实际上就是Control Panel。
-
-一个Master Node至少要运行：
-
-#### Api server
-
-用于用户通过Kubernetes Client（如K8S dashboard或Kubectl）进行Cluster的管理，其实就是Cluster的API Gateway。
-
-#### Scheduler
-
-资源调度中心，可以根据资源情况、环境，决定新的Node、Pod该如何安排。
-
-#### Controller manager
-
-监测Pod的状态，提醒Scheduler进行恢复等。
-
-#### etcd
-
-是一个Key-value store 服务，用于存储Cluster的状态，是整个k8s Cluster的大脑。
-
-## Pod
-
-Pod是对容器化的Application的抽象，不仅仅是指代docker，可以替换为任何一种容器技术。
-
-![图形用户界面 低可信度描述已自动生成](../attachments/ec859af1d041089310cf91dfdb84b9dc.png)
-
-一个Pod一般指一个容器实例，如图中rocketcha，db
-
-但也可以指一群容器实例，如teamgram-server，即需要其他一些中间件以提供一个完整的Application。
-
-### Service
-
-一个Pod有一个自己的IP Address，一个Pod搭配一个Service，Service 管理Pod的IP，Pod挂掉IP也不会变。Service分Internal service和external service，即可被外部访问以及不可被外部访问的。
-
-Pod之间通过Service进行通信。
-
-Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Service。
-
-可以对Pod进行Replicate，实现HA（是对无状态的Pod）。即使用一个新的Node，运行一样的Pod，然后这两个Pod之间使用同一个Service，这时候，Service也有Load balance的功能。这种功能可以通过“Deployment”组件实现。
-
-而对于DB这类有状态的Pod进行Replicate，需要使用“StatefulSet”组件实现。但是非常复杂，所以一般来说DB是部署在K8S Cluster之外的。
-
-### Configuration
-
-对于Pod的外部配置，可以使用ConfigMap或Secrets。
-
-## Other
-
-### Kuboard
-
-国产K8s集群管理Dashboard
-
-#### Pod添加
-
-可以通过UI手动创建工作负载，也可以从Yaml文件导入
-
-一个Pod（工作负载）可以有多个容器，生命周期是一起的？而且这几个容器不能使用同一个端口。
-
-Pod下的容器端口，实际上基本只要填本机端口（表示容器开了这个端口），一般不填宿主机端口。
-
-#### 同命名空间下服务互调
-
-需要在Pod编辑中，服务/应用路由中开通服务，暴露端口。
-
-选择NodePort：服务对外暴露的端口、服务本身目标端口（一般一致，然后就在本命名空间下的服务可以通过服务名+端口访问了），中间是集群外部公布的端口？可以通过外部IP：端口供给集群外部访问。
-
-#### 跨命名空间访问
-
-可以通过ClusterIP
-
-#### 配置中心
-
-ConfigMap既可以映射环境变量，也可以将Key-Value变成文件名，文件内容的形式进行文件映射。
-
-文件映射需要在Pod中设置，存储挂载中，添加数据卷
-
-选择配置字典，KeyToPath，这里就可以选择文件并给定映射到的路径
-
-数据卷挂载到容器，上面是容器目录，下面是映射到的数据卷目录
-
-#### Pod容器日志
-
-现仅支持查看追踪日志，容器日志需要Kuborad另外配置？
-
-#### 连接容器
-
-容器下面bash、sh可以用，还可以通过文件浏览器直接管理容器的文件。
-
-快捷访问端口：开通的端口可以简单通过端口右边绿色的按钮通过代理访问。
-
-### Minikube
-
-1 Node K8s Cluster，即Master node、Work node都在一个Node上。
-
-一般用于本地测试、学习。
