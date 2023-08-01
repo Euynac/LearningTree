@@ -32,10 +32,10 @@
 | Ctrl+Shift+I      | 打开DevTools查看Obsidian报错       |
 | Alt+1             | 添加代码行                         |
 | Alt+3             | 添加代码块                         |
-| Alt+4             | 来源浮窗插件颜色                   |
-| Alt+5             | 来源字体颜色插件颜色               |
-| Alt+6             | 设置字体颜色                       |
-| Alt+Q             | Quiet Outline插件的目录            | 
+| Alt+4             | 设置来源字体颜色插件颜色           |
+| Alt+5             | 切换颜色块                         | 
+| Alt+6             | 自定义当前字体颜色设置             |
+| Alt+Q             | Quiet Outline插件的目录            |
 
 > 模板在attachments/templates文件夹下，可以自行增加模板
 

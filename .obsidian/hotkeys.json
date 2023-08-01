@@ -115,14 +115,6 @@
       "key": "1"
     }
   ],
-  "editing-toolbar:change-font-color": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "4"
-    }
-  ],
   "colored-text:add-text": [
     {
       "modifiers": [
@@ -139,14 +131,36 @@
       "key": "6"
     }
   ],
-  "colored-text:change-color-forward": [],
-  "colored-text:change-color-backwards": [],
   "obsidian-quiet-outline:quiet-outline": [
     {
       "modifiers": [
         "Alt"
       ],
       "key": "Q"
+    }
+  ],
+  "colored-text:color-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "4"
+    }
+  ],
+  "colored-text:alter-color-palette": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "6"
+    }
+  ],
+  "colored-text:change-color-backwards": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "5"
     }
   ]
 }

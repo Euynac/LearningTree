@@ -23565,7 +23565,11 @@ var import_obsidian3 = require("obsidian");
 var ColorBar = class {
   constructor(plugin) {
     this.onClick = (index) => (e) => {
-      this.plugin.selectColor(index);
+      if (this.plugin.curIndex == index) {
+        this.plugin.openColorModal();
+      } else {
+        this.plugin.selectColor(index);
+      }
     };
     this.plugin = plugin;
   }
@@ -25046,7 +25050,7 @@ function contextMenu(app2, menu, editor, plugin, curColor) {
   const selection = editor.getSelection();
   if (selection) {
     menu.addItem((item) => {
-      item.setTitle("Change Color").onClick((e) => {
+      item.setTitle("Color Text").onClick((e) => {
         if (editor.getSelection()) {
           editor.replaceSelection(`<span style="color:${curColor}">${selection}</span>`);
           const cursorEnd = editor.getCursor("to");
@@ -25125,8 +25129,8 @@ var ColoredFont = class extends import_obsidian3.Plugin {
     this.colorBar = new ColorBar(this);
     this.colorBar.addColorBar();
     this.addCommand({
-      id: "add-text",
-      name: "Add the colored text",
+      id: "color-text",
+      name: "Color Text",
       hotkeys: [],
       editorCallback: (editor, view) => {
         let selection = editor.getSelection();
@@ -25137,16 +25141,11 @@ var ColoredFont = class extends import_obsidian3.Plugin {
       }
     });
     this.addCommand({
-      id: "get-color-input",
-      name: "Get Color Input",
+      id: "alter-color-palette",
+      name: "Alter Color Palette",
       hotkeys: [],
       callback: () => {
-        new ColorModal(this.app, this, this.curColor, (result) => {
-          this.curColor = result;
-          this.colorDivs[this.curIndex].style.backgroundColor = result;
-          this.colorsData.colorArr[this.curIndex] = result;
-          this.saveColorData();
-        }).open();
+        this.openColorModal();
       }
     });
     this.addCommand({
@@ -25161,6 +25160,14 @@ var ColoredFont = class extends import_obsidian3.Plugin {
       hotkeys: [],
       callback: () => this.selectColor(this.curIndex == 0 ? this.cellCount - 1 : this.curIndex - 1)
     });
+  }
+  openColorModal() {
+    new ColorModal(this.app, this, this.curColor, (result) => {
+      this.curColor = result;
+      this.colorDivs[this.curIndex].style.backgroundColor = result;
+      this.colorsData.colorArr[this.curIndex] = result;
+      this.saveColorData();
+    }).open();
   }
   selectColor(newIndex) {
     this.prevIndex = this.curIndex;
