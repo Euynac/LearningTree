@@ -1,7 +1,5 @@
 {
-  "spellcheckLanguages": [
-    "en"
-  ],
+  "spellcheckLanguages": null,
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "newFileLocation": "root",

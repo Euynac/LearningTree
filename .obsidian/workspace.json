@@ -13,14 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "ComputerScience/Linux.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1232f2e48f5df43a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ComputerScience/Linux.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "70d0e75e0533e0a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ComputerScience/Linux.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2d4975ac87a15258",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ComputerScience/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -70,7 +110,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273
+    "width": 299.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "ComputerScience/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "ComputerScience/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md"
+                "file": "ComputerScience/Linux.md"
               }
             }
           },
@@ -181,23 +222,29 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f49c79704f16a261",
+  "active": "2d4975ac87a15258",
   "lastOpenFiles": [
-    "CTF/MISC/图像隐写/PNG.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "ComputerScience/Linux.md",
+    "attachments/ff9f8ba6a923aa8fa8705a432b2b7b81.jpeg",
+    "attachments/fedf7e3d0bbff1ea70bb09384d43c370.png",
+    "attachments/fe23f359a26b0d080e10bc837a69b927.png",
+    "attachments/fc35966aaa4228489b7f58a18df9583d.png",
+    "attachments/fb4a25918d43ded045a8ffce8865a06b.png",
+    "attachments/fa553fa65e35ca0ee554684aaffc6077.png",
+    "attachments/f8465574550795aeae5a9aa36f80364a.png",
+    "attachments/f30159ce56ad05756bd53552d9d7817d.png",
+    "attachments/f745f6650da2aa67c84616a6bec27000.png",
+    "attachments/f43befa278c41ace9a79e48d6b45ec3e.png",
     "CTF/MISC/图像隐写/图像隐写.md",
-    "attachments/Pasted image 20230731231037.png",
-    "attachments/Pasted image 20230731225459.png",
+    "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/文件头.md",
     "CTF/ToolManual/010Editor.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/ToolsList.md",
     "CTF/ToolManual/CyberChef.md",
     "SoftwareManual/Git.md",
-    "attachments/Pasted image 20230730194022.png",
     "CTF/README.md",
     "CTF/ToolManual/VMware.md",
-    "attachments/Pasted image 20230730175440.png",
-    "attachments/Pasted image 20230730175319.png",
     "CTF/MISC/压缩包.md",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
     "SoftwareManual/MicosoftOffice.md.baiduyun.uploading.cfg",
@@ -205,7 +252,6 @@
     "SoftwareManual/CMD.md.baiduyun.uploading.cfg",
     "CTF/ToolsList.md.baiduyun.uploading.cfg",
     "SoftwareManual/CMD.md",
-    "attachments/Pasted image 20230726170452.png",
     "SoftwareManual/VisualStudio.md",
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
@@ -224,10 +270,6 @@
     "CTF/ToolManual/Wireshark.md",
     "ComputerScience/SoftwareTest.md",
     "CTF/CTF.md",
-    "attachments/ffbf0839a1b1013377f002c9325dc7be.png",
-    "attachments/fcf4104187daf017d196f9f78ae3026d.png",
-    "attachments/faa2999d50b3b1ad6eed55bdce1f885a.png",
-    "attachments/f929b0b0711e50201e9052eaaa57efee.jpeg",
     "未命dd名.canvas"
   ]
 }
