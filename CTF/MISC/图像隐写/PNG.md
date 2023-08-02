@@ -103,15 +103,14 @@ IDAT存放着图像真正的数据信息，因此，如果能够了解IDAT的结
 
 最好有三个以上的IDAT才好判断。
 通过010的模板分析，如果第一个IDAT块大小为1000，第二个IDAT为800，第三个IDAT为600，这里就可以判断出来第三个块是隐写的数据，因为只有当第二个IDAT填充到1000后，才会继续填充第三个IDAT
-
+![](../../../attachments/Pasted%20image%2020230801220336.png)
 可以用脚本读取来解题：
 ```python
 import zlib
 import binascii
 fp = open('pngpng.png','rb')
-fp.seek(107356,0)
-# print(fp.read(86741).hex())
-fp1 = zlib.decompress(binascii.unhexlify(fp.read(86741).hex()))
+fp.seek(96775,0) # 这其实就是数据块的起始
+fp1 = zlib.decompress(binascii.unhexlify(fp.read(98).hex()))
 fp2 = open('1.rar','wb')
 fp2.write(fp1)
 ```
