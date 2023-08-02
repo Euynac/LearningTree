@@ -4,37 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "c70ceaf6d08ad023",
+        "id": "c4778dd365480bc9",
         "type": "tabs",
         "children": [
           {
-            "id": "3848347c577a7e12",
+            "id": "d5047fd25ee9aa9a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CloudNative/Docker.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8bba2cd5f7b97135",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/C#.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Programming/C#.md"
-              }
+              "state": {}
             }
           },
           {
@@ -196,13 +173,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8bba2cd5f7b97135",
+  "active": "d5047fd25ee9aa9a",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
+    "CloudNative/Docker.md",
+    "attachments/Pasted image 20230802175133.png",
+    "Programming/C#.md",
+    "attachments/Pasted image 20230802174653.png",
+    "attachments/Pasted image 20230802174637.png",
     "attachments/Pasted image 20230802171236.png",
     "attachments/Pasted image 20230802171059.png",
     "attachments/Pasted image 20230802171032.png",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "Programming/C#.md",
     "Programming",
     "新建文件夹",
     "CTF/MISC/图像隐写/PNG.md",
@@ -211,16 +193,11 @@
     "attachments/Pasted image 20230801220312.png",
     "attachments/Pasted image 20230801220300.png",
     "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/Docker.md",
     "SoftwareManual/Git.md",
     "README.md",
     "CloudNative/CloudNative.md",
     "ComputerScience/Linux.md",
     "ComputerScience/SoftwareTest.md",
-    "attachments/ff9f8ba6a923aa8fa8705a432b2b7b81.jpeg",
-    "attachments/fedf7e3d0bbff1ea70bb09384d43c370.png",
-    "attachments/fe23f359a26b0d080e10bc837a69b927.png",
-    "attachments/fc35966aaa4228489b7f58a18df9583d.png",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/文件头.md",
     "CTF/ToolManual/010Editor.md",
@@ -235,7 +212,6 @@
     "SoftwareManual/CMD.md.baiduyun.uploading.cfg",
     "CTF/ToolsList.md.baiduyun.uploading.cfg",
     "SoftwareManual/CMD.md",
-    "SoftwareManual/VisualStudio.md",
     "attachments/templates/Csharp代码.md.baiduyun.uploading.cfg",
     "attachments/ffbf0839a1b1013377f002c9325dc7be.png.baiduyun.uploading.cfg",
     "attachments/fcf4104187daf017d196f9f78ae3026d.png.baiduyun.uploading.cfg",

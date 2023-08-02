@@ -1,3 +1,25 @@
+### 文件编码与代码规范
+
+文件编码可以在这里检查：
+![](../attachments/Pasted%20image%2020230802171032.png)
+![](../attachments/Pasted%20image%2020230802171059.png)
+
+如果没发现这个选项，需要进行自定义：
+![](../attachments/Pasted%20image%2020230802174653.png)
+
+VS2022之后，可以设置编辑器的默认encoding。在Solution或Project下添加`.editorconfig`文件
+![](../attachments/Pasted%20image%2020230802171236.png)
+然后在其中添加
+```editorconfig
+[*]
+charset = utf-8
+```
+
+添加后，后续增加的新文件应都是UTF-8格式的了。
+
+`.editorconfig`文件还可以定义代码规范，和resharper的规范共存：
+![](../attachments/Pasted%20image%2020230802175133.png)
+
 ### 离线下载
 ##### 教程
 [Create an offline installation - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022)

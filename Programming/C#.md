@@ -4,17 +4,6 @@
 
 原理是因为VS2022生成的Dockerfile编译是拷贝了源代码到容器内编译，而如果本机的代码文件编码为GB2312，当时拷过去的时候文件已经乱码，因此编译为二进制文件还是乱码，执行的时候自然也是乱码。
 
-可以在这里检查：
-![](../attachments/Pasted%20image%2020230802171032.png)
-![](../attachments/Pasted%20image%2020230802171059.png)
-
-VS2022之后，可以设置编辑器的默认encoding。在Solution或Project下添加`.editorconfig`文件
-![](../attachments/Pasted%20image%2020230802171236.png)
-然后在其中添加
-```editorconfig
-[*]
-charset = utf-8
-```
 
 # 历史
 
