@@ -167,7 +167,44 @@ cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 #### 驱动文件更换（如TypeC耳机驱动问题）
 
 以H180 Plus这款TypeC耳机为例：
+![](../attachments/Pasted%20image%2020230803190424.png)
+上图是已经更换了旧驱动，原本新驱动无法使用，只能识别为麦克风，更换后正常。
 
+更换驱动需要对应的`*.inf`文件
+
+查看该设备对应的驱动：
+![](../attachments/Pasted%20image%2020230803191354.png)
+
+旧驱动取自一台windows10电脑。
+使用powershell命令`Get-WindowsDriver -Online -Driver "wdma_usb.inf"` 查看驱动信息。
+
+```txt
+Driver              : wdma_usb.inf
+OriginalFileName    : C:\Windows\System32\DriverStore\FileRepository\wdma_usb.inf_amd64_63b279bcecfa8b38\wdma_usb.inf
+Inbox               : True
+ClassName           : MEDIA
+ClassDescription    : 声音、视频和游戏控制器
+ClassGuid           : {4D36E96C-E325-11CE-BFC1-08002BE10318}
+BootCritical        : False
+ProviderName        : Microsoft
+Date                : 7/6/2023 12:00:00 AM
+Version             : 10.0.22621.1992
+ManufacturerName    : Yamaha
+HardwareDescription : Yamaha USB MIDI
+Architecture        : x64
+HardwareId          : USB\VID_0499&PID_1FFF
+ServiceName         : usbaudio
+CompatibleIds       :
+ExcludeIds
+```
+
+这里可以得到驱动文件所在的地址
+`OriginalFileName    : C:\Windows\System32\DriverStore\FileRepository\wdma_usb.inf_amd64_63b279bcecfa8b38\wdma_usb.inf`
+
+将文件夹从旧电脑拷贝出来，放到本机电脑，然后对指定设备替换驱动。
+`更新驱动程序`->`浏览我的电脑以查找`->`让我从计算机可用驱动列表选取`->`从磁盘安装`->选择对应inf文件。
+这里可能会出现该文件没有经过数字签名，需要临时禁用这个安全机制。
+`Shift`+开始菜单的重启按钮，进入疑难解答界面，接着`高级选项`->`启动设置`->`重启`，然后可以选择`禁用驱动程序强制签名`，电脑这回重启后可以安装未签名的驱动了，按上面步骤安装驱动后重启后，耳机就可以用了。
 
 #### 修复系统损坏文件
 
