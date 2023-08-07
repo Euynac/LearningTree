@@ -159,7 +159,7 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 
 # 其他
 
-| 软件名                     | 场景                                 | 备注                                                                                                   |
+|软件名| 场景                                 | 备注                                                                                                   |
 |:-------------------------- |:------------------------------------ |:------------------------------------------------------------------------------------------------------ |
 | RustDesk                   | 远程桌面                             | 开源                                                                                                   |
 | Parsec                     | 远程桌面                             | 支持移动端，高画质                                                                                     |
@@ -167,7 +167,8 @@ steghide -s 100 设置容错，但其实检测不一定准确。。因此如果�
 | ContextMenuManager.NET.4.0 | Windows右键管理工具                  |                                                                                                        |
 | Optimizer                  | Windows优化工具                      | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
 | sysinternals               | Windows调试工具等，火绒剑替代        |                                                                                                        |
-| BFG-repo-cleaner           | Git Secret blob 移除工具                  | [rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner)                                                                                                       |
+|BFG-repo-cleaner| Git Secret blob 移除工具                  |[rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner) |
+|Czkawka|文件清理，可以搜索相似、重复文件、文件夹等|[qarmin/czkawka](https://github.com/qarmin/czkawka)|
 
 
 # 效率
