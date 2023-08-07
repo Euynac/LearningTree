@@ -184,6 +184,8 @@
   },
   "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "CloudNative/Docker.md",
+    "CloudNative/Kubernetes(K8S).md",
     "CTF/ToolsList.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/思路打开.md",
@@ -217,7 +219,6 @@
     "attachments/Pasted image 20230803190424.png",
     "attachments/Pasted image 20230803191354.png",
     "CloudNative/CloudNative.md",
-    "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20230802175133.png",
     "attachments/Pasted image 20230802174653.png",
     "Programming",

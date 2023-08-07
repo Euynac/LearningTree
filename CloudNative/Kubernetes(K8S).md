@@ -115,7 +115,14 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 
 ### 推送到镜像仓库
 
- `docker tag <仓库名>/`
+```shell
+docker load -i <源镜像名> # 这里load出来的是none，可以用镜像ID进行控制
+cat /etc/hosts # 查看仓库地址（一般设置了hosts）
+docker tag 镜像ID <仓库名>/<项目名>/<镜像名>:[版本号] 
+docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过tag而不能通过ID
+# 同一个镜像名不同tag版本号可以在镜像仓库里面选择版本。
+```
+
 
 # K8S集群管理
 
