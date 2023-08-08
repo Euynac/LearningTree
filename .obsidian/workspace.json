@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273
+    "width": 299.49999618530273,
+    "collapsed": true
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -184,6 +185,7 @@
   },
   "active": "47c1b2d63db417cb",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230808212302.png",
     "attachments/Pasted image 20230808192247.png",
     "attachments/Pasted image 20230808191824.png",
     "attachments/Pasted image 20230808191816.png",
@@ -217,7 +219,6 @@
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "attachments/Pasted image 20230805163031.png",
-    "attachments/Pasted image 20230805162928.png",
     "ComputerScience/Linux.md",
     "CTF/Untitled.md",
     "CTF/Reverse.md",
