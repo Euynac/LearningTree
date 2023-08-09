@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "ComputerScience/WEB.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "ComputerScience/WEB.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "ComputerScience/WEB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md"
+                "file": "ComputerScience/WEB.md"
               }
             }
           },
@@ -183,9 +183,11 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "Architecture/ABP.md",
+    "ComputerScience/WEB.md",
+    "CloudNative/Kubernetes(K8S).md",
     "attachments/Pasted image 20230809141442.png",
     "CloudNative/Docker.md",
-    "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CloudNative/Components/Apache APISIX.md",
     "CTF/ToolsList.md",
@@ -208,7 +210,6 @@
     "attachments/Pasted image 20230808192247.png",
     "attachments/Pasted image 20230808191824.png",
     "attachments/Pasted image 20230808191816.png",
-    "attachments/Pasted image 20230808185806.png",
     "Fontend",
     "CloudNative/Dapr.md",
     "CTF/MISC/压缩包.md",
@@ -221,7 +222,6 @@
     "CTF/CRYPTO/CTF.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/PBE.md",
-    "CTF/CRYPTO/密码种类与特征.md",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
     "Programming",
     "新建文件夹",

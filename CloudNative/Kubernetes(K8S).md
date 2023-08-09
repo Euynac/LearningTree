@@ -146,7 +146,7 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 |Keepalived |provides high availability for Linux systems by allowing multiple servers to share a virtual IP address.  |  |
 ### HAproxy
 
-负载均衡器及反向代理服务器
+负载均衡器及反向代理服务器。
 load balancer and proxy server software that is used to distribute network traffic across multiple servers to improve performance, reliability, and scalability of web applications. It uses a round-robin algorithm to distribute incoming requests to the servers in a balanced way.
 ### Keepalived
 
