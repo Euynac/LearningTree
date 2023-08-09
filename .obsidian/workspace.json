@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Koubot/Linux命令.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Koubot/Linux命令.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Koubot/Linux命令.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Koubot/Linux命令.md"
+                "file": "CloudNative/Kubernetes(K8S).md"
               }
             }
           },
@@ -183,9 +183,11 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "CloudNative/CloudNative.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "Koubot/Linux命令.md",
     "attachments/templates/LinuxShellPlugin.md",
     "attachments/templates/python脚本.md",
-    "Koubot/Linux命令.md",
     "ComputerScience/Linux.md",
     "Koubot",
     "CloudNative/Components/Apache APISIX.md",
@@ -206,7 +208,6 @@
     "Fontend",
     "CloudNative/Docker.md",
     "CloudNative/Dapr.md",
-    "CloudNative/CloudNative.md",
     "CTF/MISC/压缩包.md",
     "CloudNative/Components",
     "attachments/Pasted image 20230808001803.png",
@@ -221,7 +222,6 @@
     "CTF/CRYPTO/PBE.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/Untitled.md",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
     "Programming",
     "新建文件夹",
