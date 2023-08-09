@@ -150,6 +150,14 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 
 ![](../attachments/Pasted%20image%2020230809100733.png)
 
+### Keepalived
+
+`FHRP`协议，第一跳冗余协议，解决路由器单点故障问题，从协议上进行解决，让多个路由器使用一个虚拟IP。FHRP stands for First Hop Redundancy Protocol, which is used to provide redundancy for the first hop of a network. This is typically done by having multiple routers share the same virtual IP address, so that if one router fails, another can take over seamlessly. 
+FHRP协议有很多种具体协议实现，私有的如思科的`HSRP`、`GLBP`等，公有的则是著名的`VRRP`。`VRRP (Virtual Router Redundancy Protocol)` is a public protocol that provides the same functionality as HSRP, allowing multiple routers to share a virtual IP address to provide redundancy. VRRP is not tied to any specific vendor or platform, making it more widely used than HSRP.
+
+`VRRP`协议的使用就是架构图中常见的`VIP`
+![](../attachments/Pasted%20image%2020230809141442.png)
+
 ### Ceph
 
 #### 三种存储类型
