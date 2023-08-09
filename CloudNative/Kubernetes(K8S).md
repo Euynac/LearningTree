@@ -133,16 +133,23 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 
 ### 概念
 
-|名称|作用 |备注 |
-|:------- |:----------------------------------------- |:---- |
-|KubeKey |用于便捷安装K8S和KubeSphere的工具 |简称kk|
-|VIP |virtual IP，它是一群节点共用的一个虚拟IP|  |
-|Ceph |分布式存储方案，实现K8S的存储卷方面的能力|  |
-|Ceph-CSI|Ceph Container Storage Interface. Ceph 容器存储接口是一个用于 RBD 和 CephFS 的驱动程序。|  |
+| 名称     | 作用                                                                                     | 备注   |
+|:-------- |:---------------------------------------------------------------------------------------- |:------ |
+| KubeKey  | 用于便捷安装K8S和KubeSphere的工具                                                        | 简称kk |
+| VIP      | virtual IP，它是一群节点共用的一个虚拟IP                                                 |        |
+| Ceph     | 分布式存储方案，实现K8S的存储卷方面的能力                                                |        |
+| Ceph-CSI | Ceph Container Storage Interface. Ceph 容器存储接口是一个用于 RBD 和 CephFS 的驱动程序。 |        |
+| HAproxy  |负载均衡器，用于创建高可用K8S集群。provides high availability, load balancing, and proxying for TCP and HTTP-based applications. (LVS)|  |
+|Keepalived |provides high availability for Linux systems by allowing multiple servers to share a virtual IP address.  |  |
+### HAproxy
 
-#### Ceph
+在每一个工作节点上部署一个负载均衡器（HAproxy），所有主节点的 Kubernetes 组件连接其本地的 kube-apiserver ，而所有工作节点的 Kubernetes 组件通过由 KubeKey 部署的负载均衡器反向代理到多个主节点的 kube-apiserver 。这种模式相较于专用到负载均衡器来说效率有所降低，因为会引入额外的健康检查机制，但是如果当前环境无法提供外部负载均衡器或者虚拟 IP（VIP）时这将是一种更实用、更有效、更方便的高可用部署模式。
 
-##### 三种存储类型
+![](../attachments/Pasted%20image%2020230809100733.png)
+
+### Ceph
+
+#### 三种存储类型
 
 **块存储（ RADOS Block Device, RBD )**
 其中RADOS全称为Reliable Autonomic Distributed Object Store, 可靠的、自动化的、分布式对象存储系统。
