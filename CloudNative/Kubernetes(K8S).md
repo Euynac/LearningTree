@@ -146,11 +146,13 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 |Keepalived |provides high availability for Linux systems by allowing multiple servers to share a virtual IP address.  |  |
 ### HAproxy
 
-在每一个工作节点上部署一个负载均衡器（HAproxy），所有主节点的 Kubernetes 组件连接其本地的 kube-apiserver ，而所有工作节点的 Kubernetes 组件通过由 KubeKey 部署的负载均衡器反向代理到多个主节点的 kube-apiserver 。这种模式相较于专用到负载均衡器来说效率有所降低，因为会引入额外的健康检查机制，但是如果当前环境无法提供外部负载均衡器或者虚拟 IP（VIP）时这将是一种更实用、更有效、更方便的高可用部署模式。
-
-![](../attachments/Pasted%20image%2020230809100733.png)
-
+负载均衡器及反向代理服务器
+load balancer and proxy server software that is used to distribute network traffic across multiple servers to improve performance, reliability, and scalability of web applications. It uses a round-robin algorithm to distribute incoming requests to the servers in a balanced way.
 ### Keepalived
+
+Keepalived通过VRRP协议实现服务或网络层高可用，即实现节点健康状态监测、剔除集群中故障节点。
+它一般与负载均衡器一起实现高可用，所以可以看到有`nginx+keepalived`，以及这里的`HAproxy+keepalived`的搭配。
+#### VRRP
 
 `FHRP`协议，第一跳冗余协议，解决路由器单点故障问题，从协议上进行解决，让多个路由器使用一个虚拟IP。FHRP stands for First Hop Redundancy Protocol, which is used to provide redundancy for the first hop of a network. This is typically done by having multiple routers share the same virtual IP address, so that if one router fails, another can take over seamlessly. 
 FHRP协议有很多种具体协议实现，私有的如思科的`HSRP`、`GLBP`等，公有的则是著名的`VRRP`。`VRRP (Virtual Router Redundancy Protocol)` is a public protocol that provides the same functionality as HSRP, allowing multiple routers to share a virtual IP address to provide redundancy. VRRP is not tied to any specific vendor or platform, making it more widely used than HSRP.
