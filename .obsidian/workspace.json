@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "CTF/CRYPTO/公钥密码密钥格式.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273,
-    "collapsed": true
+    "width": 299.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "CTF/CRYPTO/公钥密码密钥格式.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "CTF/CRYPTO/公钥密码密钥格式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Docker.md"
+                "file": "CTF/CRYPTO/公钥密码密钥格式.md"
               }
             }
           },
@@ -172,20 +171,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "markdown-table-editor:Open Markdown Table Editor": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
-    "README.md",
     "CloudNative/Docker.md",
+    "README.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "CloudNative/Kubernetes(K8S).md",
     "ComputerScience/Linux.md",
