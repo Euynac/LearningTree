@@ -88,7 +88,7 @@ CRI is an interface between container runtimes and container orchestration platf
 
 ![图形用户界面 低可信度描述已自动生成](../attachments/ec859af1d041089310cf91dfdb84b9dc.png)
 
-一个Pod一般指一个容器实例，如图中rocketcha，db
+一个Pod一般指一个容器实例，如图中rocketchat，db
 
 但一个Pod也可以有多个容器实例，在Docker中的这种情况，如teamgram-server，称为容器组。
 
@@ -154,7 +154,7 @@ Keepalived通过VRRP协议实现服务或网络层高可用，即实现节点健
 它一般与负载均衡器一起实现高可用，所以可以看到有`nginx+keepalived`，以及这里的`HAproxy+keepalived`的搭配。
 #### VRRP
 
-`FHRP`协议，第一跳冗余协议，解决路由器单点故障问题，从协议上进行解决，让多个路由器使用一个虚拟IP。FHRP stands for First Hop Redundancy Protocol, which is used to provide redundancy for the first hop of a network. This is typically done by having multiple routers share the same virtual IP address, so that if one router fails, another can take over seamlessly. 
+`FHRP(First Hop Redundancy Protocol)`协议，第一跳冗余协议，解决路由器单点故障问题，从协议上进行解决，让多个路由器使用一个虚拟IP。FHRP stands for First Hop Redundancy Protocol, which is used to provide redundancy for the first hop of a network. This is typically done by having multiple routers share the same virtual IP address, so that if one router fails, another can take over seamlessly. 
 FHRP协议有很多种具体协议实现，私有的如思科的`HSRP`、`GLBP`等，公有的则是著名的`VRRP`。`VRRP (Virtual Router Redundancy Protocol)` is a public protocol that provides the same functionality as HSRP, allowing multiple routers to share a virtual IP address to provide redundancy. VRRP is not tied to any specific vendor or platform, making it more widely used than HSRP.
 
 `VRRP`协议的使用就是架构图中常见的`VIP`

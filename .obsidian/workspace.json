@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/WEB.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.49999618530273,
-    "collapsed": true
+    "width": 299.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/WEB.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/WEB.md",
+                "file": "CloudNative/Deployments/K8S部署笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/WEB.md"
+                "file": "CloudNative/Deployments/K8S部署笔记.md"
               }
             }
           },
@@ -184,9 +183,10 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
-    "Architecture/ABP.md",
-    "ComputerScience/WEB.md",
     "CloudNative/Kubernetes(K8S).md",
+    "ComputerScience/Linux.md",
+    "ComputerScience/WEB.md",
+    "Architecture/ABP.md",
     "attachments/Pasted image 20230809141442.png",
     "CloudNative/Docker.md",
     "CloudNative/Deployments/K8S部署笔记.md",
@@ -197,7 +197,6 @@
     "Koubot/Linux命令.md",
     "attachments/templates/LinuxShellPlugin.md",
     "attachments/templates/python脚本.md",
-    "ComputerScience/Linux.md",
     "Koubot",
     "CTF/MISC/图像隐写/图像隐写.md",
     "attachments/Pasted image 20230808222519.png",
