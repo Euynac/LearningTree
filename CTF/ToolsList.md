@@ -155,47 +155,92 @@
 | Typora   | Markdown编辑器                  |      |
 
 
+# Git
+
+| 软件名 | 场景                     | 备注 |
+|:------ |:------------------------ |:---- |
+| bfg    | 批量从历史删除密钥等数据 |      |
+|        |                          |      |
+|        |                          |      |
+
+
 
 
 # Windows
 
+## 开发
+
+| 软件名   | 场景                                              | 备注 |
+|:-------- |:------------------------------------------------- |:---- |
+| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |      | 
+|          |                                                   |      |
+|          |                                                   |      |
+
+
+
 ## 硬件
 
-| 软件名 | 场景                   | 备注 |
-|:------ |:---------------------- |:---- |
-| aida64 | 全能硬件检测、指标工具 |      |
-|        |                        |      |
-|        |                        |      |
+| 软件名          | 场景                   | 备注 |
+|:--------------- |:---------------------- |:---- |
+| aida64          | 全能硬件检测、指标工具 |      |
+| CrystalDiskMark | 磁盘评测               |      |
+| Cpu-z           | 硬件参数               |      |
+|                 |                        |      |
 
 
 ## 其他
 
-|软件名| 场景                                 | 备注                                                                                                   |
-|:-------------------------- |:------------------------------------ |:------------------------------------------------------------------------------------------------------ |
-| RustDesk                   | 远程桌面                             | 开源                                                                                                   |
-| Parsec                     | 远程桌面                             | 支持移动端，高画质                                                                                     |
-| Proxifier                  | 设置各种规则，使得本地软件走特定代理 |                                                                                                        |
-| ContextMenuManager.NET.4.0 | Windows右键管理工具                  |                                                                                                        |
-| Optimizer                  | Windows优化工具                      | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
-|sysinternals| Windows调试工具等，火绒剑替代        |                                                                                                        |
-|BFG-repo-cleaner| Git Secret blob 移除工具                  |[rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner) |
-|Czkawka|文件清理，可以搜索相似、重复文件、文件夹等|[qarmin/czkawka](https://github.com/qarmin/czkawka)|
+| 软件名                     | 场景                                       | 备注                                                                                                   |
+|:-------------------------- |:------------------------------------------ |:------------------------------------------------------------------------------------------------------ |
+| RustDesk                   | 远程桌面                                   | 开源                                                                                                   |
+| Parsec                     | 远程桌面                                   | 支持移动端，高画质                                                                                     |
+| Proxifier                  | 设置各种规则，使得本地软件走特定代理       |                                                                                                        |
+| ContextMenuManager.NET.4.0 | Windows右键管理工具                        |                                                                                                        |
+| Optimizer                  | Windows优化工具                            | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
+| sysinternals               | Windows调试工具等，火绒剑替代              |                                                                                                        |
+| BFG-repo-cleaner           | Git Secret blob 移除工具                   | [rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner)                                  |
+| Czkawka                    | 文件清理，可以搜索相似、重复文件、文件夹等 | [qarmin/czkawka](https://github.com/qarmin/czkawka)                                                    |
+| drawio                     | 开源画图工具(visio替代)                    |                                                                                                        |
+| XMouseButtonControl        | 鼠标功能DIY                                |                                                                                                        |
 
 
 ## 效率
 
-| 软件名       | 场景                                             | 备注                                                                        |
-|:------------ |:------------------------------------------------ |:--------------------------------------------------------------------------- |
-| Snipaste     | 截图贴图工具                                     |                                                                             |
-| GoldenDict   | 支持MDict的字典工具                              |                                                                             |
-| FluentSearch | 快捷搜索栏，大量功能                             |                                                                             |
-| Quicker      | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏 | 收费版可翻页                                                                |
-| utools       | 类似Quicker，但支持markdown笔记搜索              | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
-| DevToys      | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)                           |
-| PowerToys    | 微软开源功能增强工具，包括批量重命名、图像压缩等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)               |
-| Captura      | 开源录屏工具                                     |                                                                             |
-| TreeSizePro  | 用饼图方式直观的查看硬盘占用情况                 |                                                                             |
-|              |                                                  |                                                                             |
+| 软件名           | 场景                                                       | 备注                                                                        |
+|:---------------- |:---------------------------------------------------------- |:--------------------------------------------------------------------------- |
+| Snipaste         | 截图贴图工具                                               |                                                                             |
+| GoldenDict       | 支持MDict的字典工具                                        |                                                                             |
+| FluentSearch     | 快捷搜索栏，大量功能                                       |                                                                             |
+| Quicker          | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏           | 收费版可翻页                                                                |
+| utools           | 类似Quicker，但支持markdown笔记搜索                        | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
+| DevToys          | 如格式化JSON，JSON转YAML，比较文本，测试RegExp             | [veler/DevToys](https://github.com/veler/DevToys)                           |
+| PowerToys        | 微软开源功能增强工具，包括批量重命名、图像压缩、进程解锁等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)               |
+| Captura          | 开源录屏工具                                               |                                                                             |
+| TreeSizePro      | 用饼图方式直观的查看硬盘占用情况                           |                                                                             |
+| AnyTxt.Searcher  | 能够索引doc,txt,pdf等文件内容，全盘搜索文件内容            |                                                                             |
+| Bandicam         | 录屏工具（收费）                                           |                                                                             |
+| UACWhitelistTool | UAC添加白名单，将以管理员运行的弹窗屏蔽，例如everything    | [XIU2/UACWhitelistTool](https://github.com/XIU2/UACWhitelistTool)           |
+| WinMerge         | 开源的文件比较/合并工具                                    |                                                                             |
+| Everything       | 最强全局文件搜索                                           |                                                                             |
+| ScreenToGif      | Gif录屏工具                                                |                                                                             |
+
+## Audio
+| 软件名  | 场景                   | 备注 |
+|:------- |:---------------------- |:---- |
+| LoopBe1 | Virtual MIDI Driver    |      |
+| MIDIOX  | 监控和调试MIDI设备信号 |      |
+|         |                        |      |
+
+## Novel
+| 软件名  | 场景                  | 备注 |
+|:------- |:--------------------- |:---- |
+| Calibre | equb,mobi等阅读器     |      |
+| easypub | txt,equb,mobi格式转换 |      |
+| Sigli   | Epub开源编辑器        |      |
+| lncrawl | 小说，漫画开源爬虫    |      |
+|         |                       |      |
+
+
 
 
 ## Video
@@ -204,6 +249,7 @@
 | BoilsoftVideoSplitterPortable | 无渲染无损视频剪辑            |      |
 | MKVToolNix                    | MKV格式编辑，提取字幕、音频等 |      |
 | Lossless Cut                  | 无渲染无损、音频剪辑          |      |
+| KikoPlay                      | 看番工具，还可以加载弹幕      |      |
 
 ## 中间件管理
 
@@ -212,6 +258,17 @@
 | RedisInsight                  | Redis官方出品管理工具 | [RedisInsight/RedisInsight: Redis GUI by Redis (github.com)](https://github.com/RedisInsight/RedisInsight) |
 | Another Redis Desktop Manager | Redis管理工具         | [qishibo/AnotherRedisDesktopManager](https://github.com/qishibo/AnotherRedisDesktopManager)                |
 |                               |                       |                                                                                                            |
+
+## UI
+| 软件名       | 场景                                                                     | 备注 |
+|:------------ |:------------------------------------------------------------------------ |:---- |
+| FlaUInspect  | UI Automation属性值获取工具，可以找到窗口XPATH等                         |      |
+| ForceToolkit | （突破前端限制）强制在其他应用程序中启用灰显的禁用按钮，复选框和更多控件 |      |
+| inspect_x64  | UI 自动化属性值获取工具                                                  |      |
+|              |                                                                          |      |
+
+
+
 
 # AI
 
@@ -238,6 +295,14 @@
 |Immersive Translate|最好用的双语翻译|  |
 |        |      |      |
 |        |      |      |
+
+# Android
+
+| 软件名 | 场景       | 备注 |
+|:------ |:---------- |:---- |
+| autojs | 自动化脚本 |      |
+|        |            |      |
+|        |            |      |
 
 
 
