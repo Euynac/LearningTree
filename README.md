@@ -1,4 +1,4 @@
-# Markdown & Obsidian 
+# Markdown 
 
 ## 配置
 
@@ -19,20 +19,44 @@
 
 [Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 [Extended Syntax | Markdown Guide](https://www.markdownguide.org/extended-syntax/)
+## Typora
+### 快捷键
+
+| 快捷键      | 作用     |
+| ----------- | -------- |
+| Shift+Enter | 表格换行 |
+|             |          |
+|             |          |
+
+#### 自定义配置
+
+`Advanced Setting`可以打开配置文件夹，其中`conf.user.json`中定义：
+
+```json
+ "keyBinding": {
+    // for example:
+    // "Always on Top": "Ctrl+Shift+P"
+    // All other options are the menu items 'text label' displayed from each typora menu
+    "Code":"Alt+1",
+    "Code Fences":"Alt+3"
+  },
+```
+
+
 
 ## Obsidian快捷键
 
 目前收集的和自定义的常用快捷键
 
-| 快捷键            | 作用                               |
+|快捷键 |作用|
 | ----------------- | ---------------------------------- |
 | Ctrl+1...6        | 设置为Heading1-6                   |
 | Ctrl+T            | 快捷增加模板（Template）           |
-| Ctrl+B            | 加粗（Bold）                       |
+| Ctrl+B            |加粗（Bold）|
 | Ctrl+P            | 命令面板（Panel）                  |
 | Ctrl+Q            | 表格高级编辑（需要先整体选中表格） |
 | 表格最后一行Enter | 添加下一行                         |
-| 表格Tab           | 同行切换，最后一列后开始添加下一列 |
+| 表格Tab           |同行切换，最后一列后开始添加下一列|
 | Ctrl+D            | 删除当前段落（Delete）             |
 | Ctrl+E            | 切换为编辑模式进行预览             |
 | Ctrl+Shift+I      | 打开DevTools查看Obsidian报错       |

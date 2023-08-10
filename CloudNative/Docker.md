@@ -88,24 +88,24 @@ You can combine single character flags to shorten the full command.
 
 | 命令                                | 含义                                                         | 备注                                                         |
 | :---------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-|`build -t <name> .`|建造Image，通过指定目录（这里.指示当前目录）下的Docker file -t tag 给建造的Image起个名| `--build-arg http_proxy=http://proxy.exaple.com` <br />`--build-arg https_proxy=http://proxy.exaple.com` **可以指定代理** -f 可以指定Dockerfile的位置。一般情况是在Dockerfile所在文件夹中运行build。但VS生成的Dockerfile，则需要在sln文件夹下，然后用-f指定Dockerfile位置。 |
-| `exec -it <container> /bin/sh`   | 启动并进入容器内部                                           | 与run的区别是exec是启动或连接到已经存在/运行的容器中去。 而run是对于还未创建的新容器而言，即run是需要传image |
+|`build -t <name> .`|建造Image，通过指定目录（这里`.`指示当前目录）下的Docker file <br />`-t tag` 给建造的Image起个名| `--build-arg http_proxy=http://proxy.exaple.com` <br />`--build-arg https_proxy=http://proxy.exaple.com`<br /> **可以指定代理**<br /> `-f` 可以指定Dockerfile的位置。一般情况是在Dockerfile所在文件夹中运行build。但VS生成的Dockerfile，则需要在sln文件夹下，然后用`-f`指定Dockerfile位置。 |
+| `exec -it <container> /bin/sh`   | 启动并进入容器内部                                           | 与`run`的区别是`exec`是启动或连接到已经存在/运行的容器中去。 而`run`是对于还未创建的新容器而言，即`run`是需要传image |
 | `cp <from> <to>`  | 文件导入导出                                                 | 容器内部路径的写法`8592134a642d:/folder`                     |
-| `run -i -t ubuntu /bin/bash`        | 从指定Image（这里是ubuntu）中实例化出一个新的容器并运行。 -d run as detached. 如需要Long-running 的服务，放在后台运行。 -p 8080:80 将本机8080端口映射到容器的80端口 （如果要暴露多个，可以多写几个-p映射） --name 给实例化的新容器起个名，不然docker会随机起名 --privileged=true 以特权模式运行，可以执行systemctl等命令(需要以/sbin/init启动然后再用exec命令进入容器) "--rm" flag tells Docker to automatically remove the container when it exits -e XXX=’xxx’ 设置环境变量 | ①If you do not have the ubuntu image locally, Docker pulls it from your configured registry, as though you had run docker pull ubuntu manually.<br />②Docker creates a new container, as though you had run a docker container create command manually.<br/>③Docker allocates a read-write filesystem to the container, as its final layer. This allows a running container to create or modify files and directories in its local filesystem.<br />④Docker creates a network interface to connect the container to the default network, since you did not specify any networking options. This includes assigning an IP address to the container. By default, containers can connect to external networks using the host machine’s network connection.<br />⑤Docker starts the container and executes /bin/bash. Because the container is running interactively and attached to your terminal (due to the -i and -t flags), you can provide input using your keyboard while the output is logged to your terminal.<br />⑥When you type exit to terminate the /bin/bash command, the container stops but is not removed. You can start it again or remove it. |
-| images                              | 列出当前已有的images                                         |                                                              |
-| commit \<container\> [image]        | 将指定容器更改保存到新镜像 Create a new image from a container’s changes |                                                              |
-| ps                                  | processes 当前运行的容器 -a 显示所有包括未运行的.            | --size 显示当前容器占用空间大小                              |
-| logs \<container\>                  | 查看容器日志 -f follow，追踪当前容器的输出                   | 比如使用了-detached参数启动在后台运行的容器，要看它的输出可以使用该命令 |
-| rm \<container\>                    | 移除容器 -f force 强制移除容器，即使它在运行                 | Once the container has stopped, it can be removed.           |
-| rmi \<image\>                       | 移除镜像                                                     |                                                              |
-| stop \<container\>                  | 停止运行一个容器                                             |                                                              |
-| push \<docker hub repository name\> | 推送image到docker hub                                        |                                                              |
-| pull \<docker hub repository name\> | 拉取image到本地                                              |                                                              |
-| update                              | 更新配置？                                                   | --restart=no \<CONTAINER ID\> 对某一个容器关闭自启动 --restart=no \$(docker ps -q) 取消所有容器自启动 |
-| export                              | 导出容器实例                                                 | 主要用来制作基础镜像，比如我们从一个 ubuntu 镜像启动一个容器，然后安装一些软件和进行一些设置后，使用 docker export 保存为一个基础镜像。然后，把这个镜像分发给其他人使用，比如作为基础的开发环境。 |
-| import                              | 导入容器实例                                                 |                                                              |
-| save                                | 保存镜像                                                     | -o 导出的路径 建议.tar结尾 可以同时将多个镜像打包到一个文件中 |
-| load                                | 加载镜像                                                     | -i 输入文件路径                                              |
+| `run -i -t ubuntu /bin/bash`        | 从指定Image（这里是ubuntu）中实例化出一个新的容器并运行。<br /> `-d run as detached` 如需要Long-running 的服务，放在后台运行。 <br />`-p 8080:80` 将本机8080端口映射到容器的80端口 （如果要暴露多个，可以多写几个-p映射） <br />`--name` 给实例化的新容器起个名，不然docker会随机起名 <br />`--privileged=true` 以特权模式运行，可以执行`systemctl`等命令(需要以`/sbin/init`启动然后再用`exec`命令进入容器) <br />`--rm` flag tells Docker to automatically remove the container when it exits <br />`-e XXX=’xxx’` 设置环境变量 | ①If you do not have the `ubuntu` image locally, Docker pulls it from your configured registry, as though you had run docker pull ubuntu manually.<br />②Docker creates a new container, as though you had run a docker container create command manually.<br/>③Docker allocates a read-write filesystem to the container, as its final layer. This allows a running container to create or modify files and directories in its local filesystem.<br />④Docker creates a network interface to connect the container to the default network, since you did not specify any networking options. This includes assigning an IP address to the container. By default, containers can connect to external networks using the host machine’s network connection.<br />⑤Docker starts the container and executes `/bin/bash`. Because the container is running **interactively** and attached to your terminal (due to the `-i` and `-t` flags), you can provide input using your keyboard while the output is logged to your terminal.<br />⑥When you type exit to terminate the `/bin/bash` command, the container stops but is not removed. You can start it again or remove it. |
+| `images`                            | 列出当前已有的`images`                                       |                                                              |
+| `commit \<container\> [image]`      | 将指定容器更改保存到新镜像 <br />Create a new image from a container’s changes |                                                              |
+| `ps`                                | processes <br />当前运行的容器 <br />`-a` 显示所有包括未运行的. | `--size` 显示当前容器占用空间大小                            |
+| `logs <container>` | 查看容器日志 `-f follow`，追踪当前容器的输出                 | 比如使用了`-detached`参数启动在后台运行的容器，要看它的输出可以使用该命令 |
+| `rm <container>`  | 移除容器 <br />`-f force` 强制移除容器，即使它在运行         | Once the container has stopped, it can be removed.           |
+| `rmi <image>`                     | 移除镜像                                                     |                                                              |
+| `stop <container>`                | 停止运行一个容器                                             |                                                              |
+| `push <docker hub repository name>` | 推送image到docker hub                                        |                                                              |
+| `pull <docker hub repository name>` | 拉取image到本地                                              |                                                              |
+| `update`                            | 更新配置？                                                   | `--restart=no <CONTAINER ID>` 对某一个容器关闭自启动<br />`--restart=no $(docker ps -q)` 取消所有容器自启动 |
+| `export`                            | 导出容器实例                                                 | 主要用来制作基础镜像，比如我们从一个 ubuntu 镜像启动一个容器，然后安装一些软件和进行一些设置后，使用 `docker export` 保存为一个基础镜像。然后，把这个镜像分发给其他人使用，比如作为基础的开发环境。 |
+| `import`                            | 导入容器实例                                                 |                                                              |
+| `save`                              | 保存镜像                                                     | `-o` 导出的路径 建议.tar结尾 可以同时将多个镜像打包到一个文件中 |
+| `load`                              | 加载镜像                                                     | `-i` 输入文件路径                                            |
 
 #### 运行轻量级程序
 
@@ -127,15 +127,13 @@ You can combine single character flags to shorten the full command.
 
 创建的容器默认都是这种模式(default bridge driver)，和主机通过docker生成的虚拟网桥连接起来。容器之间和主机之间可以互相通过ip访问。
 
-如果是用户定义的bridge(user-defined bridge)，则默认可以通过容器名互相访问。
+如果是用户定义的bridge(user-defined bridge)，**则默认可以通过容器名互相访问**。
 
-#### 
+If you are using Docker on MacOS or Windows 18.03+, you can connect to the magic hostname `host.docker.internal`.
 
-If you are using Docker on MacOS or Windows 18.03+, you can connect to the magic hostname host.docker.internal.
+如果是WSL2，host会有相应的虚拟网卡，通过`ipconfig`可以看到虚拟ip。容器也可以通过该ip访问到宿主机。(但有时候好像又不行)
 
-如果是WSL2，host会有相应的虚拟网卡，通过ipconfig可以看到虚拟ip。容器也可以通过该ip访问到宿主机。(但有时候好像又不行)
-
-注意host.docker.internal和wsl虚拟的ip不一致但都能访问到宿主机。
+注意`host.docker.internal`和wsl虚拟的ip不一致但都能访问到宿主机。
 
 #### host
 
@@ -145,25 +143,25 @@ If you are using Docker on MacOS or Windows 18.03+, you can connect to the magic
 
 | 命令                                              | 含义                     | 备注                                                                                                |
 |---------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------------|
-| network ls                                        | 列出所有创建的网络       |                                                                                                     |
-| network inspect \<network-id\>                    | 查看网络信息             | 可以看到当前网络有哪些容器加入。 想要看某个容器加入了什么网络，使用docker inspect \<container-id\>  |
-| network create \<network-name\>                   | 创建一个user-defined网络 | 默认是创建user-defined bridge网络                                                                   |
-| network connect \<network-name\> \<container\>    | 连接一个现有的容器到网络 |                                                                                                     |
-|network disconnect \<network-name\> \<container\>|  |  |
+| `network ls`                                      | 列出所有创建的网络       |                                                                                                     |
+| `network inspect <network-id>`                  | 查看网络信息             | 可以看到当前网络有哪些容器加入。 想要看某个容器加入了什么网络，使用`docker inspect <container-id>` |
+| `network create <network-name>`                 | 创建一个`user-defined`网络 | 默认是创建`user-defined bridge`网络                                                                 |
+| `network connect <network-name> <container>`  | 连接一个现有的容器到网络 |                                                                                                     |
+|`network disconnect <network-name> <container>`|  |  |
 
 ## Docker Storage
 
-If you want to persist data in Docker, the recommended way is to use Docker Volumes. Without the use of Docker Volumes, the writeable layer of your Docker Container is removed from your Host as soon as you remove the Docker Container. But a Docker Volume is a separate Docker Object, which is not removed when you remove a Docker Container.
+If you want to persist data in Docker, the recommended way is to use Docker Volumes. Without the use of Docker Volumes, the **writeable layer** of your Docker Container is removed from your Host as soon as you remove the Docker Container. But a Docker Volume is a separate Docker Object, which is not removed when you remove a Docker Container.
 
 Volumes可以看作是独立出来的一个writeable layer，它在容器管理之外（有自己的管理方法），它可以在容器创建的时候设置映射，将容器内的某个目录映射到指定的volume中去。
 
 ![types of mounts and where they live on the Docker host](../attachments/cd09b2d732da72b743dc5c5d68f7e0f6.png)
 
-| Type         | Explanation                                                                                                                                                                                                                                 |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Volumes      | Volumes are stored in a part of the host filesystem which is managed by Docker (/var/lib/docker/volumes/ on Linux). Non-Docker processes should not modify this part of the filesystem. Volumes are the best way to persist data in Docker. |
-| Bind mounts  | Bind mounts may be stored anywhere on the host system. They may even be important system files or directories. Non-Docker processes on the Docker host or a Docker container can modify them at any time.                                   |
-| tmpfs mounts | tmpfs mounts are stored in the host system’s memory only, and are never written to the host system’s filesystem.                                                                                                                            |
+| Type         | Explanation                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Volumes      | Volumes are stored in a part of the host filesystem which is managed by Docker (`/var/lib/docker/volumes/` on Linux). Non-Docker processes should not modify this part of the filesystem. Volumes are the best way to persist data in Docker. |
+| Bind mounts  | Bind mounts may be stored anywhere on the host system. They may even be important system files or directories. Non-Docker processes on the Docker host or a Docker container can modify them at any time. |
+| tmpfs mounts | tmpfs mounts are stored in the host system’s memory only, and are never written to the host system’s filesystem. |
 
 ### Docker Volume
 
@@ -173,27 +171,27 @@ Volumes provide the ability to connect specific filesystem paths of the containe
 
 它可以映射（挂载mounting）容器目录到宿主机的特定目录
 
-它的路径由docker自己决定，在创建容器时，-v的使用方式是my-volume:/usr/local/data
+它的路径由docker自己决定，在创建容器时，`-v`的使用方式是`my-volume:/usr/local/data`
 
 ### Bind mounts
 
-The file or directory does not need to exist on the Docker host already. It is created on demand if it does not yet exist（但如果使用—mount，则不会自动创建，而是error）
+The file or directory does not need to exist on the Docker host already. It is created on demand if it does not yet exist（但如果使用mount，则不会自动创建，而是error）
 
-路径由自己控制，-v /path/to/data:/usr/local/data，可以使用relative path.
+路径由自己控制，`-v /path/to/data:/usr/local/data`，可以使用relative path.
 
 windows下，也可以使用Unix-style path
 
-C:\\Users\\user\\work -\> /c/Users/user/work
+`C:\Users\user\work` -\> `/c/Users/user/work`
 
 ### 命令
 
-| 命令                                                                                                                                                                     | 含义                                                                                                                 | 备注                                                                                                                                                       |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| volume create \<volume name\>                                                                                                                                            | 创建一个volume对象                                                                                                   |                                                                                                                                                            |
-| volume ls                                                                                                                                                                | 列出拥有的volume对象                                                                                                 |                                                                                                                                                            |
-| volume inspect \<volume name\>                                                                                                                                           | 查看volume对象信息                                                                                                   | Mountpoint就是实际映射到的url，具体与driver有关。 当driver是local，即挂载到宿主机（windows的是在docker VM上）。                                            |
-| volume prune                                                                                                                                                             | 移除未使用的Volume                                                                                                   | As long as volumes are associated with a container (either running or not), they cannot be removed.                                                        |
-| docker run -e ‘ACCEPT_EULA=Y’ -e ‘SA_PASSWORD=passw0rd1!’ -p 1433:1433 –name sql2019 -v sql_volume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04 | 其中-v是设置容器中/var/opt/mssql目录挂载到sql_volume，即容器对于该目录任何read-write操作将会直接作用在sql_volume上。 | -v 名字(docker volumn)或目录（bind mounts）：容器目录 比较容易使用 官方建议使用--mount  --mount type=bind,source=/tmp,target=/usr 最大区别在于显式与隐式。 |
+| 命令                                                         | 含义                                                         | 备注                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `volume create <volume name>`                              | 创建一个volume对象                                           |                                                              |
+| `volume ls`                                                  | 列出拥有的volume对象                                         |                                                              |
+| `volume inspect <volume name>`                             | 查看volume对象信息                                           | Mountpoint就是实际映射到的url，具体与driver有关。 当driver是local，即挂载到宿主机（windows的是在docker VM上）。 |
+| `volume prune`                                               | 移除未使用的Volume                                           | As long as volumes are associated with a container (either running or not), they cannot be removed. |
+| `docker run -e ‘ACCEPT_EULA=Y’ -e ‘SA_PASSWORD=passw0rd1!’ -p 1433:1433 –name sql2019 -v sql_volume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04` | 其中`-v`是设置容器中`/var/opt/mssql`目录挂载到sql_volume，即容器对于该目录任何read-write操作将会直接作用在sql_volume上。 | `-v 名字(docker volumn)或目录(bind mounts):容器目录 ` 比较容易使用 <br />官方建议使用`--mount`  `--mount type=bind,source=/tmp,target=/usr` 最大区别在于显式与隐式。 |
 
 
 
@@ -205,23 +203,24 @@ C:\\Users\\user\\work -\> /c/Users/user/work
 
 ![Graphical user interface, text, application Description automatically generated](../attachments/81252500c55a7899b75ad4b5b7bda8ce.png)
 
-.env 文件里面可以定义全局的环境变量VARIABLE_NAME=XXX
+`.env` 文件里面可以定义全局的环境变量`VARIABLE_NAME=XXX`
 
-然后在docker-compose.yml等文件中可以\${VARIABLE_NAME}这样使用。
+然后在`docker-compose.yml`等文件中可以`${VARIABLE_NAME}`这样使用。
 
 还有dapr中namespace环境变量的作用：
 
-\# If the NAMESPACE env var is set, Dapr does not load any
 
-\# component that does not specify the same namespace.
-
+```env
+# If the NAMESPACE env var is set, Dapr does not load any
+# component that does not specify the same namespace.
 NAMESPACE=fips
+```
 
-docker-compose.yml中定义的是镜像及网络
+`docker-compose.yml`中定义的是镜像及网络
 
 ![Text Description automatically generated](../attachments/28be9916e14084384c26ca651f95740b.png)
 
-docker-compose.override.yml中定义的是配置。
+`docker-compose.override.yml`中定义的是配置。
 
 注意使用 服务名:端口 中的端口是容器内部实际端口（即ports的右边那个），而不是对外暴露的映射主机的端口(还未确定)
 
