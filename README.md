@@ -1,5 +1,10 @@
 # Markdown & Obsidian 
 
+## 配置
+
+#### 不限制页面宽度
+`Editor` -> `Display` -> `Readable line length`，取消勾选。
+
 ## Markdown语法
 
 [Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)

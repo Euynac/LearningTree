@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/公钥密码密钥格式.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/公钥密码密钥格式.md",
+                "file": "README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/公钥密码密钥格式.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/公钥密码密钥格式.md"
+                "file": "README.md"
               }
             }
           },
@@ -167,25 +167,26 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5
+    "width": 340.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "markdown-table-editor:Open Markdown Table Editor": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "CTF/CRYPTO/公钥密码密钥格式.md",
     "CloudNative/Docker.md",
     "README.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
     "CloudNative/Kubernetes(K8S).md",
     "ComputerScience/Linux.md",
     "CTF/CRYPTO/CTF.md",
