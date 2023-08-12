@@ -272,11 +272,12 @@
 
 # AI
 
-| 软件名       | 场景                | 备注                                                            |
-|:------------ |:------------------- |:--------------------------------------------------------------- |
-| Umi-OCR      | 离线、批量OCR       | [hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR)     |
-| Lama-cleaner | 图像修复/自定义擦除 | [Sanster/lama-cleaner](https://github.com/Sanster/lama-cleaner) |
-| DeepFaceLive | AI换脸，支持直播    | [iperov/DeepFaceLive](https://github.com/iperov/DeepFaceLive)                                                                |
+| 软件名       | 场景                                                           | 备注                                                            |
+|:------------ |:-------------------------------------------------------------- |:--------------------------------------------------------------- |
+| Umi-OCR      | 离线、批量OCR                                                  | [hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR)     |
+| so-vits-svc  | SVC(Singing voice conversion)技术，用于音色模拟，唱歌变声等。还有SVS。 | [svc-develop-team/so-vits-svc](https://github.com/svc-develop-team/so-vits-svc)                                                                |
+| Lama-cleaner | 图像修复/自定义擦除                                            | [Sanster/lama-cleaner](https://github.com/Sanster/lama-cleaner) |
+| DeepFaceLive | AI换脸，支持直播                                               | [iperov/DeepFaceLive](https://github.com/iperov/DeepFaceLive)   |
 
 
 # Game

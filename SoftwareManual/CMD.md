@@ -156,55 +156,20 @@ cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 
 `CHCP 65001`
 
+python等项目多采用使用`setenv.bat`文件去临时创建一个运行环境，在其中添加：
+
+```py
+export PYTHONUTF8=1  # linux / macOS
+set PYTHONUTF8=1  # windows
+```
+
+千万注意`bat`文件中使用`set xxxx=xxxx`时，结尾不要含有空格，否则也会当作传入的值。
+
+
+
 #### 关闭/启用默认使用管理员权限打开程序
 
 程序所在的exe右键属性中，可以控制是否默认以管理员权限打开。
-
-#### 设备管理器注册表
-
-设备管理器中，右键属性-详细信息可以查看驱动或硬件的注册表值，可以通过其中的`驱动程序关键字`（英文`Driver Key`）去搜索值找到对应驱动注册表的位置。
-
-#### 驱动文件更换（如TypeC耳机驱动问题）
-
-以H180 Plus这款TypeC耳机为例：
-![](../attachments/Pasted%20image%2020230803190424.png)
-上图是已经更换了旧驱动，原本新驱动无法使用，只能识别为麦克风，更换后正常。
-
-更换驱动需要对应的`*.inf`文件
-
-查看该设备对应的驱动：
-![](../attachments/Pasted%20image%2020230803191354.png)
-
-旧驱动取自一台windows10电脑。
-使用powershell命令`Get-WindowsDriver -Online -Driver "wdma_usb.inf"` 查看驱动信息。
-
-```txt
-Driver              : wdma_usb.inf
-OriginalFileName    : C:\Windows\System32\DriverStore\FileRepository\wdma_usb.inf_amd64_63b279bcecfa8b38\wdma_usb.inf
-Inbox               : True
-ClassName           : MEDIA
-ClassDescription    : 声音、视频和游戏控制器
-ClassGuid           : {4D36E96C-E325-11CE-BFC1-08002BE10318}
-BootCritical        : False
-ProviderName        : Microsoft
-Date                : 7/6/2023 12:00:00 AM
-Version             : 10.0.22621.1992
-ManufacturerName    : Yamaha
-HardwareDescription : Yamaha USB MIDI
-Architecture        : x64
-HardwareId          : USB\VID_0499&PID_1FFF
-ServiceName         : usbaudio
-CompatibleIds       :
-ExcludeIds
-```
-
-这里可以得到驱动文件所在的地址
-`OriginalFileName    : C:\Windows\System32\DriverStore\FileRepository\wdma_usb.inf_amd64_63b279bcecfa8b38\wdma_usb.inf`
-
-将文件夹从旧电脑拷贝出来，放到本机电脑，然后对指定设备替换驱动。
-`更新驱动程序`->`浏览我的电脑以查找`->`让我从计算机可用驱动列表选取`->`从磁盘安装`->选择对应inf文件。
-这里可能会出现该文件没有经过数字签名，需要临时禁用这个安全机制。
-`Shift`+开始菜单的重启按钮，进入疑难解答界面，接着`高级选项`->`启动设置`->`重启`，然后可以选择`禁用驱动程序强制签名`，电脑这回重启后可以安装未签名的驱动了，按上面步骤安装驱动后重启后，耳机就可以用了。
 
 #### 修复系统损坏文件
 
@@ -376,6 +341,76 @@ Hyper-V 会保留部分tcp端口，开始到结束范围内的端口不可用, �
 | netsh interface ipv4 show neighbors |                                                                                                                                                                                                                                             | 查看局域网邻居ip                                                                                                                                                                                                                   |
 | tracert                             |                                                                                                                                                                                                                                             | 路由跟踪，指示到目标地址经过的路由IP                                                                                                                                                                                               |
 |                                     |                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                    |
+
+
+
+# 注册表
+
+#### 控制启动服务
+
+有些服务`services.msc`中调整启动类型的选项是灰色的，可以通过修改注册表强行更改。
+
+注册表位置：`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\`
+
+找到服务，其中`Start`值就是目标。
+
+**值=0**，默认开机bios启动而启动
+
+**值=1**，跟随操作系统启动
+
+**值=2**，自动启动
+
+**值=3**，手动启动
+
+**值=4**，禁用
+
+#### 设备管理器注册表
+
+设备管理器中，右键属性-详细信息可以查看驱动或硬件的注册表值，可以通过其中的`驱动程序关键字`（英文`Driver Key`）去搜索值找到对应驱动注册表的位置。
+
+#### 驱动文件更换（如TypeC耳机驱动问题）
+
+以H180 Plus这款TypeC耳机为例：
+![](../attachments/Pasted%20image%2020230803190424.png)
+上图是已经更换了旧驱动，原本新驱动无法使用，只能识别为麦克风，更换后正常。
+
+更换驱动需要对应的`*.inf`文件
+
+查看该设备对应的驱动：
+![](../attachments/Pasted%20image%2020230803191354.png)
+
+旧驱动取自一台windows10电脑。
+使用powershell命令`Get-WindowsDriver -Online -Driver "wdma_usb.inf"` 查看驱动信息。
+
+```txt
+Driver              : wdma_usb.inf
+OriginalFileName    : C:\Windows\System32\DriverStore\FileRepository\wdma_usb.inf_amd64_63b279bcecfa8b38\wdma_usb.inf
+Inbox               : True
+ClassName           : MEDIA
+ClassDescription    : 声音、视频和游戏控制器
+ClassGuid           : {4D36E96C-E325-11CE-BFC1-08002BE10318}
+BootCritical        : False
+ProviderName        : Microsoft
+Date                : 7/6/2023 12:00:00 AM
+Version             : 10.0.22621.1992
+ManufacturerName    : Yamaha
+HardwareDescription : Yamaha USB MIDI
+Architecture        : x64
+HardwareId          : USB\VID_0499&PID_1FFF
+ServiceName         : usbaudio
+CompatibleIds       :
+ExcludeIds
+```
+
+这里可以得到驱动文件所在的地址
+`OriginalFileName    : C:\Windows\System32\DriverStore\FileRepository\wdma_usb.inf_amd64_63b279bcecfa8b38\wdma_usb.inf`
+
+将文件夹从旧电脑拷贝出来，放到本机电脑，然后对指定设备替换驱动。
+`更新驱动程序`->`浏览我的电脑以查找`->`让我从计算机可用驱动列表选取`->`从磁盘安装`->选择对应inf文件。
+这里可能会出现该文件没有经过数字签名，需要临时禁用这个安全机制。
+`Shift`+开始菜单的重启按钮，进入疑难解答界面，接着`高级选项`->`启动设置`->`重启`，然后可以选择`禁用驱动程序强制签名`，电脑这回重启后可以安装未签名的驱动了，按上面步骤安装驱动后重启后，耳机就可以用了。
+
+#### 
 
 # 批处理基础
 

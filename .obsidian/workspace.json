@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/WEB.md",
+                "file": "AI/Drawing.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/WEB.md",
+                "file": "AI/Drawing.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/WEB.md",
+                "file": "AI/Drawing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/WEB.md"
+                "file": "AI/Drawing.md"
               }
             }
           },
@@ -197,7 +197,11 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "AI/ArtificialIntelligence.md",
+    "AI/Drawing.md",
+    "AI",
     "CTF/ToolsList.md",
+    "ComputerScience/WEB.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
@@ -217,19 +221,16 @@
     "CloudNative/CloudNative.md",
     "CloudNative/Dapr.md",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "ComputerScience/WEB.md",
     "Architecture/ABP.md",
     "attachments/Pasted image 20230809141442.png",
     "CloudNative/Components/Apache APISIX.md",
     "attachments/Pasted image 20230809100733.png",
     "Koubot/Linux命令.md",
-    "attachments/templates/LinuxShellPlugin.md",
     "Koubot",
     "attachments/Pasted image 20230808222519.png",
     "attachments/Pasted image 20230808222119.png",
     "attachments/Pasted image 20230808221927.png",
     "attachments/Pasted image 20230808221913.png",
-    "Fontend/FrontendConcept.md",
     "attachments/Pasted image 20230808212302.png",
     "attachments/Pasted image 20230808192247.png",
     "attachments/Pasted image 20230808191824.png",
@@ -242,7 +243,6 @@
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
     "SoftwareManual/MicosoftOffice.md.baiduyun.uploading.cfg",
     "SoftwareManual/Git.md.baiduyun.uploading.cfg",
-    "SoftwareManual/CMD.md.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }
