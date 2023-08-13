@@ -317,6 +317,8 @@ python-tk
 python3-tk
 
 python包：
+cv2
+matplotlib
 numpy
 matplotlib
 python-tk
