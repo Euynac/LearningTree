@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Deployments/时钟同步.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Deployments/时钟同步.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Deployments/时钟同步.md",
+                "file": "CloudNative/Deployments/K8S集群部署要求.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Deployments/时钟同步.md"
+                "file": "CloudNative/Deployments/K8S集群部署要求.md"
               }
             }
           },
@@ -197,18 +197,19 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230814163237.png",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CloudNative/Deployments/K8S集群部署要求.md",
     "AI/Drawing.md",
     "CTF/Hacker/软件破解.md",
     "CloudNative/Docker.md",
     "CTF/Hacker",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Dapr.md",
-    "CloudNative/Deployments/时钟同步.md",
     "attachments/Pasted image 20230814155551.png",
     "attachments/Pasted image 20230814155526.png",
     "attachments/Pasted image 20230814155516.png",
     "attachments/Pasted image 20230814155326.png",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/ToolsList.md",
@@ -228,7 +229,6 @@
     "README.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "ComputerScience/Linux.md",
-    "CTF/CRYPTO/CTF.md",
     "attachments/Pasted image 20230809141442.png",
     "attachments/Pasted image 20230809100733.png",
     "Koubot",
