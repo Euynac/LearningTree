@@ -59,3 +59,9 @@
 3. 最后输入“timedatectl”命令，看到如下图所示则时钟同步成功。
 
 ![](../../attachments/Pasted%20image%2020230814155516.png)
+
+
+
+# DNS服务器配置
+
+配置好后可以使用`dig www.xxx.com`命令，随便输入一个网站，它会读取`/etc/resolv.conf`下`nameserver`的配置然后尝试发送请求解析，如果有回应，说明DNS配置正确。
