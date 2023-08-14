@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CloudNative/Deployments/时钟同步.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CloudNative/Deployments/时钟同步.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CloudNative/Deployments/时钟同步.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/压缩包.md"
+                "file": "CloudNative/Deployments/时钟同步.md"
               }
             }
           },
@@ -197,11 +197,23 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "AI/Drawing.md",
+    "CTF/Hacker/软件破解.md",
+    "CloudNative/Docker.md",
+    "CTF/Hacker",
+    "CloudNative/Kubernetes(K8S).md",
+    "CloudNative/Dapr.md",
+    "CloudNative/Deployments/时钟同步.md",
+    "attachments/Pasted image 20230814155551.png",
+    "attachments/Pasted image 20230814155526.png",
+    "attachments/Pasted image 20230814155516.png",
+    "attachments/Pasted image 20230814155326.png",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/ToolsList.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/思路打开.md",
-    "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/图像隐写/JPG.md",
     "ComputerScience/WEB.md",
@@ -209,21 +221,14 @@
     "ComputerScience/SoftwareTest.md",
     "ComputerScience/Database.md",
     "ComputerScience/BigData.md",
-    "AI/Drawing.md",
     "AI/ArtificialIntelligence.md",
     "AI",
     "attachments/templates/python脚本.md",
     "attachments/templates/Shell脚本.md",
     "README.md",
-    "CloudNative/Docker.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CloudNative/Kubernetes(K8S).md",
     "ComputerScience/Linux.md",
     "CTF/CRYPTO/CTF.md",
-    "CTF/ToolManual/010Editor.md",
-    "CTF/ToolManual/VMware.md",
-    "CTF/ToolManual/Xdbg.md",
-    "CloudNative/K8S集群管理.md",
     "attachments/Pasted image 20230809141442.png",
     "attachments/Pasted image 20230809100733.png",
     "Koubot",
@@ -231,10 +236,6 @@
     "attachments/Pasted image 20230808222119.png",
     "attachments/Pasted image 20230808221927.png",
     "attachments/Pasted image 20230808221913.png",
-    "attachments/Pasted image 20230808212302.png",
-    "attachments/Pasted image 20230808192247.png",
-    "attachments/Pasted image 20230808191824.png",
-    "attachments/Pasted image 20230808191816.png",
     "Fontend",
     "CloudNative/Components",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
@@ -242,7 +243,6 @@
     "新建文件夹",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
     "SoftwareManual/MicosoftOffice.md.baiduyun.uploading.cfg",
-    "SoftwareManual/Git.md.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }
