@@ -111,6 +111,8 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 ### Configuration
 
 对于Pod的外部配置，可以使用ConfigMap或Secrets。
+#### 挂载单个文件
+默认挂载 `configMap` 时，`kubernetes` 会覆盖掉挂载的整个目录，哪怕使用 `items` 也会导致整个目录被覆盖，那么如何实现挂在单个文件而不覆盖整个目录呢。下面说一下 `kubernetes` 中如何挂载单个文件而不是整个目录。
 
 # Harbor镜像仓库
 
