@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md"
+                "file": "CTF/README.md"
               }
             }
           },
@@ -195,13 +195,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95641d9f2e99738f",
+  "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "CTF/CRYPTO/Practice_Cryptograph.md",
+    "CTF/CRYPTO/PBE.md",
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/CRYPTO/CTF.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/公钥密码密钥格式.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/MISC/思路打开.md",
     "CTF/MISC/文件头.md",
-    "CTF/CRYPTO/CTF.md",
     "CTF/MISC/压缩包.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "attachments/Pasted image 20230814163237.png",
@@ -216,7 +222,6 @@
     "attachments/Pasted image 20230814155526.png",
     "attachments/Pasted image 20230814155516.png",
     "attachments/Pasted image 20230814155326.png",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/ToolsList.md",
     "ComputerScience/WEB.md",
     "ComputerScience/Unity.md",
@@ -225,11 +230,6 @@
     "ComputerScience/BigData.md",
     "AI/ArtificialIntelligence.md",
     "AI",
-    "attachments/templates/python脚本.md",
-    "attachments/templates/Shell脚本.md",
-    "README.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
-    "ComputerScience/Linux.md",
     "attachments/Pasted image 20230809141442.png",
     "attachments/Pasted image 20230809100733.png",
     "Koubot",
