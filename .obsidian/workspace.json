@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Music/MusicTheory.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Music/MusicTheory.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "Music/MusicTheory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md"
+                "file": "Music/MusicTheory.md"
               }
             }
           },
@@ -197,6 +197,8 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "Music/FLStudio.md",
+    "CloudNative/Kubernetes(K8S).md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "Architecture/ABP.md",
     "CloudNative/Dapr.md",
@@ -219,7 +221,6 @@
     "CTF/Hacker/软件破解.md",
     "CloudNative/Docker.md",
     "CTF/Hacker",
-    "CloudNative/Kubernetes(K8S).md",
     "attachments/Pasted image 20230814155551.png",
     "attachments/Pasted image 20230814155526.png",
     "attachments/Pasted image 20230814155516.png",
@@ -228,7 +229,6 @@
     "ComputerScience/WEB.md",
     "ComputerScience/Unity.md",
     "ComputerScience/SoftwareTest.md",
-    "ComputerScience/Database.md",
     "AI",
     "attachments/Pasted image 20230809141442.png",
     "attachments/Pasted image 20230809100733.png",
