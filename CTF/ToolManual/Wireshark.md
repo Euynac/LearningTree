@@ -50,7 +50,12 @@ ARP请求是广播的，因此可以靠速度取胜。
 
 ## 数据提取
 
+### 字节流
 提取字节流 选中HTTP包，File->Export Packet bytes，或直接使用快捷键`CTRL+SHIFT+X`
+
+### 批量浏览包含的文件
+![](../../attachments/Pasted%20image%2020230817230201.png)
+
 
 # 其他功能
 
