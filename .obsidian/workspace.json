@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -197,6 +197,7 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
+    "CTF/ToolManual/Wireshark.md",
     "attachments/Pasted image 20230817230201.png",
     "CTF/CRYPTO/CTF.md",
     "CTF/README.md",
@@ -235,7 +236,6 @@
     "Koubot",
     "attachments/Pasted image 20230808222519.png",
     "attachments/Pasted image 20230808222119.png",
-    "attachments/Pasted image 20230808221927.png",
     "Fontend",
     "CloudNative/Components",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
