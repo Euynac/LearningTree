@@ -9,6 +9,8 @@
 ![](../../attachments/Pasted%20image%2020230814163237.png)
 7.  将五个服务器中“/etc/yum.repos.d/openEuler.repo”重命名备份，然 后将“配 置文 件 \openEuler.repo ” 拷贝 到5个 服务器 的“/etc/yum.repos.d”路径下。
 这是配置yum仓库地址
+注意这个目录下不要有多个`.repo`文件，它似乎只会识别一个去处理。
+验证是否配置成功可以尝试`yum list`
 
 8. 在服务器分别执行`dnf clean all`，`dnf makecache`命令
 The commands `dnf clean all` and `dnf makecache` are related to the DNF package manager, which is used to install, update, and remove software packages on RPM-based Linux distributions. Here is a brief explanation of what they do:
@@ -16,7 +18,9 @@ The commands `dnf clean all` and `dnf makecache` are related to the DNF package 
 - `dnf clean all` removes all cached files generated from the repository metadata. This can help to solve package installation problems that arise from corrupt or outdated metadata. It also frees up some disk space by deleting unnecessary files1
 - `dnf makecache` downloads and caches metadata for enabled repositories. This can speed up the package installation process by avoiding unnecessary downloads. It also ensures that the metadata is up to date and consistent with the remote repositories2
 
+9. 执行 `yum install -y conntrack socat tar`
 
+10. 重启群集每个节点的服务器。
 
 
 # 防火墙配置
@@ -80,9 +84,9 @@ The commands `dnf clean all` and `dnf makecache` are related to the DNF package 
 
 ```sh
 nameserver 188.xxx.xxx.xxx
-
 ```
 
+可以运行`systemctl restart NetworkManager`命令重启使其强制生效。
 # 系统资源限制配置
 
 The default value of max count of system handle defined in Linux depends on the type of handle you are referring to. There are different kinds of handles, such as file descriptors, processes, sockets, memory mappings, etc. Each of them has a different limit and a different way to change it.
@@ -132,7 +136,48 @@ gpgkey=file:///opt/openeuler_repo/RPM-GPG-KEY-openEuler
 ![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
 
 3、执行“yum -y install nginx”安装 nginx，将/etc/nginx/nginx.conf 文件重命名备份，然后将“nginx.conf”拷贝到/etc/nginx 路径下。
+`nginx.conf`文件内容修改如下：
 
+```nginx
+user  nginx;
+worker_processes  auto;                          # 建议设置为core-1
+error_log  /var/log/nginx/error.log  warn;       # log存放位置
+pid        /var/run/nginx.pid;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name  localhost;                 # 服务器名（url）
+        client_max_body_size 4G;
+        root         /usr/share/nginx/repo;                 # 服务默认目录
+
+        location / {
+            autoindex            on;            # 开启访问目录下层文件，这里一定要记得开，不然会有403Forbidden问题
+            autoindex_exact_size on;
+            autoindex_localtime  on; 
+        }
+
+    }
+}
+```
+
+可以用软链接方式将repo文件夹链接到nginx目录下
+`ln -s /opt/openeuler_repo /usr/share/nginx/repo`
 
 
 4、依次执行“systemctl enable nginx”，“systemctl start nginx”， “systemctl status nginx”，看到下图则nginx 启动成功。
