@@ -96,3 +96,49 @@ A third example is the maximum number of TCP/IP connections per system, which ca
 A fourth example is the maximum number of memory mappings per process, which can be checked by using the command `cat /proc/sys/vm/max_map_count`. The default value is usually 65530, but it can be changed by using the command `sysctl vm.max_map_count=number`.
 
 These are just some examples of system handles and their limits in Linux. There may be other types of handles that have different limits and ways to change them. You can find more information about them by searching on the web or reading the Linux documentation. I hope this helps you understand the concept of system handles and their limits in Linux. 😊
+
+# openeuler 软件源
+
+## 可参考（[搭建 repo 服务器 (openeuler.org)](https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Administration/%E6%90%AD%E5%BB%BArepo%E6%9C%8D%E5%8A%A1%E5%99%A8.html)）
+
+1、将“openEuler-22.03-LTS-everything-x86_64-dvd.iso”镜像拷贝到服务器的root 目录下。
+
+2、按顺序执行以下命令：
+
+（1）mkdir -p /mnt/iso
+
+（ 2    ） mount      openEuler-22.03-LTS-everything-x86_64-dvd.iso
+
+/mnt/iso/
+
+（3）mkdir /opt/openeuler_repo/
+
+（3） cp -r /mnt/iso/* /opt/openeuler_repo/
+
+（4）   im /etc/yum.repos.d/openEuler.repo
+
+3、在 openEuler.repo 文件里写入以下内容
+
+
+```config
+[base] 
+name=base
+baseurl=file:///opt/openeuler_repo enabled=1
+gpgcheck=1
+gpgkey=file:///opt/openeuler_repo/RPM-GPG-KEY-openEuler
+```
+
+
+![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
+
+3、执行“yum -y install nginx”安装 nginx，将/etc/nginx/nginx.conf 文件重命名备份，然后将“nginx.conf”拷贝到/etc/nginx 路径下。
+
+
+
+4、依次执行“systemctl enable nginx”，“systemctl start nginx”， “systemctl status nginx”，看到下图则nginx 启动成功。
+
+![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg)
+
+5、打开浏览器访问本机 IP 地址，出现下图则部署成功。
+
+![](file:///C:/Users/87083/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg)
