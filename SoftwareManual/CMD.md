@@ -156,9 +156,9 @@ cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 
 `CHCP 65001`
 
-python等项目多采用使用`setenv.bat`文件去临时创建一个运行环境，在其中添加：
+解决python乱码问题：python等项目多采用使用`setenv.bat`文件去临时创建一个运行环境，在其中添加：
 
-```py
+```sh
 export PYTHONUTF8=1  # linux / macOS
 set PYTHONUTF8=1  # windows
 ```

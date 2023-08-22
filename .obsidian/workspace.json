@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/CMD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -62,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "chcp 65001",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,7 +79,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/CMD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "SoftwareManual/CMD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "SoftwareManual/CMD.md"
               }
             }
           },
@@ -197,8 +198,8 @@
   },
   "active": "3772a3b4cf7197f3",
   "lastOpenFiles": [
-    "CTF/ToolManual/Xdbg.md",
     "CTF/ToolsList.md",
+    "CTF/ToolManual/Xdbg.md",
     "CTF/ToolManual/Wireshark.md",
     "attachments/Pasted image 20230817230201.png",
     "CTF/CRYPTO/CTF.md",
