@@ -4,7 +4,7 @@
 2. 永久关闭 Selinux
 3. 永久关闭虚拟内存交换
 4. 永久关闭防火墙
-5. 创建resolv.conf 文件，并配置 DNS 服务器 IP 地址。
+5. 创建`/etc/resolv.conf` 文件，并配置 DNS 服务器 IP 地址。
 6. 执行“vi /etc/security/limits.conf”修改系统最大句柄数限制,在文件中添加“* soft nofile 65535”和“* hard nofile 65535”。再重启服务器。
 ![](../../attachments/Pasted%20image%2020230814163237.png)
 7.  将五个服务器中“/etc/yum.repos.d/openEuler.repo”重命名备份，然 后将“配 置文 件 \openEuler.repo ” 拷贝 到5个 服务器 的“/etc/yum.repos.d”路径下。
@@ -76,7 +76,12 @@ The commands `dnf clean all` and `dnf makecache` are related to the DNF package 
 # DNS服务器配置
 
 配置好后可以使用`dig www.xxx.com`命令，随便输入一个网站，它会读取`/etc/resolv.conf`下`nameserver`的配置然后尝试发送请求解析，如果有回应，说明DNS配置正确。
+`resolve.conf`文件内容如下：
 
+```sh
+nameserver 188.xxx.xxx.xxx
+
+```
 
 # 系统资源限制配置
 
