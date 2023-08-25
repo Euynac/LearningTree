@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CloudNative/K8S集群管理.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CloudNative/K8S集群管理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CloudNative/K8S集群管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "CloudNative/K8S集群管理.md"
               }
             }
           },
@@ -183,18 +183,19 @@
   },
   "active": "fdbdedb149a82885",
   "lastOpenFiles": [
+    "CloudNative/Docker.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CloudNative/Deployments/K8S集群部署要求.md",
+    "CloudNative/Kubernetes(K8S).md",
+    "CloudNative/K8S集群管理.md",
+    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20230824155703.png",
     "CTF/ToolsList.md",
-    "CloudNative/K8S集群管理.md",
-    "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
     "README.md",
     "attachments/Pasted image 20230823084310.png",
     "SoftwareManual/MicosoftOffice.md",
     "SoftwareManual/VSCode.md",
     "SoftwareManual/VisualStudio.md",
-    "SoftwareManual/CMD.md",
     "CTF/ToolManual/Wireshark.md",
     "CTF/ToolManual/010Editor.md",
     "CTF/Hacker/软件破解.md",
@@ -221,7 +222,6 @@
     "attachments/Pasted image 20230809141442.png",
     "attachments/Pasted image 20230809100733.png",
     "Koubot",
-    "attachments/Pasted image 20230808222519.png",
     "Fontend",
     "CloudNative/Components",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",

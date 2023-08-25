@@ -14,6 +14,91 @@
 
 负载均衡器及反向代理服务器。
 load balancer and proxy server software that is used to distribute network traffic across multiple servers to improve performance, reliability, and scalability of web applications. It uses a round-robin algorithm to distribute incoming requests to the servers in a balanced way.
+
+配置HAproxy文件：
+```cfg
+# Global settings for HAProxy
+global
+    # Set the logging destination and log level
+    log /dev/log local0 warning
+
+    # Set the directory for the chroot environment
+    chroot /var/lib/haproxy
+
+    # Set the file containing the process ID
+    pidfile /var/run/haproxy.pid
+
+    # Maximum allowed concurrent connections
+    maxconn 4000
+
+    # Set the user and group for running HAProxy
+    user haproxy
+    group haproxy
+
+    # Run HAProxy as a daemon
+    daemon
+
+    # Enable a Unix socket for statistics monitoring
+    stats socket /var/lib/haproxy/stats
+
+# defines default settings that will be applied to all backend sections unless explicitly overridden.
+defaults
+    # Use the global log settings
+    log global
+
+    # Enable logging for HTTP requests
+    option httplog
+
+    # Do not log connections with no data exchange
+    option dontlognull
+
+    # Set the maximum timeout for connecting to a server
+    timeout connect 5000
+
+    # Set the maximum timeout for client connections
+    timeout client 50000
+
+    # Set the maximum timeout for server connections
+    timeout server 50000
+
+# Configuration for handling incoming traffic
+frontend kube-apiserver
+    # Bind to all available IP addresses on port 6443
+    bind *:6443
+
+    # Use TCP mode for handling traffic
+    mode tcp
+
+    # Enable logging for TCP connections
+    option tcplog
+
+    # Direct incoming traffic to the kube-apiserver backend
+    default_backend kube-apiserver
+
+# Configuration for backend kube-apiserver
+backend kube-apiserver
+    # Use TCP mode for backend connections
+    mode tcp
+
+    # Enable logging for backend TCP connections
+    option tcplog
+
+    # Enable TCP health checks for backend servers
+    option tcp-check
+
+    # Use round-robin load balancing algorithm
+    balance roundrobin
+
+    # Server parameters for health checks and load balancing
+    default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
+
+    # Define backend servers with their IP addresses
+    server kube-apiserver-1 172.16.0.4:6443 check # Replace the IP address with your own.
+    server kube-apiserver-2 172.16.0.5:6443 check # Replace the IP address with your own.
+    server kube-apiserver-3 172.16.0.6:6443 check # Replace the IP address with your own.
+```
+
+
 ## Keepalived
 
 Keepalived通过VRRP协议实现服务或网络层高可用，即实现节点健康状态监测、剔除集群中故障节点。
