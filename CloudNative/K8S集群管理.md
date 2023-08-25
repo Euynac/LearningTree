@@ -16,7 +16,7 @@
 load balancer and proxy server software that is used to distribute network traffic across multiple servers to improve performance, reliability, and scalability of web applications. It uses a round-robin algorithm to distribute incoming requests to the servers in a balanced way.
 
 配置HAproxy文件：
-```cfg
+```sh
 # Global settings for HAProxy
 global
     # Set the logging destination and log level
@@ -103,6 +103,57 @@ backend kube-apiserver
 
 Keepalived通过VRRP协议实现服务或网络层高可用，即实现节点健康状态监测、剔除集群中故障节点。
 它一般与负载均衡器一起实现高可用，所以可以看到有`nginx+keepalived`，以及这里的`HAproxy+keepalived`的搭配。
+
+```sh
+# Global definitions for VRRP
+global_defs {
+  notification_email {
+    # Add email addresses for VRRP notifications
+  }
+  router_id LVS_DEVEL    # Sets the router ID for identification purposes.
+  vrrp_skip_check_adv_addr # Skips checking the advertising address for consistency.
+  
+  # Disable gratuitous ARP and Gratuitous Neighbor Advertisement intervals.
+  vrrp_garp_interval 0  
+  vrrp_gna_interval 0
+}
+
+# VRRP script for checking HAProxy
+vrrp_script chk_haproxy {
+  script "killall -0 haproxy"   # Check if HAProxy is running
+  interval 2                    # Check every 2 seconds
+  weight 2                      # Higher weight indicates higher preference
+}
+
+# VRRP instance configuration
+vrrp_instance haproxy-vip {
+  state BACKUP                   # Sets the initial state of the VRRP instance to backup.
+  priority 100                   # Sets the priority of this machine in the VRRP group.
+  interface eth0                 # Specifies the network interface to use for VRRP.
+  virtual_router_id 60           # Assigns a virtual router ID for this VRRP instance.
+  advert_int 1                   # Advertisement interval
+  # Contains authentication settings for VRRP.
+  authentication {
+    auth_type PASS               # Use password authentication
+    auth_pass 1111               # Set the authentication password
+  }
+  unicast_src_ip 172.16.0.2       # Source IP address for unicast
+  unicast_peer {
+    172.16.0.3                   # Peer's IP address for unicast
+  }
+
+  # Defines the virtual IP address for the VRRP instance.
+  virtual_ipaddress {
+    172.16.0.10/24               # Virtual IP address and subnet mask
+  }
+
+  # Specifies scripts to track the status of.
+  track_script {
+    chk_haproxy                 # Monitor the script's status
+  }
+}
+
+```
 ### VRRP
 
 `FHRP(First Hop Redundancy Protocol)`协议，第一跳冗余协议，解决路由器单点故障问题，从协议上进行解决，让多个路由器使用一个虚拟IP。FHRP stands for First Hop Redundancy Protocol, which is used to provide redundancy for the first hop of a network. This is typically done by having multiple routers share the same virtual IP address, so that if one router fails, another can take over seamlessly. 
