@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/MISC/思路打开.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/MISC/思路打开.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/MISC/思路打开.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CTF/MISC/思路打开.md"
               }
             }
           },
@@ -183,8 +183,11 @@
   },
   "active": "f54d71e3ce6ef86d",
   "lastOpenFiles": [
-    "attachments/Pasted image 20230829170428.png",
     "CTF/MISC/文件头.md",
+    "CTF/MISC/思路打开.md",
+    "CTF/Hacker/软件破解.md",
+    "SoftwareManual/VisualStudio.md",
+    "attachments/Pasted image 20230829170428.png",
     "CTF/MISC/压缩包.md",
     "CTF/README.md",
     "CTF/ToolManual/Wireshark.md",
@@ -200,9 +203,7 @@
     "attachments/Pasted image 20230823084310.png",
     "SoftwareManual/MicosoftOffice.md",
     "SoftwareManual/VSCode.md",
-    "SoftwareManual/VisualStudio.md",
     "CTF/ToolManual/010Editor.md",
-    "CTF/Hacker/软件破解.md",
     "ComputerScience/Database.md",
     "CTF/ToolManual/Xdbg.md",
     "attachments/Pasted image 20230817230201.png",
@@ -220,7 +221,6 @@
     "attachments/Pasted image 20230814155326.png",
     "AI",
     "attachments/Pasted image 20230809141442.png",
-    "attachments/Pasted image 20230809100733.png",
     "Koubot",
     "Fontend",
     "CloudNative/Components",
