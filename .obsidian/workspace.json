@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/文件头.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/文件头.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -183,6 +183,8 @@
   },
   "active": "f54d71e3ce6ef86d",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230829170428.png",
+    "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
     "CTF/README.md",
     "CTF/ToolManual/Wireshark.md",
@@ -210,8 +212,6 @@
     "Architecture/ABP.md",
     "CloudNative/Dapr.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
-    "CTF/CRYPTO/PBE.md",
-    "CTF/CRYPTO/Encoding.md",
     "attachments/Pasted image 20230814163237.png",
     "CTF/Hacker",
     "attachments/Pasted image 20230814155551.png",
