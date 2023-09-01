@@ -27,7 +27,7 @@ charset = utf-8
 ##### 下载bootstrapper vs_enterprise.exe
 [Create a network-based installation - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/install/create-a-network-installation-of-visual-studio?view=vs-2022#download-the-visual-studio-bootstrapper-to-create-the-layout)
 ```shell
-# 使用哦 bootstrapper进行运行命令 create local layout
+# 使用 bootstrapper进行运行命令 create local layout
 vs_enterprise.exe --layout D:\VS2022\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Component.Git --includeRecommended --lang en-US zh-CN
 
 # --lang在安装时无效

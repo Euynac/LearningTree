@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Hacker/软件破解.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -183,9 +183,9 @@
   },
   "active": "f54d71e3ce6ef86d",
   "lastOpenFiles": [
+    "CTF/Hacker/软件破解.md",
     "CTF/MISC/思路打开.md",
     "CTF/MISC/文件头.md",
-    "CTF/Hacker/软件破解.md",
     "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20230829170428.png",
     "CTF/MISC/压缩包.md",
