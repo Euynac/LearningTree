@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7764b6b038fc29ea",
+        "id": "d53434c99eee6fe0",
         "type": "tabs",
         "children": [
           {
-            "id": "f4c2da6dc36c7461",
+            "id": "c69c0511e417c5e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CTF/MISC/图像隐写/JPG.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "kex",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CTF/MISC/图像隐写/JPG.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CTF/MISC/图像隐写/JPG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Linux.md"
+                "file": "CTF/MISC/图像隐写/JPG.md"
               }
             }
           },
@@ -182,19 +181,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f4c2da6dc36c7461",
+  "active": "c69c0511e417c5e0",
   "lastOpenFiles": [
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/思路打开.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/PBE.md",
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/CRYPTO/公钥密码密钥格式.md",
+    "CTF/MISC/镜像分析.md",
+    "CTF/MISC/压缩包.md",
     "ComputerScience/Linux.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/镜像分析.md",
     "CTF/MISC/音频隐写.md",
-    "CTF/MISC/压缩包.md",
-    "CTF/MISC/文件头.md",
     "CTF/ToolManual/Xdbg.md",
     "CTF/ToolManual/VMware.md",
     "CTF/README.md",
-    "CTF/MISC/思路打开.md",
     "attachments/Pasted image 20230902133734.png",
     "attachments/Pasted image 20230902132207.png",
     "attachments/Pasted image 20230902132123.png",
@@ -211,11 +214,7 @@
     "CloudNative/K8S集群管理.md",
     "CloudNative/Docker.md",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
-    "CloudNative/Kubernetes(K8S).md",
-    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20230824155703.png",
-    "README.md",
     "attachments/Pasted image 20230823084310.png",
     "attachments/Pasted image 20230817230201.png",
     "attachments/Pasted image 20230814163237.png",
