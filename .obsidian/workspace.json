@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/图像隐写/图像隐写.md"
+                "file": "CTF/ToolManual/010Editor.md"
               }
             }
           },
@@ -197,10 +197,11 @@
   },
   "active": "a8c5223bbc373a70",
   "lastOpenFiles": [
+    "CTF/ToolManual/CyberChef.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
     "CTF/ToolsList.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/思路打开.md",
@@ -226,7 +227,6 @@
     "attachments/Pasted image 20230817230201.png",
     "CTF/CRYPTO/CTF.md",
     "Music/MusicTheory.md",
-    "Music/FLStudio.md",
     "attachments/Pasted image 20230814163237.png",
     "CTF/Hacker",
     "attachments/Pasted image 20230814155551.png",
