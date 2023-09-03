@@ -145,7 +145,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | powerlevel10k | zsh主题                    | [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k) |
 | ohmyzsh       | 管理 linux shell zsh       | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                       |
 | Dust          | Du+rust,增强disk usage命令 | [bootandy/dust](https://github.com/bootandy/dust)                                           |
-| Bat           | Cat美化工具，语法高亮      |                                                                                             |
+| Bat           | Cat美化工具，语法高亮      | [42.6k star,推荐个强大的命令，让输出焕然一新的语法高亮工具--bat](https://mp.weixin.qq.com/s/D7WCiwXo1aGsa2RQeR82nA)                                                                                            |
 
 # 笔记
 
