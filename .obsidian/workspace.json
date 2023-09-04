@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/压缩包.md",
+                "file": "CTF/ToolManual/010Editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/压缩包.md"
+                "file": "CTF/ToolManual/010Editor.md"
               }
             }
           },
@@ -183,6 +183,9 @@
   },
   "active": "1868b21d6d323f46",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230904233917.png",
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/压缩包.md",
     "Fontend/FrontendConcept.md",
     "Koubot/Linux命令.md",
     "Music/MusicTheory.md",
@@ -190,7 +193,6 @@
     "Reverse/Reverse.md",
     "SoftwareManual/WSL.md",
     "CTF/CRYPTO/密码攻击方式.md",
-    "CTF/MISC/压缩包.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/MISC/图像隐写/图像隐写.md",
@@ -215,10 +217,8 @@
     "attachments/Pasted image 20230903003510.png",
     "CTF/ToolManual/010Editor.md",
     "attachments/Pasted image 20230902234150.png",
-    "CTF/MISC/文件头.md",
     "CTF/MISC/镜像分析.md",
     "CTF/README.md",
-    "CTF/ToolManual/Xdbg.md",
     "attachments/Pasted image 20230902211937.png",
     "CTF/Hacker",
     "AI",
