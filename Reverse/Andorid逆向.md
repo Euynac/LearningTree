@@ -122,7 +122,7 @@ frida-ps -U
 
 IDA 还原JNI函数方法名，用于显示调用的具体函数名称
 [IDA 还原JNI函数方法名 的三种方法_ida jni_暗夜枭熊的博客-CSDN博客](https://blog.csdn.net/yb493071294/article/details/80378730)
-
+![](../attachments/Pasted%20image%2020230904172641.png)
 
 
 
