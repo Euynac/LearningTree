@@ -38,7 +38,7 @@ ADB 全称 Android Debug Bridge，译作Android 调试桥。 ADB是一种功能�
 
 ```sh
 adb connect host:port # 连接安卓模拟器
-adb device # 列出已连接的设备
+adb devices # 列出已连接的设备
 adb -s 设备号 shell # 连上shell
 ```
 
