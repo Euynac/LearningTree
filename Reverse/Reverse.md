@@ -29,6 +29,8 @@ CPU模块右键Go to -\> Expression 输入计算后的函数地址 （Ctrl+G快�
 
 ## IDA
 
+`F5` 某段汇编方法转换为C代码模式查看
+
 `G` 跳转到地址
 
 `Ctrl+ALT+K` 修改指令（Key-Patch-\>Patcher）
@@ -42,3 +44,6 @@ CPU模块右键Go to -\> Expression 输入计算后的函数地址 （Ctrl+G快�
 其中`ida_with_struct_py3.py`脚本可以使用`ida`运行，选择`script.json`，然后选择`il2cpp.h`头文件，运行后IDA将会补全函数名
 
 ![Graphical user interface, application Description automatically generated](../attachments/65fd3bdf0ce8572a5cc835fc357c2c74.png)
+
+对于其他语言调用动态链接库的情况，可以去Exports去看这个库导出了哪些方法。
+![](../attachments/Pasted%20image%2020230904114624.png)
