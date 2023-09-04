@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "Reverse/Andorid逆向.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "Reverse/Andorid逆向.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolsList.md",
+                "file": "Reverse/Andorid逆向.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolsList.md"
+                "file": "Reverse/Andorid逆向.md"
               }
             }
           },
@@ -183,11 +183,13 @@
   },
   "active": "c69c0511e417c5e0",
   "lastOpenFiles": [
+    "Reverse/Reverse.md",
+    "Reverse/Andorid逆向.md",
+    "Reverse",
+    "CTF/ToolsList.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/CTF.md",
     "CTF/CRYPTO/Encoding.md",
-    "CTF/ToolsList.md",
-    "CTF/Reverse.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/图像隐写/JPG.md",
@@ -227,7 +229,6 @@
     "Programming",
     "新建文件夹",
     "attachments/Pasted image 20230726170452.png.baiduyun.uploading.cfg",
-    "SoftwareManual/MicosoftOffice.md.baiduyun.uploading.cfg",
     "未命dd名.canvas"
   ]
 }
