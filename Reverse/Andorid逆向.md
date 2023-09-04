@@ -25,16 +25,32 @@ Dalvik虚拟机拥有专属的DEX可执行文件格式和指令集代码。Smali
 
 Smali提供反汇编功能的同时，也提供了打包反汇编代码重新生成DEX的功能，因此Smali被广泛地用于APP广告注入、汉化和破解、ROM定制等方面。
 
+### DEX
+Dex是Dalvik虚拟机的可执行文件，Dex文件与标准的Class文件在结构设计上有着本质上的区别。标准的Java程序在经过编译后，还需要通过dx工具将在编译过程中所生成的数个Class文件整合成一个Dex文件。Dex文件是传统Jar文件大小的50%左右。并且每个apk文件中包含一个classes.dex，是Dalvik可执行文件。
 
+
+
+
+### ADB
+用于创建adb shell，连上安卓系统，就相当于ssh连上linux一样。
 
 # 软件
 ## 脱壳
 
-#### BlackDex
+和PE文件脱壳不一样，PE文件的壳运行完后就解密了整个文件到内存，EOP？
+然后dump出来。
+安卓壳是加载整个到内存，卡好时间点dump。
+
+### BlackDex
 开源软件，脱壳失败可能是安卓版本过高。
 
+### MT管理器
 
-## Jadx
+安卓中的app，可以对apk进行重打包、签名。
+
+
+## 反编译
+### Jadx
 
 反编译apk回java代码，可以以更自然的形式观看代码。
 新版本搜索文本可以在资源和注解里面搜索。但是新版本某些apk却无法反编译（jadx问题）。
@@ -51,21 +67,17 @@ Smali提供反汇编功能的同时，也提供了打包反汇编代码重新生
 IDA 还原JNI函数方法名，用于显示调用的具体函数名称
 [IDA 还原JNI函数方法名 的三种方法_ida jni_暗夜枭熊的博客-CSDN博客](https://blog.csdn.net/yb493071294/article/details/80378730)
 
-### Hook
+#### Hook
 对某个方法或参数进行hook，支持使用frida或xposed进行。
 比如可以将某个方法实现变为自己传入的代码片段。
 [凡墙总是门 (kevinspider.github.io)](https://kevinspider.github.io/)
 
 
-## Andorid Killer
+### Andorid Killer
 
 反编译apk回Smali代码，通过Smali语法对apk文件在汇编层面进行更改，修改完成后还可以重新编译、签名回apk文件。
 ![](../attachments/Pasted%20image%2020230904101145.png)
 如果编译报错，比如某png文件报错，可以把那个文件删了（资源文件不影响）
-### MT管理器
-
-安卓中的app，可以对apk进行重打包、签名。
-
 
 # 代码
 
