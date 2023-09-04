@@ -35,3 +35,5 @@ Smali提供反汇编功能的同时，也提供了打包反汇编代码重新生
 # 代码
 
 入口类（通常是MainActivity）中有OnCreate方法（相当于init）
+也可以通过`AndroidManifest.xml`查看。
+![](../attachments/Pasted%20image%2020230904095851.png)
