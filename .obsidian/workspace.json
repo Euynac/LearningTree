@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reverse/Andorid逆向.md",
+                "file": "ComputerScience/Linux.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "79d0616adb181207",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SoftwareManual/WSL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reverse/Andorid逆向.md",
+                "file": "SoftwareManual/WSL.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Reverse/Andorid逆向.md",
+                "file": "SoftwareManual/WSL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reverse/Andorid逆向.md"
+                "file": "SoftwareManual/WSL.md"
               }
             }
           },
@@ -181,11 +195,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c69c0511e417c5e0",
+  "active": "79d0616adb181207",
   "lastOpenFiles": [
+    "ComputerScience/Linux.md",
+    "SoftwareManual/WSL.md",
+    "Music/MusicTheory.md",
+    "Koubot/Linux命令.md",
+    "SoftwareManual/CMD.md",
+    "Reverse/Andorid逆向.md",
     "attachments/Pasted image 20230904172641.png",
     "CTF/ToolsList.md",
-    "Reverse/Andorid逆向.md",
     "Reverse/Reverse.md",
     "Architecture/ABP.md",
     "attachments/Pasted image 20230904114624.png",
@@ -215,11 +234,6 @@
     "CTF/ToolManual/CyberChef.md",
     "attachments/Pasted image 20230902211937.png",
     "CTF/CRYPTO/PBE.md",
-    "ComputerScience/Linux.md",
-    "CTF/MISC/音频隐写.md",
-    "CTF/ToolManual/VMware.md",
-    "attachments/Pasted image 20230902133734.png",
-    "SoftwareManual/VisualStudio.md",
     "CTF/Hacker",
     "AI",
     "Koubot",
