@@ -42,6 +42,10 @@ tshark -r challenge.pcapng -Y "http" -T fields -e "http.request.uri.quer
 在分组详情中选中想要的字段，获取过滤器语法：
 ![](../../attachments/Pasted%20image%2020230905110623.png)
 
+过滤器语法，包含模糊：
+[wireshark-filter(4)](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+
+
 ### 自定义列
 ![](../../attachments/Pasted%20image%2020230905105246.png)
 
