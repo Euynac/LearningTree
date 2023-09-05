@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/密码种类与特征.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/密码种类与特征.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/密码种类与特征.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/密码种类与特征.md"
+                "file": "CTF/CRYPTO/算法性质.md"
               }
             }
           },
@@ -184,8 +184,8 @@
   },
   "active": "9342dd0b2f51af5f",
   "lastOpenFiles": [
-    "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/CRYPTO/算法性质.md",
     "Programming/C#.md",
     "CTF/MISC/思路打开.md",
