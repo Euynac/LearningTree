@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/伪随机数.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/伪随机数.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/伪随机数.md",
+                "file": "CTF/CRYPTO/算法性质.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/伪随机数.md"
+                "file": "CTF/CRYPTO/算法性质.md"
               }
             }
           },
@@ -184,8 +184,9 @@
   },
   "active": "9342dd0b2f51af5f",
   "lastOpenFiles": [
-    "CTF/CRYPTO/Encoding.md",
     "CTF/CRYPTO/伪随机数.md",
+    "CTF/CRYPTO/算法性质.md",
+    "CTF/CRYPTO/Encoding.md",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/密码攻击方式.md",
     "CTF/MISC/数值类.md",
@@ -213,7 +214,6 @@
     "Reverse/Reverse.md",
     "SoftwareManual/WSL.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
-    "ComputerScience/Linux.md",
     "attachments/Pasted image 20230904172641.png",
     "attachments/Pasted image 20230904114624.png",
     "attachments/Pasted image 20230904112652.png",
