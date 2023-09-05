@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/压缩包.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/压缩包.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/压缩包.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md"
+                "file": "CTF/MISC/压缩包.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "00dd08fa9b7e859d",
   "lastOpenFiles": [
+    "CTF/ToolManual/Wireshark.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "CTF/MISC/图像隐写/BMP.md",
@@ -219,7 +220,6 @@
     "Reverse",
     "CTF/CRYPTO/CTF.md",
     "attachments/Pasted image 20230903004512.png",
-    "attachments/Pasted image 20230903003515.png",
     "CTF/Hacker",
     "AI",
     "Koubot",
