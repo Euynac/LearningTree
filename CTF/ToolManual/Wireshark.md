@@ -30,6 +30,21 @@
 
 `ip.addr == xxx.xxx.xxx.xxx` source或destination是指定ip的数据包
 
+
+```sh
+# 可以提取想要的数据
+tshark -r challenge.pcapng -Y "http" -T fields -e "http.request.uri.query.parameter" > 2.txt
+
+# 其中-Y 填的就是过滤器语法
+# -T 是要提取的类型 -e 是具体字段
+```
+
+在分组详情中选中想要的字段，获取过滤器语法：
+![](../../attachments/Pasted%20image%2020230905110623.png)
+
+### 自定义列
+![](../../attachments/Pasted%20image%2020230905105246.png)
+
 ## ARP (Address Resolution Protocol)
 
 通过IP地址获取物理地址的一个TCP/IP协议。
