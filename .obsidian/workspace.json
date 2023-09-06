@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "SoftwareManual/CMD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "vmware",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "SoftwareManual/CMD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "SoftwareManual/CMD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/WEB.md"
+                "file": "SoftwareManual/CMD.md"
               }
             }
           },
@@ -184,6 +184,11 @@
   },
   "active": "eccc3c6c01951402",
   "lastOpenFiles": [
+    "ComputerScience/Linux.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
+    "CTF/ToolManual/VMware.md",
+    "SoftwareManual/CMD.md",
+    "CTF/WEB/WEB.md",
     "CTF/README.md",
     "CTF/AWD/AWD.md",
     "CTF/CRYPTO/算法性质.md",
@@ -196,8 +201,6 @@
     "CTF/PWN/基础.md",
     "attachments/Pasted image 20230905233647.png",
     "CTF/ToolsList.md",
-    "CTF/WEB/WEB.md",
-    "SoftwareManual/CMD.md",
     "CTF/WEB",
     "CTF/PWN",
     "SoftwareManual/AHK.md",
@@ -211,9 +214,6 @@
     "Programming/C#.md",
     "CTF/MISC/思路打开.md",
     "CTF/MISC/数值类.md",
-    "CTF/MISC/音频隐写.md",
-    "CTF/MISC/文件头.md",
-    "CTF/MISC/镜像分析.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",

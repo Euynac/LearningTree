@@ -1,5 +1,26 @@
 # PowerShell
 
+#### 安装SSH Server以支持SSH连接
+
+```sh
+# 使用PowerShell以管理员权限执行，查看安装状态
+Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+# 安装Server
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+# 初始化ssh服务器
+net start sshd
+# 或
+Start-Service sshd
+
+# 设为开机自启
+Set-Service -Name sshd -StartupType 'Automatic'
+# This is a PowerShell command that retrieves all firewall rules that have "ssh" in their name.
+Get-NetFirewallRule -Name *ssh*
+
+```
+
+
 #### 获取CPU温度
 
 ```powershell
