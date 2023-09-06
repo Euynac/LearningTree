@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CTF/AWD/AWD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CTF/AWD/AWD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CTF/AWD/AWD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md"
+                "file": "CTF/AWD/AWD.md"
               }
             }
           },
@@ -184,10 +184,12 @@
   },
   "active": "eccc3c6c01951402",
   "lastOpenFiles": [
+    "CTF/CRYPTO/算法性质.md",
+    "CTF/AWD/AWD.md",
+    "CTF/AWD",
     "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/Encoding.md",
     "ComputerScience/Database.md",
-    "CTF/CRYPTO/算法性质.md",
     "CTF/CRYPTO/学习资料.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/PWN/基础.md",
@@ -212,7 +214,6 @@
     "CTF/MISC/文件头.md",
     "CTF/MISC/镜像分析.md",
     "CTF/MISC/压缩包.md",
-    "CTF/ToolManual/Wireshark.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
@@ -229,7 +230,6 @@
     "Fontend",
     "CloudNative/Components",
     "CTF/MISC/图像隐写/Untitled.md.nssyncsc",
-    "Programming",
     "未命dd名.canvas"
   ]
 }
