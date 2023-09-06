@@ -14,7 +14,7 @@ scp -P 12345 /home/1.zip root@127.0.0.1:/home
 
 ## 源码备份
 
-备份到本地、以及源站上`/home/xxx`目录一份，不建议备份到`/tmp`，因为攻击者通过`/var/www/`攻击的访问权限是在`/tmp`以及`www`目录下
+备份到本地、以及源站上`/home/xxx`目录一份，不建议备份到`/tmp`，因为攻击者通过`/var/www/`攻击的访问权限是在`/tmp`以及`/tmp/www/html`目录下
 
 ## 主机发现
 
@@ -48,3 +48,10 @@ for i in range(51200,51230):
         check
             down
             waf
+### 目录发现
+
+```sh
+# 2是标准错误输出，输出到一个不存在的路径，可以随便填，优雅点就填下面的
+find / -name 'xxx.php' 2 > /dev/null
+```
+
