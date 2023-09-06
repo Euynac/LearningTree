@@ -1,6 +1,19 @@
 # VMWare
 
 
+# 网络
+
+## Bridged模式
+
+这个似乎可以连接互联网，但不知为何无法SSH
+
+## NAT模式
+
+测试过可以SSH连接
+
+## Host-only模式
+
+
 
 # TroubleShooting
 

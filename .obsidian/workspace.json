@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VSCode.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "CTF/ToolManual/CyberChef.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -62,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "vmware",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VSCode.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "SoftwareManual/VSCode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "SoftwareManual/VSCode.md"
               }
             }
           },
@@ -197,17 +197,19 @@
   },
   "active": "eccc3c6c01951402",
   "lastOpenFiles": [
-    "CTF/README.md",
     "CTF/PWN/基础.md",
-    "CTF/AWD/AWD.md",
-    "CTF/WEB/WEB.md",
+    "CTF/ToolManual/CyberChef.md",
+    "CTF/ToolManual/VMware.md",
     "SoftwareManual/CMD.md",
+    "CTF/WEB/WEB.md",
+    "CTF/AWD/AWD.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/密码攻击方式.md",
+    "CTF/README.md",
     "ComputerScience/Linux.md",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "CTF/ToolManual/VMware.md",
     "CTF/CRYPTO/算法性质.md",
     "CTF/AWD",
-    "CTF/CRYPTO/密码种类与特征.md",
     "CTF/CRYPTO/Encoding.md",
     "ComputerScience/Database.md",
     "CTF/CRYPTO/学习资料.md",
@@ -220,13 +222,11 @@
     "SoftwareManual/Git.md",
     "SoftwareManual/WSL.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/CRYPTO/密码攻击方式.md",
     "CTF/CRYPTO/CTF.md",
     "CTF/CRYPTO/PBE.md",
     "CTF/CRYPTO/伪随机数.md",
     "Programming/C#.md",
     "CTF/MISC/思路打开.md",
-    "CTF/MISC/数值类.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",

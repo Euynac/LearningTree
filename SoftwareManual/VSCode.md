@@ -89,7 +89,9 @@ $extensions | Get-VSMarketPlaceExtension
 "javascript.suggest.completeFunctionCalls": true,
 "C_Cpp.autocompleteAddParentheses": true "python.analysis.completeFunctionParens": true,
 ```
+### 对某个插件停止自动更新
 
+Auto updates are disabled if you install a specific version (not latest) which is now supported.
 
 ## 快捷操作
 
