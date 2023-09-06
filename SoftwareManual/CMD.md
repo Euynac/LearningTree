@@ -24,6 +24,9 @@ Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 # 添加防火墙
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22 -Program "C:\Windows\System32\OpenSSH\sshd.exe"
 
+
+# ssh服务端生成ssh公钥，以使用无密码连接
+ssh-keygen -t rsa -b 4096
 ```
 
 仍然无效的可以使用如下方法安装

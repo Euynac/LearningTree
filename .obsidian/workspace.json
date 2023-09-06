@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "SoftwareManual/CMD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "SoftwareManual/CMD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "SoftwareManual/CMD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/WEB.md"
+                "file": "SoftwareManual/CMD.md"
               }
             }
           },
@@ -196,15 +195,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "089244ec01f2a52b",
+  "active": "eccc3c6c01951402",
   "lastOpenFiles": [
+    "CTF/README.md",
+    "CTF/PWN/基础.md",
     "CTF/AWD/AWD.md",
+    "CTF/WEB/WEB.md",
     "SoftwareManual/CMD.md",
     "ComputerScience/Linux.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/ToolManual/VMware.md",
-    "CTF/WEB/WEB.md",
-    "CTF/README.md",
     "CTF/CRYPTO/算法性质.md",
     "CTF/AWD",
     "CTF/CRYPTO/密码种类与特征.md",
@@ -212,7 +212,6 @@
     "ComputerScience/Database.md",
     "CTF/CRYPTO/学习资料.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
-    "CTF/PWN/基础.md",
     "attachments/Pasted image 20230905233647.png",
     "CTF/ToolsList.md",
     "CTF/WEB",
