@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/AWD/工具.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -50,7 +50,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/AWD/工具.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/AWD.md",
+                "file": "CTF/AWD/工具.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/AWD.md"
+                "file": "CTF/AWD/工具.md"
               }
             }
           },
@@ -184,9 +184,13 @@
   },
   "active": "eccc3c6c01951402",
   "lastOpenFiles": [
-    "CTF/ToolManual/VMware.md",
-    "Koubot/Linux命令.md",
     "CTF/AWD/AWD.md",
+    "CTF/AWD/工具.md",
+    "CTF/AWD/Linux易忽略点.md",
+    "attachments/Pasted image 20230907170754.png",
+    "CTF/ToolManual/VMware.md",
+    "attachments/Pasted image 20230907154606.png",
+    "Koubot/Linux命令.md",
     "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
     "CTF/ToolManual/CyberChef.md",
@@ -212,8 +216,6 @@
     "SoftwareManual/WSL.md",
     "CTF/CRYPTO/公钥密码密钥格式.md",
     "CTF/CRYPTO/CTF.md",
-    "CTF/CRYPTO/PBE.md",
-    "CTF/CRYPTO/伪随机数.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
@@ -221,8 +223,6 @@
     "attachments/Pasted image 20230904172641.png",
     "attachments/Pasted image 20230904114624.png",
     "attachments/Pasted image 20230904112652.png",
-    "attachments/Pasted image 20230904101145.png",
-    "attachments/Pasted image 20230904095851.png",
     "Reverse",
     "CTF/Hacker",
     "AI",
