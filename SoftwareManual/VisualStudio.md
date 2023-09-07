@@ -1,3 +1,5 @@
+
+功能增强参考：[2.14 Visual Studio 高效率 | Furion (baiqian.ltd)](http://furion.baiqian.ltd/docs/vsfast/)
 ### 文件编码与代码规范
 
 文件编码可以在这里检查：

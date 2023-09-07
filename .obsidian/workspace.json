@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/工具.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/工具.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/工具.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/工具.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -184,9 +184,9 @@
   },
   "active": "eccc3c6c01951402",
   "lastOpenFiles": [
+    "CTF/AWD/Linux易忽略点.md",
     "CTF/AWD/AWD.md",
     "CTF/AWD/工具.md",
-    "CTF/AWD/Linux易忽略点.md",
     "attachments/Pasted image 20230907170754.png",
     "CTF/ToolManual/VMware.md",
     "attachments/Pasted image 20230907154606.png",
