@@ -107,6 +107,10 @@ System.Windows.Clipboard.SetText(result);
 
 ### 语法高亮
 
+如果语法高亮出现问题，方法等仍然是白色的，可以尝试：
+This happens when you set Color Theme: Use system setting
+Set Color Theme: Dark - or Color Theme: Blue
+
 #### 正则
 
 三种方式让正则表达式高亮
