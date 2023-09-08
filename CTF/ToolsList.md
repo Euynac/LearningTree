@@ -144,7 +144,9 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | Dust          | Du+rust,增强disk usage命令                  | [bootandy/dust](https://github.com/bootandy/dust)                                                                   |
 | Bat           | Cat美化工具，语法高亮                       | [42.6k star,推荐个强大的命令，让输出焕然一新的语法高亮工具--bat](https://mp.weixin.qq.com/s/D7WCiwXo1aGsa2RQeR82nA) |
 | rustup        | rust安装工具                                | 先`sudo apt remove rustc`如果已经安装的话                                                                           |
-| You-Get       | 用于从 Web 下载媒体内容（视频、音频、图像） | [soimort/you-get](https://github.com/soimort/you-get)                                                                                                                    |
+| You-Get       | 用于从 Web 下载媒体内容（视频、音频、图像） | [soimort/you-get](https://github.com/soimort/you-get)                                                               |
+| explainshell  | 自动解释所有linux命令                       | [idank/explainshell](https://github.com/idank/explainshell)                                                         |
+| linux-command | 搜索linux命令                               | [jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command)                                             | 
 
 # 笔记
 

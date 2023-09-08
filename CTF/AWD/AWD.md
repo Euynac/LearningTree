@@ -174,7 +174,10 @@ ps aux | grep www-data | awk '{print $2}' | xargs kill -9
 ```sh
 # 客户端监听端口
 nc -lvvp 9999
-
+# -l           listen mode, for inbound connects
+# -v           verbose [use twice to be more verbose]
+# -n           numeric-only IP addresses, no DNS
+# -p port      local port number (port numbers can be individual or ranges: lo-hi [inclusive])
 # Netcat 是 Linux 系统下常用的网络工具，当然也有Windows版本，在 Linux 下使用命令 `nc`，前面的端口监听就是使用 Netcat
 
 # payload1 

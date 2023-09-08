@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/MISC/思路打开.md",
+                "file": "CTF/思路打开.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/MISC/思路打开.md",
+                "file": "CTF/思路打开.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/MISC/思路打开.md",
+                "file": "CTF/思路打开.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/MISC/思路打开.md"
+                "file": "CTF/思路打开.md"
               }
             }
           },
@@ -182,20 +182,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "eccc3c6c01951402",
+  "active": "95641d9f2e99738f",
   "lastOpenFiles": [
+    "CTF/ToolsList.md",
+    "CTF/AWD/AWD.md",
+    "CTF/AWD/工具.md",
+    "CTF/AWD/漏洞.md",
+    "CTF/思路打开.md",
     "CTF/CRYPTO/Encoding.md",
-    "CTF/MISC/思路打开.md",
     "CTF/MISC/数值类.md",
     "SoftwareManual/VisualStudio.md",
     "CTF/AWD/Linux易忽略点.md",
-    "CTF/AWD/AWD.md",
-    "CTF/AWD/工具.md",
     "attachments/Pasted image 20230907170754.png",
     "CTF/ToolManual/VMware.md",
     "attachments/Pasted image 20230907154606.png",
     "Koubot/Linux命令.md",
-    "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
     "CTF/ToolManual/CyberChef.md",
     "SoftwareManual/VSCode.md",
@@ -215,7 +216,6 @@
     "CTF/WEB",
     "CTF/PWN",
     "SoftwareManual/AHK.md",
-    "SoftwareManual/Git.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
