@@ -125,13 +125,16 @@ JJLamodrHXspZr5qUcfZYO3u0Gdw3fhzQqxO834pCgRbqcvOn3Vkju
 
 基于64个可打印字符来表示二进制数据的表示方法,3个字节可由4个可打印字符来表示
 
-**特征**: 0-9 A-Z a-Z +/ =    长度为4的倍数
+**特征**: 0-9 A-Z a-Z +/ =    长度为4的倍数。但可以删去等号，所以尝试加一到两等号看看是否长度能凑到4的倍数
 
 **测试数据**:
 
 ```
 5byA5Y+R5bel5YW36ZuG5ZCIIGJ5IGxlb240MDZANTJwb2ppZS5jbg==
 ```
+
+注意换了字典的情况，如果解出来的刚好是64位，而且每位字符都只有一个，那这基本上可以确定是base64编码的字典
+比如：`sQ+3ja02RchXLUFmNSZoYPlr8e/HVqxwfWtd7pnTADK15Evi9kGOMgbuIzyB64CJ`
 
 ## base64Url
 

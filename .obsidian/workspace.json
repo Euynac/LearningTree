@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/MISC/思路打开.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/MISC/思路打开.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/MISC/思路打开.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CTF/MISC/思路打开.md"
               }
             }
           },
@@ -184,6 +184,10 @@
   },
   "active": "eccc3c6c01951402",
   "lastOpenFiles": [
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/MISC/思路打开.md",
+    "CTF/MISC/数值类.md",
+    "SoftwareManual/VisualStudio.md",
     "CTF/AWD/Linux易忽略点.md",
     "CTF/AWD/AWD.md",
     "CTF/AWD/工具.md",
@@ -204,7 +208,6 @@
     "CloudNative/Deployments/K8S部署笔记.md",
     "CTF/CRYPTO/算法性质.md",
     "CTF/AWD",
-    "CTF/CRYPTO/Encoding.md",
     "ComputerScience/Database.md",
     "CTF/CRYPTO/学习资料.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
@@ -213,9 +216,6 @@
     "CTF/PWN",
     "SoftwareManual/AHK.md",
     "SoftwareManual/Git.md",
-    "SoftwareManual/WSL.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/CRYPTO/CTF.md",
     "attachments/Pasted image 20230905110623.png",
     "attachments/Pasted image 20230905105246.png",
     "attachments/Pasted image 20230905102150.png",
