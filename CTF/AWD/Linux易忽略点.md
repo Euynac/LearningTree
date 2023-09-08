@@ -13,7 +13,7 @@
 在Linux中，反引号（\`）用于将其中的命令执行结果以参数形式（非字符串）展开（或者说是将结果替换到命令），因此它是最先执行的，展开后才轮到bash去处理整段命令。
 ```sh
 echo `echo 123` # 执行完里面的内容，直接以参数展开，然后变为了echo 123，这时才轮到babsh执行这段命令
-echo $(ls) # 除了反引号，也可以使用$()来实现相同的效果
+echo $(ls) # 除了反引号，也可以使用$()来实现相同的效果，不过不是所有版本linux都支持
 ```
 
 #### &
@@ -24,6 +24,31 @@ echo $(ls) # 除了反引号，也可以使用$()来实现相同的效果
 那么还可以定义函数：`function_name() { ... }`，在当前会话中有效。
 
 **Fork Bomb** `:(){ :|:& };:`也就好理解了，重复创建自身进程耗尽linux的进程资源使电脑死机无法响应，可以通过限制 `ulimit` 限制资源
+#### ${}
+
+```sh
+a=123 # shell中定义变量，=之间不能有空格
+echo $a # $a读取变量(先宏替换再执行命令)
+echo aa${a}bb # 其实也类似于$a读取变量，不过在与其他字符串合并的时候可以边界明确
+
+# 还有字符处理的功能
+# #是去掉左边（键盘上#在 $ 的左边）  
+# %是去掉右边（键盘上% 在$ 的右边）  
+# 单一符号#，%是最小匹配；两个符号##，%%是最大匹配
+path=/etc/sysconfig/network
+echo ${path#*/} # 去掉path变量左边 第一次出现 */ 子串 *代表匹配任意0或0个以上字符 结果：etc/sysconfig/network
+echo ${path##*/} # 最大匹配 结果：network
+echo ${path%/*}  # 去掉path变量右边匹配的子串 /etc/sysconfig
+# 截取
+echo ${path:0:5} # 结果：/etc/
+echo ${path:3:7} # 结果：c/sysco
+
+# 替换
+echo ${path/et/op} # 第一个出现的et替换成op /opc/sysconfig/network 
+echo ${path//et/op} # 所有出现的et替换成op /opc/sysconfig/nopwork
+```
+
+
 
 ## 文件描述符 (File Descriptor)
 
