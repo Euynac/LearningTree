@@ -19,8 +19,9 @@ var result = await Http.PostAsync("api/method", new StringContent(strData));
 ```
 调用，这里的`string`是不带`"`的，会报错，就很反人类。。
 首先`StringContent`的`MediaType`就不对，是`plain/text`的，而`FromBody`是只支持`application/json`格式的，会报`Unsupported Media Type`的错误。
-
+然后就是`"`的问题了，具体错误忘记记录了。
 具体用法要看`FromBody`的限制：
 [Parameter Binding in ASP.NET Web API - ASP.NET 4.x | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api#using-frombody)
 
+所以最好使用`Frombody`只用DTO request类来写，其他的限制太复杂。
 
