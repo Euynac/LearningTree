@@ -300,3 +300,18 @@ docker pull wcjiang/linux-command
 ```shell
 docker run --name linux-command --rm -d -p 9665:3000 wcjiang/linux-command:latest
 ```
+
+
+## \~\/.zshrc
+
+```sh
+alias proxy="source /root/Scripts/proxy.sh"
+alias ares="docker run -it --rm ares"
+alias linuxman="docker run --name linux-command --rm -d -p 3002:3000 wcjiang/linux-command:latest | xargs echo http://localhost:3002"
+alias ciphey="docker run -it --rm remnux/ciphey"
+alias ctfwiki="docker run --name ctf-wiki --rm -d -p 3003:80 ctfwiki/ctf-wiki | xargs echo http://localhost:3003"
+alias phpman="docker run --rm --name php8-manual -dp 3001:80 koubot/php8-manual-zh:v8.2;echo http://localhost:3001/indexes.functions.html"
+alias cyberchef="docker run --name cyberchef -it --rm -dp 3004:8000 mpepping/cyberchef;echo http://localhost:3004"
+alias phpdocker="docker run --rm -d -p 8080:80 -p 2222:22 --name my-apache-php-app -v "$PWD":/var/www/html php72-ctf"
+eval $(thefuck --alias)
+```

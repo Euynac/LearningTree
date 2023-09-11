@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/AWD/工具.md",
+                "file": "SoftwareManual/WSL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/AWD/工具.md",
+                "file": "SoftwareManual/WSL.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/AWD/工具.md",
+                "file": "SoftwareManual/WSL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/AWD/工具.md"
+                "file": "SoftwareManual/WSL.md"
               }
             }
           },
@@ -183,8 +183,8 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
-    "CTF/PWN/基础.md",
     "CTF/AWD/工具.md",
+    "CTF/PWN/基础.md",
     "CloudNative/Docker.md",
     "CTF/ToolsList.md",
     "SoftwareManual/Git.md",
