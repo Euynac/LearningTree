@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/PHP.md",
+                "file": "SoftwareManual/CMD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/PHP.md",
+                "file": "SoftwareManual/CMD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/PHP.md",
+                "file": "SoftwareManual/CMD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/PHP.md"
+                "file": "SoftwareManual/CMD.md"
               }
             }
           },
@@ -183,11 +183,12 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
+    "SoftwareManual/WSL.md",
+    "SoftwareManual/CMD.md",
+    "CTF/WEB/PHP.md",
     "attachments/Pasted image 20230911233713.png",
     "CTF/WEB/WEB.md",
-    "CTF/WEB/PHP.md",
     "CTF/AWD/AWD.md",
-    "SoftwareManual/WSL.md",
     "CTF/AWD/工具.md",
     "CTF/PWN/基础.md",
     "CloudNative/Docker.md",
@@ -195,7 +196,6 @@
     "SoftwareManual/Git.md",
     "Fontend/Blazor.md",
     "SoftwareManual/VisualStudio.md",
-    "SoftwareManual/CMD.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/镜像分析.md",
     "CTF/MISC/数值类.md",
@@ -221,7 +221,6 @@
     "attachments/Pasted image 20230905102150.png",
     "attachments/Pasted image 20230904233917.png",
     "attachments/Pasted image 20230904172641.png",
-    "attachments/Pasted image 20230904114624.png",
     "Reverse",
     "CTF/Hacker",
     "AI",
