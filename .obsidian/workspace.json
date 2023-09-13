@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fontend/Blazor.md",
+                "file": "CTF/AWD/AWD.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fontend/Blazor.md",
+                "file": "CTF/AWD/AWD.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fontend/Blazor.md",
+                "file": "CTF/AWD/AWD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fontend/Blazor.md"
+                "file": "CTF/AWD/AWD.md"
               }
             }
           },
@@ -193,9 +193,10 @@
   },
   "active": "d8d06db9c05d4775",
   "lastOpenFiles": [
-    "CTF/AWD/AWD.md",
     "CTF/AWD/漏洞.md",
     "CTF/AWD/工具.md",
+    "Fontend/Blazor.md",
+    "CTF/AWD/AWD.md",
     "SoftwareManual/CMD.md",
     "SoftwareManual/WSL.md",
     "CTF/WEB/PHP.md",
@@ -205,7 +206,6 @@
     "CloudNative/Docker.md",
     "CTF/ToolsList.md",
     "SoftwareManual/Git.md",
-    "Fontend/Blazor.md",
     "SoftwareManual/VisualStudio.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/镜像分析.md",
