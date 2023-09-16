@@ -33,7 +33,7 @@ zip -r xxx.zip ./*
 unzip xxx.zip -d
 
 # tar
-tar -cvpf xxx.tar ./* # -p 保持文件权限一致
+tar -cvpf /home/ctf/backup.tar -C /var/www/html ./* # -p 保持文件权限一致; -C 设置目标路径，不设置如果用绝对路径则包含父目录路径加入压缩包
 tar -xvpf xxx.tar -C /home/ctf/xxx
 
 ```
