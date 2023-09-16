@@ -315,3 +315,8 @@ alias cyberchef="docker run --name cyberchef -it --rm -dp 3004:8000 mpepping/cyb
 alias phpdocker="docker run --rm -d -p 8080:80 -p 2222:22 --name my-apache-php-app -v "$PWD":/var/www/html php72-ctf"
 eval $(thefuck --alias)
 ```
+
+
+> 注意，自己在使用反引号、`$()`等操作时，在sh脚本中的执行效果和预期的的问题，它先执行那一部分作为结果替换到脚本中，因此自己在配置 `.zshrc`等文件时，注意执行顺序。`$PWD`等环境变量也一样，脚本第一次运行时候已经决定了结果。除非使用转义符。
+
+Best of all, use a function instead of an alias. A function lets you write the command exactly as you would normally without _any_ extra quotes or escaping.
