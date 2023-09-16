@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/解析漏洞.md",
+                "file": "CloudNative/Docker.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "prune",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -100,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/解析漏洞.md",
+                "file": "CloudNative/Docker.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/解析漏洞.md",
+                "file": "CloudNative/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/解析漏洞.md"
+                "file": "CloudNative/Docker.md"
               }
             }
           },
@@ -205,10 +206,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b3603e03c46ed70e",
+  "active": "06bae426a52ef2d9",
   "lastOpenFiles": [
-    "CTF/WEB/代码与命令执行.md",
+    "Koubot/Linux命令.md",
     "CTF/WEB/解析漏洞.md",
+    "CTF/WEB/代码与命令执行.md",
     "CTF/WEB/PHP.md",
     "CTF/WEB/WEB.md",
     "CTF/WEB/文件包含.md",
@@ -232,7 +234,6 @@
     "CTF/ToolsList.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",

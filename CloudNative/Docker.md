@@ -106,7 +106,7 @@ You can combine single character flags to shorten the full command.
 | `import`                             | 导入容器实例                                                 |                                                              |
 | `save`                               | 保存镜像                                                     | `-o` 导出的路径 建议.tar结尾 可以同时将多个镜像打包到一个文件中 |
 | `load`                               | 加载镜像                                                     | `-i` 输入文件路径                                            |
-| `container prune`                    | 移除停止的容器                                               |                                                              |
+| `container prune`                    | 移除停止的容器                                               | `image prune` 移除悬挂镜像。`-a`则是所有未使用的镜像。       |
 | `stats`                              | 监控容器资源占用情况                                         |                                                              |
 | `update --restart=no <CONTAINER ID>` | 取消容器自启动                                               |                                                              |
 
