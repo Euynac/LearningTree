@@ -116,24 +116,24 @@ frida-ps -U
 
 对于Java调C语言层里面的方法，反编译回的java代码只有方法定义（有`native`关键字），没有具体实现，需要去找到相应的so包进行IDA反汇编（IDA的64位和32位是指反汇编的目标架构）。
 
-![](../attachments/Pasted%20image%2020230904112652.png)
+![](../../../attachments/Pasted%20image%2020230904112652.png)
 
 比如这里就是需要去apk压缩包中的lib文件找到相应的so文件（动态链接库）。注意不同架构的so文件可能不太一样。
 
 IDA 还原JNI函数方法名，用于显示调用的具体函数名称
 [IDA 还原JNI函数方法名 的三种方法_ida jni_暗夜枭熊的博客-CSDN博客](https://blog.csdn.net/yb493071294/article/details/80378730)
-![](../attachments/Pasted%20image%2020230904172641.png)
+![](../../../attachments/Pasted%20image%2020230904172641.png)
 
 
 
 ### Andorid Killer
 
 反编译apk回Smali代码，通过Smali语法对apk文件在汇编层面进行更改，修改完成后还可以重新编译、签名回apk文件。
-![](../attachments/Pasted%20image%2020230904101145.png)
+![](../../../attachments/Pasted%20image%2020230904101145.png)
 如果编译报错，比如某png文件报错，可以把那个文件删了（资源文件不影响）
 
 # 代码
 
 入口类（通常是MainActivity）中有OnCreate方法（相当于init）
 也可以通过`AndroidManifest.xml`查看。
-![](../attachments/Pasted%20image%2020230904095851.png)
+![](../../../attachments/Pasted%20image%2020230904095851.png)
