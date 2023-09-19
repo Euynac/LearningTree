@@ -126,10 +126,11 @@ https://github.com/gubeihc/blasting 前端密码爆破
 |:------------ |:--------------------------------- |:------------------------------------------------------------------------------------------------------ |
 | Javassist    | Java bytecode engineering toolkit | [jboss-javassist/javassist (github.com)](https://github.com/jboss-javassist/javassist)                 |
 | JD-GUI       | Java Decompiler                   | [java-decompiler/jd-gui at v1.6.6 (github.com)](https://github.com/java-decompiler/jd-gui/tree/v1.6.6) |
-| Jadx         |  Dex to Java decompiler                                 | [skylot/jadx: Dex to Java decompiler (github.com)](https://github.com/skylot/jadx)                     |
+| Jadx         | Dex to Java decompiler            | [skylot/jadx: Dex to Java decompiler (github.com)](https://github.com/skylot/jadx)                     |
 | dnspy        | C#反编译                          |                                                                                                        |
 | ILspy        | C#反编译                          |                                                                                                        |
 | Il2CppDumper | unity反编译                       |                                                                                                        |
+| PEiD         | PE查壳，但古早程序                | [爱盘 - 最新的在线破解工具包 (52pojie.cn)](https://down.52pojie.cn/Tools/PEtools/)                     | 
 
 
 
