@@ -8,33 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d8d06db9c05d4775",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/AWD/AWD.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b3603e03c46ed70e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/计算机网络.md",
+                "file": "CTF/WEB/信息收集.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/计算机网络.md",
+                "file": "CTF/WEB/信息收集.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/计算机网络.md",
+                "file": "CTF/WEB/信息收集.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/计算机网络.md"
+                "file": "CTF/WEB/信息收集.md"
               }
             }
           },
@@ -207,32 +193,32 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
-    "CTF/Reverse/Andorid逆向.md",
-    "ComputerScience/计算机网络.md",
-    "AI/ArtificialIntelligence.md",
+    "README.md",
+    "CTF/WEB/信息收集.md",
+    "CTF/WEB/文件包含.md",
+    "CTF/WEB/WEB.md",
+    "CTF/README.md",
     "CTF/AWD/AWD.md",
+    "CTF/WEB/绕过(Bypass).md",
+    "CTF/WEB/解析漏洞.md",
+    "CTF/WEB/PHP.md",
+    "CTF/WEB/代码与命令执行.md",
+    "ComputerScience/WEB.md",
+    "ComputerScience/计算机网络.md",
+    "CTF/Reverse/Andorid逆向.md",
+    "AI/ArtificialIntelligence.md",
     "CTF/AWD/Linux易忽略点.md",
     "CTF/CRYPTO/Encoding.md",
     "CTF/AWD/工具.md",
     "CTF/AWD/漏洞.md",
-    "ComputerScience/WEB.md",
     "SoftwareManual/WSL.md",
     "ComputerScience/Linux.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "CloudNative/Docker.md",
     "Koubot/Linux命令.md",
-    "CTF/WEB/解析漏洞.md",
-    "CTF/WEB/代码与命令执行.md",
-    "CTF/WEB/PHP.md",
-    "CTF/WEB/WEB.md",
-    "CTF/WEB/文件包含.md",
     "CTF/MISC/文件头.md",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/PBE.md",
-    "CTF/CRYPTO/CTF.md",
-    "CTF/CRYPTO/学习资料.md",
-    "CTF/CRYPTO/密码种类与特征.md",
-    "CTF/CRYPTO/算法性质.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",

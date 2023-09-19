@@ -253,12 +253,7 @@ Base64是网络上最常见的用于传输8Bit字节码的编码方式之一，b
 
 # WEB
 
-### robots.txt
-A robots.txt file tells search engine crawlers which URLs the crawler can access on your site.
 
-robots.txt，给搜索引擎爬虫看的文件，表示有哪些东西它是不应该爬取的。、
-
-直接放在网站根目录，然后全小写。
 
 ### string转可执行代码
 eval, function, setInterval, setTimeout等方法有快速通道通向编译器，可以将string转化为可执行代码
