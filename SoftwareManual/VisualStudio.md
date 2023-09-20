@@ -366,7 +366,12 @@ Ctrl+Shift+V 打开粘贴板历史内容,点击粘贴
 ### 问题
 
 #### prop template
-`prop`有非常奇怪的问题，转而使用VisualStudio的比较好。（！其实原因发现居然是VS自己的IntelliCode，关闭C# suggestioins）
+`prop`有非常奇怪的问题，转而使用VisualStudio的比较好。
+
+> 其实原因发现居然是VS自己的IntelliCode，关闭C# suggestioins.
+> 又发现一个解决方案，可以开启IntelliCode，但是选择 `Apply whole line completions on right arrow`
+
+
 ReSharper > Tools > Template Explorer
 ![](../attachments/Pasted%20image%2020230829170428.png)
 
