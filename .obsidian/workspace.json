@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CloudNative/Kubernetes(K8S).md"
               }
             }
           },
@@ -193,8 +193,14 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
-    "Programming/C#.md",
+    "CloudNative/K8S集群管理.md",
+    "CloudNative/Kubernetes(K8S).md",
+    "CloudNative/Docker.md",
+    "CloudNative/CloudNative.md",
+    "CloudNative/Deployments/K8S集群部署要求.md",
+    "CloudNative/Deployments/K8S部署笔记.md",
     "SoftwareManual/VisualStudio.md",
+    "Programming/C#.md",
     "CTF/ToolsList.md",
     "CTF/Reverse/PE逆向.md",
     "CTF/AWD/工具.md",
@@ -213,12 +219,6 @@
     "CTF/Reverse/Andorid逆向.md",
     "AI/ArtificialIntelligence.md",
     "CTF/AWD/Linux易忽略点.md",
-    "CTF/CRYPTO/Encoding.md",
-    "CTF/AWD/漏洞.md",
-    "SoftwareManual/WSL.md",
-    "ComputerScience/Linux.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
-    "CloudNative/Docker.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
