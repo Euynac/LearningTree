@@ -398,9 +398,11 @@ ToString()
 
 例如：
 
+```cs
 DailyTemperature { HighTemp = 57, LowTemp = 30, Mean = 43.5 }
-
 DailyTemperature { HighTemp = 60, LowTemp = 35, Mean = 47.5 }
+```
+
 
 ##### Nondestructive mutation
 
