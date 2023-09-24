@@ -158,6 +158,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | Obsidian | Markdown编辑器，支持插件        |      |
 | MarkText | 开源Markdown编辑器，支持UML图等 |      |
 | Typora   | Markdown编辑器                  |      |
+| Wiki.js  | Wiki部署，支持Markdown，多功能  | [requarks/wiki](https://github.com/requarks/wiki)     |
 
 
 # Git
