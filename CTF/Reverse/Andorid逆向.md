@@ -134,6 +134,6 @@ IDA 还原JNI函数方法名，用于显示调用的具体函数名称
 
 # 代码
 
-入口类（通常是MainActivity）中有OnCreate方法（相当于init）
+入口类（通常是`MainActivity`）中有`OnCreate`方法（相当于`init`）
 也可以通过`AndroidManifest.xml`查看。
 ![](../../../attachments/Pasted%20image%2020230904095851.png)
