@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/流量分析.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/流量分析.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md",
+                "file": "CTF/MISC/流量分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/ToolManual/Wireshark.md"
+                "file": "CTF/MISC/流量分析.md"
               }
             }
           },
@@ -193,6 +193,9 @@
   },
   "active": "b3603e03c46ed70e",
   "lastOpenFiles": [
+    "CTF/MISC/电子取证.md",
+    "CTF/MISC/流量分析.md",
+    "CTF/ToolManual/Wireshark.md",
     "CTF/ToolManual/Xdbg.md",
     "CTF/Reverse/Andorid逆向.md",
     "CTF/ToolsList.md",
@@ -217,9 +220,6 @@
     "CloudNative/K8S集群管理.md",
     "CloudNative/CloudNative.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
-    "CloudNative/Deployments/K8S部署笔记.md",
-    "SoftwareManual/VisualStudio.md",
-    "Programming/C#.md",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
