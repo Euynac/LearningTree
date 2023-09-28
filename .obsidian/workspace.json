@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e9474b2aba1ae203",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.14"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,7 +202,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95641d9f2e99738f",
+  "active": "e9474b2aba1ae203",
   "lastOpenFiles": [
     "Fontend/FrontendConcept.docx",
     "Fontend/Blazor.md",
