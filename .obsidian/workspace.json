@@ -24,9 +24,12 @@
             "id": "e9474b2aba1ae203",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.4.14"
+                "file": "Architecture/ABP.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -97,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fontend/FrontendConcept.md"
+                "file": "Architecture/ABP.md"
               }
             }
           },
