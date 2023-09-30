@@ -6,7 +6,6 @@
 ### 内置类型
 
 ```csharp
-```csharp
 [HttpPost("save")]
 public async Task Save([FromBody] string content)
 {

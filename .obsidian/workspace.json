@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3603e5be521169c6",
+        "id": "a4758dff08b6cc4e",
         "type": "tabs",
         "children": [
           {
-            "id": "e9474b2aba1ae203",
+            "id": "fc0c2a0a8ed9331f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Math/形式幂级数.md",
+                "file": "ComputerScience/Algorithm/代码优化.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Math/形式幂级数.md",
+                "file": "ComputerScience/Algorithm/代码优化.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Math/形式幂级数.md",
+                "file": "ComputerScience/Algorithm/代码优化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Math/形式幂级数.md"
+                "file": "ComputerScience/Algorithm/代码优化.md"
               }
             }
           },
@@ -191,11 +191,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e9474b2aba1ae203",
+  "active": "fc0c2a0a8ed9331f",
   "lastOpenFiles": [
+    "ComputerScience/Algorithm/代码优化.md",
+    "ComputerScience/Algorithm",
+    "Programming/ASP.NET Core接口.md",
+    "Programming/C#.md",
+    "Fontend/Blazor.md",
+    "ComputerScience/AI/Drawing.md",
+    "ComputerScience/AI/ArtificialIntelligence.md",
+    "ComputerScience/IoT.md",
+    "CloudNative/Dapr.md",
+    "CloudNative/CloudNative.md",
+    "Math/形式幂级数.md",
     "attachments/Pasted image 20230930112206.png",
     "CTF/MISC/二维码.md",
-    "Math/形式幂级数.md",
     "Math",
     "attachments/Pasted image 20230930103322.png",
     "attachments/Pasted image 20230930103305.png",
@@ -213,32 +223,22 @@
     "CTF/MISC/数值类.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/图像隐写/BMP.md",
-    "Architecture/ABP.md",
+    "ComputerScience/Architecture/ABP.md",
     "Fontend/FrontendConcept.docx",
-    "Fontend/Blazor.md",
     "CTF/WEB/信息收集.md",
     "CTF/WEB/PHP.md",
-    "CTF/WEB/解析漏洞.md",
-    "SoftwareManual/VisualStudio.md",
-    "CloudNative/Dapr.md",
-    "CloudNative/CloudNative.md",
-    "CloudNative/K8S集群管理.md",
-    "CloudNative/Components/Apache APISIX.md",
-    "CloudNative/Deployments/K8S集群部署要求.md",
     "attachments/Pasted image 20230921000057.png",
     "attachments/Pasted image 20230911233713.png",
     "attachments/Pasted image 20230909205742.png",
     "attachments/Pasted image 20230907170754.png",
     "attachments/Pasted image 20230907154606.png",
     "CTF/AWD",
-    "attachments/Pasted image 20230905233647.png",
     "CTF/WEB",
     "CTF/PWN",
     "CTF/Reverse",
     "CTF/Hacker",
-    "AI",
+    "ComputerScience/AI",
     "Koubot",
-    "Fontend",
     "未命dd名.canvas"
   ]
 }
