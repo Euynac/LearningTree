@@ -109,9 +109,9 @@ WZHXGU{v6086w7w137455u0041720yu0595xw46}
 
 ## [autoKey](https://zh.wikipedia.org/wiki/%E8%87%AA%E5%8A%A8%E5%AF%86%E9%92%A5%E5%AF%86%E7%A0%81)
 
-自动密钥密码，密钥开头是一个关键词，之后则是明文的重复
+自动密钥密码，基于维吉尼亚密码。密钥开头是给定的Key，之后密钥则是明文的重复。
 
-**特征**: 
+**特征**: 替换密码。
 
 **测试数据**:
 
@@ -1056,9 +1056,9 @@ Trooloolooloolooloolooloolooloolollooooolooloolooloolooloolooooolooloolooloolool
 
 ## [virgenene](https://zh.m.wikipedia.org/zh/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81)
 
-维吉尼亚密码
+维吉尼亚密码，替换密码
 
-**特征**: 无,见提示
+**特征**: 替换密码,见提示
 
 **测试数据**:
 
