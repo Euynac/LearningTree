@@ -15,3 +15,15 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 ### Unit Of Work
 [Getting Started AspNetCore Application | Documentation Center | ABP.IO](https://docs.abp.io/en/abp/latest/Getting-Started-AspNetCore-Application)
+
+
+# 错误排查
+
+### Repository中的基类属性为null没有注册
+只能通过Abp Module进行注册，不能简单地绕过它的module使用AddAssembly方法进行自动注册，否则会带来很多蜜汁问题。
+
+### 注册问题
+没有引用合适的Module
+```
+The requested service 'Volo.Abp.DependencyInjection.ObjectAccessor`1[[Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Http.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]' has not been registered
+```
