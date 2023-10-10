@@ -1143,12 +1143,12 @@ The types of positional and named parameters for an attribute class are limited 
 
 A constructor argument or public field which does not have one of these types, cannot be used as a positional or named parameter in an attribute specification.
 
-| Attributes        | Function                           | Remark                                                                                                         |
-|-------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| ModuleInitializer | auto call static Initialize method | <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/module-initializers>  |
-|                   |                                    |                                                                                                                |
-|                   |                                    |                                                                                                                |
-|                   |                                    |                                                                                                                |
+| Attributes                  | Function                                   | Remark                                                                                                        |
+| --------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| ModuleInitializer           | auto call static Initialize method         | <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/module-initializers> |
+| InternalsVisibleToAttribute | 使得internal类或方法可以给给定程序集访问到 | [InternalsVisibleToAttribute Class (System.Runtime.CompilerServices) | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=net-7.0)                                                                                                              |
+|                             |                                            |                                                                                                               |
+|                             |                                            |                                                                                                               |
 
 ## 索引器（Indexer）
 

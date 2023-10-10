@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "Programming/C#.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.49999618530273
+    "width": 200
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "Programming/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "Programming/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Hacker/软件破解.md"
+                "file": "Programming/C#.md"
               }
             }
           },
@@ -193,6 +193,7 @@
   },
   "active": "fc0c2a0a8ed9331f",
   "lastOpenFiles": [
+    "CTF/Hacker/软件破解.md",
     "ComputerScience/Architecture/ABP.md",
     "CTF/MISC/数值类.md",
     "CTF/README.md",
@@ -225,7 +226,6 @@
     "attachments/Pasted image 20230929100844.png",
     "CTF/MISC/压缩包.md",
     "CTF/ToolsList.md",
-    "CTF/CRYPTO/密码攻击方式.md",
     "Fontend/FrontendConcept.docx",
     "attachments/Pasted image 20230921000057.png",
     "attachments/Pasted image 20230911233713.png",
