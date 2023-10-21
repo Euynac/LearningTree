@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "Music/和弦.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ca0a4d1fc35fbc5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Music/MusicTheory.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "端口占用",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +79,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "Music/和弦.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "Music/和弦.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "Music/和弦.md"
               }
             }
           },
@@ -178,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 237.5
+    "width": 238.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,13 +206,14 @@
   },
   "active": "a5ab6bf5f1b09bab",
   "lastOpenFiles": [
+    "Music/MusicTheory.md",
+    "Music/和弦.md",
+    "Music/FLStudio.md",
+    "SoftwareManual/CMD.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "Programming/C#.md",
-    "Music/和弦.md",
-    "Music/MusicTheory.md",
-    "Music/FLStudio.md",
     "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20231014230052.png",
     "attachments/Pasted image 20231014230047.png",
@@ -225,7 +238,6 @@
     "Programming/ASP.NET Core接口.md",
     "Fontend/Blazor.md",
     "ComputerScience/IoT.md",
-    "CloudNative/Dapr.md",
     "attachments/Pasted image 20230930112206.png",
     "Math",
     "attachments/Pasted image 20230930103322.png",
