@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "Music/和弦.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "Music/和弦.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/MusicTheory.md",
+                "file": "Music/和弦.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/MusicTheory.md"
+                "file": "Music/和弦.md"
               }
             }
           },
@@ -193,15 +193,17 @@
   },
   "active": "44dddb4ffc621111",
   "lastOpenFiles": [
+    "Music/FLStudio.md",
+    "Music/MusicTheory.md",
+    "attachments/Pasted image 20231022214027.png",
+    "attachments/Pasted image 20231022213954.png",
     "Programming/C#.md",
     "ComputerScience/Database.md",
     "SoftwareManual/VisualStudio.md",
-    "Music/MusicTheory.md",
     "attachments/Pasted image 20231022002020.png",
     "attachments/Pasted image 20231022001334.png",
     "Music/和弦.md",
     "attachments/Pasted image 20231021230844.png",
-    "Music/FLStudio.md",
     "attachments/Pasted image 20231021223140.png",
     "SoftwareManual/CMD.md",
     "CTF/MISC/压缩包.md",
@@ -211,7 +213,6 @@
     "attachments/Pasted image 20231014230047.png",
     "attachments/Pasted image 20231014230021.png",
     "attachments/Pasted image 20231014230007.png",
-    "attachments/Pasted image 20231014225939.png",
     "CTF/ToolsList.md",
     "ComputerScience/AI/Audio.md",
     "ComputerScience/AI/ArtificialIntelligence.md",
@@ -228,8 +229,6 @@
     "ComputerScience/Algorithm/代码优化.md",
     "ComputerScience/Algorithm",
     "Programming/ASP.NET Core接口.md",
-    "Fontend/Blazor.md",
-    "attachments/Pasted image 20230930112206.png",
     "Math",
     "Fontend/FrontendConcept.docx",
     "CTF/AWD",
