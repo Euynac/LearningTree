@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Music/MusicTheory.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Music/MusicTheory.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "Music/MusicTheory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/和弦.md"
+                "file": "Music/MusicTheory.md"
               }
             }
           },
@@ -193,23 +193,23 @@
   },
   "active": "44dddb4ffc621111",
   "lastOpenFiles": [
+    "attachments/Pasted image 20231023204716.png",
+    "attachments/Pasted image 20231023204349.png",
+    "attachments/Pasted image 20231023204010.png",
+    "attachments/Pasted image 20231023203450.png",
+    "attachments/Pasted image 20231023203407.png",
+    "Music/和弦.md",
     "attachments/Pasted image 20231023195509.png",
     "attachments/Pasted image 20231023001334.png",
     "attachments/Pasted image 20231023001009.png",
     "attachments/Pasted image 20231022235309.png",
     "attachments/Pasted image 20231022234044.png",
     "attachments/Pasted image 20231022231429.png",
-    "attachments/Pasted image 20231022230613.png",
     "Music/FLStudio.md",
     "Music/MusicTheory.md",
-    "attachments/Pasted image 20231022214027.png",
-    "attachments/Pasted image 20231022213954.png",
     "Programming/C#.md",
     "ComputerScience/Database.md",
     "SoftwareManual/VisualStudio.md",
-    "attachments/Pasted image 20231022002020.png",
-    "attachments/Pasted image 20231022001334.png",
-    "Music/和弦.md",
     "SoftwareManual/CMD.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",
