@@ -149,6 +149,9 @@ sidecar的默认的HTTP监听是3500，gRPC的是50001。一般不需要修改�
 
 ### 问题
 
+#### initial http2 frame from server is not a settings frame:http2.GoAwayFrame
+边车配置的 `app-protocol` 是gRPC，然后应用中却通过dapr HttpClient去调用Http服务，造成问题。
+
 #### ERR_DIRECT_INVOKE fail to invoke
 有可能是命名空间的问题，边车与边车之间不在同一个命名空间，则默认无法互相通信。比如在K8S中挂载的边车，默认是采用了K8S自己项目的命名空间。
 
