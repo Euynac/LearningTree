@@ -89,7 +89,7 @@ string result = DTE.ActiveWindow.Document.FullName + System.Environment.NewLine 
 System.Windows.Clipboard.SetText(result);
 ```
 
-#### Stack Trace Explorer
+#### Stack Trace Explorer（堆栈信息高亮）
 
 [Stack Trace Explorer 2022 - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SamirBoulema.StackTraceExplorer2022)
 

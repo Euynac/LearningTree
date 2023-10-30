@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "00250a0b3f526e88",
+        "id": "629d714f9145d462",
         "type": "tabs",
         "children": [
           {
-            "id": "44dddb4ffc621111",
+            "id": "7f302cd6406add63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/和弦.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/和弦.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -191,24 +191,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "44dddb4ffc621111",
+  "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "ComputerScience/Database.md",
+    "attachments/Pasted image 20231030084457.png",
+    "Music/和弦.md",
     "attachments/Pasted image 20231023234405.png",
     "attachments/Pasted image 20231023233708.png",
     "attachments/Pasted image 20231023232849.png",
     "attachments/Pasted image 20231023232747.png",
     "Music/MusicTheory.md",
-    "Music/和弦.md",
     "attachments/Pasted image 20231023211045.png",
     "Music/FLStudio.md",
     "attachments/Pasted image 20231023204716.png",
     "attachments/Pasted image 20231023204349.png",
     "attachments/Pasted image 20231023204010.png",
     "attachments/Pasted image 20231023203450.png",
-    "attachments/Pasted image 20231023203407.png",
-    "attachments/Pasted image 20231023195509.png",
     "Programming/C#.md",
-    "ComputerScience/Database.md",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual/CMD.md",
     "CTF/MISC/压缩包.md",

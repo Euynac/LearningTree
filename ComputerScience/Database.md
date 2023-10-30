@@ -499,6 +499,10 @@ order by a desc，b desc ——a，b都是降序
 | SQL Server 2014 (12.x) | C:\Windows\SysWOW64\SQLServerManager12.msc |
 | SQL Server 2012 (11.x) | C:\Windows\SysWOW64\SQLServerManager11.msc |
 
+#### Navicate 无法连接
+检查是否开启了`TCP/IP`连接
+![](../attachments/Pasted%20image%2020231030084457.png)
+
 ## 语句
 
 `RESTORE DATABASE FIPS with recovery` 使正在还原的数据库变为已还原可访问
