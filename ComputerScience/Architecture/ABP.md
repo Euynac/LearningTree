@@ -19,6 +19,14 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 # 错误排查
 
+#### Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.'
+Repository中的DbContext不可以`using`，直接交由ABP框架管理生命周期。
+```cs
+await using var context = await _repository.GetDbContextAsync(); //导致错误
+//直接使用
+var context = await _repository.GetDbContextAsync();
+```
+
 ### Repository中的基类属性为null没有注册
 只能通过Abp Module进行注册，不能简单地绕过它的module使用AddAssembly方法进行自动注册，否则会带来很多蜜汁问题。
 

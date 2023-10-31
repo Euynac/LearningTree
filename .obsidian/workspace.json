@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dapr",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -194,8 +193,9 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
-    "ComputerScience/计算机网络.md",
+    "Programming/C#.md",
     "CloudNative/Dapr.md",
+    "ComputerScience/计算机网络.md",
     "SoftwareManual/VisualStudio.md",
     "ComputerScience/Database.md",
     "attachments/Pasted image 20231030084457.png",
@@ -211,7 +211,6 @@
     "attachments/Pasted image 20231023204349.png",
     "attachments/Pasted image 20231023204010.png",
     "attachments/Pasted image 20231023203450.png",
-    "Programming/C#.md",
     "SoftwareManual/CMD.md",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",

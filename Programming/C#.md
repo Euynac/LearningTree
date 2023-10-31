@@ -948,9 +948,9 @@ asynchronous [eɪˈsɪŋkrənəs]
 | adj. | 不同时存在(或发生)的; 非共时的; |
 |------|---------------------------------|
 
-用async来修饰一个方法，表明这个方法是异步的，声明的方法的返回类型必须为：void或Task或Task\<TResult\>。方法内部必须含有await修饰的方法，如果方法内部没有await关键字修饰的表达式，哪怕函数被async修饰也只能算作同步方法，执行的时候也是同步执行的。
+用`async`来修饰一个方法，表明这个方法是异步的，声明的方法的返回类型必须为：`void`或`Task`或`Task<TResult>`。方法内部必须含有`await`修饰的方法，如果方法内部没有`await`关键字修饰的表达式，哪怕函数被`async`修饰也只能算作同步方法，执行的时候也是同步执行的。
 
-void类型的async方法是无法被等待的，可以直接更改返回值类型为Task，也不用返回什么，就可让它变为可等待的async方法。async里面的返回值不需要自己包装为Task\<TResult\>这种返回值，直接return TResult然后返回值类型改为Task\<TResult\>即可。
+`void`类型的`async`方法**是无法被等待的**，可以直接更改返回值类型为`Task`，也不用返回什么，就可让它变为可等待的`async`方法。`async`里面的返回值不需要自己包装为`Task<TResult>`这种返回值，直接`return` `TResult`然后返回值类型改为`Task<TResult>`即可。
 
 ##### await
 
