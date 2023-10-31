@@ -78,6 +78,28 @@ If you leave the Configure for HTTPS checkbox checked, the generated ASP.NET Cor
 
 Care must be taken to always pass an explicit app-id parameter when consuming the state management building block. The block uses the application id value as a prefix for its state key for each key/value pair. If the application id changes, you can no longer access the previously stored state.
 
+
+## Namespace
+dapr有自己一套命名空间机制。
+当使用K8S方式部署时，微服务的命名空间采用的就是K8S的命名空间。
+而组件的命名空间，实际上是可以配置为全局访问的，即绕过K8S命名空间限制，将组件公布给dapr下所有微服务。
+[操作：配置具有多个命名空间的 Pub/Sub 组件 | Dapr 文档库](https://docs.dapr.io/zh-hans/operations/components/setup-pubsub/pubsub-namespaces/)
+
+```yaml
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub # 这里删掉了namespace限制，可以应用使得全局使用
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: "redisHost"
+    value: "redis-master.namespace-a.svc:6379"
+  - name: "redisPassword"
+    value: "YOUR_PASSWORD"
+```
+
 ## Actor
 
 Actor的method是异步的，所以接口必须以Task或Task\<…\>为返回值。
@@ -138,6 +160,12 @@ non-remoting其实就是指的动态代理的non-strong type写法，而remoting
 Actors uses System.Text.Json (JSON) for state storage (the serializer and options have a replaceable abstraction).
 
 <https://github.com/dapr/dotnet-sdk/issues/476>
+### 跨命名空间
+
+目前的Actor并没有跨命名空间调用的能力，它的注册方式默认是通过Actor所处类型名注册的，比如FlightActor类，就会注册为FlightActor，这里的是没有带命名空间前缀的注册，因此也是作用于全局。
+
+虽然作用于全局，但处于K8S不同命名空间下也不能访问到ActorHost。
+[Unhandled exception. Dapr.DaprApiException: error invoke actor method: failed to invoke target 10.39.1.36:50002 after 3 retries · Issue #5090 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/5090)
 
 ## 服务发现&服务间调用
 
@@ -241,3 +269,5 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 [https://github.com/dapr/dotnet-sdk/issues/401\#issuecomment-747563695](https://github.com/dapr/dotnet-sdk/issues/401#issuecomment-747563695)
 
 <https://devblogs.microsoft.com/devops/introducing-the-child-process-debugging-power-tool/>
+
+
