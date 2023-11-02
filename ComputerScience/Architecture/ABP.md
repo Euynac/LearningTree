@@ -25,6 +25,21 @@ Repository中的DbContext不可以`using`，直接交由ABP框架管理生命周
 await using var context = await _repository.GetDbContextAsync(); //导致错误
 //直接使用
 var context = await _repository.GetDbContextAsync();
+
+```
+
+而且Repository依赖UnitOfWork：
+对于不是ApplicationService等默认开启了UnitOfWork的，需要手动增加UnitOfWork标签。比如在EventHandler中。注意要使用virtual才会生效。
+```cs
+[UnitOfWork]
+public virtual async Task HandleEventAsync(MyEto eventData)
+
+//还有手动的方式
+using (var uow = _unitOfWorkManager.Begin()
+{
+    var client = await clientCredentialRepository.SingleOrDefaultAsync(x => x.ClientId == client_id);
+    await uow.CompleteAsync();
+}
 ```
 
 ### Repository中的基类属性为null没有注册
