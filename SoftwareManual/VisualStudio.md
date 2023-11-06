@@ -55,6 +55,8 @@ Debug Single Thread 多线程时单线程调试
 
 Multiline Search and Replace 多行替换、搜索
 
+#### Folder To Solution Folder
+直接添加物理文件夹成为相应的Solution Folder，不用再一个一个对比。
 #### SwitchStartupProject
 
 能够保存不同的Startup Project的设置。
