@@ -258,6 +258,12 @@ NAMESPACE=fips
 
 # 错误排查
 
+#### COPY找不到文件
+
+首先要弄清楚 `context` 原理：
+dockerfile的context是 `docker -f xxxx.dockerfile -t tagname <context>` 中 `context` 参数。
+docker-compose以及dockerfile支持`.dockerignore`，但注意它只能在`context`所在目录下，因此要确定是否COPY的文件目录被忽略了，导致找不到文件。
+
 #### docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
 
 原因是 docker 没有启动
