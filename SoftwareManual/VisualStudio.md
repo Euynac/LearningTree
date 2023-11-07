@@ -55,6 +55,8 @@ Debug Single Thread 多线程时单线程调试
 
 Multiline Search and Replace 多行替换、搜索
 
+[File Path On Footer - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter)
+可以在打开的文件下面显示文件所在地址，快速打开相关文件夹等
 #### Folder To Solution Folder
 直接添加物理文件夹成为相应的Solution Folder，不用再一个一个对比。
 #### SwitchStartupProject
