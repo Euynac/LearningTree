@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "appsetting",
+                "query": "Stage",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
