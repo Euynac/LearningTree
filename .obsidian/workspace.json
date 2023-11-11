@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Castle",
+                "query": "dll",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
