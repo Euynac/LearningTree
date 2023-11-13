@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dll",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/CMD.md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/CMD.md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -192,10 +191,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "06bae426a52ef2d9",
+  "active": "7f302cd6406add63",
   "lastOpenFiles": [
-    "SoftwareManual/VisualStudio.md",
+    "CTF/README.md",
     "SoftwareManual/CMD.md",
+    "SoftwareManual/VisualStudio.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "CloudNative/Dapr.md",
@@ -224,7 +224,6 @@
     "ComputerScience/AI/Drawing.md",
     "CTF/Hacker/软件破解.md",
     "CTF/MISC/数值类.md",
-    "CTF/README.md",
     "CTF/MISC/电子取证.md",
     "CTF/MISC/音频隐写.md",
     "CTF/MISC/文件头.md",
