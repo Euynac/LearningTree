@@ -199,7 +199,12 @@ ILSpy
 创建和导入：
 [Create multi-project templates - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates?view=vs-2022)
 
-
+导入自定义的模板目前要手动找到相应目录，并拷贝`.zip`进去。
+目录默认在（设置的文档目录）：
+`D:\Documents\Visual Studio 2022\Templates\ProjectTemplates`
+但也可能读取的是：
+`C:\Users\<Name>\Documents\Visual Studio 2022\Templates\ProjectTemplates`
+具体可以自己生成一个，勾上自动导入，然后通过 `everything`等工具找到实际目录。
 
 # 调试
 
