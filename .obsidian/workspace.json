@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Koubot/Linux命令.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Koubot/Linux命令.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Koubot/Linux命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "Koubot/Linux命令.md"
               }
             }
           },
@@ -193,11 +193,11 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20231113101056.png",
     "SoftwareManual/CMD.md",
     "CTF/ToolsList.md",
     "CTF/README.md",
-    "SoftwareManual/VisualStudio.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "CloudNative/Dapr.md",
@@ -216,7 +216,6 @@
     "attachments/Pasted image 20231023204716.png",
     "attachments/Pasted image 20231023204349.png",
     "attachments/Pasted image 20231023204010.png",
-    "attachments/Pasted image 20231023203450.png",
     "CTF/MISC/压缩包.md",
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
