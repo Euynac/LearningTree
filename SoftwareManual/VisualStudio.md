@@ -196,6 +196,8 @@ ILSpy
 还有使用插件形式安装的是在 `Extensions`中进行卸载，需要以管理员权限启动VS
 ![](../attachments/Pasted%20image%2020231113101056.png)
 
+创建和导入：
+[Create multi-project templates - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates?view=vs-2022)
 
 
 
