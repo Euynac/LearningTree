@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Koubot/Linux命令.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Koubot/Linux命令.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Koubot/Linux命令.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Koubot/Linux命令.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -193,6 +193,7 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "Koubot/Linux命令.md",
     "SoftwareManual/VisualStudio.md",
     "attachments/Pasted image 20231113101056.png",
     "SoftwareManual/CMD.md",

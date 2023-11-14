@@ -208,6 +208,8 @@ ILSpy
 
 模板xml文件的属性：[Visual Studio Template Schema Reference - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/extensibility/visual-studio-template-schema-reference?view=vs-2022)
 
+> 有个bug，用windows自带的zip压缩的文件VS无法识别。
+
 
 # 调试
 
