@@ -418,6 +418,14 @@ Shortcut Scheme中可以开启Shortcut Browser，按三下Ctrl快速弹出当前
 
 如果发现对不上快捷键，需要去Keyboard配置中重新覆盖一下配置。
 
+
+### File Layout
+其中有功能可以排序属性
+
+应用File Layout需要使用
+![](../attachments/Pasted%20image%2020231114103910.png)
+这个右键文件使用 `Cleanup Code…` 功能，注意不是VS的CleanupCode
+
 ### 快捷
 
 #### Alt+\` Navigate To
