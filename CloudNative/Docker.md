@@ -272,6 +272,9 @@ docker-compose中的context设置是
 ```
 docker-compose以及dockerfile支持`.dockerignore`，但注意它只能在`context`所在目录下，因此要确定是否COPY的文件目录被忽略了，导致找不到文件。
 而后COPY的目录都是相当于设定的上下文开始的，也是最外层，再往context的上一层就不行了。
+
+> volumn中挂载的是**按照实际目录相对路径**来的，而不是Context的目录。
+
 #### docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
 
 原因是 docker 没有启动
