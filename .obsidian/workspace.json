@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "ComputerScience/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "ComputerScience/Linux.md"
               }
             }
           },
@@ -193,12 +193,14 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
-    "CloudNative/Dapr.md",
+    "CTF/AWD/Linux易忽略点.md",
+    "ComputerScience/Linux.md",
+    "Koubot/Linux命令.md",
     "SoftwareManual/VisualStudio.md",
+    "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "attachments/Pasted image 20231114104833.png",
     "attachments/Pasted image 20231114103910.png",
-    "Koubot/Linux命令.md",
     "attachments/Pasted image 20231113101056.png",
     "SoftwareManual/CMD.md",
     "CTF/ToolsList.md",
@@ -227,7 +229,6 @@
     "CTF/MISC/数值类.md",
     "CTF/MISC/电子取证.md",
     "CTF/MISC/音频隐写.md",
-    "CTF/MISC/文件头.md",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
