@@ -197,6 +197,18 @@ Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/2
 
 <https://github.com/dapr/dashboard/issues/38>
 
+
+
+## TroubleShotting
+
+#### Requesting HTTP version 2.0 with version policy RequestVersionOrHigher while unable to establish HTTP/2 connection
+可能是使用了 `http_proxy`和 `https_proxy` 的原因
+.NET populates the HttpClient DefaultProxy from these environment variables. My company proxy appears to be interfering with HTTP/2 (unsupported?), preventing gRPC from working correctly. The workaround for local development is to manually set the default proxy for the HttpClient before making the gRPC call:
+
+```csharp
+HttpClient.DefaultProxy = new WebProxy();
+```
+
 ## Debug
 
 需要依赖于dapr的项目，需要特别的Debug方法，如Actor的Host程序，这类项目必须
