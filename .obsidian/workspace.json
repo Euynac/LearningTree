@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -193,11 +193,11 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
     "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
     "ComputerScience/Architecture/架构.md",
     "Programming/ASP.NET Core接口.md",
-    "ComputerScience/Architecture/ABP.md",
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
     "CloudNative/Kubernetes(K8S).md",
