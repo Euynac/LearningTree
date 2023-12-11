@@ -139,6 +139,8 @@ new的优先级是按照父类A = new 子类B（），那么方法是调用的�
 
 修饰方法或属性： sealed 修饰符必须始终与 override（C\# 参考）一起使用，防止被再一次继承重写，所以是三个类以上的连续继承关系才会用到sealed
 
+尽量多使用sealed，可以提高性能。[.NET 中密封类的性能优势](https://mp.weixin.qq.com/s/dZlEjOB8jx0ku8eN8AhpzQ)
+
 ##### const关键字
 
 在编译时设置其值

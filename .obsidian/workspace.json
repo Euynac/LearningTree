@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Programming/C#.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "seal",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Programming/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Programming/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "Programming/C#.md"
               }
             }
           },
@@ -193,6 +194,7 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "ComputerScience/Architecture/ABP.md",
     "CTF/ToolsList.md",
     "SoftwareManual/CMD.md",
@@ -203,7 +205,6 @@
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
     "CloudNative/CloudNative.md",
-    "SoftwareManual/VisualStudio.md",
     "ComputerScience/Linux.md",
     "CTF/AWD/Linux易忽略点.md",
     "Koubot/Linux命令.md",
