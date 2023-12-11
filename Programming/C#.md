@@ -909,6 +909,8 @@ locking scope is even more than unnamed mutex and it's across process in an oper
 
 分为读写锁，当读操作次数显著大于写时，使用该锁进行读写分离锁，相比简单的lock可以加大效率。
 
+无法在async中使用，因为await的原理可能导致获取锁和释放锁的不是同一个线程。
+
 #### SemaphoreSlim
 
 async method中最好使用该锁，支持异步等待，替代lock。
