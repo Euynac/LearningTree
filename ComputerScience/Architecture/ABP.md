@@ -50,3 +50,14 @@ using (var uow = _unitOfWorkManager.Begin()
 ```
 The requested service 'Volo.Abp.DependencyInjection.ObjectAccessor`1[[Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Http.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]' has not been registered
 ```
+
+
+# 依赖注入
+
+
+```cs
+public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
+```
+
+
+属性注入似乎必须为public set，而且似乎只能 `ITransientDependency`
