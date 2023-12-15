@@ -60,4 +60,4 @@ public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
 ```
 
 
-属性注入似乎必须为public set，而且似乎只能 `ITransientDependency`
+属性注入必须为 public property with public setter
