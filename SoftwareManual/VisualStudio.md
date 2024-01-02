@@ -32,6 +32,9 @@ charset = utf-8
 # 使用 bootstrapper进行运行命令 create local layout
 vs_enterprise.exe --layout D:\VS2022\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Component.Git --includeRecommended --lang en-US zh-CN
 
+# 更新layout到最新版本
+vs_enterprise.exe --layout D:\VS2022\vslayout
+
 # --lang在安装时无效
 # --fix可以检验vslayout是否有包是损坏的
 

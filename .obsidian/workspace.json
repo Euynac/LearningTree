@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273.49999618530273,
-    "collapsed": true
+    "width": 273.49999618530273
   },
   "right": {
     "id": "135816766e82b8ec",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fontend/FrontendConcept.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fontend/FrontendConcept.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -194,6 +193,7 @@
   },
   "active": "7f302cd6406add63",
   "lastOpenFiles": [
+    "Fontend/FrontendConcept.md",
     "ComputerScience/Architecture/ABP.md",
     "SoftwareManual/VisualStudio.md",
     "Programming/C#.md",
@@ -229,7 +229,6 @@
     "CTF/MISC/图像隐写/JPG.md",
     "CTF/MISC/图像隐写/图像隐写.md",
     "ComputerScience/AI/Audio.md",
-    "ComputerScience/AI/ArtificialIntelligence.md",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",
