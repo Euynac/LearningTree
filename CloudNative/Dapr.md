@@ -213,7 +213,9 @@ Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/2
 HttpClient.DefaultProxy = new WebProxy();
 ```
 
-## Debug
+# Debug
+
+## 普通Debug
 
 需要依赖于dapr的项目，需要特别的Debug方法，如Actor的Host程序，这类项目必须
 
@@ -292,3 +294,9 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 <https://devblogs.microsoft.com/devops/introducing-the-child-process-debugging-power-tool/>
 
 
+## Dapr VisualStudio 2022 插件
+[[Discussion] Who is using Visual Studio (or other IDEs) for Dapr application development? · Issue #6097 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/6097)
+[microsoft/vs-dapr: View, manage, and diagnose Dapr services within Visual Studio. (github.com)](https://github.com/microsoft/vs-dapr)
+[Dapr Community Call - Oct 4th (#91) (youtube.com)](https://www.youtube.com/watch?v=L_S98bRGfCQ&t=668s)
+
+其他：[[Discussion] Who is using Visual Studio (or other IDEs) for Dapr application development? · Issue #6097 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/6097)
