@@ -203,7 +203,7 @@ Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/2
 
 ## TroubleShotting
 
-> Visual Studio 由于预热机制，边车仅启动一次，除非自行重启，边车是不会重读配置的
+> Visual Studio 由于预热机制，**边车仅启动一次，除非自行重启，边车是不会重读配置的**。比如监听领域事件。
 
 #### Requesting HTTP version 2.0 with version policy RequestVersionOrHigher while unable to establish HTTP/2 connection
 可能是使用了 `http_proxy`和 `https_proxy` 的原因
