@@ -23,7 +23,14 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 #### AbpDbConcurrencyException
 
-领域事件中UpdateAsync产生AbpDbConcurrencyException问题。最后发现其实就是并发异常。眼光不能局限在某个服务，这次是事件多次触发，Redis拿到旧的数据导致的
+##### 修改令牌
+`GetAsync()`查出的实体实例被修改后，然后又重新多次查询相关实例并客户端侧修改，即时没有使用 `Update` 等方法也会导致并发异常。（这里是同事写了个递归函数）
+初步判断应该是令牌修改是ABP客户端侧判断，而非交给数据库判断，然后多次查询修改时发现令牌不匹配，直接在客户端侧触发并发修改异常。
+
+只读查询功能似乎要额外设置。具体看 `GetAsync()`设置。
+
+##### 多线程触发
+领域事件中UpdateAsync产生AbpDbConcurrencyException问题。最后发现其实就是多线程并发异常。眼光不能局限在某个服务，这次是事件多次触发，Redis拿到旧的数据导致的
 `https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L347:17&popover=pinned`
 `https://sourcegraph.com/github.com/abpframework/abp@4f6426add5b69bfb273f601b1ddd9f1f89099a72/-/blob/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs?L520:28&popover=pinned`
 
