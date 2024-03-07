@@ -95,7 +95,7 @@ CRI is an interface between container runtimes and container orchestration platf
 容器组中的容器共享生命周期、资源、本地网络和存储卷，在K8S中也称为 Pod。**容器组有公共的IP地址，两个容器监听不同的端口。**
 
 dapr中的边车，就是很好的例子，边车与应用程序位于同一个Pod内。
-
+[kubernetes里的各种port解惑 - 周国通 - 博客园 (cnblogs.com)](https://www.cnblogs.com/tylerzhou/p/11023157.html)
 ### Service
 
 一个Pod有一个自己的IP Address，一个Pod搭配一个Service，Service 管理Pod的IP，Pod挂掉IP也不会变。Service分Internal service和external service，即可被外部访问以及不可被外部访问的。
