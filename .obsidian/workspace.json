@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "CTF/ToolsList.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -50,7 +50,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "CTF/ToolsList.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md",
+                "file": "CTF/ToolsList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Kubernetes(K8S).md"
+                "file": "CTF/ToolsList.md"
               }
             }
           },
@@ -195,6 +196,7 @@
   },
   "active": "259f7c99059586b9",
   "lastOpenFiles": [
+    "CloudNative/Kubernetes(K8S).md",
     "Programming/TroubleShooting.md",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual/VSCode.md",
@@ -215,7 +217,6 @@
     "attachments/Pasted image 20240109155224.png",
     "Fontend/FrontendConcept.md",
     "ComputerScience/Architecture/架构.md",
-    "CloudNative/Kubernetes(K8S).md",
     "CloudNative/CloudNative.md",
     "ComputerScience/Linux.md",
     "CTF/AWD/Linux易忽略点.md",

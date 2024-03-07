@@ -5,14 +5,14 @@
 ### 暴力破解
 
 
-| 软件名              | 场景                                                                           | 备注                                                                                                                                      |
-|:------------------- |:------------------------------------------------------------------------------ |:----------------------------------------------------------------------------------------------------------------------------------------- |
-| ARCHPR              | 可以用于明文攻击，即已有被加密过的压缩包内的部分文件，进行逆向破解。不支持RAR5 | [压缩 (lanzoui.com)](https://hzgzs.lanzoui.com/s/yasuopj)                                                                                 |
-| ziperello           |                                                                                | [主流格式压缩包密码破解方法+字典枚举 整理+工具](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1478639&highlight=%D1%B9%CB%F5%B0%FC) |
-| 字典破解2.0         |                                                                                |                                                                                                                                           |
-| PasswareKitForensic | 除明文攻击外，基本支持暴力破解相关所有功能                                     | 已保存在百度网盘                                                                                                                          |
-| bkcrack             | 可用于明文攻击                                                                 | [kimci86/bkcrack](https://github.com/kimci86/bkcrack/releases/tag/v1.5.0)                                                                 |
-| hydra               | 爆破ftp、ssh等                                                                               |                                                                                                                                           |
+| 软件名                 | 场景                                        | 备注                                                                                                                   |
+| :------------------ | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| ARCHPR              | 可以用于明文攻击，即已有被加密过的压缩包内的部分文件，进行逆向破解。不支持RAR5 | [压缩 (lanzoui.com)](https://hzgzs.lanzoui.com/s/yasuopj)                                                              |
+| ziperello           |                                           | [主流格式压缩包密码破解方法+字典枚举 整理+工具](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1478639&highlight=%D1%B9%CB%F5%B0%FC) |
+| 字典破解2.0             |                                           |                                                                                                                      |
+| PasswareKitForensic | 除明文攻击外，基本支持暴力破解相关所有功能                     | 已保存在百度网盘                                                                                                             |
+| bkcrack             | 可用于明文攻击                                   | [kimci86/bkcrack](https://github.com/kimci86/bkcrack/releases/tag/v1.5.0)                                            |
+| hydra               | 爆破ftp、ssh等                                |                                                                                                                      |
 
 
 ## 图片
@@ -176,42 +176,42 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 开发
 
-| 软件名 | 场景 | 备注 |
-| :--- | :--- | :--- |
-| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |  |
-| Navicate | 本地数据库管理工具 |  |
-| DbGate | WEB端数据库管理工具 | 开源免费 |
-|  |  |  |
-|  |  |  |
+| 软件名      | 场景                              | 备注   |
+| :------- | :------------------------------ | :--- |
+| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |      |
+| Navicate | 本地数据库管理工具                       |      |
+| DbGate   | WEB端数据库管理工具                     | 开源免费 |
+|          |                                 |      |
+|          |                                 |      |
 
 
 
 
 ## 硬件
 
-| 软件名          | 场景                   | 备注 |
-|:--------------- |:---------------------- |:---- |
-| aida64          | 全能硬件检测、指标工具 |      |
-| CrystalDiskMark | 磁盘评测               |      |
-| Cpu-z           | 硬件参数               |      |
-|                 |                        |      |
+| 软件名             | 场景          | 备注  |
+| :-------------- | :---------- | :-- |
+| aida64          | 全能硬件检测、指标工具 |     |
+| CrystalDiskMark | 磁盘评测        |     |
+| Cpu-z           | 硬件参数        |     |
+|                 |             |     |
 
 
 ## 其他
 
-| 软件名                     | 场景                                       | 备注                                                                                                   |
-|:-------------------------- |:------------------------------------------ |:------------------------------------------------------------------------------------------------------ |
-| RustDesk                   | 远程桌面                                   | 开源                                                                                                   |
-| Parsec                     | 远程桌面                                   | 支持移动端，高画质                                                                                     |
-| Proxifier                  | 设置各种规则，使得本地软件走特定代理       |                                                                                                        |
-| ContextMenuManager.NET.4.0 | Windows右键管理工具                        |                                                                                                        |
-| Optimizer                  | Windows优化工具                            | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
-| sysinternals               | Windows调试工具等，火绒剑替代              |                                                                                                        |
-| BFG-repo-cleaner           | Git Secret blob 移除工具                   | [rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner)                                  |
+| 软件名                        | 场景                    | 备注                                                                                                     |
+| :------------------------- | :-------------------- | :----------------------------------------------------------------------------------------------------- |
+| RustDesk                   | 远程桌面                  | 开源                                                                                                     |
+| Parsec                     | 远程桌面                  | 支持移动端，高画质                                                                                              |
+| Proxifier                  | 设置各种规则，使得本地软件走特定代理    |                                                                                                        |
+| ContextMenuManager.NET.4.0 | Windows右键管理工具         |                                                                                                        |
+| Optimizer                  | Windows优化工具           | [hellzerg/optimizer: The finest Windows Optimizer (github.com)](https://github.com/hellzerg/optimizer) |
+| sysinternals               | Windows调试工具等，火绒剑替代    |                                                                                                        |
+| BFG-repo-cleaner           | Git Secret blob 移除工具  | [rtyley/bfg-repo-cleaner](https://github.com/rtyley/bfg-repo-cleaner)                                  |
 | Czkawka                    | 文件清理，可以搜索相似、重复文件、文件夹等 | [qarmin/czkawka](https://github.com/qarmin/czkawka)                                                    |
-| drawio                     | 开源画图工具(visio替代)                    |                                                                                                        |
-| XMouseButtonControl        | 鼠标功能DIY                                |                                                                                                        |
-|                            |                                            |                                                                                                        |
+| drawio                     | 开源画图工具(visio替代)       |                                                                                                        |
+| XMouseButtonControl        | 鼠标功能DIY               |                                                                                                        |
+|                            |                       |                                                                                                        |
 
 
 ## 效率
@@ -237,11 +237,13 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | PixPin           | 截图贴图长截图工具                                                           |                                                                             |
 
 ## Audio
-| 软件名  | 场景                   | 备注 |
-|:------- |:---------------------- |:---- |
-| LoopBe1 | Virtual MIDI Driver    |      |
-| MIDIOX  | 监控和调试MIDI设备信号 |      |
-|         |                        |      |
+| 软件名               | 场景                  | 备注  |
+| :---------------- | :------------------ | :-- |
+| LoopBe1           | Virtual MIDI Driver |     |
+| MIDIOX            | 监控和调试MIDI设备信号       |     |
+| MIDITranslatorPro | 可转换MIDI信号为键盘等其他信号   |     |
+|                   |                     |     |
+|                   |                     |     |
 
 ## Novel
 | 软件名  | 场景                  | 备注 |
