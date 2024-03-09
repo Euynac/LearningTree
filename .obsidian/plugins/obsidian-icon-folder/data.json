@@ -1,6 +1,6 @@
 {
   "settings": {
-    "migrated": true,
+    "migrated": 4,
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 16,
     "emojiStyle": "none",
@@ -13,23 +13,27 @@
       {
         "rule": "规范",
         "icon": "FarNoteSticky",
-        "for": "folders"
+        "for": "folders",
+        "order": 0
       },
       {
         "rule": "战略设计",
         "icon": "FarComments",
-        "for": "folders"
+        "for": "folders",
+        "order": 1
       },
       {
         "rule": "战术设计",
         "icon": "FarFileCode",
-        "for": "folders"
+        "for": "folders",
+        "order": 2
       },
       {
         "rule": "最佳实践",
         "icon": "FarGem",
         "for": "folders",
-        "color": "#e65656"
+        "color": "#e65656",
+        "order": 3
       }
     ],
     "extraMargin": {
@@ -38,7 +42,12 @@
       "bottom": 0,
       "left": 0
     },
-    "iconInTabsEnabled": false
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":"
   },
   "attachments": "FarImages"
 }

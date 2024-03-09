@@ -38,8 +38,8 @@ var CommandAliasPluginSettingTab = class extends import_obsidian.PluginSettingTa
   }
   display() {
     const { containerEl } = this;
-    let app = this.app;
-    let options = { "": "--- command list ---" };
+    const app = this.app;
+    const options = { "": "--- command list ---" };
     for (const key in app.commands.commands) {
       if (!Object.prototype.hasOwnProperty.call(app.commands.commands, key)) {
         continue;
@@ -66,14 +66,32 @@ var CommandAliasPluginSettingTab = class extends import_obsidian.PluginSettingTa
       })
     );
     containerEl.createEl("h3", { text: "Register aliases" });
+    const aliasesForRemove = [];
     for (const aliasId in this.plugin.settings.aliases) {
       if (!Object.prototype.hasOwnProperty.call(this.plugin.settings.aliases, aliasId)) {
         continue;
       }
       const alias = this.plugin.settings.aliases[aliasId];
+      const aliasName = alias.name;
       const command = app.commands.commands[alias.commandId];
       const commandName = command.name || "command missing";
-      new import_obsidian.Setting(containerEl).setName(alias.name).setDesc(commandName).addButton((button) => button.setButtonText("Remove").onClick(async (e) => {
+      aliasesForRemove.push({
+        aliasId,
+        aliasName,
+        commandName
+      });
+    }
+    aliasesForRemove.sort((a, b) => {
+      if (a.aliasName < b.aliasName) {
+        return -1;
+      }
+      if (a.aliasName > b.aliasName) {
+        return 1;
+      }
+      return 0;
+    });
+    for (const { aliasId, aliasName, commandName } of aliasesForRemove) {
+      new import_obsidian.Setting(containerEl).setName(aliasName).setDesc(commandName).addButton((button) => button.setButtonText("Remove").onClick(async (e) => {
         delete this.plugin.settings.aliases[aliasId];
         await this.plugin.saveSettings();
         this.display();

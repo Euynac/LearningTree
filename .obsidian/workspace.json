@@ -156,14 +156,6 @@
             }
           },
           {
-            "id": "6716985ecea915f5",
-            "type": "leaf",
-            "state": {
-              "type": "quiet-outline",
-              "state": {}
-            }
-          },
-          {
             "id": "c455a32f745a50cd",
             "type": "leaf",
             "state": {
@@ -174,9 +166,17 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "69a00cd8a3fdb10a",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -194,7 +194,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "259f7c99059586b9",
+  "active": "69a00cd8a3fdb10a",
   "lastOpenFiles": [
     "CloudNative/Kubernetes(K8S).md",
     "Programming/TroubleShooting.md",

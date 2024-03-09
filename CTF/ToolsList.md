@@ -19,14 +19,14 @@
 
 ### 加解密隐写
 
-| 软件名            | 场景                                                                                           | 备注                                                |
-|:----------------- |:---------------------------------------------------------------------------------------------- |:--------------------------------------------------- |
-| oursecret         | 有些提示“我们的秘密”这种可能涉及该工具隐写加密，需要密码，可进行图片+文件加密隐写              |                                                     |
-| zsteg             | zsteg可以检测PNG和BMP图片里的隐写数据，LSB部分支持                                             | [zed-0xff/zsteg](https://github.com/zed-0xff/zsteg) |
-| LSB-Steganography | 00000开头特征的LSB隐写                                                                         |                                                     |
-| stegpy            | 01双通道隐写                                                                                   |                                                     |
-| cloacked-pixel    | 带密码的LSB隐写                                                                                |                                                     |
-| stegsolve         | 图片隐写综合分析工具                                                                           |                                                     |
+| 软件名               | 场景                                                         | 备注                                                  |
+| :---------------- | :--------------------------------------------------------- | :-------------------------------------------------- |
+| oursecret         | 有些提示“我们的秘密”这种可能涉及该工具隐写加密，需要密码，可进行图片+文件加密隐写                 |                                                     |
+| zsteg             | zsteg可以检测PNG和BMP图片里的隐写数据，LSB部分支持                           | [zed-0xff/zsteg](https://github.com/zed-0xff/zsteg) |
+| LSB-Steganography | 00000开头特征的LSB隐写                                            |                                                     |
+| stegpy            | 01双通道隐写                                                    |                                                     |
+| cloacked-pixel    | 带密码的LSB隐写                                                  |                                                     |
+| stegsolve         | 图片隐写综合分析工具                                                 |                                                     |
 | jphs(jphide)      | 使用stegdetect出现的提示的工具，用于有密码的jpg隐写文件，目前网上能下载到的带界面的为`jphswin` |                                                     |
 
 
@@ -216,25 +216,25 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 效率
 
-| 软件名           | 场景                                                       | 备注                                                                        |
-|:---------------- |:---------------------------------------------------------- |:--------------------------------------------------------------------------- |
-| Snipaste         | 截图贴图工具                                               |                                                                             |
-| GoldenDict       | 支持MDict的字典工具                                        |                                                                             |
-| FluentSearch     | 快捷搜索栏，大量功能                                       |                                                                             |
-| Quicker          | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏           | 收费版可翻页                                                                |
-| utools           | 类似Quicker，但支持markdown笔记搜索                        | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
-| DevToys          | 如格式化JSON，JSON转YAML，比较文本，测试RegExp             | [veler/DevToys](https://github.com/veler/DevToys)                           |
-| PowerToys        | 微软开源功能增强工具，包括批量重命名、图像压缩、进程解锁等 | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)               |
-| Captura          | 开源录屏工具                                               |                                                                             |
-| TreeSizePro      | 用饼图方式直观的查看硬盘占用情况                           |                                                                             |
-| AnyTxt.Searcher  | 能够索引doc,txt,pdf等文件内容，全盘搜索文件内容            |                                                                             |
-| Bandicam         | 录屏工具（收费）                                           |                                                                             |
-| UACWhitelistTool | UAC添加白名单，将以管理员运行的弹窗屏蔽，例如everything    | [XIU2/UACWhitelistTool](https://github.com/XIU2/UACWhitelistTool)           |
-| WinMerge         | 开源的文件比较/合并工具                                    |                                                                             |
-| Everything       | 最强全局文件搜索                                           |                                                                             |
-| ScreenToGif      | Gif录屏工具                                                |                                                                             |
-| Textify          | 无限制复制工具，替代OCR                                    | [m417z/Textify](https://github.com/m417z/Textify)                           |
-| PixPin           | 截图贴图长截图工具                                                           |                                                                             |
+| 软件名              | 场景                                 | 备注                                                                    |
+| :--------------- | :--------------------------------- | :-------------------------------------------------------------------- |
+| Snipaste         | 截图贴图工具                             |                                                                       |
+| GoldenDict       | 支持MDict的字典工具                       |                                                                       |
+| FluentSearch     | 快捷搜索栏，大量功能                         |                                                                       |
+| Quicker          | 鼠标中键插件扩展、类Workflow编程、含有快捷搜索栏       | 收费版可翻页                                                                |
+| utools           | 类似Quicker，但支持markdown笔记搜索          | [插件离线安装](https://blog.csdn.net/m0_32156988/article/details/126415067) |
+| DevToys          | 如格式化JSON，JSON转YAML，比较文本，测试RegExp   | [veler/DevToys](https://github.com/veler/DevToys)                     |
+| PowerToys        | 微软开源功能增强工具，包括批量重命名、图像压缩、进程解锁等      | [microsoft/PowerToys](https://github.com/microsoft/PowerToys)         |
+| Captura          | 开源录屏工具                             |                                                                       |
+| TreeSizePro      | 用饼图方式直观的查看硬盘占用情况                   |                                                                       |
+| AnyTxt.Searcher  | 能够索引doc,txt,pdf等文件内容，全盘搜索文件内容      |                                                                       |
+| Bandicam         | 录屏工具（收费）                           |                                                                       |
+| UACWhitelistTool | UAC添加白名单，将以管理员运行的弹窗屏蔽，例如everything | [XIU2/UACWhitelistTool](https://github.com/XIU2/UACWhitelistTool)     |
+| WinMerge         | 开源的文件比较/合并工具                       |                                                                       |
+| Everything       | 最强全局文件搜索                           |                                                                       |
+| ScreenToGif      | Gif录屏工具                            |                                                                       |
+| Textify          | 无限制复制工具，替代OCR                      | [m417z/Textify](https://github.com/m417z/Textify)                     |
+| PixPin           | 截图贴图长截图工具                          |                                                                       |
 
 ## Audio
 | 软件名               | 场景                  | 备注  |

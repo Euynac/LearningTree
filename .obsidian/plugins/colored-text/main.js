@@ -23559,29 +23559,38 @@ __export(main_exports, {
   default: () => ColoredFont
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian3 = require("obsidian");
+var import_obsidian4 = require("obsidian");
 
-// src/ColorBar.ts
-var ColorBar = class {
+// src/statusBar.ts
+var import_obsidian = require("obsidian");
+var StatusBar = class {
   constructor(plugin) {
-    this.onClick = (index) => (e) => {
-      if (this.plugin.curIndex == index) {
+    this.onClickColorBar = (index) => () => {
+      if (this.plugin.curIndex === index) {
         this.plugin.openColorModal();
       } else {
         this.plugin.selectColor(index);
       }
     };
+    this.onClickHighlight = () => () => {
+      this.clickHighlight();
+    };
     this.plugin = plugin;
   }
-  addColorBar() {
+  // region Color Cells
+  addColorCells() {
     for (let i2 = 0; i2 < this.plugin.cellCount; i2++) {
-      let statusBarColor = this.plugin.addStatusBarItem();
+      const statusBarColor = this.plugin.addStatusBarItem();
       statusBarColor.style.paddingLeft = "0";
       statusBarColor.style.paddingRight = "0";
-      statusBarColor.style.order = `${i2 + 1}`;
+      statusBarColor.style.order = `${i2 + 2}`;
+      if (this.plugin.hidePlugin) {
+        statusBarColor.style.height = "0";
+        statusBarColor.style.width = "0";
+      }
       statusBarColor.addClasses(["mod-clickable"]);
-      statusBarColor.addEventListener("click", this.onClick(i2));
-      let colorIcon = statusBarColor.createDiv(
+      statusBarColor.addEventListener("click", this.onClickColorBar(i2));
+      const colorIcon = statusBarColor.createDiv(
         {
           cls: "status-color"
         }
@@ -23593,12 +23602,34 @@ var ColorBar = class {
       }
       this.plugin.colorDivs.push(colorIcon);
     }
-    this.plugin.colorDivs[0].style.borderStyle = "solid";
+    if (!this.plugin.hidePlugin)
+      this.plugin.colorDivs[0].style.borderStyle = "solid";
   }
+  // endregion
+  // region Highlight Mode
+  addHighlightMode() {
+    const item = this.plugin.addStatusBarItem();
+    item.style.order = "1";
+    item.ariaLabel = "Highlight Mode";
+    this.highlightButton = item;
+    item.addClass("mod-clickable");
+    item.addEventListener("click", this.onClickHighlight());
+    (0, import_obsidian.setIcon)(item, "highlighter");
+    if (this.plugin.hidePlugin) {
+      item.style.height = "0";
+      item.style.width = "0";
+    }
+  }
+  clickHighlight() {
+    this.plugin.highlightMode = !this.plugin.highlightMode;
+    if (!this.plugin.hidePlugin)
+      this.highlightButton.style.backgroundColor = this.plugin.highlightMode ? "rgba(220, 220, 220, 0.3)" : "rgba(220, 220, 220, 0)";
+  }
+  // endregion
 };
 
-// src/ColorModal.tsx
-var import_obsidian = require("obsidian");
+// src/colorModal.tsx
+var import_obsidian2 = require("obsidian");
 var import_react3 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
@@ -24955,8 +24986,8 @@ var ColorPalette = ({
 };
 var ColorPalette_default = ColorPalette;
 
-// src/ColorModal.tsx
-var ColorModal = class extends import_obsidian.Modal {
+// src/colorModal.tsx
+var ColorModal = class extends import_obsidian2.Modal {
   constructor(app2, plugin, prevColor, onSubmit) {
     super(app2);
     this.onModalColorClick = (color) => {
@@ -24989,12 +25020,12 @@ var ColorModal = class extends import_obsidian.Modal {
         )
       ))
     );
-    new import_obsidian.Setting(contentEl).setName("Custom color").addColorPicker(
+    new import_obsidian2.Setting(contentEl).setName("Custom color").addColorPicker(
       (color) => color.setValue(this.prevColor).onChange((value) => {
         this.colorResult = value;
       })
     );
-    new import_obsidian.Setting(contentEl).addButton(
+    new import_obsidian2.Setting(contentEl).addButton(
       (btn) => btn.setButtonText("Submit").setCta().onClick(() => {
         this.close();
         this.onSubmit(this.colorResult);
@@ -25008,15 +25039,15 @@ var ColorModal = class extends import_obsidian.Modal {
   }
 };
 
-// src/RGBConverter.ts
-var RGBConverter = class {
+// src/rgbConverter.ts
+var RgbConverter = class {
   componentToHex(c2) {
-    let hex = c2.toString(16);
+    const hex = c2.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
   }
   rgbToHex(rgb) {
-    let substr2 = rgb.substring(4, rgb.length - 1);
-    let rgbArr = substr2.split(",");
+    const substr2 = rgb.substring(4, rgb.length - 1);
+    const rgbArr = substr2.split(",");
     let hexStr = "#";
     for (let i2 = 0; i2 < 3; i2++) {
       hexStr += this.componentToHex(parseInt(rgbArr[i2]));
@@ -25042,8 +25073,63 @@ var DEFAULT_SETTINGS = {
     "#7030a0"
   ],
   colorArr: Array(5).fill(DEFAULT_COLOR),
-  colorCellCount: "5"
+  colorCellCount: "5",
+  hidePlugin: false
 };
+
+// src/colorRemover.ts
+function removeColor(editor) {
+  const fromCursor = editor.getCursor("from");
+  const toCursor = editor.getCursor("to");
+  const spanRegex = /<span style=".*?">(.*?)<\/span>(.*?)/;
+  const spanRegexG = /<span style=".*?">(.*?)<\/span>(.*?)/g;
+  const beginRegex = /<span style=".*?">/;
+  const endString = "</span>";
+  if (fromCursor.ch == toCursor.ch && fromCursor.line == toCursor.line) {
+    const cursor = fromCursor;
+    const line2 = editor.getLine(cursor.line);
+    let d = 0;
+    let sub = line2.substring(d);
+    let found = false;
+    while (!found && sub.search(spanRegex) != -1) {
+      const pos = sub.search(spanRegex);
+      d += pos;
+      const close = sub.substring(pos).search(endString);
+      if (cursor.ch >= d && cursor.ch < d + close + endString.length) {
+        const newLine = line2.substring(0, d) + line2.substring(d).replace(spanRegex, "$1$2");
+        editor.setLine(cursor.line, newLine);
+        editor.setCursor({ line: cursor.line, ch: d });
+        found = true;
+      } else {
+        sub = sub.substring(pos + 1);
+      }
+    }
+  } else {
+    const lines = [...Array(toCursor.line - fromCursor.line + 1)].map((x2, i2) => editor.getLine(fromCursor.line + i2));
+    const lastInd = lines.length - 1;
+    lines[lastInd] = lines[lastInd].substring(0, toCursor.ch);
+    lines[0] = lines[0].substring(fromCursor.ch);
+    let unendedBeginIndex = null;
+    for (const [i2, l2] of lines.entries()) {
+      let newLine = l2;
+      newLine = newLine.replaceAll(spanRegexG, "$1$2");
+      lines[i2] = newLine;
+      if (newLine.search(endString) != -1 && unendedBeginIndex) {
+        const j2 = unendedBeginIndex.line;
+        const ch = unendedBeginIndex.ch;
+        lines[j2] = lines[j2].substring(0, ch) + lines[j2].substring(ch).replace(beginRegex, "");
+        lines[i2] = lines[i2].replace(endString, "");
+      }
+      if (newLine.search(beginRegex) != -1) {
+        unendedBeginIndex = { line: i2, ch: newLine.search(beginRegex) };
+      }
+    }
+    lines[0] = editor.getLine(fromCursor.line).substring(0, fromCursor.ch) + lines[0];
+    lines[lastInd] = lines[lastInd] + editor.getLine(toCursor.line).substring(toCursor.ch);
+    lines.map((l2, i2) => editor.setLine(fromCursor.line + i2, l2));
+    editor.setCursor(fromCursor);
+  }
+}
 
 // src/contextMenu.ts
 function contextMenu(app2, menu, editor, plugin, curColor) {
@@ -25058,26 +25144,31 @@ function contextMenu(app2, menu, editor, plugin, curColor) {
         }
       });
     });
+    menu.addItem((item) => {
+      item.setTitle("Remove Color").onClick((e) => {
+        removeColor(editor);
+      });
+    });
   }
 }
 
 // src/settings.ts
-var import_obsidian2 = require("obsidian");
-var SettingsTab = class extends import_obsidian2.PluginSettingTab {
+var import_obsidian3 = require("obsidian");
+var SettingsTab = class extends import_obsidian3.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
   }
   display() {
-    let { containerEl } = this;
+    const { containerEl } = this;
     containerEl.empty();
-    new import_obsidian2.Setting(containerEl).setName("Number of Color Cells").setDesc("Change number of color cells (You need to reload Obsidian for changes to occur)").addText(
+    new import_obsidian3.Setting(containerEl).setName("Number of Color Cells").setDesc("Change number of color cells (You need to reload Obsidian for changes to occur)").addText(
       (text) => text.setPlaceholder("5").setValue(this.plugin.colorsData.colorCellCount).onChange(async (value) => {
         this.plugin.colorsData.colorCellCount = value;
         await this.plugin.saveColorData();
       })
     );
-    this.favoriteColorsSetting = new import_obsidian2.Setting(containerEl).setName("Favorite Colors").setDesc("Set your favorite colors to pick from");
+    this.favoriteColorsSetting = new import_obsidian3.Setting(containerEl).setName("Favorite Colors").setDesc("Set your favorite colors to pick from");
     this.plugin.colorsData.favoriteColors.forEach((c2, i2) => {
       this.favoriteColorsSetting.addColorPicker(
         (color) => color.setValue(c2).onChange(async (value) => {
@@ -25095,11 +25186,17 @@ var SettingsTab = class extends import_obsidian2.PluginSettingTab {
         await this.plugin.saveColorData();
       });
     });
+    new import_obsidian3.Setting(containerEl).setName("Hide Plugin in the Status Bar").setDesc("(You need to reload Obsidian for changes to occur)").addToggle((toggle) => {
+      toggle.setValue(this.plugin.colorsData.hidePlugin).onChange(async (value) => {
+        this.plugin.colorsData.hidePlugin = value;
+        await this.plugin.saveColorData();
+      });
+    });
   }
   reloadColors(components) {
     let i2 = 0;
     for (const component of components) {
-      if (component instanceof import_obsidian2.ColorComponent) {
+      if (component instanceof import_obsidian3.ColorComponent) {
         component.setValue(this.plugin.colorsData.favoriteColors[i2]);
         i2++;
       }
@@ -25107,12 +25204,83 @@ var SettingsTab = class extends import_obsidian2.PluginSettingTab {
   }
 };
 
+// src/editorExtension/textFormatting.ts
+var TextFormatting = class {
+  constructor(view) {
+    this.editorView = view;
+    this.shouldInsert = "none";
+    this.posAfterAsterisk = 0;
+  }
+  // This function detects if bold or italic markdown added. And if it is added, it will return
+  // boolean accordingly
+  detectMarkdown(update) {
+    this.shouldInsert = "none";
+    for (const tr of update.transactions) {
+      tr.changes.iterChanges((fromA, toA, fromB, toB) => {
+        if (toB - fromA > 0) {
+          const insertedCharText = this.editorView.state.doc.slice(fromA, toB);
+          const insertedChar = insertedCharText.sliceString(0, insertedCharText.length);
+          if (insertedChar.contains("*")) {
+            const nextCharText = this.editorView.state.doc.slice(toB, toB + 4);
+            const nextChar = nextCharText.sliceString(0, nextCharText.length);
+            if (nextChar.contains("<s")) {
+              this.shouldInsert = insertedChar.length === 1 ? "italic" : "bold";
+              this.posAfterAsterisk = toB + nextChar.indexOf("<") + 13;
+            }
+          }
+        }
+      });
+      if (this.shouldInsert)
+        break;
+    }
+    return this.shouldInsert !== "none";
+  }
+  updateEditor() {
+    setTimeout(() => {
+      const insertStyle = this.shouldInsert === "bold" ? "font-weight:bold; " : "font-style:italic; ";
+      this.editorView.dispatch({
+        changes: { from: this.posAfterAsterisk, insert: insertStyle }
+      });
+    }, 0);
+  }
+};
+
+// src/editorExtension/editorExtension.ts
+var EditorExtension = class {
+  constructor(view, plugin) {
+    this.handleMouseUp = () => {
+      if (this.plugin.highlightMode)
+        this.plugin.changeColor();
+    };
+    this.editorView = view;
+    this.textFormatting = new TextFormatting(view);
+    this.plugin = plugin;
+    this.editorView.contentDOM.addEventListener("mouseup", this.handleMouseUp);
+  }
+  update(update) {
+    if (this.textFormatting.detectMarkdown(update)) {
+      this.textFormatting.updateEditor();
+    }
+  }
+  destroy() {
+    this.editorView.contentDOM.removeEventListener("mouseup", this.handleMouseUp);
+  }
+};
+function createEditorExtensionClass(plugin) {
+  return class extends EditorExtension {
+    constructor(view) {
+      super(view, plugin);
+    }
+  };
+}
+
 // src/main.ts
-var ColoredFont = class extends import_obsidian3.Plugin {
+var import_view = require("@codemirror/view");
+var ColoredFont = class extends import_obsidian4.Plugin {
   constructor() {
     super(...arguments);
     this.colorDivs = [];
-    this.rgbConverter = new RGBConverter();
+    this.rgbConverter = new RgbConverter();
     this.handleColorChangeInContextMenu = (menu, editor) => {
       contextMenu(app, menu, editor, this, this.curColor);
     };
@@ -25120,24 +25288,25 @@ var ColoredFont = class extends import_obsidian3.Plugin {
   async onload() {
     this.curColor = DEFAULT_COLOR;
     this.curIndex = 0;
+    this.highlightMode = false;
     await this.loadColorData();
     this.cellCount = +this.colorsData.colorCellCount > MAX_CELL_COUNT ? MAX_CELL_COUNT : +this.colorsData.colorCellCount;
+    this.hidePlugin = this.colorsData.hidePlugin;
     this.addSettingTab(new SettingsTab(this.app, this));
+    const EditorExtensionClass = createEditorExtensionClass(this);
+    this.registerEditorExtension(import_view.ViewPlugin.fromClass(EditorExtensionClass));
     this.registerEvent(
       this.app.workspace.on("editor-menu", this.handleColorChangeInContextMenu)
     );
-    this.colorBar = new ColorBar(this);
-    this.colorBar.addColorBar();
+    this.colorBar = new StatusBar(this);
+    this.colorBar.addColorCells();
+    this.colorBar.addHighlightMode();
     this.addCommand({
       id: "color-text",
       name: "Color Text",
       hotkeys: [],
-      editorCallback: (editor, view) => {
-        let selection = editor.getSelection();
-        editor.replaceSelection(`<span style="color:${this.curColor}">${selection}</span>`);
-        const cursorEnd = editor.getCursor("to");
-        cursorEnd.ch -= 7;
-        editor.setCursor(cursorEnd);
+      editorCallback: () => {
+        this.changeColor();
       }
     });
     this.addCommand({
@@ -25149,17 +25318,36 @@ var ColoredFont = class extends import_obsidian3.Plugin {
       }
     });
     this.addCommand({
-      id: "change-color-forward",
-      name: "Change the Color Forward",
+      id: "move-color-cell-forward",
+      name: "Move the Color Cell Forward",
       hotkeys: [],
       callback: () => this.selectColor(this.curIndex == this.cellCount - 1 ? 0 : this.curIndex + 1)
     });
     this.addCommand({
-      id: "change-color-backwards",
+      id: "move-color-cell-backwards",
       name: "Change the Color Backwards",
       hotkeys: [],
       callback: () => this.selectColor(this.curIndex == 0 ? this.cellCount - 1 : this.curIndex - 1)
     });
+    this.addCommand({
+      id: "remove-color",
+      name: "Remove Color From Selection / Under Cursor",
+      hotkeys: [],
+      editorCallback: (editor) => {
+        removeColor(editor);
+      }
+    });
+    this.addCommand({
+      id: "change-highlight-mode",
+      name: "Activate/Deactivate Highlight Mode",
+      hotkeys: [],
+      editorCallback: () => {
+        console.log("change-highlight");
+        this.colorBar.clickHighlight();
+      }
+    });
+  }
+  onunload() {
   }
   openColorModal() {
     new ColorModal(this.app, this, this.curColor, (result) => {
@@ -25169,11 +25357,30 @@ var ColoredFont = class extends import_obsidian3.Plugin {
       this.saveColorData();
     }).open();
   }
+  changeColor() {
+    const view = this.app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+    if (view) {
+      const editor = view.editor;
+      const selection = editor.getSelection();
+      if (selection.length > 0) {
+        editor.replaceSelection(`<span style="color:${this.curColor}">${selection}</span>`);
+        const cursorEnd = editor.getCursor("to");
+        try {
+          editor.setCursor(cursorEnd.line, cursorEnd.ch + 1);
+        } catch (e) {
+          const lineText = editor.getLine(cursorEnd.line);
+          editor.setLine(cursorEnd.line, lineText + " ");
+        }
+      }
+    }
+  }
   selectColor(newIndex) {
     this.prevIndex = this.curIndex;
     this.curIndex = newIndex;
-    this.colorDivs[this.prevIndex].style.borderStyle = "none";
-    this.colorDivs[this.curIndex].style.borderStyle = "solid";
+    if (!this.hidePlugin) {
+      this.colorDivs[this.prevIndex].style.borderStyle = "none";
+      this.colorDivs[this.curIndex].style.borderStyle = "solid";
+    }
     this.curColor = this.rgbConverter.rgbToHex(this.colorDivs[this.curIndex].style.backgroundColor);
   }
   async loadColorData() {
