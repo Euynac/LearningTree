@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/架构.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/架构.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/架构.md",
+                "file": "SoftwareManual/VisualStudio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/架构.md"
+                "file": "SoftwareManual/VisualStudio.md"
               }
             }
           },
@@ -195,6 +195,7 @@
   },
   "active": "259f7c99059586b9",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/架构.md",
     "Programming/C#.md",
     "CloudNative/Dapr.md",
     "SoftwareManual/VisualStudio.md",
@@ -217,7 +218,6 @@
     "SoftwareManual/Git.md",
     "attachments/Pasted image 20240109155224.png",
     "Fontend/FrontendConcept.md",
-    "ComputerScience/Architecture/架构.md",
     "CloudNative/CloudNative.md",
     "ComputerScience/Linux.md",
     "CTF/AWD/Linux易忽略点.md",
