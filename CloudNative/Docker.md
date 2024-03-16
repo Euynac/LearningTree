@@ -392,6 +392,10 @@ Nuget.Config 在 Users\\\${username}\\AppData\\Roaming\\NuGet下
 
 docker compose文件里面不能有中文
 
+#### 执行后无限等待，CANCELED \[xxx internal\] load build context
+
+docker compose中镜像构建的 context 文件找不到，可能是路径写错或者没创建相应的Dockerfile。
+
 ### Can not find the container with the name starting with XXX
 检查是否是以 `Release` 模式运行，而又禁用了 `Release` 的容器运行
 
