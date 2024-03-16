@@ -9,7 +9,7 @@
 		新增"Endpoint"的中间件类型，相对于消息Transform的中间件。可访问到Input Endpoint和Output Endpoint。
 		Endpoint中间件可以有HTTP接口触发、定时器触发中间件，不过新增这种可能就会使得Pipe通信属性多一个方向（因为可以传递主动拉取的事件消息了）
 - 从指定文件类型读取信息
-		瞬时生命周期Pipeline，用完即销毁。
+		瞬时生命周期Channel，用完即销毁。
 		相对的是常规的LongRunning生命周期，它是单例的。
 
 # 规划
@@ -79,7 +79,7 @@ ICommunicationCore
 注册后在AppBuild后阶段才开始解析中间件，实例化管道。这时候才可以运用依赖注入的功能。
 将面向接口的核心及中间件所依赖项解析。
 
-IPipeManager获取指定管道名管道实例。
+IDataChannelManager获取指定管道名消息通路实例。
 
 
 ## Dashboard
