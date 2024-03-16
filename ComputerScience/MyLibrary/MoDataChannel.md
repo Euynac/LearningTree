@@ -36,19 +36,13 @@
 Input方向一般代表从 对端系统 到 本系统 的方向，即消息首先来源于对端系统，经过通信核心，进入管道。
 Output方向一般代表从 本系统 到 对端系统 的方向，即消息首先来源于本系统，进入管道，再经过通信核心，进入对端系统。
 
-管道Endpoint（IPipeEndpoint）
-收的方式：（被动）收到信息推送事件、主动获取。
-发的方式：主动推送、（被动）收到信息收取请求事件（Event）。
+管道Endpoint实现IPipeEndpoint，有收与发两种接口。
 
 配置管道Endpoint后，可自动根据管道Endpoint支持的收发方式，计算出管道支持的通信方向属性。
 
 管道可以拥有中间件，消息通过DataContext进行传输。中间件应有Input和Output两种方向的Context处理逻辑。
 
-#### 管道事件
-
-PipeEndpoint接口：
-- PositiveMethod: `SendData()`、`RetrieveData()`
-- PassiveEvent: `OnDataInComing()`、`OnDataRequest()`
+#### 管道终端
 
 DataContext头：
 ```json
