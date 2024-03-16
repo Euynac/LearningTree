@@ -5,10 +5,14 @@
 
 # 场景
 
-- 从指定HTTP接口，定时获取信息，写入数据库表
+- 从指定HTTP接口，定时或通过接口触发获取信息，写入数据库表
+		新增"Endpoint"的中间件类型，相对于消息Transform的中间件。可访问到Input Endpoint和Output Endpoint。
+		Endpoint中间件可以有HTTP接口触发、定时器触发中间件，不过新增这种可能就会使得Pipe通信属性多一个方向（因为可以传递主动拉取的事件消息了）
+- 从指定文件类型读取信息
+		瞬时生命周期Pipeline，用完即销毁。
+		相对的是常规的LongRunning生命周期，它是单例的。
 
-
-# 设计
+# 规划
 
 #### 需求
 
@@ -16,37 +20,52 @@
 
 以适配器模式作为接口接入模式，开发适配器微服务。适配器将通信能力、数据协议转换解耦，保持系统纯净。适配器开发需要模板化，这里以数据管道（Data Pipeline）模式为参考设计开发出轻量的ETL框架
 
-#### 功能
+#### 设计
 
-- 以消息通路为单位，构建与目标系统的消息传递连接。
+- 以消息通路（DataChannel）为单位，构建与目标系统/资源的消息传递连接。
 - 消息通路以双向管道模式实现。
 - 消息通路消息传递以上下文模式传递，自由新增管道中间件，如可配置数据协议转换中间件，将目标系统的格式转换为指定格式。
 - 消息通路可以统一管理，查看状态等各种信息。
-
+- Pipe+Middleware Build后成为Pipeline，是未激活状态，init后变为DataChannel。
 
 #### 双向管道模式
 
-管道有两个入口，即两个管道Client，也就会有两个消息传递方向。但是并不一定该管道就支持双向通信，还是要根据管道Client支持的收发方式确定管道通信方向属性。
+管道有两个入口，即两个管道Endpoint，也就会有两个消息传递方向。但是并不一定该管道就支持双向通信，还是要根据管道Endpoint支持的收发方式确定管道通信方向属性。
 
 管道拥有仅Inner to Outer（Output）方向以及仅Outer to Inner（Input）方向，以及双向通信（Output and Input）属性。
 Input方向一般代表从 对端系统 到 本系统 的方向，即消息首先来源于对端系统，经过通信核心，进入管道。
 Output方向一般代表从 本系统 到 对端系统 的方向，即消息首先来源于本系统，进入管道，再经过通信核心，进入对端系统。
 
-管道Client（IPipeClient）
+管道Endpoint（IPipeEndpoint）
 收的方式：（被动）收到信息推送事件、主动获取。
-发的方式：主动推送、（被动）收到信息收取请求事件。
+发的方式：主动推送、（被动）收到信息收取请求事件（Event）。
 
-配置管道Client后，可自动根据管道Client支持的收发方式，计算出管道支持的通信方向属性。
+配置管道Endpoint后，可自动根据管道Endpoint支持的收发方式，计算出管道支持的通信方向属性。
 
 管道可以拥有中间件，消息通过DataContext进行传输。中间件应有Input和Output两种方向的Context处理逻辑。
 
+#### 管道事件
+
+PipeEndpoint接口：
+- PositiveMethod: `SendData()`、`RetrieveData()`
+- PassiveEvent: `OnDataInComming()`、`OnDataRequest()`
+
+DataContext头：
+```json
+{
+  "operation": "get", //必须
+  "metadata": {
+    "path": "/things/1234"  //根据Endpoint支持不同而不同
+  }
+}
+```
 
 #### 通信核心
 ICommunicationCore
-通信能力抽象为MQ、数据库、TCP、UDP、Serial、WebSocket等。将通信所需参数抽象为通信核心Metadata（CommunicationMetadata）
+通信能力抽象为MQ、数据库、TCP、UDP、Serial、WebSocket、File等。将通信所需参数抽象为通信核心Metadata（CommunicationMetadata）
 仅需配置通信核心Metadata，即可获得相应的通信能力，直接从目标建立连接，获取信息。
 
-通信核心实现了管道Client接口（IPipeClient），可作为管道Client消息入口。
+通信核心实现了管道Endpoint接口（IPipeEndpoint），可作为管道Endpoint消息入口。
 
 
 #### 配置过程
