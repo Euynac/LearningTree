@@ -17,4 +17,4 @@
 `Name in AB%,%CD%,EF`
 `CreateTime in 2023-1-1 - 2024-1-1`
 `CreateTime = 2023-1-1 || CreateTime = 2024-1-1`
-`Name like ABC,`
+`Name = ABC`
