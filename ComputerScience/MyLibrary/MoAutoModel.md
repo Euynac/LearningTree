@@ -13,3 +13,6 @@
 #### 字段与值表达式生成
 
 #### 值转换器
+
+`Name in AB%,%CD%,EF`
+`CreateTime in 20`

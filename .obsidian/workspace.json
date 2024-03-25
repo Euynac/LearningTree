@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "ComputerScience/MyLibrary/MoAutoModel.md"
               }
             }
           },
@@ -209,6 +209,7 @@
   },
   "active": "cf4741d681b42aa0",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "Programming/ASP.NET Core.md",
@@ -232,7 +233,6 @@
     "ComputerScience/Algorithm/代码优化.md",
     "CloudNative/K8S集群管理.md",
     "CTF/Hacker/软件破解.md",
-    "ComputerScience/Architecture/ABP.md",
     "SoftwareManual/Git.md",
     "attachments/Pasted image 20240109155224.png",
     "Fontend/FrontendConcept.md",
