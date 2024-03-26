@@ -317,6 +317,9 @@ cfg.RegisterServicesFromAssembly(callingAssembly);
 
 ### System.Text.Json
 
+#### 默认不会序列化Field
+
+
 #### 某些Deserialize后变成default
 
 因为属性必须是public set方法。或者用init，或用[JsonInclude]
