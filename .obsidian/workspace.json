@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/ASP.NET Core接口.md",
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/ASP.NET Core接口.md",
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/ASP.NET Core接口.md",
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/ASP.NET Core接口.md"
+                "file": "ComputerScience/MyLibrary/MoRpcInvocation.md"
               }
             }
           },
@@ -195,6 +195,8 @@
   },
   "active": "0d9bf22d85d1c792",
   "lastOpenFiles": [
+    "Programming/ASP.NET Core接口.md",
+    "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "Programming/C#.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/架构.md",
@@ -217,10 +219,8 @@
     "ComputerScience/Unity.md",
     "ComputerScience/SoftwareTest.md",
     "CTF/思路打开.md",
-    "Programming/ASP.NET Core接口.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "CloudNative/Deployments/K8S部署笔记.md",
-    "Programming/TroubleShooting.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
