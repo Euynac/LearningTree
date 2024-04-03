@@ -94,4 +94,35 @@ public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
 
 
 # Distributed Event Bus
-#### AbpDaprEventBus
+`EventBus`实现基类为`EventBusBase`
+#### DaprEventBus
+`DaprDistributedEventBus.cs`中继承`EventBus`实现。
+`IDaprSerializer`用于序列化
+
+
+# Json序列化
+`IJsonSerializer`接口
+实现`AbpSystemTextJsonSerializer`
+其中配置项是`AbpSystemTextJsonSerializerOptions`。只作用于Abp的`IJsonSerializer`、`DaprClientFactory`等，而不会作用于`Controller`(`MVC`框架)用的`JsonOptions`，需要分别配置
+
+
+```cs
+// 巨坑：这个Abp的AbpAspNetCoreMvcModule默认帮我们实现了DateTime转换，自己写的Converter将不会进入。而且它的转换失败不会报错，只会为null。
+Configure<AbpJsonOptions>(options =>
+{
+	options.InputDateTimeFormats.Add("yyyy-MM-dd HH:mm:ss");
+	options.InputDateTimeFormats.Add("yyyy-MM-dd");
+	options.InputDateTimeFormats.Add("yyyy-MM-ddTHH:mm:ss");
+	options.InputDateTimeFormats.Add("yyyy-MM-dd HH:mm");
+
+	options.OutputDateTimeFormat = "yyyy-MM-dd HH:mm:ss";
+});
+
+
+// 巨坑：Abp的DateTime转换位于AbpSystemTextJsonSerializerModifiersOptions，以及AbpDateTimeConverterModifier
+Configure<AbpSystemTextJsonSerializerModifiersOptions>(options =>
+{
+    options.Modifiers.Clear();
+});
+
+```
