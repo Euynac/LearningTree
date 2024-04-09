@@ -12,6 +12,14 @@
 
 #### 字段与值表达式生成
 
+#### 自定义字段Query组装器
+
+
+```cs
+CustomFor(nameof(Entity.FieldName), (input, querable))
+```
+
+
 #### 值转换器
 
 `Name in "AB%|%CD%|EF"`
@@ -19,4 +27,7 @@
 `CreateTime >= "2023-1-1" && CreateTime <= "2024-1-1"`
 `Name = "ABC"`
 
+高阶：
+`CreateTime in "[Today,Tomorrow]"`
+`UpdateTime in "[EOBT,EOBT+30min]"`
 
