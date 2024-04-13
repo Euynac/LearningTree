@@ -222,6 +222,12 @@ Standalone模式暂时不支持docker compose。（仅支持k8s，截至2022/9/2
 <https://github.com/dapr/dashboard/issues/38>
 
 
+## Placement
+
+`placement`服务被 `Actor` 功能依赖，如果不装此服务，会导致 `error finding address for actor type xxx for id xxx` 问题
+
+Self-host 模式，不依赖docker环境，需要使用`dapr init --slim`。离线安装有另外方式。
+
 
 ## TroubleShotting
 

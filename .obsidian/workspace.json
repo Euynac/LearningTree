@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/MyLibrary/MoHotConfiguration.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -195,8 +195,8 @@
   },
   "active": "ab526b8686076adb",
   "lastOpenFiles": [
-    "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
+    "ComputerScience/MyLibrary/MoAutoModel.md",
     "Programming/C#.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
