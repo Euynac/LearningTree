@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "CloudNative/Kubernetes(K8S).md"
               }
             }
           },
@@ -195,6 +195,9 @@
   },
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
+    "CloudNative/K8S集群管理.md",
+    "ComputerScience/AI/ArtificialIntelligence.md",
+    "CloudNative/Dapr.md",
     "ComputerScience/Architecture/ABP.md",
     "SoftwareManual/VisualStudio.md",
     "CTF/ToolsList.md",
@@ -204,7 +207,6 @@
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
-    "CloudNative/Dapr.md",
     "Programming/C#.md",
     "ComputerScience/SoftwareTest.md",
     "Programming/ASP.NET Core接口.md",
@@ -216,11 +218,9 @@
     "SoftwareManual/AHK.md",
     "Math/形式幂级数.md",
     "CTF/Hacker/软件破解.md",
-    "CloudNative/K8S集群管理.md",
     "ComputerScience/操作系统.md",
     "ComputerScience/计算机网络.md",
     "ComputerScience/数据结构.md",
-    "CloudNative/CloudNative.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
