@@ -186,6 +186,40 @@ I assume, you should have already a fork (MyFork) of the common repo (BaseRepo) 
 
 Now you should have a pending pull request in your fork (MyFork), which you can simply accept.
 
+## 自动换行转换
+[Disable git EOL Conversions - Stack Overflow](https://stackoverflow.com/questions/21822650/disable-git-eol-conversions)
+```
+# Handle line endings automatically for files detected as text 
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Never modify line endings of our bash scripts
+*.sh -crlf
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+*.css           text
+*.html          text
+*.java          text
+*.js            text
+*.json          text
+*.properties    text
+*.txt           text
+*.xml           text
+
+# These files are binary and should be left untouched
+# (binary is macro for -text -diff)
+*.class         binary
+*.jar           binary
+*.gif           binary
+*.jpg           binary
+*.png           binary
+```
+
+
+
 # 开源协议
 
 ![图片包含 日程表 描述已自动生成](../attachments/17120b1324d66fe52e161baeafee27c9.png)![图示 中度可信度描述已自动生成](../attachments/4b33b7e7acddea591e74cbea61b93da4.png)
