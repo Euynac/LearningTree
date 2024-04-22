@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "CTF/WEB/正则表达式.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "环视",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "CTF/WEB/正则表达式.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/Hacker/软件破解.md",
+                "file": "CTF/WEB/正则表达式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Hacker/软件破解.md"
+                "file": "CTF/WEB/正则表达式.md"
               }
             }
           },
@@ -195,6 +195,10 @@
   },
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
+    "CTF/思路打开.md",
+    "CTF/WEB/正则表达式.md",
+    "SoftwareManual/VisualStudio.md",
+    "CTF/Hacker/软件破解.md",
     "SoftwareManual/Git.md",
     "CTF/ToolsList.md",
     "Fontend/Blazor.md",
@@ -206,7 +210,6 @@
     "ComputerScience/AI/ArtificialIntelligence.md",
     "CloudNative/Dapr.md",
     "ComputerScience/Architecture/ABP.md",
-    "SoftwareManual/VisualStudio.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
@@ -218,9 +221,6 @@
     "Programming/ASP.NET Core.md",
     "ComputerScience/Architecture/架构.md",
     "CloudNative/Docker.md",
-    "SoftwareManual/CMD.md",
-    "SoftwareManual/AHK.md",
-    "Math/形式幂级数.md",
     "ComputerScience/MyLibrary",
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
