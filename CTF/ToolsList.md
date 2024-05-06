@@ -84,6 +84,14 @@ https://github.com/gubeihc/blasting 前端密码爆破
 |           |      |      |
 |           |      |      |
 
+## 其他
+
+| 软件名     | 场景               | 备注                                                                               |
+| :------ | :--------------- | :------------------------------------------------------------------------------- |
+| bruno   | API接口测试          | [lightweight alternative to postman/insomnia](https://github.com/usebruno/bruno) |
+| IPCheck | IP相关工具，检查VPN是否覆盖 | [MyIP](https://github.com/jason5ng32/MyIP)                                       |
+|         |                  |                                                                                  |
+|         |                  |                                                                                  |
 
 
 
@@ -212,6 +220,7 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | drawio                     | 开源画图工具(visio替代)       |                                                                                                                            |
 | XMouseButtonControl        | 鼠标功能DIY               |                                                                                                                            |
 | HAWK5                      | C# WPF开发的爬虫、数据清洗工具    | [ferventdesert/Hawk: visualized crawler & ETL IDE written with C#/WPF (github.com)](https://github.com/ferventdesert/Hawk) |
+|                            |                       |                                                                                                                            |
 
 
 ## 效率
@@ -308,11 +317,11 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 
 # Browser Add-on
-| 软件名 | 场景 | 备注 |
-|:------ |:---- |:---- |
-|Immersive Translate|最好用的双语翻译|  |
-|        |      |      |
-|        |      |      |
+| 软件名                 | 场景       | 备注  |
+| :------------------ | :------- | :-- |
+| Immersive Translate | 最好用的双语翻译 |     |
+|                     |          |     |
+|                     |          |     |
 
 # Android
 
