@@ -519,6 +519,11 @@ select count(*) c, DATEPART(HH, SOBT) as d from FlightPlan where … group by SO
 嵌套语句都需要取列名、且临时表也要取名
 
 ## 坑
+#### 连接字符串失败
+
+比如用 `Navicate` 连接 `127.0.0.1:33333` 端口的`docker`环境SQL Server，默认是会报错的。
+而要使用 `127.0.0.1,33333`，逗号连接！
+
 
 #### 自增ID列无法插入
 
