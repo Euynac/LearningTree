@@ -101,7 +101,7 @@ public IAbpLazyServiceProvider LazyServiceProvider { get; set; } = default!;
 `EventBus`实现基类为`EventBusBase`
 #### DaprEventBus
 `DaprDistributedEventBus.cs`中继承`EventBus`实现。
-`IDaprSerializer`用于序列化
+`IDaprSerializer`用于序列化，ABP默认实现为Utf8JsonDaprSerializer，实际使用IJsonSerializer实现。而该接口ABP默认实现为AbpSystemTextJsonSerializer，使用AbpSystemTextJsonSerializerOptions进行配置。
 
 
 # Json序列化
