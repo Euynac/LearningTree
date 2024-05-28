@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Programming/NET/Authentication.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Programming/NET/Authentication.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Programming/NET/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "Programming/NET/Authentication.md"
               }
             }
           },
@@ -195,9 +195,9 @@
   },
   "active": "abf7ed3a5683e937",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
     "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
-    "ComputerScience/Architecture/ABP.md",
     "ComputerScience/架构.md",
     "CTF/Hacker/软件破解.md",
     "Programming/NET/Authentication.md",

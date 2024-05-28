@@ -35,6 +35,9 @@ such as [AddJwtBearer](https://learn.microsoft.com/en-us/dotnet/api/microsoft.e
 
 "JwtBearer" refers to a type of authentication scheme in ASP.NET Core. It is used for authenticating users based on JSON Web Tokens (JWT).
 
+
+> OIDC stands for OpenID Connect, which is a standard protocol for authentication. It is used to verify the identity of users based on authentication performed by an authorization server.
+
 # Authorization(授权)
 
 
