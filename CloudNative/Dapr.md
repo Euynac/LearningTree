@@ -257,6 +257,10 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
  }));
 ```
 
+#### ERROR_HEALTH_NOT_READY
+滚动更新时，启动边车失败？猜测是dapr无法注册端口被占用问题？K8S还是dapr bug？
+解决方案：干掉旧的，单独起新的：可将副本数置为0后更新。
+
 # Debug
 
 ## 普通Debug
