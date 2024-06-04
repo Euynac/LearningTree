@@ -153,3 +153,13 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 
 
 [K8S集群管理](K8S集群管理.md)
+
+
+# TroubleShooting
+
+#### poor network performance in k8s container with calico
+这个issue的测试方案可以参考？用的qperf https://github.com/projectcalico/calico/issues/922
+切换了calico的网络模式，从ipip模式调整到vxlan模式，另外设置了mtu为1500
+具体原因不清楚，可能是ipip模式与openeuler适配的问题。
+
+![](../attachments/4ce39983e3b8871aea802b5ef10167a.jpg)
