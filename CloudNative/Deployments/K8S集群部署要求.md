@@ -65,10 +65,10 @@ The commands `dnf clean all` and `dnf makecache` are related to the DNF package 
 
 1. vi /etc/chrony.conf 修改server
     
-    server 188.2.93.120 iburst （IP 为时钟服务器 ip）
+    server 188.22.94.120 iburst （IP 为时钟服务器 ip）
     
 
-![](../../attachments/Pasted%20image%2020230814155526.png)
+![](../../attachments/Pasted%20image%2020240616173908.png)
 
 1. systemctl enable chronyd (3)systemctl restart chronyd 查看状态
     
