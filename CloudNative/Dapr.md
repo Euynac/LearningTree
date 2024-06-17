@@ -265,6 +265,9 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 #### 调用超时爆炸，瘫痪
 微服务调用一定要避免成环路的情况。
 
+#### invoke failed Transport: authentication handshake failed: x509: certificate has expired
+更新了`dapr-system` `control panel`但未重启边车。
+
 
 # Debug
 
