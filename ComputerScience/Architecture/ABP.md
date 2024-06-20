@@ -10,6 +10,8 @@ ABP 是 ASP.NET Boilerplate的全称，意味着它是一种代码层面的最�
 
 [[Abp vNext 源码分析] - 文章目录 - MyZony - 博客园 (cnblogs.com)](https://www.cnblogs.com/myzony/p/10722506.html)
 
+![](../../attachments/Pasted%20image%2020240620151358.png)
+
 
 # 数据库
 
