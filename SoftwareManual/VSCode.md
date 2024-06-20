@@ -95,6 +95,10 @@ Auto updates are disabled if you install a specific version (not latest) which i
 
 ## 快捷操作
 
+### 常用快捷键
+
+`Ctrl+Shift+F` 全局查找
+`Ctrl+P` 按文件名查找文件 （其实`Ctrl+T`也可以，和 Visual Studio Resharper 快捷键一致，不过多了个`#`号
 ### HTML
 
 #### Emmet abbreviation
