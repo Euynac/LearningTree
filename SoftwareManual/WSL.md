@@ -31,6 +31,8 @@
 
 新版本WSL遇到问题的：
 [Accessing network applications with WSL | Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/networking#auto-proxy)
+
+https://github.com/microsoft/WSL/issues/10753#issuecomment-2041372912
 #### 脚本
 
 
