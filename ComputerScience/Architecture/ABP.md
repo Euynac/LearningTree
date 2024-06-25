@@ -158,4 +158,6 @@ Configure<AbpSystemTextJsonSerializerModifiersOptions>(options =>
 
 雪花类型long id均使用string代替，否则会遇到json序列化丢失精度问题`https://jsoneditoronline.org/indepth/parse/why-does-json-parse-corrupt-large-numbers/`
 
+`C# System.Text.Json` 可以通过设置 `JsonSerializerOptions.NumberHandling` 来设定是否转为字符串类型。
+
 # Time （UTC与本地时间）
