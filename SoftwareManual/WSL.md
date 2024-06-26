@@ -25,14 +25,31 @@
 | wsl -d(--distribution) \<Distribution Name\> --user \<User Name\>                                         | 若要通过特定用户运行特定 Linux 发行版，请将 \<Distribution Name\> 替换为你首选的 Linux 发行版的名称（例如 Debian），将 \<User Name\> 替换为现有用户的名称（例如 root）。 如果 WSL 发行版中不存在该用户，你将会收到一个错误。 若要输出当前用户名，请使用 whoami 命令。 |
 | wsl --set-default \<Distribution Name\>                                                                   | 设定默认打开的Linux发行版                                                                                                                                                                                                                                             |
 
-### WSL连接宿主机代理
+## WSL连接宿主机代理
 
 <https://zinglix.xyz/2020/04/18/wsl2-proxy/>
 
+
+#### 新版配置
 新版本WSL遇到问题的：
 [Accessing network applications with WSL | Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/networking#auto-proxy)
 
 https://github.com/microsoft/WSL/issues/10753#issuecomment-2041372912
+
+```config
+[wsl2]
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
+
+[experimental]
+# requires dnsTunneling but are also OPTIONAL
+bestEffortDnsParsing=true
+useWindowsDnsCache=true
+
+```
+
 #### 脚本
 
 
