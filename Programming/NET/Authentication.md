@@ -73,6 +73,8 @@ public abstract class AuthenticationManager
 ### Cliams
 "Claims" in the context of ASP.NET Core authentication typically refers to the assertions about a user that a system receives and uses to make decisions about access or behavior. These claims can include information like the user's name, email, roles, or any other relevant data that can be used for authorization purposes within the application. In ASP.NET Core, these claims are used during the authentication process to determine the user's identity and authorization levels.
 
+[ASP.NET Core 认证与授权 初识认证 - 雨夜朦胧 - 博客园 (cnblogs.com)](https://www.cnblogs.com/RainingNight/p/introduce-basic-authentication-in-asp-net-core.html)
+
 [ASP.NET Core 之 Identity 入门（一） - Savorboard - 博客园 (cnblogs.com)](https://www.cnblogs.com/savorboard/p/aspnetcore-identity.html)
 
 简单理解抽象定义：
