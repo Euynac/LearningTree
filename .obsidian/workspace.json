@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "Programming/NET/ASP.NET Core.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "Programming/NET/ASP.NET Core.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "Programming/NET/ASP.NET Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/Authentication.md"
+                "file": "Programming/NET/ASP.NET Core.md"
               }
             }
           },
@@ -195,8 +195,8 @@
   },
   "active": "e31b85cc9a853575",
   "lastOpenFiles": [
-    "CloudNative/Docker.md",
     "Programming/NET/Authentication.md",
+    "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "attachments/Pasted image 20240627160448.png",
     "ComputerScience/MyLibrary/MoDataChannel.md",

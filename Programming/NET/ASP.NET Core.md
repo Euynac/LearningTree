@@ -676,6 +676,8 @@ Windows安全中心：高级设置（高级安全Windows Defender防火墙）
 
 就可以让局域网其他的电脑访问。
 
+[8 ways to set the URLs for an ASP.NET Core app (andrewlock.net)](https://andrewlock.net/8-ways-to-set-the-urls-for-an-aspnetcore-app/)
+
 **公网部署**
 
 类似于局域网部署。
