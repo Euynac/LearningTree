@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "Programming/NET/Authentication.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CoreCLR",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "Programming/NET/Authentication.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Docker.md",
+                "file": "Programming/NET/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Docker.md"
+                "file": "Programming/NET/Authentication.md"
               }
             }
           },
@@ -196,6 +195,7 @@
   },
   "active": "e31b85cc9a853575",
   "lastOpenFiles": [
+    "CloudNative/Docker.md",
     "Programming/NET/Authentication.md",
     "ComputerScience/Architecture/ABP.md",
     "attachments/Pasted image 20240627160448.png",
@@ -212,7 +212,6 @@
     "SoftwareManual/VSCode.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
-    "CloudNative/Docker.md",
     "CloudNative/CloudNative.md",
     "CloudNative/Dapr.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
