@@ -21,6 +21,15 @@
 
 ## OAuth2.0
 
+涉及名词定义：
+- **Third-party application OR Client**：第三方应用程序，前端或客户端。
+- **HTTP service**：HTTP服务提供商，也即后端服务或目标服务器。
+- **Resource Owner**：资源所有者，一般是指某个用户。
+- **User Agent**：用户代理，本文中就是指浏览器。
+- **Authorization server**：认证服务器，即服务提供商专门用来处理认证的服务器。
+- **Resource server**：资源服务器，即服务提供商存放用户生成的资源的服务器。它与认证服务器，可以是同一台服务器，也可以是不同的服务器。
+
+
 [What is OAuth 2.0 and what does it do for you? - Auth0](https://auth0.com/intro-to-iam/what-is-oauth-2)
 [理解OAuth 2.0 - 阮一峰的网络日志 (ruanyifeng.com)](https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 OAuth 2.0 is an authorization protocol and NOT an authentication protocol. As such, it is designed primarily as a means of granting access to a set of resources, for example, remote APIs or user data.
@@ -59,7 +68,9 @@ JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给�
 ## OpenID
 [OpenID Connect 是什麼？ | HENNGE Taiwan 部落格](https://hennge.com/tw/blog/what-is-openid-connect.html)
 基于`OAuth2.0`的单点登录技术。
-
+以下两个术语有了新的名称：
+- **Third-party application OR Client**：第三方应用程序，前端或客户端。现在称为 **Relying Party**
+- **Authorization server**：认证服务器，即服务提供商专门用来处理认证的服务器。现在称为 **OpenID Provider** 除了可以放置 AccessToken 之外，也可以存放ID Token
 
 # Authentication(身份认证)
 
