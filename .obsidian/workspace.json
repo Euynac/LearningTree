@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "ComputerScience/MyLibrary/MoDataChannel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/Authentication.md"
+                "file": "ComputerScience/MyLibrary/MoDataChannel.md"
               }
             }
           },
@@ -195,18 +195,18 @@
   },
   "active": "f5e682c25e14e59f",
   "lastOpenFiles": [
+    "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoDataChannel.md",
-    "Programming/NET/ASP.NET Core.md",
+    "SoftwareManual/CMD.md",
     "Programming/NET/Authentication.md",
+    "Programming/NET/ASP.NET Core.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
     "attachments/Pasted image 20240627160448.png",
-    "ComputerScience/MyLibrary/MoAutoModel.md",
     "ComputerScience/MyLibrary/MoHotConfiguration.md",
     "ComputerScience/MyLibrary/MoRpcInvocation.md",
     "Programming/TroubleShooting.md",
     "SoftwareManual/WSL.md",
-    "SoftwareManual/CMD.md",
     "attachments/Pasted image 20240620151358.png",
     "ComputerScience/Architecture/架构.md",
     "SoftwareManual/VSCode.md",
