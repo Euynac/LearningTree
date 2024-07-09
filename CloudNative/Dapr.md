@@ -377,3 +377,9 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 ### 50002 DaprGrpcPort for Internal ?
 
 ### 9090 MetricsPort
+
+### Preventing IP addresses on Dapr
+
+To prevent Dapr sidecars from being called on any IP address (especially in production environments such as Kubernetes), Dapr restricts its listening IP addresses to `localhost`. Use the [dapr-listen-addresses](https://docs.dapr.io/zh-hans/reference/arguments-annotations-overview/) setting if you need to enable access from external addresses.
+
+Comma separated list of IP addresses that sidecar will listen to. Defaults to all in standalone mode. Defaults to `[::1],127.0.0.1` in Kubernetes. To listen to all IPv4 addresses, use `0.0.0.0`. To listen to all IPv6 addresses, use `[::]`.
