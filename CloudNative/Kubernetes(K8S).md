@@ -106,9 +106,9 @@ name: tomcat-server
 spec:
 type: NodePort
 ports:
-    port: 11111  #service暴露在cluster ip上的端口，通过<cluster ip>:port访问服务,通过此端口集群内的服务可以相互访问
-    targetPort: 8080  #Pod的外部访问端口，port和nodePort的数据通过这个端口进入到Pod内部，Pod里面的containers的端口映射到这个端口，提供服务
-    nodePort: 30001 #Node节点的端口，<nodeIP>:nodePort 是提供给集群外部客户访问service的入口
+    targetPort: 8080  #Pod的外部访问端口，也就是容器设定需暴露的container port。port和nodePort的数据通过这个端口进入到Pod内部，Pod里面的containers的端口映射到这个端口，提供服务
+    port: 11111  #[集群内部]service暴露在cluster ip上的端口，其他容器通过<cluster ip>:port访问服务,通过此端口集群内的服务可以相互访问
+    nodePort: 30001 #[集群外部]Node节点的端口，<nodeIP>:nodePort 是提供给集群外部客户访问service的入口
 selector:
 tier: frontend
 ```

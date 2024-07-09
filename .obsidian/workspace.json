@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/Authentication.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/Authentication.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -179,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 238.5
+    "width": 239.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,12 +195,14 @@
   },
   "active": "cb7083eaadca7a46",
   "lastOpenFiles": [
+    "CloudNative/Kubernetes(K8S).md",
+    "CloudNative/K8S集群管理.md",
+    "Programming/NET/Authentication.md",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
     "ComputerScience/MyLibrary/MoDataChannel.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
     "SoftwareManual/CMD.md",
-    "Programming/NET/Authentication.md",
     "Programming/NET/ASP.NET Core.md",
     "CloudNative/Docker.md",
     "ComputerScience/Architecture/ABP.md",
@@ -212,8 +214,6 @@
     "attachments/Pasted image 20240620151358.png",
     "ComputerScience/Architecture/架构.md",
     "SoftwareManual/VSCode.md",
-    "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/K8S集群管理.md",
     "CloudNative/CloudNative.md",
     "CloudNative/Dapr.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
@@ -232,7 +232,6 @@
     "attachments/Pasted image 20240309124752.png",
     "attachments/Pasted image 20240309124642.png",
     "attachments/Pasted image 20240109155224.png",
-    "attachments/Pasted image 20231114104833.png",
     "ComputerScience/Algorithm",
     "Math",
     "Fontend/FrontendConcept.docx",

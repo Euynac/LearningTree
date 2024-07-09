@@ -366,3 +366,14 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 ## 资源需求
 
 [Production guidelines on Kubernetes | Dapr Docs](https://docs.dapr.io/operations/hosting/kubernetes/kubernetes-production)
+
+
+## 边车默认端口
+
+### 3500 DaprHttpPort
+
+### 50001 DaprGrpcPort
+
+### 50002 DaprGrpcPort for Internal ?
+
+### 9090 MetricsPort
