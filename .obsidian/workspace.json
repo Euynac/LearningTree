@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "Programming/NET/ASP.NET Core.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "HasForeignKey",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "Programming/NET/ASP.NET Core.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CloudNative/Dapr.md",
+                "file": "Programming/NET/ASP.NET Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CloudNative/Dapr.md"
+                "file": "Programming/NET/ASP.NET Core.md"
               }
             }
           },
@@ -195,6 +196,7 @@
   },
   "active": "cb7083eaadca7a46",
   "lastOpenFiles": [
+    "CloudNative/Dapr.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
     "Programming/NET/Authentication.md",
@@ -215,7 +217,6 @@
     "ComputerScience/Architecture/架构.md",
     "SoftwareManual/VSCode.md",
     "CloudNative/CloudNative.md",
-    "CloudNative/Dapr.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
     "CloudNative/Deployments/K8S部署笔记.md",
     "attachments/Pasted image 20240616173908.png",
