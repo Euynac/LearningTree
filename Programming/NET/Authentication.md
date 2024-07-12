@@ -65,7 +65,7 @@ JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给�
 
 服务器就不保存任何 session 数据了，也就是说，服务器变成无状态了，从而比较容易实现扩展。
 
-## OpenID
+## OpenID Connect (OIDC)
 [OpenID Connect 是什麼？ | HENNGE Taiwan 部落格](https://hennge.com/tw/blog/what-is-openid-connect.html)
 基于`OAuth2.0`的单点登录技术。
 以下两个术语有了新的名称：
