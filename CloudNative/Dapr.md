@@ -83,7 +83,7 @@ Care must be taken to always pass an explicit app-id parameter when consuming th
 
 如果应用程序有配置，则程序本身需要暴露 `/dapr/subscribe` 接口，供边车获取程序所监听的主题。
 
-> Visual Studio容器开发中，容器边车需要重新启动才会重新读取。
+> Visual Studio DockerCompose容器开发中，容器边车需要重新启动才会重新读取，并监听新的主题。
 
 
 ## Namespace
