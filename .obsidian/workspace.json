@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Programming/NET/ASP.NET Core接口.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Programming/NET/ASP.NET Core接口.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "Programming/NET/ASP.NET Core接口.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "Programming/NET/ASP.NET Core接口.md"
               }
             }
           },
@@ -195,13 +195,13 @@
   },
   "active": "a0a15aaa4d54f39d",
   "lastOpenFiles": [
-    "CloudNative/Dapr.md",
+    "Programming/NET/ASP.NET Core.md",
+    "SoftwareManual/VisualStudio.md",
     "ComputerScience/Architecture/ABP.md",
+    "CloudNative/Dapr.md",
     "Programming/NET/Authentication.md",
     "Programming/NET/Mapster.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
-    "SoftwareManual/VisualStudio.md",
-    "Programming/NET/ASP.NET Core.md",
     "CloudNative/Kubernetes(K8S).md",
     "CloudNative/K8S集群管理.md",
     "attachments/Pasted image 20240707180418.png",
