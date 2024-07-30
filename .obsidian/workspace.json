@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "Programming/NET/C#.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sql server",
+                "query": "event ",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -100,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "Programming/NET/C#.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Database.md",
+                "file": "Programming/NET/C#.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Database.md"
+                "file": "Programming/NET/C#.md"
               }
             }
           },
@@ -209,6 +210,7 @@
   },
   "active": "ead496f5463db7ac",
   "lastOpenFiles": [
+    "ComputerScience/Database.md",
     "Programming/NET/ASP.NET Core.md",
     "SoftwareManual/VisualStudio.md",
     "ComputerScience/Architecture/ABP.md",
@@ -240,7 +242,6 @@
     "Programming/PHP.md",
     "Programming/NET/C#.md",
     "Programming/JavaScript.md",
-    "SoftwareManual/MicosoftOffice.md",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
     "Programming/NET",
     "ComputerScience/MyLibrary",
