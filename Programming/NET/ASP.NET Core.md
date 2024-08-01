@@ -187,6 +187,8 @@ ASP.NETCore中的内置IoC容器是Microsoft.Externsions.DependencyInjection中�
 ![](../../attachments/fc35966aaa4228489b7f58a18df9583d.png)
 
 #### 手动获取依赖
+[Why You Shouldn’t Call BuildServiceProvider in .NET Development | by Damien Vande Kerckhove | Medium](https://medium.com/@damien.vandekerckhove/why-you-shouldnt-call-buildserviceprovider-in-net-development-8e25f680d529)
+单例不可提前获取
 
 [ServiceProviderServiceExtensions.GetService\<T\>(IServiceProvider) Method (Microsoft.Extensions.DependencyInjection) | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.serviceproviderserviceextensions.getservice?view=dotnet-plat-ext-7.0)
 

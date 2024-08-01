@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "0724080b219a7043",
+        "id": "af131ff511c8290f",
         "type": "tabs",
         "children": [
           {
-            "id": "a0a15aaa4d54f39d",
+            "id": "ca849d58770c6c63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/NET/ASP.NET Core接口.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ead496f5463db7ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/NET/C#.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -63,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "event ",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -101,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/NET/C#.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/NET/C#.md",
+                "file": "ComputerScience/Architecture/ABP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming/NET/C#.md"
+                "file": "ComputerScience/Architecture/ABP.md"
               }
             }
           },
@@ -208,13 +193,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ead496f5463db7ac",
+  "active": "ca849d58770c6c63",
   "lastOpenFiles": [
-    "ComputerScience/Database.md",
+    "ComputerScience/Architecture/架构.md",
     "Programming/NET/ASP.NET Core.md",
+    "Programming/NET/ASP.NET Core接口.md",
+    "CloudNative/Dapr.md",
+    "Programming/NET/C#.md",
+    "ComputerScience/Database.md",
     "SoftwareManual/VisualStudio.md",
     "ComputerScience/Architecture/ABP.md",
-    "CloudNative/Dapr.md",
     "Programming/NET/Authentication.md",
     "Programming/NET/Mapster.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
@@ -231,7 +219,6 @@
     "Programming/TroubleShooting.md",
     "SoftwareManual/WSL.md",
     "attachments/Pasted image 20240620151358.png",
-    "ComputerScience/Architecture/架构.md",
     "SoftwareManual/VSCode.md",
     "CloudNative/CloudNative.md",
     "CloudNative/Deployments/K8S集群部署要求.md",
@@ -240,8 +227,6 @@
     "attachments/Pasted image 20240616173732.png",
     "Programming/C.md",
     "Programming/PHP.md",
-    "Programming/NET/C#.md",
-    "Programming/JavaScript.md",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
     "Programming/NET",
     "ComputerScience/MyLibrary",
