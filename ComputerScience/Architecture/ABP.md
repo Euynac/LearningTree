@@ -161,7 +161,7 @@ IEntityChangeEventHelper接口来判断是否需要Publish Entity变更Event
 ## 错误排查
 
 #### Value cannot be null. 在Dapr GetEventType时Topic为null报错
-因为换用了自己的JsonSerialize，但是由于ABP拼接topic，data，pubsubname等都是用ton
+因为换用了自己的JsonSerialize，但是由于ABP拼接topic，data，pubsubname等都是用
 
 # Json序列化
 `IJsonSerializer`接口
