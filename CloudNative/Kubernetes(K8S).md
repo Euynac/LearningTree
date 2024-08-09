@@ -182,3 +182,9 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 具体原因不清楚，可能是ipip模式与openeuler适配的问题。
 
 ![](../attachments/4ce39983e3b8871aea802b5ef10167a.jpg)
+
+
+#### Nginx出现消息截断问题
+
+排查nginx日志，发现buff写入失败，提示空间不足。
+发现`df -h` 容器Pod磁盘占满。Worker节点空间不足。

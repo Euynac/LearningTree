@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Linux",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Linux.md",
+                "file": "CloudNative/Kubernetes(K8S).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Linux.md"
+                "file": "CloudNative/Kubernetes(K8S).md"
               }
             }
           },
@@ -196,6 +195,9 @@
   },
   "active": "ca849d58770c6c63",
   "lastOpenFiles": [
+    "CloudNative/K8S集群管理.md",
+    "CloudNative/Kubernetes(K8S).md",
+    "ComputerScience/Linux.md",
     "ComputerScience/Architecture/ABP.md",
     "ComputerScience/Architecture/架构.md",
     "Programming/NET/ASP.NET Core.md",
@@ -207,8 +209,6 @@
     "Programming/NET/Authentication.md",
     "Programming/NET/Mapster.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
-    "CloudNative/Kubernetes(K8S).md",
-    "CloudNative/K8S集群管理.md",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
     "ComputerScience/MyLibrary/MoDataChannel.md",
@@ -227,7 +227,6 @@
     "attachments/Pasted image 20240616173908.png",
     "attachments/Pasted image 20240616173732.png",
     "Programming/C.md",
-    "Programming/PHP.md",
     "attachments/4ce39983e3b8871aea802b5ef10167a.jpg",
     "Programming/NET",
     "ComputerScience/MyLibrary",
