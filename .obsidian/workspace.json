@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "ComputerScience/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Linux",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "ComputerScience/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md",
+                "file": "ComputerScience/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComputerScience/Architecture/ABP.md"
+                "file": "ComputerScience/Linux.md"
               }
             }
           },
@@ -195,6 +196,7 @@
   },
   "active": "ca849d58770c6c63",
   "lastOpenFiles": [
+    "ComputerScience/Architecture/ABP.md",
     "ComputerScience/Architecture/架构.md",
     "Programming/NET/ASP.NET Core.md",
     "Programming/NET/ASP.NET Core接口.md",
@@ -202,7 +204,6 @@
     "Programming/NET/C#.md",
     "ComputerScience/Database.md",
     "SoftwareManual/VisualStudio.md",
-    "ComputerScience/Architecture/ABP.md",
     "Programming/NET/Authentication.md",
     "Programming/NET/Mapster.md",
     "ComputerScience/MyLibrary/MoAutoModel.md",
