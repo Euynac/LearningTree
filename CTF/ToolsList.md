@@ -246,13 +246,14 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | PixPin           | 截图贴图长截图工具                          |                                                                       |
 
 ## Audio
-| 软件名               | 场景                  | 备注  |
-| :---------------- | :------------------ | :-- |
-| LoopBe1           | Virtual MIDI Driver |     |
-| MIDIOX            | 监控和调试MIDI设备信号       |     |
-| MIDITranslatorPro | 可转换MIDI信号为键盘等其他信号   |     |
-|                   |                     |     |
-|                   |                     |     |
+| 软件名                       | 场景                  | 备注  |
+| :------------------------ | :------------------ | :-- |
+| LoopBe1                   | Virtual MIDI Driver |     |
+| MIDIOX                    | 监控和调试MIDI设备信号       |     |
+| MIDITranslatorPro         | 可转换MIDI信号为键盘等其他信号   |     |
+| Virtual Audio Cable (VAC) | 虚拟声卡，可以用于内录电脑声音     |     |
+|                           |                     |     |
+|                           |                     |     |
 
 ## Novel
 | 软件名  | 场景                  | 备注 |
