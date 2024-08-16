@@ -101,3 +101,6 @@ ARP请求是广播的，因此可以靠速度取胜。
 
 ![Graphical user interface, text, application Description automatically generated](../../attachments/6c28c51433dc8faab4f26eb897733bb7.png)
 
+## 追踪TCP流
+图中红色是客户端，蓝色是服务端回显。
+![](../../attachments/Pasted%20image%2020240816154602.png)
