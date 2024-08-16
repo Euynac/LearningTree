@@ -20,6 +20,8 @@
 
 可以用 `and` 或 `or`进行连接
 
+`http.response.code == 200` 筛选HTTP协议返回值为200的包
+
 `tcp.flags.ack == 0 and tcp.flags.syn == 1`，表示获取TCP请求的SYN请求（三次握手的第一次）
 
 `tcp.flags.fin == 1` （FIN包是发完数据后发的包，可以代表往哪些地方发了数据）

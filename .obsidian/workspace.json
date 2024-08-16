@@ -196,6 +196,7 @@
   "active": "f34fb8866e1173b7",
   "lastOpenFiles": [
     "CTF/ToolManual/Wireshark.md",
+    "CTF/MISC/流量分析.md",
     "attachments/Pasted image 20240816154602.png",
     "CTF/MISC/压缩包.md",
     "CTF/CRYPTO/密码攻击方式.md",
@@ -211,7 +212,6 @@
     "CTF/MISC/图像隐写/图像隐写.md",
     "CTF/MISC/文件头.md",
     "CTF/MISC/数值类.md",
-    "CTF/MISC/流量分析.md",
     "CTF/MISC/镜像分析.md",
     "CTF/MISC/二维码.md",
     "CTF/MISC/电子取证.md",
