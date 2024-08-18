@@ -9,4 +9,3 @@
 **Expand / collapse node and all its children**
 `Ctrl + Alt + Click` on arrow icon
 To expand all elements, use the `<html>` element's arrow icon in the shortcut.
-
