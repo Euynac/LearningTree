@@ -15,33 +15,7 @@
 
 
 
-## 密码
-
-善用搜索，通过提示/关键词+CTF+加密 等进行搜索尝试寻找加密方式。
-
-需要口令的，可以尝试去给的文件利用关键字查找方式，关键词：flag、ctf等
-
-### 工具
-
-网站：
-
-<http://qqxiuzi.cn/daohang.htm>
-
-<http://dcode.fr>
-
-cyberchef
-
-![A screenshot of a computer Description automatically generated](../attachments/c64e8818f7a34f08ae5cee3ff2f654ee.png)
-
-Fork可以将其按分隔符批量处理
-
-Encode_Text US-ASCII或使用From charcode 10
-
-convert text to its ASCII charcode: To Charcode radix 10
-
-软件
-
-CrypTool 专业的密码学软件，可以用于教学。免费
+[编码类](MISC/编码类.md)
 
 ## 隐写术(steganography)
 
@@ -243,12 +217,6 @@ To decrypt such a thing, you need to know the password and the encryption algori
 ![A close up of a keyboard Description automatically generated with medium confidence](../attachments/c2994f2e726f89cb56c3189fd77a86c6.png)
 
 ## 编码
-
-### Base64
-
-Base64是网络上最常见的用于传输8Bit字节码的编码方式之一，base64就是一种基于64个可打印字符来表示二进制数据的表示方法。由于2的6次方等于64，所以每6个比特为一个单元，对应某个可打印字符。三个字节有24个比特，对应4个base64单元，即3个字节可表示4个可打印字符。它可用来作为电子邮件的传输编码。在base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同系统中而不同。
-
-![在这里插入图片描述](../attachments/cb26322862eb1aa2f48b58f388ceea28.png)
 
 
 # WEB

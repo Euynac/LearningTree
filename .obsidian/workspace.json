@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "37ac61b6e3691f02",
+        "id": "71ee168ecc4aad18",
         "type": "tabs",
         "children": [
           {
-            "id": "6142565ed867f22f",
+            "id": "dd778d4ac861fa04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CORS",
+                "query": "Kali",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/WEB/WEB.md",
+                "file": "CTF/MISC/图像隐写/图像隐写.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/WEB/WEB.md"
+                "file": "CTF/MISC/图像隐写/图像隐写.md"
               }
             }
           },
@@ -193,35 +193,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6142565ed867f22f",
+  "active": "dd778d4ac861fa04",
   "lastOpenFiles": [
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/思路打开.md",
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/MISC/图像隐写/BMP.md",
+    "CTF/MISC/编码类.md",
+    "SoftwareManual/WSL.md",
+    "CTF/ToolManual/CyberChef.md",
+    "CTF/ToolsList.md",
+    "CTF/README.md",
+    "CTF/AWD/工具.md",
+    "README.md",
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/CRYPTO/CTF.md",
+    "CTF/CRYPTO/Practice_Cryptograph.md",
+    "CTF/MISC/音频隐写.md",
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/数值类.md",
+    "CTF/MISC/流量分析.md",
+    "CTF/MISC/镜像分析.md",
+    "CTF/MISC/二维码.md",
+    "CTF/MISC/电子取证.md",
+    "CTF/WEB/WEB.md",
     "CTF/WEB/PHP.md",
     "CTF/WEB/JavaScript.md",
     "CTF/WEB/HTTP请求头.md",
-    "CTF/WEB/WEB.md",
-    "Fontend/FrontendConcept.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/AWD/Linux易忽略点.md",
-    "ComputerScience/MyLibrary/MoDataChannel.md",
-    "ComputerScience/MyLibrary/MoRpcInvocation.md",
-    "ComputerScience/操作系统.md",
-    "ComputerScience/网络安全（新）.md",
-    "ComputerScience/网络安全（旧）.md",
-    "CTF/MISC/图像隐写/PNG.md",
-    "CTF/MISC/图像隐写/BMP.md",
-    "CTF/MISC/图像隐写/JPG.md",
-    "CTF/AWD/工具.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
-    "CTF/Hacker/代理解密.md",
-    "CTF/MISC/流量分析.md",
-    "CTF/ToolManual/Wireshark.md",
     "attachments/Pasted image 20240816154602.png",
-    "CTF/MISC/压缩包.md",
-    "CTF/CRYPTO/密码攻击方式.md",
-    "ComputerScience/Architecture/架构.md",
-    "CTF/ToolsList.md",
-    "CTF/README.md",
-    "CTF/MISC/音频隐写.md",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
     "attachments/Pasted image 20240627160448.png",

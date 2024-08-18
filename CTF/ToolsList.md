@@ -46,11 +46,11 @@
 |        |                                  |                                                                                                                      |
 ## 编码/加密
 
-| 软件名    | 场景                 | 备注                                                           |
-|:--------- |:-------------------- |:-------------------------------------------------------------- |
-| Ciphey    | 自动加解密   | [Ciphey/Ciphey (github.com)](https://github.com/Ciphey/Ciphey) |
-| Cyberchef | 烹饪化加解密/编码工具         |                                                                |
-| Ares      | 自动加解密，是Ciphey下一代 | [bee-san/Ares (github.com)](https://github.com/bee-san/Ares)                                                               |
+| 软件名       | 场景               | 备注                                                             |
+| :-------- | :--------------- | :------------------------------------------------------------- |
+| Ciphey    | 自动加解密            | [Ciphey/Ciphey (github.com)](https://github.com/Ciphey/Ciphey) |
+| Cyberchef | 烹饪化加解密/编码工具      |                                                                |
+| Ares      | 自动加解密，是Ciphey下一代 | [bee-san/Ares (github.com)](https://github.com/bee-san/Ares)   |
 
 ## 内存取证
 
@@ -358,3 +358,7 @@ frida
 frida-tools
 pwntools
 LibcSearcher
+
+
+# Linux环境
+
