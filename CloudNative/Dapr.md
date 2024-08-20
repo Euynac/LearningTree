@@ -257,10 +257,12 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
  }));
 ```
 
-#### ERROR_HEALTH_NOT_READY
+#### ERROR_HEALTH_NOT_READY  无法启动边车等
+##### 端口占用
 滚动更新时，启动边车失败？猜测是dapr无法注册端口被占用问题？K8S还是dapr bug？
 解决方案：干掉旧的，单独起新的：可将副本数置为0后更新。
-
+##### 容器端口不对
+比如配置了环境变量监听80但是容器配的是8080等问题。
 
 #### 调用超时爆炸，瘫痪
 微服务调用一定要避免成环路的情况。
@@ -268,8 +270,9 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 #### invoke failed Transport: authentication handshake failed: x509: certificate has expired
 更新了`dapr-system` `control panel`但未重启边车。
 
-#### K8S daprd 边车未启动
+#### K8S daprd 边车消失 无显示
 检查 `yaml` 文件 `annotation` 无异常，如果仍未出现，似乎是因为设置了工作负载的内存、CPU限制，可能是BUG？
+
 
 
 # Debug
