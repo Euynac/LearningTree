@@ -31,11 +31,13 @@
 
 
 #### 新版配置
-新版本WSL遇到问题的：
+新版本WSL遇到问题的：wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理
 [Accessing network applications with WSL | Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/networking#auto-proxy)
 
 https://github.com/microsoft/WSL/issues/10753#issuecomment-2041372912
 
+
+在Windows用户根目录新建`.wslconfig`文件
 ```config
 [wsl2]
 networkingMode=mirrored
@@ -43,12 +45,15 @@ dnsTunneling=true
 firewall=true
 autoProxy=true
 
+
 [experimental]
 # requires dnsTunneling but are also OPTIONAL
 bestEffortDnsParsing=true
 useWindowsDnsCache=true
+autoMemoryReclaim=gradual  # gradual  | dropcache | disabled
 
 ```
+然后`wsl --shutdown`关闭后重启wsl
 
 #### 脚本
 
