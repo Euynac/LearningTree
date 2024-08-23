@@ -297,11 +297,13 @@ passwd root # 输入两次强制设置弱密码
 
 ## 安装常用包
 
-wget //从Web下载文件
+```sh
+apt install wget # 可从Web下载文件
+apt install net-tools
+apt install dirsearch # 目录扫描
 
-net-tools
+```
 
-sudo
 
 ## 安装自编译软件
 
