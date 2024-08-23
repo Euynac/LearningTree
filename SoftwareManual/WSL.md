@@ -300,8 +300,8 @@ passwd root # 输入两次强制设置弱密码
 ```sh
 apt install wget # 可从Web下载文件
 apt install net-tools
-apt install dirsearch # 目录扫描
-
+apt install dirsearch # web目录扫描
+apt install hydra # web密码爆破
 ```
 
 
