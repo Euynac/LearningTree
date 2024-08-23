@@ -53,7 +53,7 @@ The term "allow_url_include" refers to a PHP setting that controls whether or no
 - string.tolower
 - string.rot13
 - convert.base64-encode
-- convert.iconv.utf-8*.utf-16*
+- convert.iconv.utf-8*.utf-16* 将数据流的内容按照「指定字符编码」来转。把文件的字符编码从 utf-8* 转换为 utf-16*
 ```php
 ######### read过滤器应用于接收输入流参数的函数
 
