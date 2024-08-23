@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "91a0569d435483d6",
+        "id": "87bd524dad69001f",
         "type": "tabs",
         "children": [
           {
-            "id": "67f4e67ab31d8587",
+            "id": "7c2e2c31dc0b92b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/Reverse/Andorid逆向.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MyLi",
+                "query": "RSA",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/Reverse/Andorid逆向.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/WSL.md",
+                "file": "CTF/Reverse/Andorid逆向.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/WSL.md"
+                "file": "CTF/Reverse/Andorid逆向.md"
               }
             }
           },
@@ -195,8 +194,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "67f4e67ab31d8587",
+  "active": "7c2e2c31dc0b92b9",
   "lastOpenFiles": [
+    "CTF/Reverse/PE逆向.md",
+    "CTF/Reverse/Reverse.md",
+    "CTF/MISC/镜像分析.md",
+    "CTF/MISC/二维码.md",
+    "CTF/MISC/电子取证.md",
+    "CTF/MISC/编码类.md",
+    "CTF/CRYPTO/密码种类与特征.md",
+    "CTF/CRYPTO/密码攻击方式.md",
+    "CTF/CRYPTO/算法性质.md",
+    "CTF/CRYPTO/学习资料.md",
+    "CTF/CRYPTO/RSA.md",
+    "CTF/CRYPTO/公钥密码密钥格式.md",
+    "CTF/CRYPTO/CTF.md",
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/CRYPTO/PBE.md",
+    "CTF/CRYPTO/Practice_Cryptograph.md",
+    "CTF/CRYPTO/伪随机数.md",
+    "SoftwareManual/WSL.md",
     "CloudNative/Docker.md",
     "CTF/WEB/PHP.md",
     "CTF/AWD/工具.md",
@@ -205,24 +222,6 @@
     "SoftwareManual/CMD.md",
     "CTF/WEB/绕过(Bypass).md",
     "CTF/WEB/正则表达式.md",
-    "CTF/WEB/信息收集.md",
-    "CTF/WEB/HTTP请求头.md",
-    "CTF/WEB/JavaScript.md",
-    "CTF/WEB/WEB.md",
-    "CTF/WEB/SSRF.md",
-    "CTF/WEB/Python.md",
-    "SoftwareManual/WSL.md",
-    "CTF/ToolsList.md",
-    "CTF/MISC/压缩包.md",
-    "CTF/MISC/音频隐写.md",
-    "CTF/MISC/文件头.md",
-    "CTF/MISC/数值类.md",
-    "CTF/MISC/镜像分析.md",
-    "CTF/MISC/二维码.md",
-    "CTF/MISC/流量分析.md",
-    "CTF/MISC/电子取证.md",
-    "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/图像隐写/PNG.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
