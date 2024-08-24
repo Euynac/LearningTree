@@ -62,6 +62,9 @@ determines whether PHP is allowed to open remote files using functions like `fil
 
 提供了一个方式来 读取HTTP请求体的原始内容。
 
+注意，使用POST方法请求体时，必须按照`enctype`的格式进行传参，不然读取为空。
+比如`application/x-www-form-urlencoded`，要么就直接用`raw`，也就是`Content-Type: text/plain`
+
 ```php
 <?php
 # 尝试通过 php://input 协议获取原始 POST 数据
