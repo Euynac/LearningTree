@@ -4,6 +4,7 @@
 [SSRF漏洞用到的其他协议（dict协议，file协议） - My_Dreams - 博客园 (cnblogs.com)](https://www.cnblogs.com/zzjdbk/p/12970919.html)
 [Gopher协议原理和限制介绍——Gopher协议支持发出GET、POST请求（类似协议转换）：可以先截获get请求包和post请求包，在构成符合gopher协议的请求_11898275的技术博客_51CTO博客](https://blog.51cto.com/u_11908275/6392927)
 
+SSRF(`Server-Side Request Forgery`, 服务器端请求伪造) 是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统）
 
 # 协议
 
@@ -39,6 +40,6 @@ gopher://<host>:<port>/<gopher-path>_<TCP数据流>
 - curl/libcurl 7.43 上 gopher 协议存在 bug（%00 截断），经测试 7.49 可用
 ## File
 基本形式：`file://host/path`
-> If _host_ is omitted, it is taken to be **localhost**, the machine from which the URL is being interpreted. 所以一般就会是用 `file:///`这种形式
+> If _host_ is omitted, it is taken to be **localhost**, the machine from which the URL is being interpreted. 所以一般就会是用 `file:///path`这种形式
 
 可以读取服务器文件，常用于源码泄露。

@@ -57,7 +57,11 @@ determines whether PHP is allowed to open remote files using functions like `fil
 [文件包含&PHP伪协议利用_file_get_contents()支持的协议_红云谈安全的博客-CSDN博客](https://blog.csdn.net/qq_51524329/article/details/121439731)
 
 ## php://input
+
+> 条件：`allow_url_include = On`
+
 提供了一个方式来 读取HTTP请求体的原始内容。
+
 ```php
 <?php
 # 尝试通过 php://input 协议获取原始 POST 数据
@@ -72,6 +76,9 @@ var_dump($_POST);
 
 
 ## php://filter
+
+> 条件：无
+
 可用来定义接下来输入和输出流（I/O streams），也即数据流，可以是某个文件（xx.php）或某个url（http://www.baidu.com），然后可以在访问数据流之前进行「过滤」，并指定过滤方式。
 
 过滤器语法：`php://filter/[read=或write=]filter-name[|other-filter-name]/resource=xxxx`, 其中`read=`可选。多个过滤器用`|`分隔，按从左到右的方式过滤。
@@ -135,21 +142,43 @@ file_put_contents('php://filter/write=string.tolower/resource=result.txt','hello
 
 ## 其他协议
 
+#### file:// 
+
+> 条件： 无
+
+访问本地文件系统。可以`file:///etc/passwd`
+
+#### data://
+
+> 条件：`allow_url_fopen`,`allow_url_include`均为`on`
+
+ 数据（RFC 2397）
+ 这是一个输入流执行的协议，它可以向服务器输入数据，而服务器也会执行。常用代码如下：
+ `http://127.0.0.1/include.php?file=data://text/plain,<?php%20phpinfo();?>`
+`text/plain;base64`: 若纯文本没用可用base64编码
+
+
+#### zip://
+
+zip://协议可以用来访问服务器中的压缩包，无论压缩包里面的文件是什么类型的都可以执行。也就是说如果服务器禁止我们上传php文件那么我们可以把php文件改后缀然后压缩再上传，然后用zip协议访问。要利用zip协议时一般要结合文件上传与文件包含两个漏洞
+
+一般的代码为`?file=zip:///php.zip#phpinfo.jpg`
+其中的`#`表示的是`php.zip`的子文件名。
+
+其他还有类似的压缩协议：
+- `compress.bzip2://` 要压缩成bzip2格式
+- `compress.zlib://` 要压缩成zlib格式
+- `phar://` 也可以访问zip包，但访问子文件使用`/`: `?file=phar:///phpinfo.zip/phpinfo.txt`
 
 ```
 
-file:// — 访问本地文件系统
+
 
 http:// — 访问 HTTP(s) 网址
 
 ftp:// — 访问 FTP(s) URLs
 
-php:// — 访问各个输入/输出流（I/O streams）
-PHP 提供了一些杂项输入/输出（IO）流，允许访问 PHP 的输入输出流、标准输入输出和错误描述符， 内存中、磁盘备份的临时文件流以及可以操作其他读取写入文件资源的过滤器。
-
 zlib:// — 压缩流
-
-data:// — 数据（RFC 2397）
 
 glob:// — 查找匹配的文件路径模式
 

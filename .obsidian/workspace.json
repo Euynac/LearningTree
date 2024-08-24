@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "gopher",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,8 +188,9 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
-    "CTF/WEB/文件包含.md",
+    "CTF/WEB/SSRF.md",
     "CTF/WEB/PHP.md",
+    "CTF/WEB/文件包含.md",
     "SoftwareManual/WSL.md",
     "CTF/CRYPTO/CTF.md",
     "CTF/WEB/JavaScript.md",
@@ -213,7 +214,6 @@
     "CTF/MISC/电子取证.md",
     "CTF/MISC/编码类.md",
     "CTF/CRYPTO/学习资料.md",
-    "CTF/CRYPTO/公钥密码密钥格式.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
