@@ -50,9 +50,13 @@ determines whether PHP is allowed to open remote files using functions like `fil
 短标签允许使用` <? ?> `来代替` <?php ?> `来开启和结束 PHP 代码段。原本`<? ?>`内内容不解析的，现在也会尝试解析了。
 
 # 伪协议(Pseudo Protocols)
-也被称为流包装器，这些伪协议以`php://`开头，后面跟着一些参数，用于指定要执行的操作或需要访问的资源。
+也被称为流包装器（`wrapper`），这些伪协议以`php://`开头，后面跟着一些参数，用于指定要执行的操作或需要访问的资源。
 伪协议表明这些协议并不是一个真实的外部协议，例如`http`或`ftp`。`PHP`伪协议的出现是为了提供一个统一的、简洁的接口来处理不同的数据流。这些伪协议可以被看作是一种桥梁，它们允许开发者使用常规的文件操作函数来处理各种不同的数据流。
 
+
+> 吐槽：似乎中国才称伪协议。看官方解释：
+> [PHP: php:// - Manual](https://www.php.net/manual/en/wrappers.php.php)
+> [PHP: Supported Protocols and Wrappers - Manual](https://www.php.net/manual/en/wrappers.php)
 
 [文件包含&PHP伪协议利用_file_get_contents()支持的协议_红云谈安全的博客-CSDN博客](https://blog.csdn.net/qq_51524329/article/details/121439731)
 
@@ -88,7 +92,7 @@ var_dump($_POST);
 
 > read定义的是输入流，write定义的是输出流，具体看某个函数所需参数是输入流还是输出流
 
-以下是各种过滤器
+以下是各种过滤器[PHP: 可用过滤器列表 - Manual](https://www.php.net/manual/zh/filters.php)
 - `string.toupper`
 - `string.tolower`
 - `string.rot13`
