@@ -5,16 +5,6 @@
 [Web小白的CTF自学笔记（5）——PHP基础 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/688362521)
 
 
-#### 输出错误信息
-```php
-if(!ini_get('display_errors')) 
-{
-    ini_set('display_errors', 'On');
-}
-error_reporting(E_ALL);
-```
-
-
 
 # 弱类型
 
@@ -38,6 +28,24 @@ var_dump("0e123124"=="0e44912"); //true 科学计数法时(0e开头) 视为相�
 
 # php.ini安全配置
 
+## 临时设置
+
+可以使用`ini_set()`函数在脚本里面临时开启某个设置。但是注意并不是所有的设置都可以，比如`allow_url_include`就不行。
+
+具体：[PHP: List of php.ini directives - Manual](https://www.php.net/manual/en/ini.list.php)
+
+#### 输出错误信息
+```php
+if(!ini_get('display_errors')) 
+{
+    ini_set('display_errors', 'On');
+}
+error_reporting(E_ALL);
+```
+
+
+
+## 常用配置
 #### allow_url_include
 The term "allow_url_include" refers to a PHP setting that controls whether or not remote file inclusion is allowed. When set to "On", it allows PHP scripts to include files from remote locations using a URL. This can be useful for accessing resources or libraries hosted on other servers, but it can also pose a security risk if not used carefully.
 #### allow_url_fopen
@@ -221,3 +229,9 @@ base64_decode($_GET['content']);
 ```
 当`$content`被加上了`<?php exit; ?>`以后，我们可以使用`php://filter/write=convert.base64-decode` 来**首先对其解码**。在解码的过程中，字符`<、?、;、>、空格`等一共有7个字符不符合base64编码的字符范围将被忽略，所以最终被解码的字符仅有phpexit和我们传入的其他字符。
 phpexit一共7个字符，**因为base64算法解码时是4个byte一组**，所以给他增加1个a一共8个字符。这样，phpexita被正常解码，而后面我们传入的webshell的base64内容也被正常解码。结果就是`<?php exit; ?>`没有了。
+
+
+
+# 参考资料
+
+[PHP Tricks | HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/php-tricks-esp)
