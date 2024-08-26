@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ba57cde1dab6eafa",
+        "id": "71ee168ecc4aad18",
         "type": "tabs",
         "children": [
           {
-            "id": "a0096c37646f8351",
+            "id": "dd778d4ac861fa04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/思路打开.md",
+                "file": "SoftwareManual/WSL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/思路打开.md",
+                "file": "SoftwareManual/WSL.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/思路打开.md",
+                "file": "SoftwareManual/WSL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/思路打开.md"
+                "file": "SoftwareManual/WSL.md"
               }
             }
           },
@@ -165,14 +166,21 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "69a00cd8a3fdb10a",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
-    "width": 219.5,
-    "collapsed": true
+    "width": 219.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,34 +194,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a0096c37646f8351",
+  "active": "dd778d4ac861fa04",
   "lastOpenFiles": [
-    "CTF/MISC/图像隐写/PNG.md",
-    "CTF/思路打开.md",
+    "Programming/NET/C#.md",
     "attachments/Pasted image 20240825234859.png",
-    "CTF/MISC/编码类.md",
-    "CTF/WEB/PHP.md",
-    "CTF/MISC/数值类.md",
-    "CTF/MISC/图像隐写/JPG.md",
-    "CTF/MISC/图像隐写/BMP.md",
-    "CTF/MISC/图像隐写/图像隐写.md",
-    "CTF/MISC/电子取证.md",
-    "CTF/WEB/文件包含.md",
+    "CTF/CRYPTO/RSA理论知识.md",
+    "CTF/CRYPTO/RSA.md",
     "SoftwareManual/WSL.md",
-    "CTF/WEB/代码与命令执行.md",
+    "CloudNative/Dapr.md",
     "CloudNative/Docker.md",
-    "CTF/ToolManual/Burpsuite.md",
-    "CTF/WEB/SSRF.md",
-    "CTF/CRYPTO/CTF.md",
-    "CTF/WEB/JavaScript.md",
-    "CTF/WEB/Python.md",
-    "Programming/Python.md",
-    "CTF/CRYPTO/密码种类与特征.md",
-    "CTF/WEB/绕过(Bypass).md",
-    "CTF/CRYPTO/算法性质.md",
-    "CTF/CRYPTO/伪随机数.md",
-    "CTF/CRYPTO/Encoding.md",
+    "CTF/ToolManual/010Editor.md",
+    "CTF/MISC/文件头.md",
+    "CTF/MISC/压缩包.md",
+    "CTF/MISC/图像隐写/JPG.md",
+    "CTF/MISC/图像隐写/PNG.md",
+    "CTF/MISC/图像隐写/图像隐写.md",
+    "CTF/思路打开.md",
+    "CTF/MISC/图像隐写/BMP.md",
+    "CTF/MISC/编码类.md",
+    "CTF/ToolManual/CyberChef.md",
     "CTF/ToolsList.md",
+    "CTF/README.md",
+    "CTF/AWD/工具.md",
+    "README.md",
+    "CTF/CRYPTO/Encoding.md",
+    "CTF/CRYPTO/CTF.md",
+    "CTF/CRYPTO/Practice_Cryptograph.md",
+    "CTF/MISC/音频隐写.md",
+    "CTF/MISC/数值类.md",
+    "CTF/MISC/流量分析.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
