@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CloudNative/Dapr.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CloudNative/Dapr.md"
               }
             }
           },
@@ -188,6 +188,7 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
+    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/MicosoftOffice.md",
     "Programming/JavaScript.md",
     "Fontend/HTML&CSS.md",
@@ -214,7 +215,6 @@
     "CTF/WEB/JavaScript.md",
     "CTF/WEB/Python.md",
     "Programming/Python.md",
-    "CTF/CRYPTO/密码种类与特征.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",
