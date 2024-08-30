@@ -23,6 +23,27 @@
 - `chr()` function can be used to convert an ASCII ordinal number to a character (the `ord()` function does the opposite).
 - `bytes.fromhex(str)` convert hex to bytes. `b'xx'.hex()`on byte strings to get the hex representation.
 
+### 常用库函数
+
+#### import base64
+- `base64.b64encode()` 
+
+#### from Crypto.Util.number import *
+> pip install PyCryptodome
+
+密码学中，常将数据由bytes转为长整型数据。
+
+```python
+message: HELLO  
+ascii bytes: [72, 69, 76, 76, 79]  
+hex bytes: [0x48, 0x45, 0x4c, 0x4c, 0x4f]  
+base-16: 0x48454c4c4f   # 16进制数据，是由十六进制数组拼接得到
+base-10: 310400273487   # 10进制数据，是由十六进制数字转为十进制得到
+```
+
+以上过程在`PyCryptodome`库中函数：`bytes_to_long()` and `long_to_bytes()`已经实现。
+
+
 # 字符串
 
 ## **`r' '`: 原始字符串**
