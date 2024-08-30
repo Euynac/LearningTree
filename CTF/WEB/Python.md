@@ -22,6 +22,7 @@
 - `type()` 获取类型
 - `chr()` function can be used to convert an ASCII ordinal number to a character (the `ord()` function does the opposite).
 - `bytes.fromhex(str)` convert hex to bytes. `b'xx'.hex()`on byte strings to get the hex representation.
+- `bin()`将数字转成二进制字符串表示，以`0b`开头
 
 ### 常用库函数
 
