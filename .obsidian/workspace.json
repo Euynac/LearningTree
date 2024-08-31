@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CTF/WEB/Python.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CTF/WEB/Python.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md",
+                "file": "CTF/WEB/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/CRYPTO/算法性质.md"
+                "file": "CTF/WEB/Python.md"
               }
             }
           },
@@ -188,10 +188,14 @@
   },
   "active": "a0096c37646f8351",
   "lastOpenFiles": [
-    "CTF/ToolsList.md",
+    "CTF/CRYPTO/算法性质.md",
+    "CTF/CRYPTO/Practice_Cryptograph.md",
+    "CTF/CRYPTO/RSA.md",
     "CTF/WEB/Python.md",
-    "CTF/WEB/PHP.md",
     "Programming/Python.md",
+    "Programming/TroubleShooting.md",
+    "CTF/ToolsList.md",
+    "CTF/WEB/PHP.md",
     "CloudNative/Dapr.md",
     "SoftwareManual/VisualStudio.md",
     "SoftwareManual/MicosoftOffice.md",
@@ -211,10 +215,6 @@
     "CTF/MISC/电子取证.md",
     "CTF/WEB/文件包含.md",
     "SoftwareManual/WSL.md",
-    "CTF/WEB/代码与命令执行.md",
-    "CloudNative/Docker.md",
-    "CTF/ToolManual/Burpsuite.md",
-    "CTF/WEB/SSRF.md",
     "attachments/Pasted image 20240816154602.png",
     "attachments/Pasted image 20240707180418.png",
     "attachments/Pasted image 20240707180409.png",

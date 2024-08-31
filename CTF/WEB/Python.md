@@ -24,6 +24,7 @@
 - `ord()` can get the unicode character value in base 10.
 - `bytes.fromhex(str)` convert hex to bytes. `b'xx'.hex()`on byte strings to get the hex representation.
 - `bin()`将数字转成二进制字符串表示，以`0b`开头
+- `int(number, 2)` 将二进制字符串数字表示从二进制转换为整数(10进制)，支持`0b`开头的字符串。
 
 ### 常用库函数
 
