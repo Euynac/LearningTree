@@ -25,6 +25,7 @@
 - `bytes.fromhex(str)` convert hex to bytes. `b'xx'.hex()`on byte strings to get the hex representation.
 - `bin()`将数字转成二进制字符串表示，以`0b`开头
 - `int(number, 2)` 将二进制字符串数字表示从二进制转换为整数(10进制)，支持`0b`开头的字符串。
+- `' '.join()` 以空格分割字符串数组
 
 ### 常用库函数
 
@@ -105,3 +106,19 @@ print(greeting)
 
 在上述示例中，`f`前缀表示格式化字符串，大括号`{}`内的表达式会被计算并插入到字符串中。
 
+
+
+
+# 自制脚本收集
+
+#### 已知XOR后部分明文恢复部分密钥
+
+因为异或性质是异或相同后抵消，那可以直接恢复出已知明文的密钥。
+
+```python
+data = '0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104'
+decoded_data = bytes.fromhex(data)
+plain_text = 'crypto{'
+key = ''.join((chr(decoded_data[i] ^ ord(plain_text[i]))) for i in range(7))
+print(key) # 结果是myXORke，所以可以直接猜测最后XOR的密文是myXORkey
+```
