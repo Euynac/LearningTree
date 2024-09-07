@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "Programming/Python.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a692f17714eefa22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/WEB/Python.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/WEB/Python.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "CTF/WEB/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md"
+                "file": "CTF/WEB/Python.md"
               }
             }
           },
@@ -186,8 +200,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a0096c37646f8351",
+  "active": "a692f17714eefa22",
   "lastOpenFiles": [
+    "Programming/Python.md",
+    "CTF/WEB/Python.md",
+    "SoftwareManual/VisualStudio.md",
     "CloudNative/Components/Redis.md",
     "CTF/CRYPTO/算法性质.md",
     "CTF/CRYPTO/密码攻击方式.md",
@@ -196,15 +213,12 @@
     "CTF/ToolsList.md",
     "CTF/README.md",
     "CTF/思路打开.md",
-    "CTF/WEB/Python.md",
     "attachments/Pasted image 20240901184252.png",
     "CTF/CRYPTO/Practice_Cryptograph.md",
     "CTF/CRYPTO/RSA.md",
-    "Programming/Python.md",
     "Programming/TroubleShooting.md",
     "CTF/WEB/PHP.md",
     "CloudNative/Dapr.md",
-    "SoftwareManual/VisualStudio.md",
     "SoftwareManual/MicosoftOffice.md",
     "Programming/JavaScript.md",
     "Fontend/HTML&CSS.md",
