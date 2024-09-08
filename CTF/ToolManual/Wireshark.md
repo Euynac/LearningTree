@@ -39,6 +39,9 @@ tshark -r challenge.pcapng -Y "http" -T fields -e "http.request.uri.quer
 
 # 其中-Y 填的就是过滤器语法
 # -T 是要提取的类型 -e 是具体字段
+
+# 提取json响应数据
+tshark -r data.pcapng -Y 'http.request.method == "POST" && http.content_type == "application/json"' -T fields -e http.file_data > 1.json
 ```
 
 在分组详情中选中想要的字段，获取过滤器语法：
