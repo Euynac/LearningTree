@@ -275,3 +275,95 @@ parsers: # array
 TIP
 
 配置完成后可自行设置自动更新选项。
+
+
+## 支持的规则类型
+
+- DOMAIN-SUFFIX：域名后缀匹配
+- DOMAIN：域名匹配
+- DOMAIN-KEYWORD：域名关键字匹配
+- IP-CIDR：IP段匹配
+- SRC-IP-CIDR：源IP段匹配
+- GEOIP：GEOIP数据库（国家代码）匹配
+- DST-PORT：目标端口匹配
+- SRC-PORT：源端口匹配
+- PROCESS-NAME：源进程名匹配
+- RULE-SET：Rule Provider规则匹配
+- MATCH：全匹配
+
+# 示例
+
+## Bing及ChatGPT
+
+
+```yaml
+parsers:
+  - urls: http://xxx.yaml
+    yaml:
+      preprend-rules:
+        - DOMAIN-SUFFIX,location.microsoft.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bing,🔰 选择节点
+        - DOMAIN-SUFFIX,bing.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bing.net,🔰 选择节点
+        - DOMAIN-SUFFIX,bing123.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingads.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingagencyawards.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingapis.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingapistatistics.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingparachute.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingsandbox.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingvisualsearch.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bingworld.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bluehatnights.com,🔰 选择节点
+        - DOMAIN-SUFFIX,dictate.ms,🔰 选择节点
+        - DOMAIN-SUFFIX,flipwithsurface.com,🔰 选择节点
+        - DOMAIN-SUFFIX,masalladeloslimites.com,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoft-give.com,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoftcloudsummit.com,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoftdiplomados.com,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoftlatamholiday.com,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoftmxfilantropia.com,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoftpartnersolutions.com,🔰 选择节点
+        - DOMAIN-SUFFIX,msunlimitedcloudsummit.com,🔰 选择节点
+        - DOMAIN-SUFFIX,office365love.com,🔰 选择节点
+        - DOMAIN-SUFFIX,office365tw.com,🔰 选择节点
+        - DOMAIN-SUFFIX,renovacionoffice.com,🔰 选择节点
+        - DOMAIN-SUFFIX,sprinklesapp.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bing.com.cn,🔰 选择节点
+        - DOMAIN-SUFFIX,cn.bing.com,🔰 选择节点
+        - DOMAIN-SUFFIX,cn.bing.net,🔰 选择节点
+        - DOMAIN-SUFFIX,cn.mm.bing.net,🔰 选择节点
+        - DOMAIN-SUFFIX,ditu.live.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bj1.api.bing.com,🔰 选择节点
+        - DOMAIN-SUFFIX,emoi-cncdn.bing.com,🔰 选择节点
+        - DOMAIN-SUFFIX,openai.com,🔰 选择节点
+        - DOMAIN-SUFFIX,pay.openai.com,🔰 选择节点
+        - DOMAIN-SUFFIX,chat.openai.com,🔰 选择节点
+        - DOMAIN-SUFFIX,challenges.cloudflare.com,🔰 选择节点
+        - DOMAIN-SUFFIX,auth0.com,🔰 选择节点
+        - DOMAIN-SUFFIX,auth0.openai.com,🔰 选择节点
+        - DOMAIN-SUFFIX,platform.openai.com,🔰 选择节点
+        - DOMAIN-SUFFIX,chatgpt.com,🔰 选择节点
+        - DOMAIN-SUFFIX,hcaptcha.com,🔰 选择节点
+        - DOMAIN-SUFFIX,recaptcha.net,🔰 选择节点
+        - DOMAIN-SUFFIX,sfx.ms,🔰 选择节点
+        - DOMAIN-SUFFIX,microsoft.com,🔰 选择节点
+        - DOMAIN-SUFFIX,oaistatic.com,🔰 选择节点
+        - DOMAIN-SUFFIX,oaiusercontent.com,🔰 选择节点
+        - DOMAIN-SUFFIX,ai.com,🔰 选择节点
+        - DOMAIN-SUFFIX,invoice.stripe.com,🔰 选择节点
+        - DOMAIN-SUFFIX,stripe.com,🔰 选择节点
+        - DOMAIN,bard.google.com,🔰 选择节点
+        - DOMAIN-SUFFIX,bing.com,🔰 选择节点
+        - DOMAIN-SUFFIX,sentry.io,🔰 选择节点
+        - DOMAIN-SUFFIX,identrust.com,🔰 选择节点
+        - DOMAIN,openaiapi-site.azureedge.net,🔰 选择节点
+        - DOMAIN-SUFFIX,poe.com,🔰 选择节点
+        - DOMAIN,servd-anthropic-website.b-cdn.net,🔰 选择节点
+        - DOMAIN-SUFFIX,anthropic.com,🔰 选择节点
+        - DOMAIN-SUFFIX,claude.ai,🔰 选择节点
+
+
+```
+
+
