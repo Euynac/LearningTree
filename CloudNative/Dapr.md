@@ -174,6 +174,12 @@ Actors uses System.Text.Json (JSON) for state storage (the serializer and option
 虽然作用于全局，但处于K8S不同命名空间下也不能访问到ActorHost。
 [Unhandled exception. Dapr.DaprApiException: error invoke actor method: failed to invoke target 10.39.1.36:50002 after 3 retries · Issue #5090 · dapr/dapr (github.com)](https://github.com/dapr/dapr/issues/5090)
 
+#### Namespaced Actor
+> 现在1.14支持跨命名空间的Actor了
+
+Each namespaced actor deployment **must** use its own separate state store.
+
+
 
 ## Binding
 
