@@ -129,6 +129,17 @@ Node中有多个Pod，多个Service，可以用一个Ingress用于外部路由Se
 
 对于Pod的外部配置，可以使用ConfigMap或Secrets。
 
+### 容器权限
+特权模式还有一个用户和用户组的配置。效果不一。
+
+曾遇到`opentelemetry collector`无法收集pod的log问题，虽然启用了特权模式但仍无效，但以特定uid及gid启动则可以：
+```yaml
+ securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+```
+[find files with '/var/log/pods/*/*/*.log' pattern: open .: permission denied · Issue #33083 · open-telemetry/opentelemetry-collector-contrib (github.com)](https://github.com/open-telemetry/opentelemetry-collector-contrib/issues/33083)
+
 ### 挂载模式
 
 #### 访问模式
