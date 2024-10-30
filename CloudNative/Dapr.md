@@ -237,7 +237,7 @@ Self-host 模式，不依赖docker环境，需要使用`dapr init --slim`。离�
 
 ## TroubleShotting
 
-> Visual Studio 由于预热机制，**边车仅启动一次，除非自行重启，边车是不会重读配置的**。比如监听领域事件。
+> Visual Studio 由于预热机制，Docker模式下**边车仅启动一次，除非自行重启，边车是不会重读配置的**。比如监听领域事件。
 
 #### Requesting HTTP version 2.0 with version policy RequestVersionOrHigher while unable to establish HTTP/2 connection
 可能是使用了 `http_proxy`和 `https_proxy` 的原因
