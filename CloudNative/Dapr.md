@@ -203,7 +203,9 @@ Each namespaced actor deployment **must** use its own separate state store.
 
 内部服务接收来自外部的事件，可以看作是一个`trigger`
 
-
+#### input binding会批量通知所有dapr边车
+dapr有一个设计，`component`可以有`scopes`，限定binding component到特定微服务。
+[How-To: Scope components to one or more applications | Dapr Docs](https://docs.dapr.io/operations/components/component-scopes/)
 
 ## 服务发现&服务间调用
 
