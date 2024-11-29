@@ -88,3 +88,9 @@ Task.Factory.StartNew(()=>{
 测试发现，仅需等待部分时间，甚至可`Thread.Sleep(0)`，问题消失。
 
 或建议采用异步Task，应也可解决相关问题。
+
+
+
+## Configuration 对于ICollection的行为是添加
+添加的行为对于`Option`类带默认值的，以及有多个来源的都是一样。
+源码在`Microsoft.Extensions.Confgiuration.ConfigurationBinder #line 530` 中
