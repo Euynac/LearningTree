@@ -294,6 +294,9 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 #### initial http2 frame frame server is not a settings frame: \*http2.GoAwayFrame
 使用容器起来进行远程调用时，dapr直接返回该错误。原因是因为容器`override`配置中dapr配置了`app-protocol=grpc`，而实际上程序未启用grpc方式返回数据。
 
+#### 调试时事件发布有时候丢失
+看是否一个消费者组有多个消费者，默认行为同实例的会竞争事件。
+
 
 
 # Debug
