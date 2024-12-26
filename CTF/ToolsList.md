@@ -275,6 +275,8 @@ https://github.com/gubeihc/blasting 前端密码爆破
 | ScreenToGif      | Gif录屏工具                            |                                                                       |
 | Textify          | 无限制复制工具，替代OCR                      | [m417z/Textify](https://github.com/m417z/Textify)                     |
 | PixPin           | 截图贴图长截图工具                          |                                                                       |
+| WizTree          | 开源免费TreeSizePro替代品                 |                                                                       |
+|                  |                                    |                                                                       |
 
 ## Audio
 | 软件名                       | 场景                  | 备注  |
