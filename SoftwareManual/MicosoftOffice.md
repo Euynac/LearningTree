@@ -16,6 +16,10 @@
 
 Shift+F5就能回到上一次编辑位置
 
+### 打勾打叉
+
+打勾：输入2611后，选中按ALT+X。打叉输入2612
+
 ## 添加题注
 
 ![Graphical user interface Description automatically generated](../attachments/f6900c3da018b866d40387f299d60a83.png)
