@@ -161,7 +161,24 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 ```
 
 # Windows
-#### 入域
+### 反复异常蓝屏
+可能是更新驱动导致系统文件损坏，可通过命令尝试修复
+
+```powershell
+sfc /scannow
+# sfc是检查所有系统文件并将组件存储（Component Store，存放在WinSxS文件夹下）里的已签名文件替换掉被破坏的系统文件。
+```
+
+或使用
+
+```powershell
+Dism /Online /Cleanup-Image /ScanHealth
+Dism /Online /Cleanup-Image /CheckHealth
+Dism /Online /Cleanup-Image /RestoreHealth
+```
+
+
+### 入域
 
 计算机名联系部门相关人员，应是一人一计算机名。
 确认入域时，会提醒输入域账号密码验证，这时候如果这个计算机名没有关联到域账号，那会显示找不到路径之类的错误提示，这时候要联系域管理员关联上，才能使用域账号密码登陆。
