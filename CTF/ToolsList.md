@@ -123,13 +123,13 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## SSH/SFTP/FTP
 
-| 软件名    | 场景    | 备注 |
-|:--------- |:------- |:---- |
-| tabby     | 终端       | [A terminal for a more modern age](https://github.com/Eugeny/tabby)     |
-| WindTerm  |         | [kingToolbox/WindTerm](https://github.com/kingToolbox/WindTerm)     |
-| MobaXterm |         |      |
-| WinSCP    | FTP工具 |      |
-|           |         |      |
+| 软件名       | 场景    | 备注                                                                  |
+| :-------- | :---- | :------------------------------------------------------------------ |
+| tabby     | 终端    | [A terminal for a more modern age](https://github.com/Eugeny/tabby) |
+| WindTerm  | 终端    | [kingToolbox/WindTerm](https://github.com/kingToolbox/WindTerm)     |
+| MobaXterm | 终端    |                                                                     |
+| WinSCP    | FTP工具 | 可用于双向同步[winscp/winscp](https://github.com/winscp/winscp)            |
+|           |       |                                                                     |
 
 
 # PWN 
