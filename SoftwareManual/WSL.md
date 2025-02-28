@@ -304,6 +304,7 @@ apt install net-tools
 apt install dirsearch # web目录扫描
 apt install hydra # web密码爆破
 apt install libgmp-dev libmpc-dev libmpfr-dev # gmpy2 dependencies
+apt install dos2unix # 常见shell脚本回车问题
 ```
 
 
