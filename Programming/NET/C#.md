@@ -1005,7 +1005,7 @@ Note that every synhronization context implementation can decide what to do with
 
 ### Thread.Sleep和Thread.SpinWait
 [C# - Thread.Sleep(1); takes more than 1 milisecond - 16ms](https://peterdaugaardrasmussen.com/2017/04/30/thread-sleep-1-is-15-6ms/)
-
+A quick look around the internet and I found several articles that states that `Thread.Sleep(1);` takes up **15.6ms**. As this is the lowest a `thread.sleep` call takes (when using defaults). This is due to Thread.Sleep being affected by windows clock interrupt rate. The default is 64 times per second and (1000/64) is **15.625ms**.
 ## 异常
 
 注意，System.Text.Json 无法Serialize异常，参见<https://github.com/dotnet/runtime/issues/43026>
