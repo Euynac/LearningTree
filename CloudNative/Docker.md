@@ -324,6 +324,17 @@ docker exec -it centos7 /bin/bash
 ```
 
 这样可以使用systemctl启动服务了。
+
+#### Docker-in-Docker问题，daemon时不时挂掉
+搭建jenkins时直接使用jenkins容器中的docker，导致进行docker build等推送时常出现`ERROR: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`的错误
+分析日志后发现可能是由于存储驱动问题，回退到`vfs`这种不稳定的驱动，会导致镜像构建和容器运行时性能低下、磁盘占用暴增，最终可能因资源不足引发连锁问题。
+```
+time="2025-04-01T09:09:02.013354925+08:00" level=error msg="failed to mount overlay: invalid argument" storage-driver=overlay2
+time="2025-04-01T09:09:02.013431016+08:00" level=error msg="exec: \"fuse-overlayfs\": executable file not found in $PATH" storage-driver=fuse-overlayfs
+time="2025-04-01T09:09:02.223953127+08:00" level=info msg="Docker daemon" storage-driver=vfs
+```
+
+
 # Visual Studio 集成
 
 visual studio 中自动Build生成的镜像无法离开VS而生效。
