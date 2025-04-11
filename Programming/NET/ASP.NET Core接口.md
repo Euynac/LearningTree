@@ -64,6 +64,10 @@ services.TryAddScoped<ICommandFlight, CommandFlightHttpApi>();
 services.AddHttpClient<CommandFlightHttpApi>(_ => client.CreateGrpcService<ICommandFlight>());
 ```
 
+#### 性能比较
+性能不会差太远
+[c# - ASP.NET Core Singleton instance vs Transient instance performance - Stack Overflow](https://stackoverflow.com/questions/54790460/asp-net-core-singleton-instance-vs-transient-instance-performance)
+
 
 # 问题
 
