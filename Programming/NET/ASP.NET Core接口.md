@@ -52,7 +52,14 @@ endpoints.MapGet("/data-channel/channels", async (HttpResponse response, HttpCon
 # 依赖注入
 
 #### 使用依赖注入的方式构造实例，且支持部分参数由用户传递（顺序不限）
-`object ActivatorUtilities.Createlnstance(IServiceProvider provider, Type instanceType, params object[] parameters)`
+
+```cs
+object ActivatorUtilities.Createlnstance(IServiceProvider provider, Type instanceType, params object[] parameters)
+```
+
+#### Scoped和Transient的须知
+`IOptionSnapshot<T>`是`Scoped`的生命周期，如果用`IApplicationBuilder`中的根容器直接`GetService()`其实只算做一次请求，下一次还是同一个实例。需要创建`Scoped`才能真正读取到不同的实例。
+
 
 #### 部分注入
 ```cs
