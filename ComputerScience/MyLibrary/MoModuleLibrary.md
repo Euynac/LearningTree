@@ -10,6 +10,8 @@
 整个Services注册仅扫描一次业务程序集
 
 ```cs
-
-
+AddService()
+{
+    Module.Register<T>(Action(option=>option));
+}
 ```
