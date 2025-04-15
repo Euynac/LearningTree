@@ -8,3 +8,10 @@
 用于Core扫描相关程序集所有类型进行自动注册、项目单元发现等，提高整个框架的性能。
 
 整个Services注册仅扫描一次业务程序集
+
+```cs
+AddService()
+{
+    Module.Register<TModule>(Action(option=>option));
+}
+```
