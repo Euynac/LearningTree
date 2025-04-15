@@ -73,7 +73,7 @@ context.SaveChanges(); //可以成功保存。
 
 ### ChangeTracker
 
-ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时才会刷新状态是Modified，如果发现值没有变化，将还是UnChanged，所以在数据同步场景中进行Delete操作，并不会触发更新。
+ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.DetectChanges）时才会刷新状态是Modified，如果发现值（与Originally值进行对比，仅开启跟踪才会有值）没有变化，将还是UnChanged，所以在数据同步场景中进行Delete操作，并不会触发更新。
 
 在实现CDC时发现删除操作未能成功执行，ChangeTracker发现最后因为软删除置为Unchanged后SaveChanges时会调用一次ChangeTracker.Entries()计算值是否变化， 计算结果为Unchanged。
 
@@ -102,7 +102,6 @@ ChangeTracker是在调用ChangeTracker.Entries()（内部调用了ChangeTracker.
          return;
      }
 
-     //entry.Reload();
      entry.State = EntityState.Unchanged;
      entity.IsDeleted = true;
 
