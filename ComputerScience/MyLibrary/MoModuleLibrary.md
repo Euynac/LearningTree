@@ -11,8 +11,19 @@ services.AddMoModuleAuthorization(Action<ModuleOptionAuthorization> option)
 ```
 
 其中注册方法返回值为ModuleGuide，用于指引用户进一步配置模块相关功能
-```
-
+```cs
+public class ModuleGuideAuthorization
+{
+    public void AddPermissionBit<TEnum>(string claimTypeDefinition) where TEnum : struct, Enum
+    {
+        MoModule.ConfigureExtraServices<ModuleAuthorization>(services =>
+        {
+            var checker = new PermissionBitChecker<TEnum>(claimTypeDefinition);
+            PermissionBitCheckerManager.AddChecker(checker);
+            services.AddSingleton<IPermissionBitChecker<TEnum>, PermissionBitChecker<TEnum>>(_ => checker);
+        });
+    }
+}
 ```
 
 
