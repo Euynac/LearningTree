@@ -18,6 +18,7 @@ MoModule作为库的核心注册机制
 1. `ModuleOption{ModuleName}`: 模块Option的设置
 2. `ModuleGuide{ModuleName}`: 模块进一步配置的向导类
 3. `Module{ModuleName}`: 含有依赖注入的方式以及配置ASP.NET Core中间件等具体实现
+4. `ModuleBuilderExtensions{ModuleName}`: 面向用户的扩展方法
 
 ## 使用方式
 开发者使用原生的方式注册Module，每个Module的方式都类似如下示例：
