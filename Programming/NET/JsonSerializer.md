@@ -1,6 +1,11 @@
 # System.Text.Json
 
 
+## JsonConverter
+
+不管是`JsonConverterFactory`还是`JsonConverter`，引擎按顺序遍历，每个类型只会选取第一次`CanConvert`返回`true`的`Converter`进行转换，所以注意顺序。
+
+
 ## TroubleShooting
 
 ### 未成功序列化
