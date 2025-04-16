@@ -1,21 +1,26 @@
-# 概念
+# 概述
 
-模块化的基础设施库，以`ASP.NET Core`为基础，尽量解耦基础设施间的依赖，无需引入繁重的框架
+模块化的基础设施库，以`ASP.NET Core`为基础，大程度上解耦基础设施、库间的依赖，可单独使用某个模块而无需引入整个繁重的框架。
 
+## 特性
+
+1. 统一的、直觉性的基础设施库的注册、配置方式，上手简易。
+2. 自动进行中间件注册，只需要进行依赖注入配置即可。
+3. 提供高性能的服务注册方式，对于反射的自动注册操作，在所有的MoModule注册过程中，仅遍历一次。
+
+
+## 组成部分
 MoModule作为库的核心注册机制
 每个Library有自己的MoModule，该Module中，并
 1. `ModuleOption{ModuleName}`: 模块Option的设置
 2. `ModuleGuide{ModuleName}`: 模块进一步配置的向导类
 3. `Module{ModuleName}`: 含有依赖注入的方式以及配置ASP.NET Core中间件等具体实现
 
-使用原生的方式注册Module，每个Module的方式都一样：
+## 使用方式
+开发者使用原生的方式注册Module，每个Module的方式都类似如下示例：
 ```cs
-services.AddMoModuleAuthorization(Action<ModuleOptionAuthorization> option)
+services.AddMoModuleAuthorization(Action<ModuleOptionAuthorization> option = null)
 ```
-
-> 其中Action的Option设置如果不是模块第一次注册，仍会覆盖上一次的配置设置（即类似于PostConfig多次设置第一次的设置）（为了提高开发者设置的优先级）
-> 因此模块内部进行级联注册时可采用`TryAddMoModule<TModuleOption>(EMoModule module, Action<Option> preConfig = null, Action<Option> postConfig = null)`
-
 
 
 其中注册方法返回值为ModuleGuide，用于指引用户进一步配置模块相关功能
@@ -33,6 +38,22 @@ public class ModuleGuideAuthorization
     }
 }
 ```
+
+
+### 模块配置
+
+为了提高开发者设置的优先级，在开发者AddMoModule的过程中，配置Option的Action设置如果不是模块第一次注册，仍会覆盖上一次的配置设置。这是因为模块的级联注册可能在开发者使用模块之前，已经进行了模块的配置。
+
+
+### 模块级联注册
+
+
+
+因此模块内部进行级联注册时可采用如下方式：
+```cs
+TryAddMoModule<TModuleOption>(EMoModule module, Action<Option> preConfig = null, Action<Option> postConfig = null)
+```
+
 
 
 
