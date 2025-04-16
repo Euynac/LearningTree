@@ -55,7 +55,7 @@ services.ConfigMoModulePre<TModuleOption>(Action<TModuleOption> config);
 
 模块内部进行级联注册时可采用如下方式：
 ```cs
-TryAddMoModule<TModuleOption>(Action<TModuleOption> preConfig = null, Action<TModuleOption> postConfig = null);
+DependsOnMoModule<TModuleOption>(Action<TModuleOption> preConfig = null, Action<TModuleOption> postConfig = null);
 ```
 
 
