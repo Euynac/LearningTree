@@ -196,29 +196,35 @@ ORM（Object Relational Mapping）框架
 
 ## 依赖注入
 
+
 #### DbContext依赖注入
 
-[https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew\#dbcontext-factory-improvements](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew#dbcontext-factory-improvements)
+[dbcontext-factory-improvements](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew#dbcontext-factory-improvements)
 
-IDbContextFactory\<SomeDbContext\> contextFactory
+`IDbContextFactory<SomeDbContext>` contextFactory
 
-这种注入的适合Actor等，需要用 using var context1 = \_contextFactory.CreateDbContext();
+这种注入的适合Actor等，需要用 
+```cs
+using var context1 = _contextFactory.CreateDbContext();
+```
 
 注册需要这样：
 
+```cs
 builder.Services
-
-.AddDbContextFactory\<FlightContext\>(options =\> options.UseMySql(connectionString, version))
-
-.BuildServiceProvider();
+    .AddDbContextFactory<FlightContext>(options => options.UseMySql(connectionString, version))
+    .BuildServiceProvider();
+```
 
 简单的可以直接用
 
-builder.Services.AddDbContext\<FlightContext\>(
+```cs
+builder.Services.AddDbContext<FlightContext>(
+    options => options.UseMySql(connectionString, version));
+```
 
-options =\> options.UseMySql(connectionString, version));
+这种在constructor内就直接用`FlightContext`即可（适用于`Controller`）
 
-这种在constructor内就直接用FlightContext即可（适用于Controller）
 
 ## 配置
 
