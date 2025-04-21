@@ -47,12 +47,18 @@ public class ModuleGuideAuthorization
 
 
 ### 模块配置
-	
-为了提高开发者设置的优先级，在开发者AddMoModule的过程中，配置Option的Action设置如果不是模块第一次注册，仍会覆盖上一次的配置设置。这是因为模块的级联注册可能在开发者使用模块之前，已经进行了模块的配置。
-如若有其他配置需求，供开发者提供如下扩展方法：
+为了提高开发者设置的优先级，在开发者`AddMoModule`的过程中，配置`Option`的`Action`设置如果不是模块第一次注册，仍会覆盖上一次的配置设置。这是因为模块的级联注册可能在开发者使用模块之前，已经进行了模块的配置。
+如若有其他配置顺序需求，供开发者提供如下扩展方法：
 ```cs
-services.ConfigMoModulePost<TModuleOption>(Action<TModuleOption> config);
-services.ConfigMoModulePre<TModuleOption>(Action<TModuleOption> config);
+    public TModuleGuideSelf ConfigureOption<TOption>(Action<TOption> extraOptionAction, EMoModuleOrder order = EMoModuleOrder.Normal) where TOption : IMoModuleOption<TModule>
+```
+
+> 来自模块级联注册的Option的优先级始终比用户Order低1，这是通过级联注册`GuideFrom`判断实现的
+
+#### 模块额外配置
+`Guide`类中提供`ConfigureExtraOption`用以配置额外模块配置类
+```cs
+public TModuleGuideSelf ConfigureExtraOption<TOption>(Action<TOption> extraOptionAction, EMoModuleOrder order = EMoModuleOrder.Normal) where TOption : IMoModuleExtraOption<TModule>
 ```
 
 
@@ -88,3 +94,26 @@ public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this ISer
         .AddDefaultPermissionBit<TEnum>(claimTypeDefinition);
 }
 ```
+
+## MoModuleRegisterCentre
+模块注册中心，用以控制整个模块注册生命周期。
+
+### 注册流程
+
+遍历模块
+
+#### ConfigureBuilder
+
+#### ConfigureServices
+
+#### PostConfigureServices
+在执行遍历业务程序集类`IWantIterateBusinessTypes`后配置服务依赖注入
+
+#### ConfigureApplicationBuilder
+配置应用程序管道
+
+
+
+### 模块配置
+
+模块配置包含模块本身配置`ModuleOption`及额外配置`ModuleExtraOption`，
