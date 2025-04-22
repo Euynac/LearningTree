@@ -100,7 +100,9 @@ public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this ISer
 
 ### 注册流程
 
-遍历模块
+遍历模块注册请求上下文字典`ModuleRegisterContextDict`，对于每个Key，代表存在一个`Module`类型的请求。
+
+
 
 #### ConfigureBuilder
 
