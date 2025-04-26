@@ -366,9 +366,15 @@ ENTRYPOINT ["dotnet", "QuestionnaireReport.dll"]
 
 #### Failed to start Docker Application Container Engine.
 
+查看日志
 ```bash
 sudo journalctl -u docker.service
 ```
+发现是配置问题：
+```log
+
+```
+
 
 
 #### The "Configuration" parameter is not supported by the "WaitForWarmupCompletion" task loaded from assembly: Microsoft.VisualStudio.Containers.Tools.Tasks,
