@@ -364,6 +364,9 @@ ENTRYPOINT ["dotnet", "QuestionnaireReport.dll"]
 
 ## 错误排查
 
+## Failed to start Docker Application Container Engine.
+
+
 #### The "Configuration" parameter is not supported by the "WaitForWarmupCompletion" task loaded from assembly: Microsoft.VisualStudio.Containers.Tools.Tasks,
 似乎是bug，如果多个项目引用了不同的 `Container.Tools.Targets` 包，就有可能导致该问题。
 `Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from the path: xxxxxxxxxxxxx\microsoft.visualstudio.azure.containers.tools.targets\1.19.4\tools\Microsoft.VisualStudio.Containers.Tools.Tasks.dll. Verify that the parameter exists on the task, the <UsingTask> points to the correct assembly, and it is a settable public instance property.`
