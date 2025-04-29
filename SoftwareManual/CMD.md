@@ -177,6 +177,18 @@ Dism /Online /Cleanup-Image /CheckHealth
 Dism /Online /Cleanup-Image /RestoreHealth
 ```
 
+## 解除文件关联
+
+```sh
+assoc.mp4 # 获取mp4关联的文件类型
+# .mp4=WMP11.AssocFile.MP4
+ftype | findstr "MP4" # 查找文件类型关联的打开程序
+# PotPlayerMini64.MP4="D:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe" "%1"
+# 通过下面两条置空
+assoc.mp4=
+ftype PotPlayerMini64.MP4=
+```
+
 
 ### 入域
 
@@ -201,7 +213,7 @@ Windows 键 + 左 / 右方向键
 如果你的双屏是水平排列的，使用Windows + 左方向键可以将窗口移动到左边的屏幕（如果窗口在右边屏幕），Windows + 右方向键可以将窗口移动到右边的屏幕（如果窗口在左边屏幕）。不过这种方法在另一个屏幕无法正常显示的情况下可能无法准确操作，因为系统可能会根据屏幕状态做出不同反应。但在一些情况下，它可以帮助你快速切换窗口所在的屏幕位置，你可以多尝试几次看看是否能将窗口移动到可见的屏幕区域。
 
 
-#### 应用自启动最小化
+### 应用自启动最小化
 
 `start /min D:\Euynac\Dictionary\GoldenDict\GoldenDict.exe`
 
@@ -209,8 +221,11 @@ Windows 键 + 左 / 右方向键
 
 cmd运行`shell:startup`打开自定义自启动列表放入该bat文件
 
-#### win11启动组策略gpedit.msc
+`start "" /B /D "D:\Desktop\bongo_cat_mver_0.1.6_64" "Bongo Cat Mver.exe"`
 
+`start`的参数可以看帮助文件学习, 主要的坑就是第一个参数. 空引号是用来指定新窗口的标题。在 `start` 命令里，第一个引号内的内容会被当作新窗口的标题。若省略这部分，后续带引号的程序路径会被错误识别为窗口标题。所以使用空引号能避免这种情况，让命令正确识别后续的程序路径。
+
+#### win11启动组策略gpedit.msc
 
 ```powershell
 @echo off

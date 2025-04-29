@@ -364,6 +364,23 @@ ENTRYPOINT ["dotnet", "QuestionnaireReport.dll"]
 
 ## 错误排查
 
+#### Failed to start Docker Application Container Engine.
+
+查看日志
+```bash
+sudo journalctl -u docker.service
+```
+发现是配置问题：
+```log
+Apr 26 14:29:15 lavm-xi6x7kk6zz systemd[1]: docker.service: Consumed 27min 196ms CPU time. -- Boot 5cd1554dd89e43c582bcbfe75e1facfa -- Apr 26 14:30:14 lavm-xi6x7kk6zz systemd[1]: Starting Docker Application Container Engine... Apr 26 14:30:14 lavm-xi6x7kk6zz dockerd[820]: unable to configure the Docker daemon with file /etc>
+```
+
+少了逗号
+```json
+cat /etc/docker/daemon.json
+```
+
+
 #### The "Configuration" parameter is not supported by the "WaitForWarmupCompletion" task loaded from assembly: Microsoft.VisualStudio.Containers.Tools.Tasks,
 似乎是bug，如果多个项目引用了不同的 `Container.Tools.Targets` 包，就有可能导致该问题。
 `Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from the path: xxxxxxxxxxxxx\microsoft.visualstudio.azure.containers.tools.targets\1.19.4\tools\Microsoft.VisualStudio.Containers.Tools.Tasks.dll. Verify that the parameter exists on the task, the <UsingTask> points to the correct assembly, and it is a settable public instance property.`

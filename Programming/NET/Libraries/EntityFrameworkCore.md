@@ -44,7 +44,7 @@ ConcurrencyStamp原理是生成SQL语句时带上`ConcurrencyStamp=@old`，然�
 #### SQLlite相关问题
 
 遇到一个更新用户数据失败问题，随便修改某个字段都会报错。而从EFCore的SQL语句也没法看出问题：
-![](../../attachments/d5c19e6587b245290ad303ae6af8e09.png)
+![](../../../attachments/d5c19e6587b245290ad303ae6af8e09.png)
 
 SQLite对于GUID字段的存储是TEXT，是大小写敏感的，但是C# GUID对象是大小写不敏感的，日志默认ToString是小写的。又因为EFCore对于的GUID类型生成的SQL是使用大写生成的，所以匹配不上导致更新失败。
 
@@ -129,6 +129,18 @@ context.SaveChanges(); //可以成功保存。
   builder.HasOne(p=>p.Role).WithMany().HasForeignKey(p => p.GroupId);
 ```
 
+### 更新导航属性
+
+[Changing Foreign Keys and Navigations - EF Core | Microsoft Learn](https://learn.microsoft.com/en-us/ef/core/change-tracking/relationship-changes)
+
+因为EFCore提供两种方式更新，一种是用导航属性，如`Reference navigation`及`Collection navigation`，即一个是对一的，一个是对多的实体。另外一种方式是操作外键，这种需要显式定义外键并配置才能操作。
+
+只用一种方式更新关系：
+
+> Do not write code to manipulate all navigations and FK values each time a relationship changes. Such code is more complicated and must ensure consistent changes to foreign keys and navigations in every case. If possible, just manipulate a single navigation, or maybe both navigations. If needed, just manipulate FK values. Avoid manipulating both navigations and FK values.
+
+
+
 ## 继承关系
 在EF Core中，当实体类之间存在继承关系并使用TPH（Table-Per-Hierarchy）映射策略时，会自动生成Discriminator列。该列用于区分同一表中不同类型的实体，该列的值表示每一行对应的具体实体类型（如基类名或子类名）。
 继承关系有多种映射策略，如`Table-Per-Hierarchy`，`Table-Per-Type`等。
@@ -196,29 +208,35 @@ ORM（Object Relational Mapping）框架
 
 ## 依赖注入
 
+
 #### DbContext依赖注入
 
-[https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew\#dbcontext-factory-improvements](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew#dbcontext-factory-improvements)
+[dbcontext-factory-improvements](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew#dbcontext-factory-improvements)
 
-IDbContextFactory\<SomeDbContext\> contextFactory
+`IDbContextFactory<SomeDbContext>` contextFactory
 
-这种注入的适合Actor等，需要用 using var context1 = \_contextFactory.CreateDbContext();
+这种注入的适合Actor等，需要用 
+```cs
+using var context1 = _contextFactory.CreateDbContext();
+```
 
 注册需要这样：
 
+```cs
 builder.Services
-
-.AddDbContextFactory\<FlightContext\>(options =\> options.UseMySql(connectionString, version))
-
-.BuildServiceProvider();
+    .AddDbContextFactory<FlightContext>(options => options.UseMySql(connectionString, version))
+    .BuildServiceProvider();
+```
 
 简单的可以直接用
 
-builder.Services.AddDbContext\<FlightContext\>(
+```cs
+builder.Services.AddDbContext<FlightContext>(
+    options => options.UseMySql(connectionString, version));
+```
 
-options =\> options.UseMySql(connectionString, version));
+这种在constructor内就直接用`FlightContext`即可（适用于`Controller`）
 
-这种在constructor内就直接用FlightContext即可（适用于Controller）
 
 ## 配置
 
@@ -240,13 +258,13 @@ By convention, all public properties with a getter and a setter will be included
 
 可在派生上下文中覆写 OnModelCreating 方法，并使用 ModelBuilder API 来配置模型。 此配置方法最为有效，并可在不修改实体类的情况下指定配置。 Fluent API 配置具有最高优先级，并将替代约定和数据注释。
 
-![](../../attachments/10ba1df7b1aa6044b4f0cd0c53941792.png)
+![](../../../attachments/10ba1df7b1aa6044b4f0cd0c53941792.png)
 
 #### 数据注释（特性）
 
 也可将特性（称为数据注释）应用于类和属性。 数据注释会替代约定，但会被 Fluent API 配置替代。
 
-![](../../attachments/1626f51f453de92cbe2e3099808270c1.png)
+![](../../../attachments/1626f51f453de92cbe2e3099808270c1.png)
 
 以上两图两者等价，择一配置。
 
@@ -284,9 +302,9 @@ Post.Blog is the inverse navigation property （反向导航属性）of Blog.Pos
 
 显式指明导航属性，有冲突的情况：
 
-![](../../attachments/e771f44954f4ec97925196d0480dd9f7.png)
+![](../../../attachments/e771f44954f4ec97925196d0480dd9f7.png)
 
-![](../../attachments/2fa253323ef8af111b635da5434a0508.png)
+![](../../../attachments/2fa253323ef8af111b635da5434a0508.png)
 
 ### EFCore跟踪修改
 
