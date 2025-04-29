@@ -2,15 +2,15 @@
 
 ## MVC架构
 
-##### URL结构
+### URL结构
 
 一般：`http://host:port/controller(控制器)/action(方法)`
 
-##### Model传值方式
+### Model传值方式
 
 `ViewData`、`ViewBag`、`TempData`、`Model`传值，后台传数据到前台，前台绑定数据
 
-##### Session 会话 与 Cookies储存在用户本地终端上的数据
+### Session 会话 与 Cookies储存在用户本地终端上的数据
 
 `Session`是在服务端保存的一个数据结构，用来跟踪用户的状态，这个数据可以保存在集群、数据库、文件中；
 
@@ -27,7 +27,7 @@
 
 `ASP.NET Core`核心理念之一：pay-for-what-you-use 按需加载，要啥配置啥，不是原来`ASP.NET`的全家桶了。所以简约、高效。
 
-##### Token机制
+### Token机制
 
 使用`Identity Server4`
 
@@ -51,7 +51,7 @@
 
 ![](../../../attachments/4ae1eddf2b05c8f8304e1d76dbf9699d.png)
 
-#### Startup类
+### Startup类
 
 是`Kestrel`服务器和`MVC`的关联配置。
 
@@ -246,13 +246,13 @@ using(var scope = container.BeginLifetimeScope())
 
 `Filter`类的写法和控制器的依赖注入一样
 
-①全局注册：这种方式会自动注入，
+1. 全局注册：这种方式会自动注入，
 
-②`ServiceFilter`（一般的）：`action`、`controller`注册的特性使用`[ServiceFilter(typeof(Filter))]`而不是`[Filter]`。然后在`Startup`里的`ConfigureService`里注册那个类（只有一个参数，不是接口对应实例类两个参数，是让它注意一下自己自动依赖注入实例化一下）。
+2. `ServiceFilter`（一般的）：`action`、`controller`注册的特性使用`[ServiceFilter(typeof(Filter))]`而不是`[Filter]`。然后在`Startup`里的`ConfigureService`里注册那个类（只有一个参数，不是接口对应实例类两个参数，是让它注意一下自己自动依赖注入实例化一下）。
 
-③`TypeFilter`（方便的） 与`ServiceFilter`类似，不同的是不需要再去`ConfigureService`里面注册
+3. `TypeFilter`（方便的） 与`ServiceFilter`类似，不同的是不需要再去`ConfigureService`里面注册
 
-④`IFilterFactory`（个性化扩展） 这一种其实就是自己实现一遍`ServiceFilter`，也是要去`ConfigureService`注册。举例`CustomFilterFactoryAttribute`
+4. `IFilterFactory`（个性化扩展） 这一种其实就是自己实现一遍`ServiceFilter`，也是要去`ConfigureService`注册。举例`CustomFilterFactoryAttribute`
 
 2、3、4的依赖注入都是基于`FilterFactory`，所以若是自行实现的其他`Filter`的`Attribute`需要实现`IFilterMetadata`接口，不然无法依赖注入
 
@@ -278,15 +278,15 @@ using(var scope = container.BeginLifetimeScope())
 
 非强制但有优点：
 
-①要求使用`Attribute`属性路由，即不能在`Startup`里面配置路由信息而是在`Controller`类中`Action`单独配置。
+1. 要求使用`Attribute`属性路由，即不能在`Startup`里面配置路由信息而是在`Controller`类中`Action`单独配置。
 
-②验证`Model`含有错误信息时自动`HTTP 400`响应
+2. 验证`Model`含有错误信息时自动`HTTP 400`响应
 
-③推断参数绑定源
+3. 推断参数绑定源
 
-④`Multipart/form-data`请求推断
+4. `Multipart/form-data`请求推断
 
-⑤错误状态代码的问题详细信息
+5. 错误状态代码的问题详细信息
 
 数据获取是先写`IService`接口来抽象`Model`的获取然后用一个类继承接口来进行`Model`的获取处理，最后在`Controller`里面依赖注入，使用服务来获取资源，这样才能满足`IOC`。
 
@@ -371,11 +371,11 @@ using(var scope = container.BeginLifetimeScope())
 
 **其他配置**
 
-①可见性（`ShouldMapProperty`）
+1. 可见性（`ShouldMapProperty`）
 
 默认情况下，`AutoMapper`仅映射`public`成员，但其实它是可以映射到`private`属性的。需要注意的是，这里属性必须添加`private set`，省略`set`是不行的。
 
-②全局属性/字段过滤（`ShouldMapField`）
+2. 全局属性/字段过滤（`ShouldMapField`）
 
 默认情况下，`AutoMapper`尝试映射每个公共属性/字段。
 
@@ -394,8 +394,8 @@ using(var scope = container.BeginLifetimeScope())
 ```csharp
 services.AddSwaggerGen(c =>
 {
-c.SwaggerDoc("v1", new OpenApiInfo {Title = "Koubot API", Version = "1.0"}); //OpenApiInfo会对API文档增加说明信息
-c.IncludeXmlComments(System.IO.Path.Combine(AppContext.BaseDirectory, "Koubot.Server.xml"));
+    c.SwaggerDoc("v1", new OpenApiInfo {Title = "Koubot API", Version = "1.0"}); //OpenApiInfo会对API文档增加说明信息
+    c.IncludeXmlComments(System.IO.Path.Combine(AppContext.BaseDirectory, "Koubot.Server.xml"));
 });
 ```
 
@@ -406,8 +406,8 @@ app.UseSwagger(); //启用中间件服务生成Swagger作为JSON终结点
 //启用中间件服务对swagger-ui，指定Swagger JSON终结点
 app.UseSwaggerUI(c =>
 {
-c.SwaggerEndpoint("/swagger/v1/swagger.json", "Koubot API v1.0");
-c.RoutePrefix = string.Empty;//默认访问swagger UI是/swagger，设置为空可以直接通过url访问
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Koubot API v1.0");
+    c.RoutePrefix = string.Empty;//默认访问swagger UI是/swagger，设置为空可以直接通过url访问
 });
 ```
 
@@ -496,9 +496,9 @@ Windows安全中心：高级设置（高级安全Windows Defender防火墙）
 
 ### 本地开发
 
-①`dotnet dev-certs https --trust` 使用该命令信任`dotnet`的SSL开发证书。（一般安装的时候似乎已经信任了？）
+1. `dotnet dev-certs https --trust` 使用该命令信任`dotnet`的SSL开发证书。（一般安装的时候似乎已经信任了？）
 
-②在`launchSettings.json`修改启动链接由`http`改到`https`。
+2. 在`launchSettings.json`修改启动链接由`http`改到`https`。
 
 如果使用`IIS Express`启动（是VS集成的`ASP.NET Core`默认的Debug与测试的IIS的轻量版本），要非常注意的是，如果不是使用Admin权限启动（*其实试了以管理员启动VS也不行*）`IIS Express`进行Debug，则会存在
 
@@ -512,7 +512,7 @@ Windows安全中心：高级设置（高级安全Windows Defender防火墙）
 
 所以只需要将`VUE`等生成的`dist`文件夹中的内容，拷贝到`wwwroot`下即可。
 
-# SignalR
+## SignalR
 
 多种实现双向通信协议的封装与抽象（`WebSocket`、`Server-Sent Events`、`Long Polling`，根据实际`Client`兼容情况向后`Fallback`。后续会根据技术迭代增加`gRPC`等），实时推送解决方案。
 
@@ -548,11 +548,11 @@ The return value of a client method must be void or of type Task.
 
 <https://github.com/dotnet/aspnetcore/issues/32534>
 
-## Handle events for a connection
+### Handle events for a connection
 
 The `SignalR Hubs API` provides the `OnConnectedAsync` and `OnDisconnectedAsync` virtual methods to manage and track connections. Override the `OnConnectedAsync` virtual method to perform actions when a client connects to the hub, such as adding it to a group
 
-## Send messages from outside a hub
+### Send messages from outside a hub
 
 通过`Controller`获取`Hub`进行调用。
 
@@ -564,7 +564,7 @@ private readonly IHubContext<NotificationHub> _hubContext;
 private readonly IHubContext<ChatHub, IChatClient> _strongChatHubContext;
 ```
 
-## 不同的Hub不同的连接？
+### 不同的Hub不同的连接？
 
 [https://docs.microsoft.com/en-us/aspnet/signalr/overview/guide-to-the-api/hubs-api-guide-server\#multiple-hubs](https://docs.microsoft.com/en-us/aspnet/signalr/overview/guide-to-the-api/hubs-api-guide-server#multiple-hubs)
 
@@ -572,7 +572,7 @@ private readonly IHubContext<ChatHub, IChatClient> _strongChatHubContext;
 
 [https://docs.microsoft.com/en-us/aspnet/signalr/overview/guide-to-the-api/hubs-api-guide-net-client\#how-to-create-the-hub-proxy](https://docs.microsoft.com/en-us/aspnet/signalr/overview/guide-to-the-api/hubs-api-guide-net-client#how-to-create-the-hub-proxy)
 
-# gRPC
+## gRPC
 
 `gRPC` 最初由谷歌开发，是一个基于 `HTTP/2` 实现的高性能远程过程调用框架。但由于浏览器没有直接暴露 `HTTP/2`，所以 Web 应用程序不能直接使用 `gRPC`。
 
@@ -588,19 +588,19 @@ private readonly IHubContext<ChatHub, IChatClient> _strongChatHubContext;
 
 不过`gRPC`都是只支持一个请求参数（即接口的请求类只能有一个）
 
-Unary
+### Unary
 
 单项请求响应类，类似普通`RESTful API`。
 
-Server streaming
+### Server streaming
 
 客户端发送消息请求后，服务端流式发送，即可以一直保持连接，服务端随意间隔发送消息。客户端可发送取消连接的`CancellationToken`，但无法发送信息给服务端。服务端完成消息发送后结束。
 
-Client streaming
+### Client streaming
 
 客户端请求建立连接后，客户端不断流式发送消息给服务端，服务端异步监听获取，直到服务端返回响应后结束。
 
-Bi-directional streaming
+### Bi-directional streaming
 
 双向流即建立连接后，双方都可以流式的异步发送消息。
 
@@ -612,11 +612,11 @@ Bi-directional streaming
 
 后端服务间调用建议采用`gRPC`
 
-## 概念
+### 概念
 
 <https://docs.microsoft.com/en-us/aspnet/core/grpc/client?view=aspnetcore-6.0>
 
-## 最佳实践
+### 最佳实践
 
 1. Creating a channel can be an expensive operation. Reusing a channel for `gRPC` calls provides performance benefits.
 2. `gRPC` clients are created with channels. `gRPC` clients are lightweight objects and don't need to be cached or reused.
@@ -624,7 +624,7 @@ Bi-directional streaming
 4. A channel and clients created from the channel can safely be used by multiple threads.
 5. Clients created from the channel can make multiple simultaneous calls.
 
-## Protobuf-net
+### Protobuf-net
 
 <https://github.com/protobuf-net/protobuf-net>
 
@@ -638,13 +638,13 @@ Bi-directional streaming
 
 <https://protobuf-net.github.io/protobuf-net.Grpc/gettingstarted>
 
-### 效率测试
+#### 效率测试
 
 <https://github.com/protobuf-net/protobuf-net.Grpc/issues/151>
 
-# Unit Test
+## Unit Test
 
-## Moq
+### Moq
 
 In simple English, `Moq` is a library which when you include in your project give you power to do Unit Testing in easy manner. Why? Because one function may call another, then another and so on. But in real what is needed, just the return value from first call to proceed to next line. `Moq` helps to ignore actual call of that method and instead you return what that function was returning. and verify after all lines of code has executed, what you desired is what you get or not. Too Much English, so here is an example:
 
