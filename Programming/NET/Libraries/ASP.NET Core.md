@@ -4,7 +4,7 @@
 
 ##### URL结构
 
-一般：http://host:port/controller(控制器)/action(方法)
+一般：`http://host:port/controller(控制器)/action(方法)`
 
 ##### Model传值方式
 
@@ -165,11 +165,9 @@ IConfigurationRoot config = new ConfigurationBuilder()
 
 好处：
 
-①去掉对于细节的依赖，方便拓展，减小影响范围，只需要改`startup`文件换一个接口实现实例，甚至可以转移到对配置文件的依赖，只需要修改配置文件。（解耦）
-
-②假如没有`IoC`，一种服务如果依赖于其他的服务，比如服务D构造需要服务C，服务C构造需要服务B，服务B构造需要服务A，而且要知道全部实例细节。工程量巨大。但是`IoC`能够屏蔽细节，对象依赖注入（`DI`），要服务D就直接拿服务D，不必关心如何构造。 （屏蔽对象的实现细节）
-
-③生命周期管理、`AOP`面向切面编程（Aspect Oriented Programming）
+1. 去掉对于细节的依赖，方便拓展，减小影响范围，只需要改`startup`文件换一个接口实现实例，甚至可以转移到对配置文件的依赖，只需要修改配置文件。（解耦）
+2. 假如没有`IoC`，一种服务如果依赖于其他的服务，比如服务D构造需要服务C，服务C构造需要服务B，服务B构造需要服务A，而且要知道全部实例细节。工程量巨大。但是`IoC`能够屏蔽细节，对象依赖注入（`DI`），要服务D就直接拿服务D，不必关心如何构造。 （屏蔽对象的实现细节）
+3. 生命周期管理、`AOP`面向切面编程（`Aspect Oriented Programming`）
 
 `ASP.NET Core`中的内置`IoC`容器是`Microsoft.Externsions.DependencyInjection`中的`ServiceCollection`，可以单独使用，但功能有一定局限性（比如只支持构造函数注入），可以换用第三方容器比如`autofac`。
 
@@ -347,31 +345,29 @@ using(var scope = container.BeginLifetimeScope())
 
 **功能**
 
-①支持直接`map`到配置过的目标类型的集合类：`IEnumerable`、`ICollection`、`IList`、`List`、`Arrays`
+1. 支持直接`map`到配置过的目标类型的集合类：`IEnumerable`、`ICollection`、`IList`、`List`、`Arrays`
 
-`mapper.Map<IEnumerable<XXX>（目标类型）>(源类型);`
+   ```csharp
+   mapper.Map<IEnumerable<XXX>>(源类型);
+   ```
+2. 处理空集合，源类型中的集合类型为`null`，则会自动映射到目标类型为空集合而不是`null`。
+3. 方法到属性映射，可以直接像配置映射到属性一样映射到方法，只要返回值一致，不需要其他配置。
+4. 自定义映射，当目标类型和源类型属性名或类型不一致，需要做一些转换时，使用自定义映射
 
-②处理空集合，源类型中的集合类型为`null`，则会自动映射到目标类型为空集合而不是`null`。
+   ```csharp
+   var config = new MapperConfiguration(cfg =>
+   {
+       cfg.CreateMap<Employee, EmployeeDto>()
+           .ForMember("EmployeeID", opt => opt.MapFrom(src => src.ID))
+           .ForMember(dest => dest.EmployeeName, opt => opt.MapFrom(src => src.Name))
+           .ForMember(dest => dest.JoinYear, opt => opt.MapFrom(src => src.JoinTime.Year));
+   });
+   ```
 
-③方法到属性映射，可以直接像配置映射到属性一样映射到方法，只要返回值一致，不需要其他配置。
+   例子是`ID`和`EmployeeID`、`EmployeeName`和`Name`属性名不同，`JoinTime`和`JoinYear`不仅属性名不同，属性类型也不同。
 
-④自定义映射，当目标类型和源类型属性名或类型不一致，需要做一些转换时，使用自定义映射
-
-```csharp
-var config = new MapperConfiguration(cfg =>
-{
-cfg.CreateMap<Employee, EmployeeDto>()
-.ForMember("EmployeeID", opt => opt.MapFrom(src => src.ID))
-.ForMember(dest => dest.EmployeeName, opt => opt.MapFrom(src => src.Name))
-.ForMember(dest => dest.JoinYear, opt => opt.MapFrom(src => src.JoinTime.Year));
-});
-```
-
-例子是`ID`和`EmployeeID`、`EmployeeName`和`Name`属性名不同，`JoinTime`和`JoinYear`不仅属性名不同，属性类型也不同。
-
-其实用法就是`ForMember(目标字段对象，其值的来源/映射方法（可以用方法计算因为是labmada）)`
-
-⑤嵌套映射，只要注册过的类型的映射，那么源类型里面的注册过的类型就会相应的自动映射。
+   其实用法就是`ForMember(目标字段对象，其值的来源/映射方法（可以用方法计算因为是lambda）)`
+5. 嵌套映射，只要注册过的类型的映射，那么源类型里面的注册过的类型就会相应的自动映射。
 
 **其他配置**
 
@@ -622,11 +618,11 @@ Bi-directional streaming
 
 ## 最佳实践
 
--   Creating a channel can be an expensive operation. Reusing a channel for gRPC calls provides performance benefits.
--   gRPC clients are created with channels. gRPC clients are lightweight objects and don't need to be cached or reused.
--   Multiple gRPC clients can be created from a channel, including different types of clients.
--   A channel and clients created from the channel can safely be used by multiple threads.
--   Clients created from the channel can make multiple simultaneous calls.
+1. Creating a channel can be an expensive operation. Reusing a channel for `gRPC` calls provides performance benefits.
+2. `gRPC` clients are created with channels. `gRPC` clients are lightweight objects and don't need to be cached or reused.
+3. Multiple `gRPC` clients can be created from a channel, including different types of clients.
+4. A channel and clients created from the channel can safely be used by multiple threads.
+5. Clients created from the channel can make multiple simultaneous calls.
 
 ## Protobuf-net
 
