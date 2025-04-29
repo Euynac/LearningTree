@@ -1,9 +1,10 @@
+# ASP.NET Core接口
 
-# 接口
+## 接口
 
-## 请求参数
+### 请求参数
 
-### 内置类型
+#### 内置类型
 
 ```csharp
 [HttpPost("save")]
@@ -22,13 +23,13 @@ var result = await Http.PostAsync("api/method", new StringContent(strData));
 具体用法要看`FromBody`的限制：
 [Parameter Binding in ASP.NET Web API - ASP.NET 4.x | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api#using-frombody)
 
-所以最好使用`Frombody`只用DTO request类来写，其他的限制太复杂。
+所以最好使用`FromBody`只用DTO request类来写，其他的限制太复杂。
 
 
-### Minimal API
-需要用`async (HttpResponse response, HttpContext context)`的异步才能被Swagger展示出来，可能是个bug
+#### Minimal API
+需要用`async (HttpResponse response, HttpContext context)`的异步才能被`Swagger`展示出来，可能是个bug
 
-```cs
+```csharp
 //获取Channel列表
 endpoints.MapGet("/data-channel/channels", async (HttpResponse response, HttpContext context) =>
 {
@@ -49,12 +50,12 @@ endpoints.MapGet("/data-channel/channels", async (HttpResponse response, HttpCon
 ```
 
 
-# 依赖注入
+## 依赖注入
 
 #### 使用依赖注入的方式构造实例，且支持部分参数由用户传递（顺序不限）
 
-```cs
-object ActivatorUtilities.Createlnstance(IServiceProvider provider, Type instanceType, params object[] parameters)
+```csharp
+object ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, params object[] parameters)
 ```
 
 #### Scoped和Transient的须知
@@ -62,8 +63,8 @@ object ActivatorUtilities.Createlnstance(IServiceProvider provider, Type instanc
 
 
 #### 部分注入
-```cs
- var client = DaprClient.CreateInvokeHttpClient(appId);
+```csharp
+var client = DaprClient.CreateInvokeHttpClient(appId);
 //方式一
 services.TryAddScoped<ICommandFlight>(provider => ActivatorUtilities.CreateInstance<CommandFlightHttpApi>(provider, client));
 //方式二 （HttpClient适用，因为被封装）未测试
@@ -76,48 +77,41 @@ services.AddHttpClient<CommandFlightHttpApi>(_ => client.CreateGrpcService<IComm
 [c# - ASP.NET Core Singleton instance vs Transient instance performance - Stack Overflow](https://stackoverflow.com/questions/54790460/asp-net-core-singleton-instance-vs-transient-instance-performance)
 
 ### 差异
-`TryAdd`{lifetime}`()` ... for example `TryAddSingleton()` ... peeps into the DI container and looks for whether **ANY** implementation type (concrete class) has been registered for the given service type (the interface). If yes then it does not register the implementation type (given in the call) for the service type (given in the call). If no , then it does.
+`TryAdd{lifetime}()` ... for example `TryAddSingleton()` ... peeps into the DI container and looks for whether **ANY** implementation type (concrete class) has been registered for the given service type (the interface). If yes then it does not register the implementation type (given in the call) for the service type (given in the call). If no , then it does.
 
-`TryAddEnumerable`(ServiceDescriptor) on the other hand peeps into the DI container , looks for whether the **SAME** implementation type (concrete class) as the implementation type given in the call has already been registered for the given service type. If yes, then it does not register the implementation type (given in the call) for the service type (given in the call). If no, then it does. Thats why there is the `Enumerable` suffix in there. _The suffix indicates that it CAN register more than one implementation types for the same service type!_
+`TryAddEnumerable`(ServiceDescriptor) on the other hand peeps into the DI container , looks for whether the **SAME** implementation type (concrete class) as the implementation type given in the call has already been registered for the given service type. If yes, then it does not register the implementation type (given in the call) for the service type (given in the call). If no, then it does. Thats why there is the `Enumerable` suffix in there. _The suffix indicates that it CAN register more than one implementation types for the same service type!_
 
 多次注册构造函数获取实例只会获取最后一次注册，需要获取所有实现可以注入`IEnumerable<IMyInterface>` （待验证）
 
 
-# 问题
+## 问题
 
-## ERR Empty Response
+### ERR Empty Response
 在`docker`环境下运行程序，开启HTTP服务监听`80`端口，访问后直接拒绝。
 排查发现，是如下代码：
 
-```cs
+```csharp
 public ConcurrentQueue<object> _queue = new();
 Task.Factory.StartNew(()=>{
-	while(true)
-	{
-		if(_queue.TryDeque())
-		{
-			//..其他业务
-		}
-	}
+    while(true)
+    {
+        if(_queue.TryDequeue())
+        {
+            //..其他业务
+        }
+    }
 })
 ```
 
 即使在不同线程，在`Linux`环境似乎会将主线程阻塞？导致HTTP等线程均不可用。
 测试发现，仅需等待部分时间，甚至可`Thread.Sleep(0)`，问题消失。
 
-或建议采用异步Task，应也可解决相关问题。
+或建议采用异步`Task`，应也可解决相关问题。
 
 
-
-
-## Serilog死锁 写大日志会出现该问题
+### Serilog死锁 写大日志会出现该问题
 [Console logging sometimes causes application to hang · Issue #84 · serilog/serilog-sinks-console](https://github.com/serilog/serilog-sinks-console/issues/84)
 
 
-
-
-
-
-
-# 待学
+## 待学
 [深入解析ASP.NET Core MVC应用的模块化设计[上篇]-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2394132)
