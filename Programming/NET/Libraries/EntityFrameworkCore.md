@@ -62,13 +62,26 @@ builder.Property(p=>p.Id).HasConversion(new GuidToStringConverter());
 ### A second operation was started on this context instance
 同一个依赖注入的类的多个仓储共用一个`DbContext`（待确认），因此无法同步执行。**注意异步方法的调用，是否都进行了`await`**。注意入口方法是否是`void`忘记等待。
 
-#### Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.'
+#### Cannot access a disposed context instance.
+
+>  A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.
+
 Repository中的`DbContext`不可以`using`，直接交由ABP框架管理生命周期。
 ```csharp
 await using var context = await _repository.GetDbContextAsync(); //导致错误
 //直接使用
 var context = await _repository.GetDbContextAsync();
 ```
+
+### 数据库更新操作异常catch后，在catch块外继续更新别的也会出现异常
+
+实体标记为modified，更新异常后 tracking仍然标记未改变，SaveChanges时仍会导致异常。
+
+```cs
+
+```
+
+
 
 ## ABP仓储层
 
