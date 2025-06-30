@@ -27,13 +27,23 @@ Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理�
 > 1. k8s 中有 namespace 的概念，由于不同的 namespace 中可以有同样名称的 service or pod，因此 DNS 解析的部份就需要考虑 namespace
 > 2. k8s cluster domain name，若是未设定，预设就会是 `cluster.local`
 
-#### Service DNS
+#### 种类
+
+##### Service DNS
 基本格式：
 `<service-name>.<namespace-name>.svc.<cluster domain name>`
 
-#### Pod DNS
+##### Pod DNS
 基本格式：
 `<pod-ip-address>.<namespace-name>.pod.<cluster domain name>`
+
+#### 排查DNS问题
+
+使用 `busybox` 镜像临时创建一个 `Pod` 并进入容器内部使用 `nslookup` 或 `ping` 等工具进行 DNS 测试。 
+
+查看容器DNS：
+1. 容器内部 `hostname`
+2. 
 
 
 
