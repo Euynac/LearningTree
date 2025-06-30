@@ -41,6 +41,20 @@ Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理�
 
 使用 `busybox` 镜像临时创建一个 `Pod` 并进入容器内部使用 `nslookup` 或 `ping` 等工具进行 DNS 测试。 
 
+##### 将短暂容器设置为长时运行
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-sleep
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args: ["/bin/sh", "-c", "sleep 31536000"]  # 休眠一年
+```
+
+
 查看容器DNS：
 1. 容器内部 `hostname`
 2. 
