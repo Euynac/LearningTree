@@ -411,3 +411,136 @@ public class Blog
 | `dotnet ef migrations script AddNewTables AddAuditTable` | `Script-Migration [AddNewTables] [AddAuditTable]` | 生成从指定migration状态到指定migration状态的修改SQL语句 |
 | `dotnet ef migrations list` | `Get-Migration` | list all existing migrations |
 | `dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Chinook" Microsoft.EntityFrameworkCore.SqlServer` | `Scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Chinook' Microsoft.EntityFrameworkCore.SqlServer` | Reverse Engineering 反向工程 DB First  `-Tables Artist, Album`可以指定仅反向给定表名  `-Force` 需要重新进行反向工程  `-Context` 指定Context |
+
+
+
+
+
+
+## 数据库连接池 (以下待测试)
+### DbContext 生命周期与连接事件详解
+
+（基于 EF Core 的 `IDbConnectionInterceptor` 事件定义）
+
+---
+
+#### ​**​1. 连接创建阶段​**​
+
+- ​**​`ConnectionCreating`​**​
+    
+    - ​**​触发时机​**​：EF Core 即将创建 `DbConnection` 对象时（仅当未显式提供连接时）
+    - ​**​可操作​**​：可修改或替换连接创建逻辑（通过 `InterceptionResult<DbConnection>`）
+    - ​**​典型场景​**​：动态生成连接字符串、注入代理连接对象
+- ​**​`ConnectionCreated`​**​
+    
+    - ​**​触发时机​**​：`DbConnection` 实例创建完成后
+    - ​**​可操作​**​：对新建连接进行初始化（如设置超时时间）
+
+---
+
+#### ​**​2. 连接打开阶段​**​
+
+- ​**​`ConnectionOpening`（同步）/ `ConnectionOpeningAsync`（异步）​**​
+    
+    - ​**​触发时机​**​：在 `DbConnection.Open()` 执行前
+    - ​**​关键控制​**​：
+        - 通过 `InterceptionResult.Suppress()` ​**​阻止默认打开操作​**​
+        - 返回修改后的 `InterceptionResult` 影响 EF Core 行为
+    - ​**​典型场景​**​：实现自定义连接池、链路追踪
+- ​**​`ConnectionOpened`（同步）/ `ConnectionOpenedAsync`（异步）​**​
+    
+    - ​**​触发时机​**​：连接​**​物理打开完成后​**​（TCP 连接已建立）
+    - ​**​可操作​**​：记录连接打开时间、更新状态监控
+
+---
+
+#### ​**​3. 连接关闭阶段​**​
+
+- ​**​`ConnectionClosing`（同步）/ `ConnectionClosingAsync`（异步）​**​
+    
+    - ​**​触发时机​**​：在 `DbConnection.Close()` 执行前
+    - ​**​关键控制​**​：
+        - 可通过 `InterceptionResult.Suppress()` ​**​阻止默认关闭操作​**​
+        - 需确保正确处理资源释放
+    - ​**​典型场景​**​：维护长连接、连接复用策略
+- ​**​`ConnectionClosed`（同步）/ `ConnectionClosedAsync`（异步）​**​
+    
+    - ​**​触发时机​**​：连接​**​物理关闭完成后​**​（TCP 连接已断开）
+    - ​**​注意​**​：此事件仅表示​**​底层连接关闭​**​，连接对象可能仍未释放
+
+---
+
+#### ​**​4. 连接释放阶段​**​
+
+- ​**​`ConnectionDisposing`（同步）/ `ConnectionDisposingAsync`（异步）​**​
+    
+    - ​**​触发时机​**​：在 `DbConnection.Dispose()` 执行前
+    - ​**​关键区别​**​：
+        - `Dispose()` 会​**​完全销毁连接对象​**​（非物理关闭，而是对象生命周期结束）
+        - 拦截后可取消释放（例如实现对象池）
+- ​**​`ConnectionDisposed`（同步）/ `ConnectionDisposedAsync`（异步）​**​
+    
+    - ​**​触发时机​**​：连接对象​**​完成释放后​**​
+    - ​**​典型场景​**​：资源泄露检测、对象池回收
+
+---
+
+#### ​**​5. 异常处理事件​**​
+
+- ​**​`ConnectionFailed`（同步）/ `ConnectionFailedAsync`（异步）​**​
+    - ​**​触发时机​**​：连接打开或关闭过程中​**​抛出未处理异常​**​时
+    - ​**​典型用途​**​：记录错误日志、重试策略
+
+---
+
+### 🔁 连接池与事件的关系
+
+1. ​**​连接对象 vs 物理连接​**​
+    
+    - 事件中的 `DbConnection` 是​**​逻辑连接对象​**​
+    - 底层物理连接由 ADO.NET 连接池管理（透明于 EF Core）
+2. ​**​连接池行为​**​
+    
+    - 当 `ConnectionClosed` 触发时：
+        - ​**​物理连接归还连接池​**​（未销毁，可复用）
+    - 当 `ConnectionDisposed` 触发时：
+        - ​**​连接对象被销毁​**​，但底层物理连接仍可能驻留池中
+3. ​**​性能优化关键​**​
+    
+    - 高频创建/释放 `DbContext` 时：
+        - 实际​**​重用池中的物理连接​**​（通过 `ConnectionClosed`→`ConnectionOpening` 循环）
+        - 避免 `ConnectionCreating` 和 `ConnectionDisposing` 高频触发
+
+---
+
+### 生命周期流程图
+
+```
+sequenceDiagram
+    participant App as 应用程序
+    participant DbCtx as DbContext
+    participant Interceptor as 连接拦截器
+    participant Pool as ADO.NET 连接池
+
+    App ->> DbCtx: new DbContext()
+    DbCtx ->> Interceptor: ConnectionCreating()
+    Interceptor -->> DbCtx: 返回连接对象
+    DbCtx ->> Interceptor: ConnectionCreated()
+
+    loop 每次数据库操作
+        DbCtx ->> Interceptor: ConnectionOpening()
+        Interceptor ->> Pool: 从池获取物理连接
+        Pool -->> Interceptor: 返回物理连接
+        DbCtx ->> Interceptor: ConnectionOpened()
+        DbCtx ->> DbCtx: 执行SQL命令
+        DbCtx ->> Interceptor: ConnectionClosing()
+        Interceptor ->> Pool: 归还物理连接
+        DbCtx ->> Interceptor: ConnectionClosed()
+    end
+
+    App ->> DbCtx: Dispose()
+    DbCtx ->> Interceptor: ConnectionDisposing()
+    DbCtx ->> Interceptor: ConnectionDisposed()
+```
+
+---
