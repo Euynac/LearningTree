@@ -244,7 +244,15 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 ### error invoke  50002 Unavailable  (dapr 1.14.4)
 调用接口时突然中断提示不可用，边车自动重启。
 排查后期间怀疑是设置了内存限制带来的问题。
-最后根据daprd边车重启堆栈发现问题指向`StateStore`。重新部署redis后正常？
+最后根据`daprd`边车重启堆栈发现问题指向`StateStore`。重新部署`redis`后正常？最后根据堆栈指向的`BulkGet`操作发现可能是`Parallelism`未进行限制的问题，增加限制后正常。
+
+
+```log
+Conn has unread data happened
+panic: interface conversion: interface {} is string, not map[interface {}]interface {} goroutine 2745 [running]: github.com/dapr/components-contrib/state/redis.(*StateStore).getDefault(0xc0013dd2d0, {0x75512f0, 0xc000997350}, 0xc0008dc180) /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/redis/redis.go:250 +0x406 github.com/dapr/components-contrib/state/redis.(*StateStore).Get(0xc0013dd2d0, {0x75512f0, 0xc000997350}, 0xc0008dc180) /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/redis/redis.go:315 +0x566 github.com/dapr/components-contrib/state.DoBulkGet.func1(0x166) /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/bulk.go:90 +0x186 created by github.com/dapr/components-contrib/state.DoBulkGet in goroutine 2370 /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/bulk.go:82 +0x85 panic: interface conversion: interface {} is string, not map[interface {}]interface {}
+
+```
+
 
 
 ## Dashboard
