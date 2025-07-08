@@ -31,7 +31,8 @@ By default, circular references are detected and exceptions thrown. You can pres
 
 
 ### 序列化值为{}
-默认情况下是序列化当前类型字段，如果用`this`关键字要小心。
+
+**默认情况下是序列化当前类型字段**，如果用`this`关键字要小心。如果传入的是个接口类型，也将序列化失败，可以使用 `(object)yourObjToSerialize`
 
 ```csharp
 /// <summary>
