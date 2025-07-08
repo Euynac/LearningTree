@@ -27,13 +27,36 @@ Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理�
 > 1. k8s 中有 namespace 的概念，由于不同的 namespace 中可以有同样名称的 service or pod，因此 DNS 解析的部份就需要考虑 namespace
 > 2. k8s cluster domain name，若是未设定，预设就会是 `cluster.local`
 
-#### Service DNS
+#### 种类
+
+##### Service DNS
 基本格式：
 `<service-name>.<namespace-name>.svc.<cluster domain name>`
 
-#### Pod DNS
+##### Pod DNS
 基本格式：
 `<pod-ip-address>.<namespace-name>.pod.<cluster domain name>`
+
+#### 排查DNS问题
+
+使用 `busybox` 镜像临时创建一个 `Pod` 并进入容器内部使用 `nslookup` 或 `ping` 等工具进行 DNS 测试。 
+
+##### 将短暂容器设置为长时运行
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-sleep
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args: ["/bin/sh", "-c", "sleep 31536000"]  # 休眠一年
+```
+
+
+查看容器DNS：
+1. 容器内部 `hostname`
 
 
 
@@ -221,3 +244,8 @@ docker push <仓库名>/<项目名>/<镜像名>:[版本号] # push只能通过ta
 [HTTP 请求头中的 Remote_Addr，X-Forwarded-For，X-Real-IP - 23云恋49枫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/luxiaojun/p/10451860.html)
 
 在K8S中部署的nginx，可能获取不到真实的地址，需要看当前nginx工作负责的k8s服务的配置。比如如果为NodePort模式，需要设置external-traffic-policy为Local，但是如果设置Local，就不能通过任意的worker节点访问会自动负载均衡了，必须相同节点。（也可以通过外部负载均衡实现）[externaltrafficpolicy的有关问题说明 - 紫色飞猪 - 博客园 (cnblogs.com)](https://www.cnblogs.com/zisefeizhu/p/13262239.html)
+
+
+
+#### 对命名空间进行资源限制后无法启动新Pod
+测试发现如果对命名空间限制资源后，内部的所有Pod也必须指明资源限制，且所有Pod加起来的资源不能超过对命名空间的资源限制。如果其中有一个Pod是无限制的资源，则该命名空间下无法再启动新的Pod

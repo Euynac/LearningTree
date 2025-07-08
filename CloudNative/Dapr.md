@@ -82,6 +82,10 @@ If you leave the Configure for HTTPS checkbox checked, the generated ASP.NET Cor
 ## State stores
 
 Care must be taken to always pass an explicit app-id parameter when consuming the state management building block. The block uses the application id value as a prefix for its state key for each key/value pair. If the application id changes, you can no longer access the previously stored state.
+
+
+
+
 ## PubSub
 
 如果应用程序有配置，则程序本身需要暴露 `/dapr/subscribe` 接口，供边车获取程序所监听的主题。
@@ -207,6 +211,11 @@ Each namespaced actor deployment **must** use its own separate state store.
 dapr有一个设计，`component`可以有`scopes`，限定binding component到特定微服务。
 [How-To: Scope components to one or more applications | Dapr Docs](https://docs.dapr.io/operations/components/component-scopes/)
 
+
+#### Binding配置正确但未生效
+日志显示成功初始化 `binding` 但未能接收事件。发现是因为 `pubsub` 的 component 配置有异常导致 pubsub模块初始化不成功，其中pubsub的队列地址与 binding 的消息队列地址一致。发现将pubsub component配置正确后 binding问题解决。
+
+
 ## 服务发现&服务间调用
 
 `daprd sidecar `有`app-port`，是指宿主微服务的`API`监听地址，由`sidecar`去调用的
@@ -225,6 +234,26 @@ dapr有一个设计，`component`可以有`scopes`，限定binding component到�
 
 可以通过改写调用api进行，如：`https://localhost:3500/v1.0/invoke/myappid.<namespace>/method/ping`
 [How to: Service invocation across namespaces | Dapr Docs](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-namespaces/)
+
+
+##### 如果发现dapr解析后请求的地址与容器组地址对应不上
+
+1. 有可能是修改了`K8S DNS`的缓存刷新时间或策略，导致重启微服务后未能立刻刷新缓存导致边车错误路由到旧的容器组地址。排查K8S DNS问题：[Kubernetes(K8S)](Kubernetes(K8S).md#DNS)
+2. 如果测试发现仅有一个节点的容器如`worker1`，其上的服务的边车均有解析问题，解析DNS不对，其他节点正常，使用busybox测试coreDNS解析正常，则该问题暂无解决方案(dapr 1.14.4)
+
+### error invoke  50002 Unavailable  (dapr 1.14.4)
+调用接口时突然中断提示不可用，边车自动重启。
+排查后期间怀疑是设置了内存限制带来的问题。
+最后根据`daprd`边车重启堆栈发现问题指向`StateStore`。重新部署`redis`后正常？最后根据堆栈指向的`BulkGet`操作发现可能是`Parallelism`未进行限制的问题，增加限制后正常。
+
+
+```log
+Conn has unread data happened
+panic: interface conversion: interface {} is string, not map[interface {}]interface {} goroutine 2745 [running]: github.com/dapr/components-contrib/state/redis.(*StateStore).getDefault(0xc0013dd2d0, {0x75512f0, 0xc000997350}, 0xc0008dc180) /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/redis/redis.go:250 +0x406 github.com/dapr/components-contrib/state/redis.(*StateStore).Get(0xc0013dd2d0, {0x75512f0, 0xc000997350}, 0xc0008dc180) /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/redis/redis.go:315 +0x566 github.com/dapr/components-contrib/state.DoBulkGet.func1(0x166) /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/bulk.go:90 +0x186 created by github.com/dapr/components-contrib/state.DoBulkGet in goroutine 2370 /home/runner/go/pkg/mod/github.com/dapr/components-contrib@v1.14.4/state/bulk.go:82 +0x85 panic: interface conversion: interface {} is string, not map[interface {}]interface {}
+
+```
+
+
 
 ## Dashboard
 
@@ -302,6 +331,8 @@ setting parameters `daprHTTPMaxRequestSize` and `UseGrpcChannelOptions` with
 #### 调试时事件发布有时候丢失
 看是否一个消费者组有多个消费者，默认行为同实例的会竞争事件。
 
+#### docker中边车突然关闭退出且无相关日志
+是否是docker-compose中设置了内存限制，到达了限制后被自动结束程序
 
 
 # Debug
@@ -397,6 +428,11 @@ The Dapr CLI run command starts the application. It invokes the underlying Dapr 
 
 
 # 部署
+
+
+## Self-Host 下载
+
+[dapr/installer-bundle: Dapr bundled installer containing CLI and runtime packaged together. This eliminated the need to download Docker images when initializing Dapr locally.](https://github.com/dapr/installer-bundle)
 
 ## 资源需求
 

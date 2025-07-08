@@ -1,5 +1,16 @@
 # System.Text.Json
 
+By default, all public properties are serialized. You can specify properties to ignore.
+
+The default encoder escapes non-ASCII characters, HTML-sensitive characters within the ASCII-range, and characters that must be escaped according to the RFC 8259 JSON spec.
+
+By default, JSON is minified. You can pretty-print the JSON.
+
+By default, casing of JSON names matches the .NET names. You can customize JSON name casing.
+
+By default, circular references are detected and exceptions thrown. You can preserve references and handle circular references.
+
+**By default, fields are ignored. You can include fields.**
 
 ## JsonConverter
 
@@ -20,7 +31,8 @@
 
 
 ### 序列化值为{}
-默认情况下是序列化当前类型字段，如果用`this`关键字要小心。
+
+**默认情况下是序列化当前类型字段**，如果用`this`关键字要小心。如果传入的是个接口类型，也将序列化失败，可以使用 `(object)yourObjToSerialize`
 
 ```csharp
 /// <summary>
