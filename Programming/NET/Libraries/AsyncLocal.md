@@ -304,7 +304,6 @@ class Program
 - 在创建新线程前调用，阻止当前线程的上下文（包括 `AsyncLocal`）流向新线程。
 - 操作后通过 `new Thread()` 创建的新线程会获得干净的上下文。
 
-
 ```cs
  static void StartNewThread()
     {
@@ -318,3 +317,23 @@ class Program
         ExecutionContext.RestoreFlow(); // 恢复上下文流动
     }
 ```
+
+#### 注意异步时的用法
+
+`ExecutionContext.SuppressFlow`必须要调用`Undo`操作，`using`最后也是帮助调用 `Undo`，但注意一定要在同一个线程中调用，否则使用`await`后不在同一个线程会出现`System.InvalidOperationException: 'AsyncFlowControl object must be used on the thread where it was created.'`异常
+
+```cs
+
+ using var context = ExecutionContext.SuppressFlow();
+ var task = Parallel.ForAsync(0, 10, new ParallelOptions() { MaxDegreeOfParallelism = 5 }, async (i, ct) =>
+ {
+     Console.WriteLine($"Parallel.ForAsync: {_asyncLocal.Value} ");
+     _asyncLocal.Value = "111";
+ });
+
+ context.Undo();
+ await task;
+
+```
+
+>  阻止上下文仅对当前创建新的线程有效，**内部如果继续使用AsyncLocal，继续创建新线程，仍会产生流动**，需要重新在内部阻止上下文流动。
