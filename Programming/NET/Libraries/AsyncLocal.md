@@ -337,3 +337,16 @@ class Program
 ```
 
 >  阻止上下文仅对当前创建新的线程有效，**内部如果继续使用AsyncLocal，继续创建新线程，仍会产生流动**，需要重新在内部阻止上下文流动。
+
+
+### ThreadPool.UnsafeQueueUserWorkItem
+
+- 直接向线程池提交任务，​**​不捕获当前上下文​**​。
+
+```cs
+  ThreadPool.UnsafeQueueUserWorkItem(_ =>
+  {
+      Console.WriteLine($"[ThreadPool] ID: {Thread.CurrentThread.ManagedThreadId}, Value: {_asyncLocal.Value ?? "null"}");
+  }, null);
+
+```
