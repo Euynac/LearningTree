@@ -97,6 +97,9 @@ Care must be taken to always pass an explicit app-id parameter when consuming th
 [PubSub: notify all instances of an application (rather than "competing consumers") · Issue #3332 · dapr/dapr](https://github.com/dapr/dapr/issues/3332)
 当前解决方案是，定义一个不同行为的`component`，其中提供`consumerID`为`{uuid}`，这样经过该`component`的所有创建及消费主题将会变成指定模式。
 
+#### 批量推送
+dapr提供的批量推送，在消息队列入队时是自动将消息拆分成了单个，比如一次推送1000条一个包，那么入消息队列的消息是1000条消息，保持了队列的数据结构一致性。
+
 
 
 ## Namespace
