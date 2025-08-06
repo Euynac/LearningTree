@@ -105,11 +105,6 @@
 9. 如果存在外部地址形如`<https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags>`格式的，替换为可阅读的格式：`[Recommended XML documentation tags - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags)`
 ```
 
-```txt
-将当前Markdown文件进行拆分，按照大章节目录拆为多个小文件，根据当前文件层级来拆分，如按照H1拆分，如拆分文件仍过大，则按照H2拆分，以此类推。拆分后的文件名与当前章节有关。
-要以当前文件名建立新文件夹，并把拆分后的文件放入到新文件夹下。
-```
-
 
 ```
 将当前Markdown文件进行拆分，按照大章节目录拆为多个小文件，根据当前文件层级来拆分，如按照H1拆分，如拆分文件仍过大，则按照H2拆分，以此类推。拆分后的文件名与当前章节有关。  
