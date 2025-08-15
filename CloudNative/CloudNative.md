@@ -2,75 +2,75 @@
 
 ![Cloud-Native Design](../attachments/360a29eab5e42fd53886a9e54c40b05e.png)
 
-CNCF（Cloud Native Computing Foundation，云原生计算基金会）
+`CNCF`（`Cloud Native Computing Foundation`，云原生计算基金会）
 
-a consortium of over 400 major corporations. Its charter is to make cloud-native computing ubiquitous across technology and cloud stacks. As one of the most influential open-source groups, it hosts many of the fastest-growing open source-projects in GitHub. These projects include Kubernetes, Prometheus, Helm, Envoy, and gRPC.
+a consortium of over 400 major corporations. Its charter is to make cloud-native computing ubiquitous across technology and cloud stacks. As one of the most influential open-source groups, it hosts many of the fastest-growing open source-projects in `GitHub`. These projects include `Kubernetes`, `Prometheus`, `Helm`, `Envoy`, and `gRPC`.
 
-<https://landscape.cncf.io/> 云原生全景图、概念解释、相应项目
+[CNCF 云原生全景图](https://landscape.cncf.io/) 云原生全景图、概念解释、相应项目
 
 ![图示 低可信度描述已自动生成](../attachments/806b4ae5295a5e274d5c509c98a60255.png)
 
-<https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png> 云原生路线图
+[云原生路线图](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
 右侧是一条企业走向云原生的道路，分为十个步骤。
 
-容器化 —— Docker
+1. 容器化 —— `Docker`
 
-CI/CD —— Argo
+2. `CI/CD` —— `Argo`
 
-编排和应用定义 —— Kubernetes Helm
+3. 编排和应用定义 —— `Kubernetes` `Helm`
 
-可观察性和分析 —— prometheus
+4. 可观察性和分析 —— `Prometheus`
 
-服务代理、发现和网格 —— CoreDNS Envoy Linkerd
+5. 服务代理、发现和网格 —— `CoreDNS` `Envoy` `Linkerd`
 
-网络、政策和安全 —— Flannel Calico
+6. 网络、政策和安全 —— `Flannel` `Calico`
 
-分布式数据库和存储 —— Vitess Rook etcd TiKV
+7. 分布式数据库和存储 —— `Vitess` `Rook` `etcd` `TiKV`
 
-流式传输和消息传递 —— gRPC NATS CloudEvents
+8. 流式传输和消息传递 —— `gRPC` `NATS` `CloudEvents`
 
-容器注册 & 运行时 —— Harbor CRI-O
+9. 容器注册 & 运行时 —— `Harbor` `CRI-O`
 
-软件发行 —— Notary
+10. 软件发行 —— `Notary`
 
 了解项目
 
-点击 <https://www.cncf.io/projects/>
+点击 [CNCF 项目页面](https://www.cncf.io/projects/)
 
 可以查看具有代表性的毕业项目，并可以点击进入项目中看到最新进展。
 
 ## 学习
 
-微软文档（MSDN）默认有中文版，将en-us改为zh-cn即可。
+微软文档（`MSDN`）默认有中文版，将 `en-us` 改为 `zh-cn` 即可。
 
-网站左下可以下载到PDF离线版（仅英文）
+网站左下可以下载到 `PDF` 离线版（仅英文）
 
-<https://docs.microsoft.com/en-us/dotnet/architecture/microservices/> 微服务概念
+- [微服务概念 | Microsoft Learn](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/)
 
-<https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/> 云原生
+- [云原生 | Microsoft Learn](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/)
 
-<https://docs.microsoft.com/en-us/devops/> DevOps
+- [DevOps | Microsoft Learn](https://docs.microsoft.com/en-us/devops/)
 
-<https://docs.docker.com/get-started/> Docker
+- [Docker Get Started](https://docs.docker.com/get-started/)
 
-<https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/> 微服务框架dapr 以.NET为例
+- [微服务框架 Dapr 以 .NET 为例 | Microsoft Learn](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/)
 
-<https://github.com/dotnet-architecture/eShopOnDapr> 基于Dapr的.NET微服务架构项目参考
+- [基于 Dapr 的 .NET 微服务架构项目参考](https://github.com/dotnet-architecture/eShopOnDapr)
 
-<https://www.youtube.com/watch?v=X48VuDVv0do> Kubernetes入门视频
+- [Kubernetes 入门视频](https://www.youtube.com/watch?v=X48VuDVv0do)
 
-<https://kubernetes.io/docs/home/> Kubernetes文档，包含在线实践
+- [Kubernetes 文档，包含在线实践](https://kubernetes.io/docs/home/)
 
-#### 扩展
+### 扩展
 
-<https://docs.microsoft.com/en-us/azure/architecture/patterns/> 云有关的设计模式
+- [云有关的设计模式 | Microsoft Learn](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
 
-<https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching> .NET Cache缓存指南
+- [.NET Cache 缓存指南 | Microsoft Learn](https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching)
 
-<https://github.com/dotnet-architecture/eShopOnContainers> 基于.NET的微服务项目参考（未使用微服务框架）
+- [基于 .NET 的微服务项目参考（未使用微服务框架）](https://github.com/dotnet-architecture/eShopOnContainers)
 
-<https://blog.csdn.net/qq_41185868/article/details/126811341> 云原生优势
+- [云原生优势](https://blog.csdn.net/qq_41185868/article/details/126811341)
 
 ## 概念
 
@@ -84,25 +84,25 @@ CI/CD —— Argo
 
 比如有关航班信息管理的API：
 
-命令式API：提供航班的CURD API，想要将航班信息修改，需要自行组合CURD的调用方式去将航班修改到想要的状态。
+命令式 `API`：提供航班的 `CURD API`，想要将航班信息修改，需要自行组合 `CURD` 的调用方式去将航班修改到想要的状态。
 
-声明式API：告诉系统想要航班状态变成什么样，由系统内部尝试去调整状态。
+声明式 `API`：告诉系统想要航班状态变成什么样，由系统内部尝试去调整状态。
 
-其实是指yaml配置文件，kuboard里面指明容器的配置状态。
+其实是指 `yaml` 配置文件，`kuboard` 里面指明容器的配置状态。
 
 ### 不变的基础设施（immutable infrastructure）
 
-DevOps中有一个概念：Pets与Cattle，它们是对我们如何管理服务器的一种服务模型。Pets故名思意，我们将服务器看作自己的宠物，有自己的名字，你通过将更多资源添加到相同计算机（纵向扩展）来进行Scaling。 如果服务器出现问题，你会进行修复，使它恢复正常运行状况。
+`DevOps` 中有一个概念：`Pets` 与 `Cattle`，它们是对我们如何管理服务器的一种服务模型。`Pets` 故名思意，我们将服务器看作自己的宠物，有自己的名字，你通过将更多资源添加到相同计算机（纵向扩展）来进行 `Scaling`。 如果服务器出现问题，你会进行修复，使它恢复正常运行状况。
 
-Cattle服务模型则是从一个既定的镜像通过特异化的配置创建出来。 它们是相同的，并分配有系统标识符（如Server-01、Server-02 等等）。 我们通过创建更多实例（横向扩展）来进行Scaling。
+`Cattle` 服务模型则是从一个既定的镜像通过特异化的配置创建出来。 它们是相同的，并分配有系统标识符（如 `Server-01`、`Server-02` 等等）。 我们通过创建更多实例（横向扩展）来进行 `Scaling`。
 
-Cattle模型采用不可变基础结构。 服务器不会进行修复或修改。 如果一台服务器发生故障或需要更新，则会销毁它并预配新服务器 – 所有操作都通过自动化完成。
+`Cattle` 模型采用不可变基础结构。 服务器不会进行修复或修改。 如果一台服务器发生故障或需要更新，则会销毁它并预配新服务器 – 所有操作都通过自动化完成。
 
 总的来说，Cattle模型在实践中通常不会在容器中安装或更新应用，而是更新更为持久化的镜像，通过编排系统下载新镜像并启动相应的容器，并将旧的容器删除。这种只更新镜像而不改变容器运行时的模式称为不变的基础设施（immutable infrastructure）。从不变的基础设施就能看出，云原生的运营与传统虚拟机运营方式截然不同。
 
-### Modern design 新设计
+### 现代设计（Modern Design）
 
-新式设计的十二个要素以及附加要素，见[https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition\#modern-design](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition#modern-design)
+新式设计的十二个要素以及附加要素，见 [现代设计 | Microsoft Learn](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition#modern-design)
 
 ### DevOps (Development & Operations)
 
@@ -114,7 +114,7 @@ DevOps is the union of people, process, and products to enable continuous delive
 
 几个挑战
 
-####   通信（Communication）
+### 通信（Communication）
 
 **前端通信**
 
@@ -148,10 +148,10 @@ DevOps is the union of people, process, and products to enable continuous delive
 
 使用Service mesh（服务网格）
 
-#### 复原能力（Resiliency）
+### 复原能力（Resiliency）
 
 分布式体系结构中，服务出现异常造成的连环问题。
-#### 分布式数据（Distributed Data）
+### 分布式数据（Distributed Data）
 
 每个服务单独管理自己的数据，如何跨多个服务进行数据治理？
 
@@ -163,7 +163,7 @@ Materialized View Pattern（视图）
 
 ![Materialized view pattern](../attachments/f4c659c2bee8809de3221f2db32f7ba7.png)
 
-#### 机密（Secrets）
+### 机密（Secrets）
 
 安全和敏感配置如何管理。
 

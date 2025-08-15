@@ -1,26 +1,26 @@
-# Kubernetes (Orchestration)
+# Kubernetes (K8S)
 
-用于容器编排
+`Kubernetes`（编排工具）用于容器编排。
 
-部署一个Kubernetes，实际上就是部署了一个Cluster。
+部署一个`Kubernetes`，实际上就是部署了一个`Cluster`。
 
 ![](../attachments/18c6f89fd0d7c2bb3af7226ae657baae.png)
 
-Kubernetes每个实例是以Cluster为单位的。每个Work Node（VM或物理机）中有Kubelet，即一个agent，由Control Plane进行中心化调度管理（由Master Node组成）。
+`Kubernetes`每个实例是以`Cluster`为单位的。每个`Work Node`（`VM`或物理机）中有`Kubelet`，即一个`agent`，由`Control Plane`进行中心化调度管理（由`Master Node`组成）。
 
 ![](../attachments/f30159ce56ad05756bd53552d9d7817d.png)
 
-用户可以通过Kubectl（Kubernetes Client），通过它调用Kubernetes的API进行管理。
+用户可以通过`Kubectl`（`Kubernetes Client`），通过它调用`Kubernetes`的`API`进行管理。
 
-一个k8s集群，可以通过namespace区分区域。
+一个`k8s`集群，可以通过`namespace`区分区域。
 
 ## 网络
 
-在K8S中，同一个命名空间（namespace）下的服务之间调用，之间通过服务名（service name）调用即可。不过在更多时候，我们可能会将一些服务单独隔离在一个命名空间中（比如我们将中间件服务统一放在 middleware 命名空间中，将业务服务放在 business 命名空间中）。
+在`K8S`中，同一个命名空间（`namespace`）下的服务之间调用，之间通过服务名（`service name`）调用即可。不过在更多时候，我们可能会将一些服务单独隔离在一个命名空间中（比如我们将中间件服务统一放在`middleware`命名空间中，将业务服务放在`business`命名空间中）。
 
-遇到这种情况，我们就需要跨命名空间访问，K8S 对service 提供了四种不同的类型，针对这个问题我们选用 ExternalName 类型的 service 即可。
+遇到这种情况，我们就需要跨命名空间访问，`K8S`对`service`提供了四种不同的类型，针对这个问题我们选用`ExternalName`类型的`service`即可。
 
-注意service端口是否开对
+注意`service`端口是否开对
 
 ### DNS
 

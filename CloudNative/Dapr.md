@@ -2,17 +2,17 @@
 
 ## 概念
 
-新一代微服务框架。dapr意为(Distributed application runtime)。特点是"any language, any framework, run anywhere"。
+新一代微服务框架。`dapr`意为(`Distributed application runtime`)。特点是"`any language, any framework, run anywhere`"。
 
-面向接口的体现，你只知道Dapr提供了一系列Building Blocks的接口，另外，还可以自己添加dapr边车，将自己的微服务也做成dapr接口支持的微服务，这样就面向了接口编程。
+面向接口的体现，你只知道`Dapr`提供了一系列`Building Blocks`的接口，另外，还可以自己添加`dapr`边车，将自己的微服务也做成`dapr`接口支持的微服务，这样就面向了接口编程。
 
-封装了很多用于微服务的组件，通过dapr API调用，而非依赖具体组件。
+封装了很多用于微服务的组件，通过`dapr API`调用，而非依赖具体组件。
 
 ![](../attachments/03822b5c9baef442cb28014153bf5d5b.png)
 
 边车模式（Sidecar architecture）
 
-它不是Service mesh。Dapr provides distributed application features. A service mesh provides a dedicated network infrastructure layer. 意味着dapr和service mesh可以共存，dapr可充当调用building blocks的api入口，service mesh提供服务之间的网络通信。
+它不是`Service mesh`。`Dapr provides distributed application features. A service mesh provides a dedicated network infrastructure layer.` 意味着`dapr`和`service mesh`可以共存，`dapr`可充当调用`building blocks`的`api`入口，`service mesh`提供服务之间的网络通信。
 
 ![](../attachments/9920595f64069ec7e095af4caf2102ca.png)
 

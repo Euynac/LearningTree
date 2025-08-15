@@ -1,118 +1,147 @@
-# 节点要求
+# K8S集群部署要求
+
+## 节点要求
 
 1. 同步时钟服务器时间
-2. 永久关闭 Selinux
+2. 永久关闭 `SELinux`
 3. 永久关闭虚拟内存交换
 4. 永久关闭防火墙
-5. 创建`/etc/resolv.conf` 文件，并配置 DNS 服务器 IP 地址。
-6. 执行“vi /etc/security/limits.conf”修改系统最大句柄数限制,在文件中添加“* soft nofile 65535”和“* hard nofile 65535”。再重启服务器。
+5. 创建 `/etc/resolv.conf` 文件，并配置 `DNS` 服务器 `IP` 地址。
+6. 执行 `vi /etc/security/limits.conf` 修改系统最大句柄数限制，在文件中添加 `* soft nofile 65535` 和 `* hard nofile 65535`。再重启服务器。
 ![](../../attachments/Pasted%20image%2020230814163237.png)
-7.  将五个服务器中“/etc/yum.repos.d/openEuler.repo”重命名备份，然 后将“配 置文 件 \openEuler.repo ” 拷贝 到5个 服务器 的“/etc/yum.repos.d”路径下。
-这是配置yum仓库地址
-注意这个目录下不要有多个`.repo`文件，它似乎只会识别一个去处理。
-验证是否配置成功可以尝试`yum list`
+7. 将五个服务器中 `/etc/yum.repos.d/openEuler.repo` 重命名备份，然后将配置文件 `openEuler.repo` 拷贝到5个服务器的 `/etc/yum.repos.d` 路径下。
+这是配置 `yum` 仓库地址
+注意这个目录下不要有多个 `.repo` 文件，它似乎只会识别一个去处理。
+验证是否配置成功可以尝试 `yum list`
 
-8. 在服务器分别执行`dnf clean all`，`dnf makecache`命令
-The commands `dnf clean all` and `dnf makecache` are related to the DNF package manager, which is used to install, update, and remove software packages on RPM-based Linux distributions. Here is a brief explanation of what they do:
+8. 在服务器分别执行 `dnf clean all`，`dnf makecache` 命令
+`dnf clean all` 和 `dnf makecache` 命令是与 `DNF` 包管理器相关的命令，用于在基于 `RPM` 的 `Linux` 发行版上安装、更新和删除软件包。以下是它们的功能说明：
 
-- `dnf clean all` removes all cached files generated from the repository metadata. This can help to solve package installation problems that arise from corrupt or outdated metadata. It also frees up some disk space by deleting unnecessary files1
-- `dnf makecache` downloads and caches metadata for enabled repositories. This can speed up the package installation process by avoiding unnecessary downloads. It also ensures that the metadata is up to date and consistent with the remote repositories2
+- `dnf clean all` 删除从仓库元数据生成的所有缓存文件。这有助于解决因损坏或过时的元数据引起的包安装问题。它还通过删除不必要的文件来释放一些磁盘空间
+- `dnf makecache` 下载并缓存已启用仓库的元数据。这可以通过避免不必要的下载来加速包安装过程。它还确保元数据是最新的，并与远程仓库保持一致
 
 9. 执行 `yum install -y conntrack socat tar`
 
-`Conntrack` is a Linux kernel module that enables tracking of network connections. It allows the kernel to keep track of all currently active network connections and provides a way to manipulate them through a user-space interface.
-`Socat` is a command-line utility that establishes two bidirectional byte streams and transfers data between them. It can be used for a variety of purposes, such as debugging, testing, and network exploration. It is often used as a replacement for the `netcat` utility in Linux systems.
+`Conntrack` 是一个 `Linux` 内核模块，可以跟踪网络连接。它允许内核跟踪所有当前活动的网络连接，并提供通过用户空间接口操作它们的方法。
+`Socat` 是一个命令行工具，可以建立两个双向字节流并在它们之间传输数据。它可以用于各种目的，如调试、测试和网络探索。它经常用作 `Linux` 系统中 `netcat` 工具的替代品。
 
-10. 重启群集每个节点的服务器。
+10. 重启集群每个节点的服务器。
 
 
-# 防火墙配置
+## 防火墙配置
 
-> OpenEuler
+> `openEuler`
 
 - 运行 `systemctl stop firewalld.service` 命令来停止防火墙服务。
 - 运行 `systemctl disable firewalld.service` 命令来禁用防火墙服务的自动启动。
 - 运行 `systemctl status firewalld.service` 命令来查看防火墙服务的状态，确认已经关闭。
 
-# 时钟配置
-多服务器之间通信要保持时钟一致，特别是内网无法连接外部时间时。
-## 服务端配置
+## 时钟配置
 
-1. vi /etc/chrony.conf
+多服务器之间通信要保持时钟一致，特别是内网无法连接外部时间时。
+
+### 服务端配置
+
+1. `vi /etc/chrony.conf`
 
 2. 在配置文件里添加以下配置
 
-   server xxx.xx.xx.xx(服务端 IP) iburst (本机配置,⾃⼰既是服务端⼜是客⼾端) 允许所有连接
+   ```
+   server xxx.xx.xx.xx(服务端 IP) iburst (本机配置,自己既是服务端又是客户端) 
    allow
+   ```
+
 ![](../../attachments/Pasted%20image%2020230814155326.png)
+
 3. 按顺序执行以下语句
 
-修改时区与同步设置
+修改时区与同步设置：
 
-`timedatectl set-timezone 'Asia/Shanghai' timedatectl set-ntp 1`
+```bash
+timedatectl set-timezone 'Asia/Shanghai'
+timedatectl set-ntp 1
+```
 
-重启服务
+重启服务：
 
-`systemctl enable chronyd systemctl restart chronyd 查看状态`
+```bash
+systemctl enable chronyd
+systemctl restart chronyd
+```
 
-`systemctl status chronyd`
+查看状态：
+
+```bash
+systemctl status chronyd
+```
 
 ![](../../attachments/Pasted%20image%2020230814155551.png)
 
-## 客户端配置
+### 客户端配置
 
-> **客户端同步时钟前必须关闭防火墙及 selinux**
+> **客户端同步时钟前必须关闭防火墙及 `SELinux`**
 
-1. vi /etc/chrony.conf 修改server
-    
-    server 188.22.94.120 iburst （IP 为时钟服务器 ip）
-    
+1. `vi /etc/chrony.conf` 修改 `server`
+
+   ```
+   server 188.22.94.120 iburst （IP 为时钟服务器 ip）
+   ```
 
 ![](../../attachments/Pasted%20image%2020240616173908.png)
 
-1. systemctl enable chronyd (3)systemctl restart chronyd 查看状态
-    
-2. systemctl status chronyd
-    
-3. 最后输入“timedatectl”命令，看到如下图所示则时钟同步成功。
+2. 启用和重启服务：
+
+   ```bash
+   systemctl enable chronyd
+   systemctl restart chronyd
+   ```
+
+3. 查看状态：
+
+   ```bash
+   systemctl status chronyd
+   ```
+
+4. 最后输入 `timedatectl` 命令，看到如下图所示则时钟同步成功。
 
 ![](../../attachments/Pasted%20image%2020230814155516.png)
 
 
 
-# DNS服务器配置
+## DNS服务器配置
 
-配置好后可以使用`dig www.xxx.com`命令，随便输入一个网站，它会读取`/etc/resolv.conf`下`nameserver`的配置然后尝试发送请求解析，如果有回应，说明DNS配置正确。
-`resolve.conf`文件内容如下：
+配置好后可以使用 `dig www.xxx.com` 命令，随便输入一个网站，它会读取 `/etc/resolv.conf` 下 `nameserver` 的配置然后尝试发送请求解析，如果有回应，说明 `DNS` 配置正确。
+`resolv.conf` 文件内容如下：
 
-```sh
+```bash
 nameserver 188.xxx.xxx.xxx
 ```
 
-可以运行`systemctl restart NetworkManager`命令重启使其强制生效。
-# 系统资源限制配置
+可以运行 `systemctl restart NetworkManager` 命令重启使其强制生效。
+## 系统资源限制配置
 
-The default value of max count of system handle defined in Linux depends on the type of handle you are referring to. There are different kinds of handles, such as file descriptors, processes, sockets, memory mappings, etc. Each of them has a different limit and a different way to change it.
+`Linux` 中定义的系统句柄最大数量的默认值取决于您所指的句柄类型。有不同类型的句柄，如文件描述符、进程、套接字、内存映射等。每种都有不同的限制和不同的更改方法。
 
-For example, the maximum number of file descriptors per process can be checked by using the command `ulimit -n`1. The default value is usually 1024, but it can be changed by editing the `/etc/security/limits.conf` file1. The maximum number of file descriptors per system can be checked by using the command `cat /proc/sys/fs/file-max`2. The default value depends on the amount of available memory, but it can be changed by using the command `sysctl fs.file-max=number`2.
+例如，每个进程的文件描述符最大数量可以通过使用命令 `ulimit -n` 来检查。默认值通常是 1024，但可以通过编辑 `/etc/security/limits.conf` 文件来更改。系统的文件描述符最大数量可以通过使用命令 `cat /proc/sys/fs/file-max` 来检查。默认值取决于可用内存的数量，但可以通过使用命令 `sysctl fs.file-max=number` 来更改。
 
-Another example is the maximum number of processes per user, which can be checked by using the command `ulimit -u`3. The default value is usually 4096, but it can be changed by editing the `/etc/security/limits.conf` file3. The maximum number of processes per system can be checked by using the command `cat /proc/sys/kernel/pid_max`4. The default value is usually 32768, but it can be changed by using the command `sysctl kernel.pid_max=number`4.
+另一个例子是每个用户的最大进程数，可以通过使用命令 `ulimit -u` 来检查。默认值通常是 4096，但可以通过编辑 `/etc/security/limits.conf` 文件来更改。系统的最大进程数可以通过使用命令 `cat /proc/sys/kernel/pid_max` 来检查。默认值通常是 32768，但可以通过使用命令 `sysctl kernel.pid_max=number` 来更改。
 
-A third example is the maximum number of TCP/IP connections per system, which can be checked by using the command `cat /proc/sys/net/ipv4/ip_local_port_range`. The default value is usually 32768 to 61000, but it can be changed by using the command `sysctl net.ipv4.ip_local_port_range=\"min max\"`. There are also other parameters that affect the TCP/IP connections, such as `net.ipv4.tcp_fin_timeout`, `net.ipv4.tcp_tw_recycle`, and `net.ipv4.tcp_tw_reuse`.
+第三个例子是系统的 `TCP/IP` 连接最大数量，可以通过使用命令 `cat /proc/sys/net/ipv4/ip_local_port_range` 来检查。默认值通常是 32768 到 61000，但可以通过使用命令 `sysctl net.ipv4.ip_local_port_range="min max"` 来更改。还有其他影响 `TCP/IP` 连接的参数，如 `net.ipv4.tcp_fin_timeout`、`net.ipv4.tcp_tw_recycle` 和 `net.ipv4.tcp_tw_reuse`。
 
-A fourth example is the maximum number of memory mappings per process, which can be checked by using the command `cat /proc/sys/vm/max_map_count`. The default value is usually 65530, but it can be changed by using the command `sysctl vm.max_map_count=number`.
+第四个例子是每个进程的内存映射最大数量，可以通过使用命令 `cat /proc/sys/vm/max_map_count` 来检查。默认值通常是 65530，但可以通过使用命令 `sysctl vm.max_map_count=number` 来更改。
 
-These are just some examples of system handles and their limits in Linux. There may be other types of handles that have different limits and ways to change them. You can find more information about them by searching on the web or reading the Linux documentation. I hope this helps you understand the concept of system handles and their limits in Linux. 😊
+这些只是 `Linux` 中系统句柄及其限制的一些例子。可能还有其他类型的句柄具有不同的限制和更改方法。您可以通过在网上搜索或阅读 `Linux` 文档来找到有关它们的更多信息。
 
-# openeuler 软件源
+## openEuler 软件源
 
-## 可参考（[搭建 repo 服务器 (openeuler.org)](https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Administration/%E6%90%AD%E5%BB%BArepo%E6%9C%8D%E5%8A%A1%E5%99%A8.html)）
+可参考 [搭建 repo 服务器 (openeuler.org)](https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Administration/%E6%90%AD%E5%BB%BArepo%E6%9C%8D%E5%8A%A1%E5%99%A8.html)
 
-1、将“openEuler-22.03-LTS-everything-x86_64-dvd.iso”镜像拷贝到服务器的root 目录下。
+1. 将 `openEuler-22.03-LTS-everything-x86_64-dvd.iso` 镜像拷贝到服务器的 `root` 目录下。
 
-2、按顺序执行以下命令：
+2. 按顺序执行以下命令：
 
-（1）mkdir -p /mnt/iso
+   ```bash
+   mkdir -p /mnt/iso
 
 （ 2    ） mount      openEuler-22.03-LTS-everything-x86_64-dvd.iso
 
@@ -124,20 +153,22 @@ These are just some examples of system handles and their limits in Linux. There 
 
 （4）   im /etc/yum.repos.d/openEuler.repo
 
-3、在 openEuler.repo 文件里写入以下内容
+3. 在 `openEuler.repo` 文件里写入以下内容：
 
 
-```config
-[base] 
-name=base
-baseurl=file:///opt/openeuler_repo enabled=1
-gpgcheck=1
-gpgkey=file:///opt/openeuler_repo/RPM-GPG-KEY-openEuler
-```
+   ```ini
+   [base] 
+   name=base
+   baseurl=file:///opt/openeuler_repo
+   enabled=1
+   gpgcheck=1
+   gpgkey=file:///opt/openeuler_repo/RPM-GPG-KEY-openEuler
+   ```
 
 
-3、执行“yum -y install nginx”安装 nginx，将/etc/nginx/nginx.conf 文件重命名备份，然后将“nginx.conf”拷贝到/etc/nginx 路径下。
-`nginx.conf`文件内容修改如下：
+4. 执行 `yum -y install nginx` 安装 `nginx`，将 `/etc/nginx/nginx.conf` 文件重命名备份，然后将 `nginx.conf` 拷贝到 `/etc/nginx` 路径下。
+
+`nginx.conf` 文件内容修改如下：
 
 ```nginx
 user  nginx;
@@ -177,10 +208,18 @@ http {
 }
 ```
 
-可以用软链接方式将repo文件夹链接到nginx目录下
-`ln -s /opt/openeuler_repo /usr/share/nginx/repo`
+可以用软链接方式将 `repo` 文件夹链接到 `nginx` 目录下：
 
+```bash
+ln -s /opt/openeuler_repo /usr/share/nginx/repo
+```
 
-4、依次执行“systemctl enable nginx”，“systemctl start nginx”， “systemctl status nginx”，看到下图则nginx 启动成功。
+5. 依次执行以下命令启动 `nginx`：
 
-5、打开浏览器访问本机 IP 地址，出现下图则部署成功。
+   ```bash
+   systemctl enable nginx
+   systemctl start nginx
+   systemctl status nginx
+   ```
+
+6. 打开浏览器访问本机 `IP` 地址，出现下图则部署成功。

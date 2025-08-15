@@ -103,6 +103,7 @@
 7. 标号也统一使用markdown列表序号，如①等需要进行修改。  
 8. 如果存在代码段，或命令，请换用反引号包裹，如: .HasKey(c =\> c.Id) => `.HasKey(c => c.Id) `  
 9. 如果存在外部地址形如`<https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags>`格式的，替换为可阅读的格式：`[Recommended XML documentation tags - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags)`
+10. 如果存在英文原文的一大段话，无需翻译成中文，仅需调整格式。
 ```
 
 

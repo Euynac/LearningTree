@@ -1,10 +1,10 @@
-# 主从机制
+# Redis
 
-#### 查看当前情况
+## 主从机制
 
-```sh
+### 查看当前情况
+
+```bash
 redis-cli -a P@ssw0rd123
-
 info replication
-
 ```
