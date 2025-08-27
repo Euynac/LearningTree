@@ -63,6 +63,12 @@ Set Project Build Order in `Visual Studio`
 
 另外还有一种可能是 `Mapster` 的 `Map` 问题，如果 `Map` 中包含 `ID` 映射的，会将 `ChangeTrack` 中变为 `Not found`，特别是映射嵌套类的时候。所以需要 `IgnoreID` 列。具体原因待查。
 
+
+### 枚举类型从数据库查出来只有0和1
+
+发现同事在 `mysql` 数据库中的类型是 `tinyint 1`，虽然在数据库这边值正确，但在EFCore这边值只在0和1之间徘徊，改成 `int` 类型后正常。
+
+
 ## `C#`
 
 ### 开发
