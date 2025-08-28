@@ -436,7 +436,21 @@ netsh int ipv6 set dynamic tcp start=49152 num=16384
 
 ### 调整网络优先级
 
+通过 PowerShell 命令调整网络适配器优先级
 
+1. 查看网络适配器信息
+  `Get-NetIPInterface | Where-Object { $_.InterfaceAlias -match 'Wi-Fi|以太网' } | Select-Object InterfaceAlias, InterfaceIndex, AddressFamily, InterfaceMetric`
+  
+  
+2. 调整接口优先级
+    - 找到无线网络和有线网络的接口索引（InterfaceIndex）
+    - 降低无线网络的接口跃点数（值越小优先级越高）
+
+  # 设置无线网络优先级（假设接口索引为12）
+  `Set-NetIPInterface -InterfaceIndex 12 -InterfaceMetric 10`
+
+  # 设置有线网络优先级（假设接口索引为15，值要大于无线网络）
+ `` Set-NetIPInterface -InterfaceIndex 15 -InterfaceMetric 20`
 
 
 # 注册表
