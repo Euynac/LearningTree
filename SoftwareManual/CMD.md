@@ -68,7 +68,8 @@ $data = Get-WMIObject -Query "SELECT * FROM Win32_PerfFormattedData_Counters_The
 而这种原因可能是配置了`DHCP`导致的，因此如果进行手动配置，填写好掩码、网关，则可以将优先级下降。
 另外还有一种方式可以增加：
 `route add 188.22.76.0 mask 255.255.255.0 188.22.77.1 -p`
-其中`-p`是永久生效，默认是拔网线重启后就失效。
+
+> 将访问 188.22.76.0-188.22.76.255 网段的所有数据，通过 188.22.77.1 这个网关进行转发，其中`-p`是永久生效，默认是拔网线重启后就失效。
 
 ### 端口转发
 
@@ -446,10 +447,10 @@ netsh int ipv6 set dynamic tcp start=49152 num=16384
     - 找到无线网络和有线网络的接口索引（InterfaceIndex）
     - 降低无线网络的接口跃点数（值越小优先级越高）
 
-  # 设置无线网络优先级（假设接口索引为12）
+  设置无线网络优先级（假设接口索引为12）
   `Set-NetIPInterface -InterfaceIndex 12 -InterfaceMetric 10`
 
-  # 设置有线网络优先级（假设接口索引为15，值要大于无线网络）
+  设置有线网络优先级（假设接口索引为15，值要大于无线网络）
  `` Set-NetIPInterface -InterfaceIndex 15 -InterfaceMetric 20`
 
 
