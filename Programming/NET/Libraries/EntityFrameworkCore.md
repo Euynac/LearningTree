@@ -5,7 +5,7 @@
 
 `Update` 方法会将传入的实体的状态设置为 `Modified`，但它只会处理根实体。`EF Core` 不会自动递归地将所有关联的子实体状态也设置为 `Modified`。
 
-> 实测发现会标记`[Own]`的实体为`Modified`
+> 实测发现会标记`[Own]`的实体为`Modified`  (有时候又没标记了？？)
 
 `Update` 方法会更改所有实体数据为当前状态，所以一般用于`Disconnected Entity`的设置。
 `https://www.learnentityframeworkcore.com/dbcontext/modifying-data`
