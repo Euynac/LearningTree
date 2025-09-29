@@ -214,13 +214,13 @@ https://github.com/gubeihc/blasting 前端密码爆破
 
 ## 开发
 
-| 软件名      | 场景                              | 备注   |
-| :------- | :------------------------------ | :--- |
-| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |      |
-| Navicate | 本地数据库管理工具                       |      |
-| DbGate   | WEB端数据库管理工具                     | 开源免费 |
-|          |                                 |      |
-|          |                                 |      |
+| 软件名      | 场景                              | 备注                                                    |
+| :------- | :------------------------------ | :---------------------------------------------------- |
+| ProcDump | 创建进程dump文件，用于查找程序crash/高占用CPU原因 |                                                       |
+| Navicate | 本地数据库管理工具                       |                                                       |
+| DbGate   | WEB端数据库管理工具                     | 开源免费                                                  |
+| dbeaver  | Navicate替代                      | [dbeaver/dbeaver](https://github.com/dbeaver/dbeaver) |
+|          |                                 |                                                       |
 
 
 
