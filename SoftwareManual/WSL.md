@@ -124,6 +124,11 @@ alias proxy="source /xxx/proxy.sh" # 可以为这个脚本设置别名 proxy，�
 解决方案是直接重启电脑。猜测是hype-v的端口随机占用有概率导致无法连接问题
 
 ## 问题
+### WSL 任何命令没有反应
+一般是升级安装损坏的问题，需要手动通过安装包安装：[Releases · microsoft/WSL](https://github.com/microsoft/WSL/releases/)
+安装过程中出现：`Could not write value  to key \SOFTWARE\Classes\Directory\shell\WSL.   Verify that you have sufficient access to that key, or contact your support personnel.` 诸如此类的问题，需要注册表编辑器修改相应文件夹System以及Adminstrator的权限为完全控制。
+
+
 
 ### zsh语法高亮非常慢
 
