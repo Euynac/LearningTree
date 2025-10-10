@@ -38,3 +38,27 @@
 ```
 
 有个缺陷是如果SourceGenerator会导致编译不通过，那还是只能回退到使用 `Visual Studio` 用 `Debug.Launch` 的方式调试。[Can not debug code generator when target project does not build : RIDER-118936](https://youtrack.jetbrains.com/issue/RIDER-118936/Can-not-debug-code-generator-when-target-project-does-not-build)
+
+
+### SourceGenerator控制生成目录
+默认设置代码生成路径会在 `C:\Users\{Username}\AppData\Local\Temp\SourceGeneratedDocuments\1415ABEDF6AED9378BC5BC80\MoLibrary.Generators.AutoController\MoLibrary.Generators.AutoController.HttpApiControllerSourceGenerator` 诸如此类的路径
+
+通过设置 `.csproj` 文件：
+```xml
+<PropertyGroup>  
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>  
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>  
+</PropertyGroup>  
+  
+<ItemGroup>  
+    <!-- Exclude the output of source generators from the compilation -->  
+    <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />  
+</ItemGroup>
+```
+可以生成到设置的项目目录下。
+
+如果不设置 `CompilerGeneratedFilesOutputPath`，默认是在 `{BaseIntermediateOutpath}/generated/{Assembly}/{SourceGeneratorName}/{GeneratedFile}`
+
+设置了就是在 
+`{CompilerGeneratedFilesOutputPath}/{Assembly}/{SourceGeneratorName}/{GeneratedFile}`
+[Always Developing - Customize source generator output location](https://www.alwaysdeveloping.net/dailydrop/2022/02/22-emit-source-generator-files/)
