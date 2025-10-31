@@ -140,6 +140,14 @@ wsl: Failed to configure network (networkingMode Mirrored), falling back to netw
 wsl: A localhost proxy configuration was detected but not mirrored into WSL. WSL in NAT mode does not support localhost proxies.
 ```
 
+将`.wslconfig`配置修改为：
+```ini
+[wsl2]
+networkingMode=mirrored
+autoProxy=true
+```
+
+
 ### zsh语法高亮非常慢
 
 输入第一块命令的时候，WSL2的zsh语法高亮特别慢，通过排查 `~/.zshrc`可以发现是`zsh-syntax-highlighting.zsh`的问题，遂上Github发现问题：
