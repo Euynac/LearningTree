@@ -147,6 +147,7 @@ networkingMode=mirrored
 autoProxy=true
 ```
 
+并将系统代理关闭
 
 ### zsh语法高亮非常慢
 
