@@ -6,6 +6,15 @@
 
 > `Visual Studio DockerCompose`容器开发中，容器边车需要重新启动才会重新读取，并监听新的主题。
 
+
+
+## 消息消费模式
+
+通过
+
+> Binding 
+
+
 ## 同消费者组非竞争模式
 
 [Allow PubSub to opt-out from competing consumer pattern to send events to every instance · Issue #3176 · dapr/dapr](https://github.com/dapr/dapr/issues/3176)
