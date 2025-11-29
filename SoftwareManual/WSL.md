@@ -149,6 +149,8 @@ autoProxy=true
 
 并将系统代理关闭
 
+如果还是不行就多重试几次就好了 `wsl --shutdown` `wsl` 一直循环，终有一次可以成功。
+
 ### zsh语法高亮非常慢
 
 输入第一块命令的时候，WSL2的zsh语法高亮特别慢，通过排查 `~/.zshrc`可以发现是`zsh-syntax-highlighting.zsh`的问题，遂上Github发现问题：
